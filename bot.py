@@ -113,12 +113,67 @@ async def on_ready():
 # ==========================================
 # 1. ARTIFACT COMMAND (MULTI-PAGE LIST)
 # ==========================================
+class ArtifactFilterModal(discord.ui.Modal, title="Filter Artifacts Catalog"):
+    query_input = discord.ui.TextInput(
+        label="Name or Keyword",
+        required=False,
+        placeholder="e.g. Ring, Fireball",
+        max_length=100
+    )
+    tier_input = discord.ui.TextInput(
+        label="Tier (boss, cursed, lesser, greater, etc.)",
+        required=False,
+        placeholder="Leave blank for any",
+        max_length=50
+    )
+    tag_input = discord.ui.TextInput(
+        label="Tag",
+        required=False,
+        placeholder="e.g. CH01",
+        max_length=50
+    )
+
+    def __init__(self, original_view):
+        super().__init__()
+        self.original_view = original_view
+
+    async def on_submit(self, interaction: discord.Interaction):
+        q = self.query_input.value.strip().lower()
+        t = self.tier_input.value.strip().lower()
+        tag = self.tag_input.value.strip().lower()
+
+        results = []
+        for art in self.original_view.all_artifacts:
+            if not isinstance(art, dict):
+                continue
+
+            match_query = (
+                not q
+                or q in str(art.get("name", "")).lower()
+                or q in str(art.get("description", "")).lower()
+            )
+            match_tier = not t or t == str(art.get("tier", "")).strip().lower()
+            match_tag = not tag or any(tag in str(item_tag).lower() for item_tag in art.get("tags", []))
+
+            if match_query and match_tier and match_tag:
+                results.append(art)
+
+        if not results:
+            return await interaction.response.send_message("❌ No artifacts matched your filter criteria.", ephemeral=True)
+
+        # Switch to filtered view
+        filtered_view = ArtifactSelectView(self.original_view.all_artifacts, results=results, page=0)
+        await interaction.response.edit_message(embed=filtered_view.get_list_embed(), view=filtered_view)
+
+
 class ArtifactSelectView(discord.ui.View):
-    def __init__(self, artifacts: list, page: int = 0):
+    def __init__(self, all_artifacts: list, results: list = None, page: int = 0):
         super().__init__(timeout=180)
-        self.artifacts = artifacts
+        self.all_artifacts = all_artifacts
+        self.artifacts = results if results is not None else all_artifacts
         self.page = page
-        self.max_page = max(0, (len(artifacts) - 1) // 25)
+        self.max_page = max(0, (len(self.artifacts) - 1) // 25)
+        self.is_filtered = results is not None
         self.update_components()
 
     def get_list_embed(self) -> discord.Embed:
@@ -133,8 +188,9 @@ class ArtifactSelectView(discord.ui.View):
             tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
             desc_lines.append(f"**{name}** - Tier: {tier} | Tags: {tags_str}")
 
+        title_prefix = "Filtered Artifacts" if self.is_filtered else "Artifacts Catalog"
         embed = discord.Embed(
-            title=f"Artifacts Catalog (Page {self.page + 1}/{self.max_page + 1})",
+            title=f"{title_prefix} (Page {self.page + 1}/{self.max_page + 1}) - Total: {len(self.artifacts)}",
             description="\n".join(desc_lines) if desc_lines else "No artifacts found.",
             color=discord.Color.gold()
         )
@@ -150,7 +206,7 @@ class ArtifactSelectView(discord.ui.View):
             discord.SelectOption(
                 label=str(art.get("name", "Unknown Item"))[:100],
                 value=str(art.get("name", "Unknown Item"))[:100],
-                description=str(art.get("description", "No description"))[:100]
+                description=f"Tier: {str(art.get('tier', 'Unknown')).capitalize()}"[:100]
             )
             for art in page_items if isinstance(art, dict)
         ]
@@ -164,24 +220,30 @@ class ArtifactSelectView(discord.ui.View):
             select.callback = self.select_callback
             self.add_item(select)
 
+        # Row 1: Filter button, reset button, or pagination controls
+        filter_btn = discord.ui.Button(label="🔍 Filter", style=discord.ButtonStyle.primary, row=1)
+        filter_btn.callback = self.filter_callback
+        self.add_item(filter_btn)
+
+        if self.is_filtered:
+            reset_btn = discord.ui.Button(label="🔄 Reset Filter", style=discord.ButtonStyle.secondary, row=1)
+            reset_btn.callback = self.reset_callback
+            self.add_item(reset_btn)
+
         if self.max_page > 0:
-            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=1)
-            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=1)
+            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=2)
+            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=2)
             prev_btn.callback = self.prev_callback
             next_btn.callback = self.next_callback
             self.add_item(prev_btn)
-            
-            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
-            list_btn.callback = self.list_callback
-            self.add_item(list_btn)
             self.add_item(next_btn)
-        else:
-            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
-            list_btn.callback = self.list_callback
-            self.add_item(list_btn)
 
-    async def list_callback(self, interaction: discord.Interaction):
-        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
+    async def filter_callback(self, interaction: discord.Interaction):
+        await interaction.response.send_modal(ArtifactFilterModal(self))
+
+    async def reset_callback(self, interaction: discord.Interaction):
+        reset_view = ArtifactSelectView(self.all_artifacts, results=None, page=0)
+        await interaction.response.edit_message(embed=reset_view.get_list_embed(), view=reset_view)
 
     async def select_callback(self, interaction: discord.Interaction):
         selected_name = interaction.data["values"][0]
@@ -195,6 +257,7 @@ class ArtifactSelectView(discord.ui.View):
             description=str(art.get("description", "No description available.")),
             color=discord.Color.gold(),
         )
+        embed.add_field(name="Tier", value=str(art.get("tier", "Unknown")).capitalize(), inline=True)
         
         tags = art.get("tags", [])
         tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
@@ -204,7 +267,17 @@ class ArtifactSelectView(discord.ui.View):
         if art.get("unlock") and art.get("unlock") != "-":
             embed.add_field(name="Unlock Requirement", value=format_field_value(art.get("unlock")), inline=False)
 
-        await interaction.response.edit_message(embed=embed, view=self)
+        # Add a button to return to the specific filtered or unfiltered list view
+        view = discord.ui.View()
+        back_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary)
+        
+        async def back_callback(inter: discord.Interaction):
+            await inter.response.edit_message(embed=self.get_list_embed(), view=self)
+            
+        back_btn.callback = back_callback
+        view.add_item(back_btn)
+
+        await interaction.response.edit_message(embed=embed, view=view)
 
     async def prev_callback(self, interaction: discord.Interaction):
         self.page -= 1
