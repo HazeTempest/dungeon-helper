@@ -3,6 +3,9 @@ import os
 import discord
 from discord import app_commands
 from discord.ext import commands
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize bot with default intents
 intents = discord.Intents.default()
@@ -410,3 +413,6 @@ async def weapon(interaction: discord.Interaction):
 
 
   await interaction.response.send_message(embed=embed)
+
+
+bot.run("DISCORD_TOKEN")
