@@ -297,6 +297,28 @@ class ArtifactSelectView(discord.ui.View):
         self.update_components()
         await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
+    async def artifact_tag_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
+        """Dynamically gathers unique tags/tiers from ARTIFACTS_DATA and suggests matches."""
+        unique_tags = set()
+        for art in ARTIFACTS_DATA:
+            if isinstance(art, dict):
+                tags = art.get("tags", [])
+                if isinstance(tags, list):
+                    for t in tags:
+                        if t and t != "-":
+                            unique_tags.add(str(t))
+                # Include tier if it exists as a separate field
+                tier = art.get("tier")
+                if tier and tier != "-":
+                    unique_tags.add(str(tier))
+
+        filtered = [
+            app_commands.Choice(name=tag, value=tag)
+            for tag in sorted(unique_tags)
+            if current.lower() in tag.lower()
+        ]
+        return filtered[:25]
+
 
 @app_commands.choices(
     tier=[
@@ -308,22 +330,21 @@ class ArtifactSelectView(discord.ui.View):
         app_commands.Choice(name="Superior", value="superior"),
     ]
 )
-@bot.tree.command(name="artifact", description="Browse all artifacts or filter by tier and tags")
+@bot.tree.command(name="artifact", description="Browse all artifacts or filter by keywords and tags")
 @app_commands.describe(
     query="Artifact name or keyword search",
-    tier="Filter by artifact tier",
-    tag="Filter by item or combat tag",
+    tag="Filter by tag or tier category",
 )
+@app_commands.autocomplete(tag=artifact_tag_autocomplete)
 async def artifact(
     interaction: discord.Interaction,
     query: str = None,
-    tier: str = None,
     tag: str = None,
 ):
-    # If no parameters are provided at all, return the full master list directly
-    if not query and not tier and not tag:
-        if not ARTIFACTS_DATA:
-            return await interaction.response.send_message("❌ No artifact data loaded or available.", ephemeral=True)
+    if not ARTIFACTS_DATA:
+        return await interaction.response.send_message("❌ No artifact data loaded or available.", ephemeral=True)
+
+    if not query and not tag:
         view = ArtifactSelectView(ARTIFACTS_DATA)
         return await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
@@ -337,16 +358,21 @@ async def artifact(
             or query.lower() in str(art.get("name", "")).lower()
             or query.lower() in str(art.get("description", "")).lower()
         )
-        match_tier = not tier or tier.lower() == str(art.get("tier", "")).strip().lower()
-        match_tag = not tag or any(tag.lower() in str(t).lower() for t in art.get("tags", []))
+        
+        # Check matching across both tags list and the explicit tier field if present
+        art_tags = [str(t) for t in art.get("tags", [])]
+        if art.get("tier"):
+            art_tags.append(str(art.get("tier")))
+            
+        match_tag = not tag or any(tag.lower() in t.lower() for t in art_tags)
 
-        if match_query and match_tier and match_tag:
+        if match_query and match_tag:
             results.append(art)
 
     if not results:
         return await interaction.response.send_message("No artifacts found matching your criteria.", ephemeral=True)
 
-    view = ArtifactSelectView(results)
+    view = ArtifactSelectView(ARTIFACTS_DATA, results=results)
     await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
 
@@ -735,6 +761,22 @@ class SkillSelectView(discord.ui.View):
         self.update_components()
         await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
+    async def skill_tag_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
+        unique_tags = set()
+        for sk in SKILLS_DATA:
+            if isinstance(sk, dict):
+                tags = sk.get("tags", [])
+                if isinstance(tags, list):
+                    for t in tags:
+                        if t and t != "-":
+                            unique_tags.add(str(t))
+
+        filtered = [
+            app_commands.Choice(name=tag, value=tag)
+            for tag in sorted(unique_tags)
+            if current.lower() in tag.lower()
+        ]
+        return filtered[:25]
 
 @bot.tree.command(name="skill", description="Browse all skills or filter by keywords and tags")
 @app_commands.describe(
