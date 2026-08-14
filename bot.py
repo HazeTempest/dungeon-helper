@@ -26,26 +26,32 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Robustly normalizes nested JSON structures and injects tier keys from parent categories."""
+    """Robustly normalizes nested JSON structures and injects category keys as 'type' or 'tier'."""
     cleaned = []
     
-    def parse_recursive(node, current_tier=None):
+    def parse_recursive(node, current_cat=None):
         if isinstance(node, list):
             for item in node:
-                parse_recursive(item, current_tier)
+                parse_recursive(item, current_cat)
         elif isinstance(node, dict):
-            # Check if this level represents a tier category (like boss, lesser, greater, etc.)
+            # Check if this level represents a category/tier
             for key, val in node.items():
-                if isinstance(val, (list, dict)) and key.lower() in ["boss", "cursed", "lesser", "greater", "regular", "superior"]:
-                    parse_recursive(val, current_tier=key)
+                if isinstance(val, (list, dict)) and key.lower() in [
+                    "boss", "cursed", "lesser", "greater", "regular", "superior",
+                    "subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill"
+                ]:
+                    parse_recursive(val, current_cat=key)
                 elif key == "list" and isinstance(val, list):
-                    parse_recursive(val, current_tier=current_tier)
+                    parse_recursive(val, current_cat=current_cat)
             
             # If this dictionary looks like an item
-            if any(k in node for k in ["file", "urlName", "description", "abilities"]):
-                # Assign tier if found from parent structure
-                if current_tier and not node.get("tier"):
-                    node["tier"] = current_tier
+            if any(k in node for k in ["file", "urlName", "description", "abilities", "stat", "modifications"]):
+                # Assign type/tier if found from parent structure
+                if current_cat:
+                    if not node.get("type") and current_cat.lower() in ["subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill"]:
+                        node["type"] = current_cat
+                    if not node.get("tier") and current_cat.lower() in ["boss", "cursed", "lesser", "greater", "regular", "superior"]:
+                        node["tier"] = current_cat
                 
                 # Determine a proper name if 'name' is missing
                 if not node.get("name"):
@@ -59,9 +65,12 @@ def extract_list(data):
             else:
                 # Traverse other values if they aren't already handled
                 for k, val in node.items():
-                    if k.lower() not in ["boss", "cursed", "lesser", "greater", "regular", "superior", "list"]:
+                    if k.lower() not in [
+                        "boss", "cursed", "lesser", "greater", "regular", "superior",
+                        "subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill", "list"
+                    ]:
                         if isinstance(val, (dict, list)):
-                            parse_recursive(val, current_tier=current_tier)
+                            parse_recursive(val, current_cat=current_cat)
 
     parse_recursive(data)
     return cleaned
@@ -559,12 +568,66 @@ async def character(interaction: discord.Interaction, name: str = None):
 # ==========================================
 # 4. SKILL COMMAND (MULTI-PAGE LIST)
 # ==========================================
+class SkillFilterModal(discord.ui.Modal, title="Filter Skills Catalog"):
+    query_input = discord.ui.TextInput(
+        label="Name or Keyword",
+        required=False,
+        placeholder="e.g. Slash, Fire",
+        max_length=100
+    )
+    type_input = discord.ui.TextInput(
+        label="Skill Type (subskill, buffskill, etc.)",
+        required=False,
+        placeholder="Leave blank for any",
+        max_length=50
+    )
+    tag_input = discord.ui.TextInput(
+        label="Tag",
+        required=False,
+        placeholder="e.g. Combat",
+        max_length=50
+    )
+
+    def __init__(self, original_view):
+        super().__init__()
+        self.original_view = original_view
+
+    async def on_submit(self, interaction: discord.Interaction):
+        q = self.query_input.value.strip().lower()
+        stype = self.type_input.value.strip().lower()
+        tag = self.tag_input.value.strip().lower()
+
+        results = []
+        for sk in self.original_view.all_skills:
+            if not isinstance(sk, dict):
+                continue
+
+            match_query = (
+                not q
+                or q in str(sk.get("name", "")).lower()
+                or q in str(sk.get("description", "")).lower()
+            )
+            match_type = not stype or stype == str(sk.get("type", "")).strip().lower()
+            match_tag = not tag or any(tag in str(item_tag).lower() for item_tag in sk.get("tags", []))
+
+            if match_query and match_type and match_tag:
+                results.append(sk)
+
+        if not results:
+            return await interaction.response.send_message("❌ No skills matched your filter criteria.", ephemeral=True)
+
+        filtered_view = SkillSelectView(self.original_view.all_skills, results=results, page=0)
+        await interaction.response.edit_message(embed=filtered_view.get_list_embed(), view=filtered_view)
+
+
 class SkillSelectView(discord.ui.View):
-    def __init__(self, skills: list, page: int = 0):
+    def __init__(self, all_skills: list, results: list = None, page: int = 0):
         super().__init__(timeout=180)
-        self.skills = skills
+        self.all_skills = all_skills
+        self.skills = results if results is not None else all_skills
         self.page = page
-        self.max_page = max(0, (len(skills) - 1) // 25)
+        self.max_page = max(0, (len(self.skills) - 1) // 25)
+        self.is_filtered = results is not None
         self.update_components()
 
     def get_list_embed(self) -> discord.Embed:
@@ -579,8 +642,9 @@ class SkillSelectView(discord.ui.View):
             tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
             desc_lines.append(f"**{name}** - Type: {stype} | Tags: {tags_str}")
 
+        title_prefix = "Filtered Skills" if self.is_filtered else "Skills Catalog"
         embed = discord.Embed(
-            title=f"Skills Catalog (Page {self.page + 1}/{self.max_page + 1})",
+            title=f"{title_prefix} (Page {self.page + 1}/{self.max_page + 1}) - Total: {len(self.skills)}",
             description="\n".join(desc_lines) if desc_lines else "No skills found.",
             color=discord.Color.green()
         )
@@ -610,24 +674,31 @@ class SkillSelectView(discord.ui.View):
             select.callback = self.select_callback
             self.add_item(select)
 
+        # Row 1: Filter & Reset buttons
+        filter_btn = discord.ui.Button(label="🔍 Filter", style=discord.ButtonStyle.primary, row=1)
+        filter_btn.callback = self.filter_callback
+        self.add_item(filter_btn)
+
+        if self.is_filtered:
+            reset_btn = discord.ui.Button(label="🔄 Reset Filter", style=discord.ButtonStyle.secondary, row=1)
+            reset_btn.callback = self.reset_callback
+            self.add_item(reset_btn)
+
+        # Row 2: Pagination buttons
         if self.max_page > 0:
-            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=1)
-            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=1)
+            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=2)
+            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=2)
             prev_btn.callback = self.prev_callback
             next_btn.callback = self.next_callback
             self.add_item(prev_btn)
-            
-            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
-            list_btn.callback = self.list_callback
-            self.add_item(list_btn)
             self.add_item(next_btn)
-        else:
-            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
-            list_btn.callback = self.list_callback
-            self.add_item(list_btn)
 
-    async def list_callback(self, interaction: discord.Interaction):
-        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
+    async def filter_callback(self, interaction: discord.Interaction):
+        await interaction.response.send_modal(SkillFilterModal(self))
+
+    async def reset_callback(self, interaction: discord.Interaction):
+        reset_view = SkillSelectView(self.all_skills, results=None, page=0)
+        await interaction.response.edit_message(embed=reset_view.get_list_embed(), view=reset_view)
 
     async def select_callback(self, interaction: discord.Interaction):
         selected_name = interaction.data["values"][0]
@@ -637,10 +708,11 @@ class SkillSelectView(discord.ui.View):
             return await interaction.response.send_message("❌ Skill not found.", ephemeral=True)
 
         embed = discord.Embed(
-            title=f"Skill: {sk.get('name')} [{str(sk.get('type', 'Skill')).capitalize()}]",
+            title=f"Skill: {sk.get('name')}",
             description=str(sk.get("description", "No description available.")),
             color=discord.Color.green(),
         )
+        embed.add_field(name="Type", value=str(sk.get("type", "Skill")).capitalize(), inline=True)
         embed.add_field(name="Stat / Scaling", value=str(sk.get("stat", "N/A")), inline=True)
 
         if sk.get("interval"):
@@ -653,7 +725,16 @@ class SkillSelectView(discord.ui.View):
         if sk.get("modifications"):
             embed.add_field(name="Modifications", value=format_field_value(sk.get("modifications")), inline=False)
 
-        await interaction.response.edit_message(embed=embed, view=self)
+        view = discord.ui.View()
+        back_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary)
+        
+        async def back_callback(inter: discord.Interaction):
+            await inter.response.edit_message(embed=self.get_list_embed(), view=self)
+            
+        back_btn.callback = back_callback
+        view.add_item(back_btn)
+
+        await interaction.response.edit_message(embed=embed, view=view)
 
     async def prev_callback(self, interaction: discord.Interaction):
         self.page -= 1
@@ -688,7 +769,6 @@ async def skill(
     skill_type: str = None,
     tag: str = None,
 ):
-    # If no parameters are provided at all, return the full master list directly
     if not query and not skill_type and not tag:
         if not SKILLS_DATA:
             return await interaction.response.send_message("❌ No skill data loaded or available.", ephemeral=True)
@@ -717,7 +797,7 @@ async def skill(
     if not results:
         return await interaction.response.send_message("No skills found matching your criteria.", ephemeral=True)
 
-    view = SkillSelectView(results)
+    view = SkillSelectView(SKILLS_DATA, results=results)
     await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
 
