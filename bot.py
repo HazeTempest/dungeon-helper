@@ -26,14 +26,22 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Normalizes JSON data into a searchable list."""
+    """Normalizes and cleans JSON data into a valid list of dictionaries."""
+    raw_list = []
     if isinstance(data, dict):
         if "data" in data and isinstance(data["data"], list):
-            return data["data"]
-        return list(data.values())
+            raw_list = data["data"]
+        else:
+            raw_list = list(data.values())
     elif isinstance(data, list):
-        return data
-    return []
+        raw_list = data
+
+    # Filter out empty or invalid items that lack a name
+    cleaned = []
+    for item in raw_list:
+        if isinstance(item, dict) and item.get("name"):
+            cleaned.append(item)
+    return cleaned
 
 
 def clean_item_text(text: str) -> str:
@@ -80,7 +88,7 @@ async def on_ready():
 
 
 # ==========================================
-# 1. ARTIFACT COMMAND (MULTI-PAGE LIST)
+# 1. ARTIFACT COMMAND (DEFAULT TO ALL & FILTER)
 # ==========================================
 class ArtifactSelectView(discord.ui.View):
     def __init__(self, artifacts: list, page: int = 0):
@@ -103,7 +111,7 @@ class ArtifactSelectView(discord.ui.View):
             desc_lines.append(f"**{name}** - Tier: {tier} | Tags: {tags_str}")
 
         embed = discord.Embed(
-            title=f"Artifact Search Results (Page {self.page + 1}/{self.max_page + 1})",
+            title=f"Artifacts Catalog (Page {self.page + 1}/{self.max_page + 1})",
             description="\n".join(desc_lines) if desc_lines else "No artifacts found.",
             color=discord.Color.gold()
         )
@@ -133,7 +141,6 @@ class ArtifactSelectView(discord.ui.View):
             select.callback = self.select_callback
             self.add_item(select)
 
-        # Navigation & List Return Buttons
         if self.max_page > 0:
             prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=1)
             next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=1)
@@ -198,9 +205,9 @@ class ArtifactSelectView(discord.ui.View):
         app_commands.Choice(name="Superior", value="superior"),
     ]
 )
-@bot.tree.command(name="artifact", description="Search or filter artifacts by tier and tags")
+@bot.tree.command(name="artifact", description="Browse all artifacts or filter by tier and tags")
 @app_commands.describe(
-    query="Artifact name or keyword",
+    query="Artifact name or keyword search",
     tier="Filter by artifact tier",
     tag="Filter by item or combat tag",
 )
@@ -220,8 +227,8 @@ async def artifact(
             or query.lower() in art.get("name", "").lower()
             or query.lower() in art.get("description", "").lower()
         )
-        match_tier = not tier or tier.lower() == art.get("tier", "").strip().lower()
-        match_tag = not tag or any(tag.lower() in t.lower() for t in art.get("tags", []))
+        match_tier = not tier or tier.lower() == str(art.get("tier", "")).strip().lower()
+        match_tag = not tag or any(tag.lower() in str(t).lower() for t in art.get("tags", []))
 
         if match_query and match_tier and match_tag:
             results.append(art)
@@ -316,7 +323,7 @@ async def collection(interaction: discord.Interaction, name: str = None):
 
 
 # ==========================================
-# 3. CHARACTER COMMAND (AUTOFILL FIX & DROPDOWNS)
+# 3. CHARACTER COMMAND
 # ==========================================
 def create_character_embed(char_data: dict) -> discord.Embed:
     embed = discord.Embed(
@@ -446,7 +453,7 @@ async def character(interaction: discord.Interaction, name: str = None):
 
 
 # ==========================================
-# 4. SKILL COMMAND (MULTI-PAGE LIST)
+# 4. SKILL COMMAND (DEFAULT TO ALL & FILTER)
 # ==========================================
 class SkillSelectView(discord.ui.View):
     def __init__(self, skills: list, page: int = 0):
@@ -469,7 +476,7 @@ class SkillSelectView(discord.ui.View):
             desc_lines.append(f"**{name}** - Type: {stype} | Tags: {tags_str}")
 
         embed = discord.Embed(
-            title=f"Skill Search Results (Page {self.page + 1}/{self.max_page + 1})",
+            title=f"Skills Catalog (Page {self.page + 1}/{self.max_page + 1})",
             description="\n".join(desc_lines) if desc_lines else "No skills found.",
             color=discord.Color.green()
         )
@@ -565,7 +572,7 @@ class SkillSelectView(discord.ui.View):
         app_commands.Choice(name="Enchant Skill", value="enchantskill"),
     ]
 )
-@bot.tree.command(name="skill", description="Search and filter skills by type, tags, or keyword")
+@bot.tree.command(name="skill", description="Browse all skills or filter by type and tags")
 @app_commands.describe(
     query="Skill name or keyword search",
     skill_type="Filter by skill category",
@@ -589,9 +596,9 @@ async def skill(
         )
         match_type = (
             not skill_type
-            or skill_type.lower() == sk.get("type", "").strip().lower()
+            or skill_type.lower() == str(sk.get("type", "")).strip().lower()
         )
-        match_tag = not tag or any(tag.lower() in t.lower() for t in sk.get("tags", []))
+        match_tag = not tag or any(tag.lower() in str(t).lower() for t in sk.get("tags", []))
 
         if match_query and match_type and match_tag:
             results.append(sk)
