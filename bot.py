@@ -26,21 +26,36 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Normalizes and cleans JSON data into a valid list of dictionaries."""
-    raw_list = []
-    if isinstance(data, dict):
+    """Robustly normalizes JSON data into a valid list of dictionary items."""
+    if isinstance(data, list):
+        raw_list = data
+    elif isinstance(data, dict):
         if "data" in data and isinstance(data["data"], list):
             raw_list = data["data"]
         else:
             raw_list = list(data.values())
-    elif isinstance(data, list):
-        raw_list = data
+    else:
+        raw_list = []
 
-    # Filter out empty or invalid items that lack a name
+    # Flatten out any nested lists or ensure dictionary coercion
     cleaned = []
     for item in raw_list:
-        if isinstance(item, dict) and item.get("name"):
+        if isinstance(item, dict):
+            # Fallback name check if 'name' key is missing or stored under alternative fields
+            if not item.get("name"):
+                for alt_key in ["title", "file", "id", "key"]:
+                    if alt_key in item:
+                        item["name"] = str(item[alt_key])
+                        break
+                if not item.get("name"):
+                    item["name"] = "Unknown Item"
             cleaned.append(item)
+        elif isinstance(item, list):
+            for sub_item in item:
+                if isinstance(sub_item, dict):
+                    if not sub_item.get("name"):
+                        sub_item["name"] = "Unknown Item"
+                    cleaned.append(sub_item)
     return cleaned
 
 
@@ -88,7 +103,7 @@ async def on_ready():
 
 
 # ==========================================
-# 1. ARTIFACT COMMAND (DEFAULT TO ALL & FILTER)
+# 1. ARTIFACT COMMAND (MULTI-PAGE LIST)
 # ==========================================
 class ArtifactSelectView(discord.ui.View):
     def __init__(self, artifacts: list, page: int = 0):
@@ -105,9 +120,9 @@ class ArtifactSelectView(discord.ui.View):
         desc_lines = []
         for art in page_items:
             name = art.get("name", "Unknown Artifact")
-            tier = art.get("tier", "Unknown").capitalize()
+            tier = str(art.get("tier", "Unknown")).capitalize()
             tags = art.get("tags", [])
-            tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
+            tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
             desc_lines.append(f"**{name}** - Tier: {tier} | Tags: {tags_str}")
 
         embed = discord.Embed(
@@ -125,9 +140,9 @@ class ArtifactSelectView(discord.ui.View):
 
         options = [
             discord.SelectOption(
-                label=art.get("name", "Unknown Artifact")[:100],
-                value=art.get("name", "Unknown Artifact")[:100],
-                description=f"Tier: {art.get('tier', 'Unknown').capitalize()}"[:100]
+                label=str(art.get("name", "Unknown Artifact"))[:100],
+                value=str(art.get("name", "Unknown Artifact"))[:100],
+                description=f"Tier: {str(art.get('tier', 'Unknown')).capitalize()}"[:100]
             )
             for art in page_items if isinstance(art, dict)
         ]
@@ -169,13 +184,13 @@ class ArtifactSelectView(discord.ui.View):
 
         embed = discord.Embed(
             title=f"Artifact: {art.get('name')}",
-            description=art.get("description", "No description available."),
+            description=str(art.get("description", "No description available.")),
             color=discord.Color.gold(),
         )
-        embed.add_field(name="Tier", value=art.get("tier", "Unknown").capitalize(), inline=True)
+        embed.add_field(name="Tier", value=str(art.get("tier", "Unknown")).capitalize(), inline=True)
 
         tags = art.get("tags", [])
-        tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
+        tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
         embed.add_field(name="Tags", value=tags_str, inline=True)
         embed.add_field(name="Abilities", value=format_field_value(art.get("abilities")), inline=False)
 
@@ -217,6 +232,13 @@ async def artifact(
     tier: str = None,
     tag: str = None,
 ):
+    # If no parameters are provided at all, return the full master list directly
+    if not query and not tier and not tag:
+        if not ARTIFACTS_DATA:
+            return await interaction.response.send_message("❌ No artifact data loaded or available.", ephemeral=True)
+        view = ArtifactSelectView(ARTIFACTS_DATA)
+        return await interaction.response.send_message(embed=view.get_list_embed(), view=view)
+
     results = []
     for art in ARTIFACTS_DATA:
         if not isinstance(art, dict):
@@ -224,8 +246,8 @@ async def artifact(
 
         match_query = (
             not query
-            or query.lower() in art.get("name", "").lower()
-            or query.lower() in art.get("description", "").lower()
+            or query.lower() in str(art.get("name", "")).lower()
+            or query.lower() in str(art.get("description", "")).lower()
         )
         match_tier = not tier or tier.lower() == str(art.get("tier", "")).strip().lower()
         match_tag = not tag or any(tag.lower() in str(t).lower() for t in art.get("tags", []))
@@ -246,7 +268,7 @@ async def artifact(
 def create_collection_embed(col_data: dict) -> discord.Embed:
     embed = discord.Embed(
         title=f"Collection: {col_data.get('name')}",
-        description=col_data.get("description", "No description available."),
+        description=str(col_data.get("description", "No description available.")),
         color=discord.Color.purple(),
     )
     embed.add_field(
@@ -267,8 +289,8 @@ class CollectionSelectView(discord.ui.View):
         super().__init__(timeout=180)
         options = [
             discord.SelectOption(
-                label=col.get("name", "Unknown Collection")[:100],
-                value=col.get("name", "Unknown Collection")[:100]
+                label=str(col.get("name", "Unknown Collection"))[:100],
+                value=str(col.get("name", "Unknown Collection"))[:100]
             )
             for col in collections[:25] if isinstance(col, dict)
         ]
@@ -292,7 +314,7 @@ async def collection_autocomplete(
     choices = []
     for col in COLLECTIONS_DATA:
         if isinstance(col, dict):
-            cname = col.get("name", "")
+            cname = str(col.get("name", ""))
             if current.lower() in cname.lower():
                 choices.append(app_commands.Choice(name=cname, value=cname))
         if len(choices) >= 25:
@@ -305,14 +327,16 @@ async def collection_autocomplete(
 @app_commands.autocomplete(name=collection_autocomplete)
 async def collection(interaction: discord.Interaction, name: str = None):
     if not name:
+        if not COLLECTIONS_DATA:
+            return await interaction.response.send_message("❌ No collection data available.", ephemeral=True)
         view = CollectionSelectView(COLLECTIONS_DATA)
         return await interaction.response.send_message("Select a collection from the dropdown:", view=view)
 
     key = name.lower()
-    col_data = next((c for c in COLLECTIONS_DATA if isinstance(c, dict) and c.get("name", "").lower() == key), None)
+    col_data = next((c for c in COLLECTIONS_DATA if isinstance(c, dict) and str(c.get("name", "")).lower() == key), None)
 
     if not col_data:
-        matches = [c for c in COLLECTIONS_DATA if isinstance(c, dict) and key in c.get("name", "").lower()]
+        matches = [c for c in COLLECTIONS_DATA if isinstance(c, dict) and key in str(c.get("name", "")).lower()]
         if matches:
             view = CollectionSelectView(matches)
             return await interaction.response.send_message(f"Multiple collections matched '{name}'. Select one:", view=view)
@@ -327,13 +351,13 @@ async def collection(interaction: discord.Interaction, name: str = None):
 # ==========================================
 def create_character_embed(char_data: dict) -> discord.Embed:
     embed = discord.Embed(
-        title=char_data.get("name", "Character"),
+        title=str(char_data.get("name", "Character")),
         color=discord.Color.blue(),
     )
     
     notes = char_data.get("notes")
     if notes:
-        embed.description = notes
+        embed.description = str(notes)
         
     stats = char_data.get("stats", {})
     if stats:
@@ -361,8 +385,8 @@ class CharacterSelectView(discord.ui.View):
 
         options = [
             discord.SelectOption(
-                label=char.get("name", "Unknown Character")[:100],
-                value=char.get("name", "Unknown Character")[:100]
+                label=str(char.get("name", "Unknown Character"))[:100],
+                value=str(char.get("name", "Unknown Character"))[:100]
             )
             for char in page_items if isinstance(char, dict)
         ]
@@ -415,7 +439,7 @@ async def character_autocomplete(
     choices = []
     for char in CHARACTERS_DATA:
         if isinstance(char, dict):
-            cname = char.get("name", "")
+            cname = str(char.get("name", ""))
             if current.lower() in cname.lower():
                 choices.append(app_commands.Choice(name=cname, value=cname))
         if len(choices) >= 25:
@@ -435,10 +459,10 @@ async def character(interaction: discord.Interaction, name: str = None):
         return await interaction.response.send_message(embed=embed, view=view)
 
     key = name.lower()
-    char_index = next((i for i, c in enumerate(CHARACTERS_DATA) if isinstance(c, dict) and c.get("name", "").lower() == key), -1)
+    char_index = next((i for i, c in enumerate(CHARACTERS_DATA) if isinstance(c, dict) and str(c.get("name", "")).lower() == key), -1)
 
     if char_index == -1:
-        matches = [c for c in CHARACTERS_DATA if isinstance(c, dict) and key in c.get("name", "").lower()]
+        matches = [c for c in CHARACTERS_DATA if isinstance(c, dict) and key in str(c.get("name", "")).lower()]
         if matches:
             view = CharacterSelectView(matches)
             embed = create_character_embed(matches[0])
@@ -453,7 +477,7 @@ async def character(interaction: discord.Interaction, name: str = None):
 
 
 # ==========================================
-# 4. SKILL COMMAND (DEFAULT TO ALL & FILTER)
+# 4. SKILL COMMAND (MULTI-PAGE LIST)
 # ==========================================
 class SkillSelectView(discord.ui.View):
     def __init__(self, skills: list, page: int = 0):
@@ -470,9 +494,9 @@ class SkillSelectView(discord.ui.View):
         desc_lines = []
         for sk in page_items:
             name = sk.get("name", "Unknown Skill")
-            stype = sk.get("type", "Skill").capitalize()
+            stype = str(sk.get("type", "Skill")).capitalize()
             tags = sk.get("tags", [])
-            tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
+            tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
             desc_lines.append(f"**{name}** - Type: {stype} | Tags: {tags_str}")
 
         embed = discord.Embed(
@@ -490,9 +514,9 @@ class SkillSelectView(discord.ui.View):
 
         options = [
             discord.SelectOption(
-                label=sk.get("name", "Unknown Skill")[:100],
-                value=sk.get("name", "Unknown Skill")[:100],
-                description=f"Type: {sk.get('type', 'Skill').capitalize()}"[:100]
+                label=str(sk.get("name", "Unknown Skill"))[:100],
+                value=str(sk.get("name", "Unknown Skill"))[:100],
+                description=f"Type: {str(sk.get('type', 'Skill')).capitalize()}"[:100]
             )
             for sk in page_items if isinstance(sk, dict)
         ]
@@ -533,17 +557,17 @@ class SkillSelectView(discord.ui.View):
             return await interaction.response.send_message("❌ Skill not found.", ephemeral=True)
 
         embed = discord.Embed(
-            title=f"Skill: {sk.get('name')} [{sk.get('type', 'Skill').capitalize()}]",
-            description=sk.get("description", "No description available."),
+            title=f"Skill: {sk.get('name')} [{str(sk.get('type', 'Skill')).capitalize()}]",
+            description=str(sk.get("description", "No description available.")),
             color=discord.Color.green(),
         )
-        embed.add_field(name="Stat / Scaling", value=sk.get("stat", "N/A"), inline=True)
+        embed.add_field(name="Stat / Scaling", value=str(sk.get("stat", "N/A")), inline=True)
 
         if sk.get("interval"):
-            embed.add_field(name="Interval / Cooldown", value=sk.get("interval"), inline=True)
+            embed.add_field(name="Interval / Cooldown", value=str(sk.get("interval")), inline=True)
 
         tags = sk.get("tags", [])
-        tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
+        tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
         embed.add_field(name="Tags", value=tags_str, inline=False)
 
         if sk.get("modifications"):
@@ -584,6 +608,13 @@ async def skill(
     skill_type: str = None,
     tag: str = None,
 ):
+    # If no parameters are provided at all, return the full master list directly
+    if not query and not skill_type and not tag:
+        if not SKILLS_DATA:
+            return await interaction.response.send_message("❌ No skill data loaded or available.", ephemeral=True)
+        view = SkillSelectView(SKILLS_DATA)
+        return await interaction.response.send_message(embed=view.get_list_embed(), view=view)
+
     results = []
     for sk in SKILLS_DATA:
         if not isinstance(sk, dict):
@@ -591,8 +622,8 @@ async def skill(
 
         match_query = (
             not query
-            or query.lower() in sk.get("name", "").lower()
-            or query.lower() in sk.get("description", "").lower()
+            or query.lower() in str(sk.get("name", "")).lower()
+            or query.lower() in str(sk.get("description", "")).lower()
         )
         match_type = (
             not skill_type
@@ -621,8 +652,8 @@ class WeaponDropdownView(discord.ui.View):
 
         options = [
             discord.SelectOption(
-                label=w.get("file", "").replace(".png", "")[:100],
-                value=w.get("urlName", w.get("file", ""))[:100],
+                label=str(w.get("file", "")).replace(".png", "")[:100],
+                value=str(w.get("urlName", w.get("file", "")))[:100],
                 description=f"WSAP: {w.get('WSAP', 'N/A')} | CD: {w.get('cooldown', 'N/A')}"[:100],
             )
             for w in weapons[:25] if isinstance(w, dict)
@@ -644,7 +675,7 @@ class WeaponDropdownView(discord.ui.View):
             return await interaction.response.send_message("❌ No valid weapons available.", ephemeral=True)
 
         chosen_weapon = next(
-            (w for w in self.weapons if isinstance(w, dict) and w.get("urlName", w.get("file", "")) == selected_val),
+            (w for w in self.weapons if isinstance(w, dict) and str(w.get("urlName", w.get("file", ""))) == selected_val),
             None
         )
 
@@ -652,12 +683,12 @@ class WeaponDropdownView(discord.ui.View):
             return await interaction.response.send_message("❌ Weapon details not found.", ephemeral=True)
 
         embed = discord.Embed(
-            title=f"{chosen_weapon.get('file', '').replace('.png', '')} ({self.char_folder.capitalize()})",
-            description=chosen_weapon.get("description", "No description available."),
+            title=f"{str(chosen_weapon.get('file', '')).replace('.png', '')} ({self.char_folder.capitalize()})",
+            description=str(chosen_weapon.get("description", "No description available.")),
             color=discord.Color.red(),
         )
-        embed.add_field(name="WSAP", value=chosen_weapon.get("WSAP", "N/A"), inline=True)
-        embed.add_field(name="Cooldown", value=chosen_weapon.get("cooldown", "N/A"), inline=True)
+        embed.add_field(name="WSAP", value=str(chosen_weapon.get("WSAP", "N/A")), inline=True)
+        embed.add_field(name="Cooldown", value=str(chosen_weapon.get("cooldown", "N/A")), inline=True)
 
         price = chosen_weapon.get("price", "0")
         price_type = chosen_weapon.get("priceType", "Gem")
@@ -665,7 +696,7 @@ class WeaponDropdownView(discord.ui.View):
 
         tags = chosen_weapon.get("tags", [])
         if tags and tags != ["-"]:
-            embed.add_field(name="Tags", value=", ".join(tags), inline=False)
+            embed.add_field(name="Tags", value=", ".join(str(t) for t in tags), inline=False)
         else:
             embed.add_field(name="Tags", value="None", inline=False)
 
@@ -682,8 +713,8 @@ class WeaponSelectView(discord.ui.View):
 
         char_options = [
             discord.SelectOption(
-                label=group.get("folder", "").capitalize()[:100],
-                value=group.get("folder", "")[:100],
+                label=str(group.get("folder", "")).capitalize()[:100],
+                value=str(group.get("folder", ""))[:100],
             )
             for group in data if isinstance(group, dict) and "folder" in group
         ][:25]
@@ -721,7 +752,7 @@ async def weapon_character_autocomplete(
     choices = []
     for group in WEAPONS_DATA:
         if isinstance(group, dict) and "folder" in group:
-            folder_name = group["folder"]
+            folder_name = str(group["folder"])
             if current.lower() in folder_name.lower():
                 choices.append(app_commands.Choice(name=folder_name.capitalize(), value=folder_name))
         if len(choices) >= 25:
@@ -737,13 +768,13 @@ async def weapon(interaction: discord.Interaction, character: str = None):
         return await interaction.response.send_message("❌ Weapon data not loaded or empty.", ephemeral=True)
 
     if character:
-        char_data = next((g for g in WEAPONS_DATA if isinstance(g, dict) and g.get("folder", "").lower() == character.lower()), None)
+        char_data = next((g for g in WEAPONS_DATA if isinstance(g, dict) and str(g.get("folder", "")).lower() == character.lower()), None)
         if not char_data or not char_data.get("weapons"):
             return await interaction.response.send_message(f"❌ No weapon data found for character '{character}'.", ephemeral=True)
 
         view = WeaponDropdownView(char_data.get("folder"), char_data.get("weapons", []))
         return await interaction.response.send_message(
-            f"Select a weapon for **{char_data.get('folder', '').capitalize()}**:",
+            f"Select a weapon for **{str(char_data.get('folder', '')).capitalize()}**:",
             view=view
         )
 
