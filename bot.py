@@ -1,5 +1,5 @@
+import json
 import os
-import aiohttp
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -7,7 +7,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-NPOINT_URL = os.getenv("NPOINT_URL")
+
+if not DISCORD_TOKEN:
+    raise ValueError("❌ Error: DISCORD_TOKEN is missing or not loaded from the .env file.")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -107,20 +109,22 @@ class WeaponCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    async def fetch_weapons(self):
-        async with aiohttp.ClientSession() as session:
-            async with session.get(NPOINT_URL) as response:
-                if response.status == 200:
-                    data = await response.json()
-                    return data.get("data", [])
-                return []
+    def load_weapons(self):
+        """Loads weapon data locally from the JSON file."""
+        try:
+            with open("ds_wiki_npoint_weapons.json", "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return data.get("data", [])
+        except Exception as e:
+            print(f"Error loading local json file: {e}")
+            return []
 
     @commands.command(name="weapon", aliases=["w"])
     async def weapon_command(self, ctx):
         """Starts the interactive weapon lookup process via dropdowns."""
-        data = await self.fetch_weapons()
+        data = self.load_weapons()
         if not data:
-            return await ctx.send("❌ Failed to fetch weapon data from API.")
+            return await ctx.send("❌ Failed to load local weapon data.")
 
         view = WeaponSelectView(data)
         await ctx.send("Select a character folder:", view=view)

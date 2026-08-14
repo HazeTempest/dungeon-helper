@@ -1,0 +1,1256 @@
+{
+  "data": [
+    {
+      "folder": "knight",
+      "weapons": [
+        {
+          "WSAP": "120%",
+          "file": "Iron Sword.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "iron-sword",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Slightly rises into the air when using the Weapon Skill.\nPerforms a circular spin, dealing damage."
+        },
+        {
+          "WSAP": "140%",
+          "file": "Axion.png",
+          "tags": [
+            "Lightning"
+          ],
+          "price": "2,000",
+          "urlName": "axion",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Fires a powerful sword beam towards enemies in front, with no hit limit.\nThe beam deals damage to enemies every 0.05 seconds and pushes them back.\n100% chance to inflict Shock."
+        },
+        {
+          "WSAP": "400%",
+          "file": "Slaine.png",
+          "tags": [
+            "Poison"
+          ],
+          "price": "2,000",
+          "urlName": "slaine",
+          "cooldown": "3s",
+          "priceType": "Gem",
+          "description": "Dashes quickly forward, slashing enemies and inflicting stun damage three times.\nCooldown time: 3 seconds"
+        },
+        {
+          "WSAP": "100%",
+          "file": "Oberon.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "2,000",
+          "urlName": "oberon",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "Teleports to and attacks enemies while holding down the Weapon Skill.\nEach hit with the Weapon Skill increases its Attack Speed by 15% (up to 75%). The range of enemy tracking widens according to the increased Attack Speed from the Weapon Skill.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "150%",
+          "file": "Tarventus.png",
+          "tags": [
+            "Bleed"
+          ],
+          "price": "2,000",
+          "urlName": "tarventus",
+          "cooldown": "1.5s",
+          "priceType": "Gem",
+          "description": "Slightly rises into the air when using the Weapon Skill.\nPerforms a circular spin, dealing damage that causes bleeding to enemies six times.\nBasic attacks gain an additional bleed chance (50%) and hit enemies three times.\nBasic ATK Range +40%\nATK SPD -20%\nCooldown time: 1.5 seconds"
+        },
+        {
+          "WSAP": "80%",
+          "file": "Ignis.png",
+          "tags": [
+            "Melee",
+            "Flame"
+          ],
+          "price": "2,000",
+          "urlName": "ignis",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Weapon Skill advances forward, attacking enemies.\nHolding the Weapon Skill charges a gauge, increasing the number of attacks the longer it is held (up to 20 times)."
+        },
+        {
+          "WSAP": "50%",
+          "file": "Impulse Blade.png",
+          "tags": [
+            "Lightning",
+            "Physical",
+            "Melee"
+          ],
+          "price": "3,000",
+          "urlName": "impulse-blade",
+          "cooldown": "2s",
+          "priceType": "Gem",
+          "description": "While holding the Weapon Skill button, swiftly slashes enemies in front.\nThe Weapon Skill is affected by Attack Speed, and you can move while channeling it.\n\nThe skill can last for 2 seconds, and each hit with the skill extends the duration by 0.1 seconds (Per-monster internal cooldown: 1 second).\n\nIf the skill is used to the end, it delivers a Finishing Strike that deals critical damage proportional to the target's Shock stacks.\nWhen the Finishing Strike damages an enemy, you are refunded Weapon Skill Cooldown equal to 0.1% of the target's Shock stacks.\n\nEach time you defeat (100 / 200 / 300) enemies with Lightning damage, the weapon becomes Enhanced. Upon Enhancement, the following bonuses apply:\n\n> Attack speed + (2.5 / 5 / 7.5)%\n> Weapon-skill size + (10 / 15 / 20)%\n> Weapon-skill count + (1 / 2 / 3)\n> Weapon-skill cooldown (25 / 50 / 75)%\n> Movement speed reduction while casting weapon skill (-15 / -10 / -5)%",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "fighter",
+      "weapons": [
+        {
+          "WSAP": "250%",
+          "file": "Wrist Guard.png",
+          "tags": [
+            "-"
+          ],
+          "price": "0",
+          "urlName": "wrist-guard",
+          "cooldown": "3.5s",
+          "priceType": "Gem",
+          "description": "Quickly move to and attack nearby enemies."
+        },
+        {
+          "WSAP": "500%",
+          "file": "Yagrush.png",
+          "tags": [
+            "Darkness",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "yagrush",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Performs a large spin kick that sends enemies flying and stuns them.\nCooldown time: 4 seconds"
+        },
+        {
+          "WSAP": "120%",
+          "file": "Taotie.png",
+          "tags": [
+            "Lightning",
+            "Magic"
+          ],
+          "price": "2,000",
+          "urlName": "taotie",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "Roar loudly, dealing damage to nearby enemies.\nChanges the basic attack range for 5 seconds.\nCooldown time: 1 second"
+        },
+        {
+          "WSAP": "200%",
+          "file": "Ayamur.png",
+          "tags": [
+            "Lightning",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "ayamur",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Quickly move to nearby enemies and perform up to 7 tracking attacks.\nAfter moving and attacking, if there are no more enemies to track nearby, the remaining tracking attempts decrease by 1.\n(The same enemy cannot be tracked consecutively)\nCooldown time: 5 seconds"
+        },
+        {
+          "WSAP": "500%",
+          "file": "Draupnir.png",
+          "tags": [
+            "Darkness",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "draupnir",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Slam the ground hard, launching enemies into the air and inflicting stun damage.\nPlunging Attacks deal the same damage as Weapon Skills.\nThe range of Plunging Attacks increases by 100%.\nCooldown time: 4 seconds"
+        },
+        {
+          "WSAP": "120%",
+          "file": "Prelude of the Wind.png",
+          "tags": [
+            "Lightning",
+            "Physical"
+          ],
+          "price": "3,000",
+          "urlName": "prelude-of-the-wind",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Basic attacks hit enemies twice.\nQuickly move forward, dealing damage to one enemy passed by for 2 seconds.\nFor every additional 10% Attack Speed, Weapon Skill hits +1 (up to 40 times).\nFor every additional 100% Attack Speed, Basic Attack hits +1.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "slayer",
+      "weapons": [
+        {
+          "WSAP": "70%",
+          "file": "Blood Scythe.png",
+          "tags": [
+            "-"
+          ],
+          "price": "0",
+          "urlName": "blood-scythe",
+          "cooldown": "6s",
+          "priceType": "Gem",
+          "description": "Rush forward while rapidly spinning the scythe, dealing damage."
+        },
+        {
+          "WSAP": "100%",
+          "file": "Soul Harvester.png",
+          "tags": [
+            "Poison"
+          ],
+          "price": "2,000",
+          "urlName": "soul-harvester",
+          "cooldown": "2s",
+          "priceType": "Gem",
+          "description": "Harvest the souls of enemies, dealing damage. (Up to 400)\nEach time a soul is harvested, the Attack Power and range of the Weapon Skill increases.\nSize per stack +0.5% (Up to 100%)\nWeapon Skill Attack Power per stack +0.8% (Up to 320%).\nMOV SPD +7%\nBasic Attacks have a 100% chance to inflict Poison.\nCooldown time: 2 seconds"
+        },
+        {
+          "WSAP": "1000%",
+          "file": "Depth Charge.png",
+          "tags": [
+            "Frost"
+          ],
+          "price": "2,000",
+          "urlName": "depth-charge",
+          "cooldown": "10s",
+          "priceType": "Gem",
+          "description": "Slam the ground hard, launching enemies in a wide area and dealing freezing damage.\nATK SPD -10%\nATK +10%"
+        },
+        {
+          "WSAP": "55%",
+          "file": "Meat Grinder.png",
+          "tags": [
+            "Bleed"
+          ],
+          "price": "2,000",
+          "urlName": "meat-grinder",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "Spin at an extremely high speed, shredding enemies.\nGain frenzy while using the Weapon Skill, gradually increasing Damage, ATK SPD, and MOV SPD",
+          "recommended": 1
+        },
+        {
+          "WSAP": "200%",
+          "file": "Vulcanus.png",
+          "tags": [
+            "Flame",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "vulcanus",
+          "cooldown": "7s",
+          "priceType": "Gem",
+          "description": "Basic Skills deal 50% additional damage to enemies.\nWhen using the Weapon Skill, throw the returning Vulcanus forward, dealing damage as it travels back.\nATK SPD -10%\nCooldown time: 7 seconds"
+        },
+        {
+          "WSAP": "125%",
+          "file": "Diablo.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "2,000",
+          "urlName": "diablo",
+          "cooldown": "6s",
+          "priceType": "Gem",
+          "description": "Swing the scythe to unleash sword energy.\nBecomes enhanced every 100 enemies killed (up to 3 times).\nSword energy damage +100% (Each enhancement +15%)\nNumber of sword energy waves: 5 (Each enhancement +1 wave)"
+        }
+      ]
+    },
+    {
+      "folder": "gunner",
+      "weapons": [
+        {
+          "WSAP": "220%",
+          "file": "Pistol.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "pistol",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Fires 4 bullets that quickly pierces the enemies in front.\n\n[Modified Drone]\nMagazine capacity: 12\nFires 4 Shots\nReload: 2s"
+        },
+        {
+          "WSAP": "45%",
+          "file": "Sentry Gun-Minigun.png",
+          "tags": [],
+          "price": "2,000",
+          "urlName": "sentry-gun-minigun",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Installs the minigun.\nCooldown time: 5 seconds\n\n[Modified Drone]\nBullet velocity +30%\nMagazine capacity: 150\nFires 5 Shots\nReload: 4s",
+          "recommended": 1
+        },
+        {
+          "WSAP": "40%",
+          "file": "Sentry Gun-Flames.png",
+          "tags": [
+            "Flame"
+          ],
+          "price": "2,000",
+          "urlName": "sentry-gun-flames",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Installs a flamethrower.\n\n[Modified Drone]\nMagazine capacity: 90\nFires 2 Shots\nReload: 4s",
+          "recommended": 1
+        },
+        {
+          "WSAP": "75%",
+          "file": "Shotgun.png",
+          "tags": [],
+          "price": "2,000",
+          "urlName": "shotgun",
+          "cooldown": "2s",
+          "priceType": "Gem",
+          "description": "Quickly draws the shotgun and fires to create distance from the enemy.\n\n[Modified Drone]\nBullet velocity +30%\nMagazine capacity: 3\nFires 1 Shot\nReload: 4s(1 shot at a time)"
+        },
+        {
+          "WSAP": "350%",
+          "file": "Golden Gun.png",
+          "tags": [
+            "Divinity"
+          ],
+          "price": "3,000",
+          "urlName": "golden-gun",
+          "cooldown": "10s",
+          "priceType": "Gem",
+          "description": "When using the Weapon Skill, equip a golden gun for a certain period of time.\nWhile equipped with the golden gun, inflict stun damage to nearby enemies, and piercing shots cause area stun damage.\nWhile equipped with the golden gun, piercing shots do not penetrate enemies.\n\n[Modified Drone]\nMagazine capacity: 6\nFires 1 Shot\nReload: 10s\nWeapon skill is not disabled"
+        }
+      ]
+    },
+    {
+      "folder": "mage",
+      "weapons": [
+        {
+          "WSAP": "85%",
+          "file": "Blazing Spellbook.png",
+          "tags": [
+            "Magic",
+            "Targeting",
+            "Flame"
+          ],
+          "price": "0",
+          "urlName": "blazing-spellbook",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Consumes mana to cast a fireball around you.\nThe mage's Weapon Skills are not affected by changes to position, direction, or speed.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "140%",
+          "file": "Frozen Spellbook.png",
+          "tags": [
+            "Magic",
+            "Projectile",
+            "Frost"
+          ],
+          "price": "2,000",
+          "urlName": "frozen-spellbook",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Consumes mana to cast Rain of Ice around you.\nThe mage's Weapon Skills are not affected by changes in position, direction, or speed."
+        },
+        {
+          "WSAP": "105%",
+          "file": "Flash Spellbook.png",
+          "tags": [
+            "Magic",
+            "Chain",
+            "Lightning"
+          ],
+          "price": "2,000",
+          "urlName": "flash-spellbook",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Consumes mana to cast chain lightning around you.\nThe mage's Weapon Skills are not affected by changes to position, direction, or speed."
+        },
+        {
+          "WSAP": "185%",
+          "file": "Sphere of Blood.png",
+          "tags": [
+            "Magic",
+            "Spell",
+            "Bleed"
+          ],
+          "price": "3,000",
+          "urlName": "sphere-of-blood",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Consumes mana to summon a Spear of Blood targeting the strongest nearby enemy, proportional to the mana spent.\nThe mage's Weapon Skills are not affected by changes to position, direction, or speed.\nBasic attacks change to melee attacks, applying a bleeding tag.\nBasic Attack Hit Count: 3\nMana cost: 5"
+        },
+        {
+          "WSAP": "110%",
+          "file": "Gem of Darkness.png",
+          "tags": [
+            "Magic",
+            "Targeting",
+            "Darkness"
+          ],
+          "price": "3,000",
+          "urlName": "gem-of-darkness",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Consumes mana to open a Gate of Darkness, continuously firing dark sphres that target enemies.\nThe mage's Weapon Skills are not affected by changes to position, direction, or speed."
+        },
+        {
+          "WSAP": "80%",
+          "file": "Song of the Sun.png",
+          "tags": [
+            "Magic",
+            "Projectile",
+            "Divinity"
+          ],
+          "price": "3,000",
+          "urlName": "song-of-the-sun",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Consumes mana to cast a holy beam of light that tracks enemies.\nThe mage's Weapon Skills are not affected by changes to position, direction, or speed.\nThe basic attack is a sphere that can be charged through key drops, with the duration and size increasing with charging time."
+        }
+      ]
+    },
+    {
+      "folder": "mercenary",
+      "weapons": [
+        {
+          "WSAP": "550%",
+          "file": "Red Greatsword.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "red-greatsword",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Rushes slightly forward and strikes downwards with force."
+        },
+        {
+          "WSAP": "600%",
+          "file": "Lava Sword Kyle.png",
+          "tags": [
+            "Flame"
+          ],
+          "price": "2,000",
+          "urlName": "lava-sword-kyle",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Rushes slightly forward and strikes downwards with force.\nIf a Dash counterattack is successful, Basic Skill is enhanced by 50% for 2 seconds.\nEnhanced Basic Skill will cause additional lava explosions."
+        },
+        {
+          "WSAP": "550%",
+          "file": "Chain Sword Chaptal.png",
+          "tags": [
+            "Divinity"
+          ],
+          "price": "2,000",
+          "urlName": "chain-sword-chaptal",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Tosses the chain forward, pulling in all the enemies in its path.\nWhen used in combo with a counterattack, all nearby enemies are bound and drawn towards you.\nDamage increases when cast on a single target.\nDeals additional damage to enemies hit with Basic Skill."
+        },
+        {
+          "WSAP": "200%",
+          "file": "Demon Sword Aran.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "3,000",
+          "urlName": "demon-sword-aran",
+          "cooldown": "6s",
+          "priceType": "Gem",
+          "description": "Advance forward and deal slashing damage.\nCan be reused up to 2 times within 3 seconds.\nCan be linked with Basic Skills.\nBasic Attacks hit enemies twice.\n Skill Damage -20%, Movement Speed +10%, Attack Speed +20%, Basic Attack Power +30%",
+          "recommended": 1
+        },
+        {
+          "WSAP": "600%",
+          "file": "Executioner's Ashen Cleaver.png",
+          "tags": [
+            "Bleed"
+          ],
+          "price": "3,000",
+          "urlName": "executioners-ashen-cleaver",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Charge forward quickly and become temporarily invincible.\nIf you deal damage to an enemy with the charge, throw an axe and activate the Red Dog (Character Passive)."
+        },
+        {
+          "WSAP": "600%",
+          "file": "Poison Wine Cask Bacchus.png",
+          "tags": [
+            "Poison"
+          ],
+          "price": "0",
+          "urlName": "poison-wine-cask-bacchus",
+          "cooldown": "7s",
+          "priceType": "PASS",
+          "description": "[Basic Effects]\nEquipped Poison skills become Drunken Skills, while synergy checks remain Poison.\nPoison skills can be obtained even without the Melee tag.\nWhen applying Poison, gain Drunkenness instead.\nWhen the Weapon Skill hits, gain Drunkenness equal to the current Poison synergy level.\nIf you consume 5 Red Dog stacks within 5 sec., enter Hangover.\n\nPoison damage increases are converted into Drunken Skill damage increases.\n\n[Drunkenness]\nWhen the Weapon Skill hits, forcibly triggers all equipped Drunken Skills.\nOn successful counter, decreases by 40; every 20m moved decreases it by 10.\n3 sec. after last dealing damage, then every 1 sec., Drunkenness decreases by 5.\nMax Drunkenness stacks are 100 and increase based on Poison synergy level.\nFor every 10 Drunkenness stacks:\n- Move Speed +0.1%\n- Attack Speed +0.2%\n- Attack +0.1\n- Drunken Skill damage +10%\nAt max Drunkenness, enter Full Drunk.\n\n[Full Drunk]\nFor 7 sec., Drunkenness is fixed at max.\nDrunkenness effects are applied at 2x.\nBasic Skills gain Hit Count +3, Range +60%, damage amplified by 300%, and are affected by the Poison tag.\nFury and Red Dog stacks are fixed at max.\nDrunken Skills cannot trigger, and Weapon Skill cooldown is restored to max.\nWhen the duration ends, or after using the Weapon Skill, enter Hangover.\n\n[Hangover]\nFor 3 sec.:\n- Move Speed -50%\n- Attack Speed -50%\n- Basic Skill Range -30%\n- Evasion +100%\nRemoves all Drunkenness.\nDrunkenness cannot be gained.\nDrunken Skills cannot trigger.\nWeapon Skill cooldown is restored to max.\nUsing the Weapon Skill immediately removes Hangover."
+        }
+      ]
+    },
+    {
+      "folder": "hunter",
+      "weapons": [
+        {
+          "WSAP": "50%",
+          "file": "Multy Shot.png",
+          "tags": [
+            "Projectile"
+          ],
+          "price": "0",
+          "urlName": "multy-shot",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Load the arrows that fire two additional arrows."
+        },
+        {
+          "WSAP": "250%",
+          "file": "Chaser.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "2,000",
+          "urlName": "chaser",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Load the exploding arrow. Reinforced arrows bounce towards the enemy on the second bounce."
+        },
+        {
+          "WSAP": "50%",
+          "file": "Blast.png",
+          "tags": [
+            "Lightning"
+          ],
+          "price": "2,000",
+          "urlName": "blast",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Load a penetrating and multi-stage hit arrow.\nMaximum number of hits: 24\nCooldown time: 3 seconds"
+        },
+        {
+          "WSAP": "60%",
+          "file": "Holy Light.png",
+          "tags": [
+            "Holy"
+          ],
+          "price": "2,000",
+          "urlName": "holy-light",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Loads an arrow of divine rays that penetrates all enemies."
+        },
+        {
+          "WSAP": "300%",
+          "file": "Demon Hands.png",
+          "tags": [
+            "Flame"
+          ],
+          "price": "2,000",
+          "urlName": "demon-hands",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Loads an arrow that inflicts Burn.\nThe arrow explodes immediately upon damaging an enemy.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "150%",
+          "file": "Frost Queen.png",
+          "tags": [
+            "Frost"
+          ],
+          "price": "3,000",
+          "urlName": "frost-queen",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Fires 3 Frost Arrows forward.\nThe number of Frost Arrows fired increases with the number of Frost Skills equipped.\nWhenever a Frozen Shield is destroyed, Frost arrows are fired in all directions."
+        },
+        {
+          "WSAP": "50%",
+          "file": "Thorned Vines of Obsidian.png",
+          "tags": [
+            "Poison"
+          ],
+          "price": "3,000",
+          "urlName": "thorned-vines-of-obsidian",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Fires an arrow that splits into 5 upon hitting the enemy."
+        }
+      ]
+    },
+    {
+      "folder": "ronin",
+      "weapons": [
+        {
+          "WSAP": "100%",
+          "file": "Katana.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "katana",
+          "cooldown": "0s",
+          "priceType": "Gem",
+          "description": "Common Katana."
+        },
+        {
+          "WSAP": "100%",
+          "file": "Blood Katana.png",
+          "tags": [
+            "Bleed"
+          ],
+          "price": "0",
+          "urlName": "blood-katana",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "[PASSIVE]\nBase Attack Speed +5%.\n\n[ACTIVE]\nChange Basic Attacks to 3 hits when unleashing.\nBase Attack Speed +50%.\nBase Skill Size +30%.\nAdd 'Bleed' property to Basic Skills.\nBleed stack limit is removed and bleeding duration not reduced while unleashing.\nBleeding does not deal damage, and Bleed stacks instantly explode into Stab on lead.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "100%",
+          "file": "Evil Katana.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "3,000",
+          "urlName": "evil-katana",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "[PASSIVE]\n+20% of Skill Attributes equipped in the first slot.\n\n[ACTIVE]\nBasic Skill Size +30%\nDegree gauge consumption per second +15%.\nEvery 0.2 sec, drops a wedge on an enemy within range, dealing 80% damage.\nThe wedge follows the attribute of the skill equipped in the first slot.\n\nWhen leaded, all wedges embedded in it explode, dealing 120% damage per wedge."
+        },
+        {
+          "WSAP": "100%",
+          "file": "Resonance Blade.png",
+          "tags": [
+            "Lightning"
+          ],
+          "price": "2,000",
+          "urlName": "resonance-blade",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "[PASSIVE]\nGain 3% increases Attack Power per bonus Movement Speed (up to 9%).\n\n[ACTIVE]\nDash Maximum Charge +1.\nDash Cooldown Recovery Speed +25%.\nDash Maximum Charge Time -30%.\nDash Distance -50%.\nDash Attack Damage +300%.\nDash can be charged mid-air.\nWaterfall Slash can be activated instantly during Dash.\nWhen Waterfall Slash hits, Dash Cooldown recovers by 65%.\n\nDuring Draw Stance, Sword Gauge Consumption per second -20%.\nDash Attack Damage increases by 100%.\nCharging Dash enhances it into Flash Slash.\n\n[FLASH SLASH]\nCan be charged until all Sword Gauge is consumed.\nWhile charging, applies 20 stacks of Electric Shock per second to enemies within 5 range and consumes 10 Sword Gauge.\nWhen released, unleash a lightning-type strike the pierces enemies, with damage increasing by 120% per second of charge time, and its area also expands.\nEnemies that are hit consume half of their Electric Shock stacks."
+        },
+        {
+          "WSAP": "100%",
+          "file": "Venomfang.png",
+          "tags": [
+            "Toxin"
+          ],
+          "price": "2,000",
+          "urlName": "venomfang",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "[PASSIVE]\nStatus Effect Damage +7%.\n\n[ACTIVE]\nKilling a poisoned enemy grants 1 Blade Gauge.\n+1 Blade Gauge per second per poisoned enemy (Maximum: +3).\nIf a Boss is poisoned, +3 Blade Gauge per second.\n\nWhen drawing the sword, the number of Poison-tagged skills doubles and all skills are activated, then sheath after 6 seconds.\n\nSkills and sheathing cannot be used while drawing the sword.\nPoison Maximum Stakcs +200.\nAttack Power -70%.\nAdds 'Poison' attribute to Basic Skills.\n\nUpon Shealthing, casts Venom Rupture on poisoned enemies within 10 range.\n\n[VENOM RUPTURE]\nConsumes all poison stacks to trigger a powerful toxic exploision.\nFor each consumed stack, Damage and Size increase by the number of Toxin Synergy tiers.\n(Basic Skill Damage × 10% Poison Stack × Toxin Synergy)"
+        }
+      ]
+    },
+    {
+      "folder": "werewolf",
+      "weapons": [
+        {
+          "WSAP": "40%",
+          "file": "Excessive Bleeding.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "excessive-bleeding",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "In Werewolf form, there is a 15% chance to inflict damage that causes Bleeding for 1 second to the enemy.\nDefeating a Boss increases Damage Count by 1.\n100% chance to inflict Bleed."
+        },
+        {
+          "WSAP": "150%",
+          "file": "Carve Wounds.png",
+          "tags": [
+            "Bleed"
+          ],
+          "price": "3,000",
+          "urlName": "carve-wounds",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "In Werewolf form, there is a 15% chance to apply a wound debuff to the enemy for 5 seconds, dealing damage.\nIncrease Base Damage by 30% when defeating a boss.\nIncrease Weapon Skill Damage by 5% against targets with the wound debuff. (Stackable)",
+          "recommended": 1
+        },
+        {
+          "WSAP": "130%",
+          "file": "Glacial Demon Beast Skadi.png",
+          "tags": [
+            "Frost",
+            "Physical"
+          ],
+          "price": "PASS",
+          "urlName": "glacial-demon-beast-skadi",
+          "cooldown": "5s",
+          "priceType": "PASS",
+          "description": "In Werewolf form, inflict Frost Damage that applies the Freeze status effect to nearby enemies, and gain the [ Blessing of the Glacier ] and [ Absolute Zero ] buffs for 10 seconds.\n\n[ Blessing of the Glacier ]\nMovement Speed and Attack Speed are increased by 10% each, and the maximum stacks for Massacre and Frenzy are inccreased by 10.\n\n[ Absolute Zero ]\nThe Freeze Chance of Basic Skills is increased by 30%, and Frost Damage is applied to Basic Skills. Basic Skill Damage increases by the current Freeze Chance."
+        },
+        {
+          "WSAP": "125%",
+          "file": "Penetrating Claw.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "2,000",
+          "urlName": "penetrating-claw",
+          "cooldown": "2s",
+          "priceType": "Gem",
+          "description": "In Werewolf form, dashes forward to deal damage to enemies in its path. Each time this Weapon Skill damages an enemy, gain a 'Slaughter' stack, and recover 5% of this Weapon Skill's cooldown (Stacks up to 10 times)."
+        }
+      ]
+    },
+    {
+      "folder": "summoner",
+      "weapons": [
+        {
+          "WSAP": "100%",
+          "file": "Contract_ Earth Elemental.png",
+          "tags": [
+            "Summon",
+            "Melee",
+            "Divinity"
+          ],
+          "price": "0",
+          "urlName": "contract-earth-elemental",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Basic Attack Damage: 100%\n\nAfter 3 Basic Atacks, unleash a Strong Attack with +240% dmaage.\nWhen casting a Weapon SKill, fire 1 rock towards the enemy.\nWhile the Summoner is casting a Weapon Skill, continuously fire rocks forward (Cooldown: 0.2s)."
+        },
+        {
+          "WSAP": "100%",
+          "file": "Contract_ Magic Rabbit.png",
+          "tags": [
+            "Summon",
+            "Darkness"
+          ],
+          "price": "3,000",
+          "urlName": "contract-magic-rabbit",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Basic Attack Damage: 100%\n\nEnemies hit by the Magic Rabbit's Basic Attack have 1 card attached (Cooldown: 1s).\nIf an enemy with a card attached takes damage from Contract Summons or Summon Damage from Contract Summons or Summon-tagged skills, consume 1 card to deal an additional 10% damage.\nWhen all attached cards are consumed, they explode and deal 275% Skill Damage.\n\nWhen casting a Weapon Skill, attach 5 cards to nearby enemies.\nWhile the Summoner is casting a Weapon Skill, fire cards forward (Cooldown: 0.1s).",
+          "recommended": 1
+        },
+        {
+          "WSAP": "100%",
+          "file": "Contract_ Lost Red Spirit.png",
+          "tags": [
+            "Summon",
+            "Flame"
+          ],
+          "price": "3,000",
+          "urlName": "contract-lost-red-spirit",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Basic Attack Damage: 350%\n\nWhen casting a Weapon Skill, fires a Fireball at a nearby enemy.\nAfter casting a Weapon Skill 3 times, summon 5 Little Red Spirits that track and attack enemies.\nLittle Red Spirits deal 350% damage and then disappear.\n\nWhile the Summoner is casting a Weapon Skill, fires Fireballs forward (Cooldown: 0.1s).",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "assassin",
+      "weapons": [
+        {
+          "WSAP": "30%",
+          "file": "Dagger.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "dagger",
+          "cooldown": "3s",
+          "priceType": "Gem",
+          "description": "Basic: Throws 3 daggers that detect enemies within a 60-degree arc in front and carve a mark on them. If no enemies are present, throws them in a fan shape.\n\nEnhanced: Throws 3 daggers that carve a mark on the 3 nearest enemies and immediately charges all dash counts."
+        },
+        {
+          "WSAP": "225%",
+          "file": "Symbol of the Bloodline.png",
+          "tags": [
+            "Bleed"
+          ],
+          "price": "3,000",
+          "urlName": "symbol-of-the-bloodline",
+          "cooldown": "6s",
+          "priceType": "Gem",
+          "description": "Basic: Casts Unleash Blood, creating an Assassin's Mark with 2 durability on all hit enemies.\n\nEnhanced: Casts Unleash Blood, creating an Assassin's Mark with 2 durability on all hit enemies.\nAwakens the power of blood to amplify damage dealt by 3% for 3 seconds, (Max 5 stacks, duration resets upon activation)\nAdditionally, restores weapon skill cooldown by 0.2 seconds per current stack and immediately charges all dash counts.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "guardian",
+      "weapons": [
+        {
+          "WSAP": "30%",
+          "file": "Iron Spear.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "iron-spear",
+          "cooldown": "10s",
+          "priceType": "Gem",
+          "description": "Thrusts countless spears forward, dealing 30% damage per hit. Damage increases by 1% for every 10% Attack Speed.\nAfter using a Weapon Skill, the first attack performs a massive thrust in three directions, dealing 70% damage per hit."
+        },
+        {
+          "WSAP": "30%",
+          "file": "Monster Hunter.png",
+          "tags": [
+            "Frost",
+            "Physical"
+          ],
+          "price": "3,000",
+          "urlName": "monster-hunter",
+          "cooldown": "10s",
+          "priceType": "Gem",
+          "description": "Thrusts countless spears forward, dealing 30% damage per hit.\nDamage increases by 1% for every 10% Attack Speed.\nAfter using a Weapon Skill, the first attack pulls in all nearby enemies and deals damage with 2x damage applied."
+        },
+        {
+          "WSAP": "350%",
+          "file": "Immortality.png",
+          "tags": [
+            "Flame"
+          ],
+          "price": "3,000",
+          "urlName": "immortality",
+          "cooldown": "10s",
+          "priceType": "Gem",
+          "description": "Thrusts countless spears forward to deal Fire Damage, then is slightly pushed back by the recoil.\nAfter using a Weapon Skill, the first attack applies +30% Explosion Size, +50% Knockback Distance, and 2x Damage."
+        },
+        {
+          "WSAP": "200%",
+          "file": "Mistilteinn.png",
+          "tags": [
+            "Poison",
+            "Poison"
+          ],
+          "price": "2,000",
+          "urlName": "mistilteinn",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Deals Poison damage when attacking while in a Barrier state.\n\nThe first attack after using the Weapon Skill deals 300% damage and plants a 'Seed' in the target.\n\nWhen a target with a 'Seed' is hit 10 times, the Seed explodes, applying the following effects:\n1. Applies Poison stacks proportional to the current Poison Synergy level.\n2. Activates one equipped Poison Skill.\n3. Increases Poison Acceleration by 100 for 1 second after Seed explosion (Stackable).\n\n'Seeds' can stack up to 10 times on a target."
+        },
+        {
+          "WSAP": "180%",
+          "file": "Blood Halberd.png",
+          "tags": [
+            "Bleed",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "blood-halberd",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Deals Bleed Damage when attacking while in a Barrier state.\n\nWhen attacking in Barrier state or using Spin Attack, generates 3 independent hitboxes (Shaft/Axe Blade/Spear Tip) based on distance. Enemies in overlapping areas take stacked damage from all sources.\n\nInner zone deals 30% ddamage; Middle zone deals 90% damage and applies 2 Bleed stacks; Outer zone deals 60% damage and applies 1 Bleed stack.\n\nThe first attack after using the Weapon Skill slams the halberd down to deal Critical Damage."
+        },
+        {
+          "WSAP": "500%",
+          "file": "Golden Cudgel.png",
+          "tags": [
+            "Divinity",
+            "Melee"
+          ],
+          "price": "2,000",
+          "urlName": "golden-cudgel",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "While in Barrier state, spin your weapon to deal 200% damage to nearby enemies every 0.25 seconds. Hit enemies have a 15% chance to be inflicted with Stun.\n\nAttack range and damage gradually increase based on spinning duration (+50% every 0.25 seconds, up to 3 seconds).\n\nWhile attacking in Barrier state, slam your weapon down to deal Critical Damage. This attack immediately cancels Barrier and counts as the first attack.\n\nSlam Damage scales with spinning duration, increasing from a base 100% up to 1000% (Maximum: 3 seconds).\n\nDeals +100% damage to enemies that are Stunned or immune to being hit.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "predator",
+      "weapons": [
+        {
+          "WSAP": "30%",
+          "file": "Iron Spear.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "iron-spear",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Throws a spear that deals damage 3 times to the enemy with the lowest health nearby.\nIf the key is held down after throwing the spear, it will execute the enemy hit by the spear."
+        },
+        {
+          "WSAP": "250%",
+          "file": "Monster Hunter.png",
+          "tags": [
+            "Physical",
+            "Frost"
+          ],
+          "price": "3,000",
+          "urlName": "monster-hunter",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Throws a harpoon that deals damage to the enemy with the lowest health nearby.\nIf the key is held down after throwing the harpoon, it will execute the enemy hit by the harpoon, pulling in all nearby enemies.\nDuring Spinning Attack, pulls in all enemies hit."
+        },
+        {
+          "WSAP": "250%",
+          "file": "Immortality.png",
+          "tags": [
+            "Flame"
+          ],
+          "price": "3,000",
+          "urlName": "immortality",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Throws a lance that deals explosive damage to the enemy with the lowest health.\n If you hold down the key after throwing, it executes the enemy hit by the lance.\nFires a shot that deals explosive damage to enemies hit by the spinning attack."
+        },
+        {
+          "WSAP": "150%",
+          "file": "Mistilteinn.png",
+          "tags": [
+            "Poison",
+            "Poison"
+          ],
+          "price": "2,000",
+          "urlName": "mistilteinn",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Execution range increases by 25%, and plants a 'Seed' on enemies hit by Execution. Instead of a Spin Attack, casts Execution immediately when Stealth ends.\n\nOn Weapon Skill use, throws Mistilteinn at the enemy with the lowest HP, applying 1 Poison stack. If the Execution Gauge is available, casts Execution immediately.\n\nIf the thrown spear hits an enemy with a 'Seed', it detonates all Seeds to apply the following effects:\n1. Applies Poison stacks proportional to the current Poison Synergy level.\n2. Activates one equipped Poison Skill.\n3. Triggers 'Poison Explosion' and recovers 50 Execution Gauge upon Seed detonation.\n\n'Seeds' can stack up to 10 times on a target.\n\nPoison Explosion consumes 10% of the target's Poison stacks to deal heavy damage.\nPoison Explosion damage is affected by Poison duration, Poison synergy tier, number of stacks consumed, and currect Poison damage multiplier."
+        },
+        {
+          "WSAP": "180%",
+          "file": "Blood Halberd.png",
+          "tags": [
+            "Bleed",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "blood-halberd",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Throws a halberd that deals Bleed Daamge to the enemy with the lowest HP. Applies 7 Bleed stacks to the hit target and immediately casts Execution if this Execution Gauge is available.\n\nOn Execution or Spin Attack, generates 3 independent hitboxes (Shaft/Axe Blade/Spear Tip) based on distance. Enemies in overlapping areas take stacked damage from all sources.\n\nInner zone deals 30% ddamage; Middle zone deals 90% damage and applies 2 Bleed stacks; Outer zone deals 60% damage and applies 1 Bleed stack.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "125%",
+          "file": "Golden Cudgel.png",
+          "tags": [
+            "Divinity",
+            "Melee"
+          ],
+          "price": "2,000",
+          "urlName": "golden-cudgel",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Hitting enemies with a Spinning Attack grants the [ Taoist Immortal ] buff (Cooldown: 3 seconds).\nThe [ Taoist Immortal ] buff stacks up to 5 times, lasts for 3 seconds, and its duration is refreshed upon gaining a stack.\n\n[ Taoist Immortal ] Buff Effects (per stack):\n- Spinning Attack Damage +10%\n- Spinning Attack Range +10%\n- Spinning Attack Multi-Hit Interval -10%\n- Spinning Attack Stun Chance +3%\n- Movement Speed +1%\n\nWhen executing, Critical Damage is applied to targets with Stun or Hit Immunity.\n(Cooldown: 1s - Taoist Immortal stacks X 0.1s)\nThe base damage of Spinning Attack is increased by 5X, while the base damage of Execution is reduced by half.\n\nThrows a Golden Cudgel that deals Stun damage to the enemy with the lowest HP.\nIf the projectile hits and the Execution gauge is available, Execution is triggered immediately.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "shaman",
+      "weapons": [
+        {
+          "WSAP": "70%",
+          "file": "Annihilation.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "annihilation",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "Rotate for 1 second and fire talismans at nearby enemies.\nFire 10 talismans per second, distributing them among multiple enemies within range.\nTalisman applies 1 stack of Sorcery on attack."
+        },
+        {
+          "WSAP": "50%",
+          "file": "Peekaboo.png",
+          "tags": [
+            "Curse",
+            "Darkness"
+          ],
+          "price": "3,000",
+          "urlName": "peekaboo",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Fire bullets forward to create multiple graffitis, applying 3 Sorcery stacks to enemies within range, dealing damage every 0.2 seconds.\nCooldown time: 4 seconds",
+          "recommended": 1
+        },
+        {
+          "WSAP": "100%",
+          "file": "Prayer Beads.png",
+          "tags": [
+            "Lightning"
+          ],
+          "price": "2,000",
+          "urlName": "prayer-beads",
+          "cooldown": "6.5s",
+          "priceType": "Gem",
+          "description": "[WEAPON SKILL]\nYou can levitate while firing Radiant Energy.\nRadiant Energy penetrates enemies and applies 1 stack of Sorcery Mark to them.\nWhen Radiant Energy triggers Sorcery, the Weapon Skill Cooldown is reduced by 1%.\nFires 24 orbs of Radiant Energy forward over 2 seconds.\nIf used during Necromancy state, consumes 3 Enhanchanted Talismans.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "500%",
+          "file": "Colossus.png",
+          "tags": [
+            "Projectile",
+            "Physical"
+          ],
+          "price": "2,000",
+          "urlName": "colossus",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "You are not knocked back while using Enhancement Talisman, but your dash distance is reduced by 50%.\nConsumes 2 charges at once to fire a single, amplified Enhancement Talisman.\nSize of Enhancement Talisman +10% per additional Enhancement Talisman consumed The \"Basic Skill Damage Increase\" effect is applied to Enhancement Talisman at 150% effectiveness.\nWhen an Enhancement Talisman triggers a Sorcery Mark, the weapon skill's cooldown is reduced by 5%.\nAttack speed with Enhancement Talisman is reduced by 5%.\nEnhancement Talisman is affected by Skill Damage Increase effects with the [Projectile], [Dark], and [Physical] tags.\n\nThe weapon skills of the Great Tree are not affected by tag effects that change position, direction, or speed.\nSummons a giant pillar that penetrates and knocks back all enemies in front of you. Enemies hit by the pillar gain 3 stacks of \"Sorcery Mark,\" and you gain an \"Enhancement Talisman\" each time the pillar penetrates an enemy. (Max 7 Talismans)"
+        }
+      ]
+    },
+    {
+      "folder": "dragonian",
+      "weapons": [
+        {
+          "WSAP": "240%",
+          "file": "Dragon Fang.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "dragon-fang",
+          "cooldown": "7s",
+          "priceType": "Gem",
+          "description": "Thrusts diagonally.\nWhen Skill Button is held, thrusts in an X-shaped pattern."
+        },
+        {
+          "WSAP": "195%",
+          "file": "Zognote's Sacred Blade.png",
+          "tags": [
+            "Divinity"
+          ],
+          "price": "3,000",
+          "urlName": "zognotes-sacred-blade",
+          "cooldown": "4s",
+          "priceType": "Gem",
+          "description": "Executes a spinning upwards slash.\nWhen Skill Button is held, performs consecutive spinning slashes.",
+          "recommended": 1
+        },
+        {
+          "WSAP": "600%",
+          "file": "Inferno Resonator.png",
+          "tags": [
+            "Flame"
+          ],
+          "price": "PASS",
+          "urlName": "inferno-resonator",
+          "cooldown": "1s",
+          "priceType": "PASS",
+          "description": "[PASSIVE]\nMax Mana is fixed at 30. Normal Dragon Communion can no longer be acquired and is replaced by Hellfire Dragon Communion.\nRecover 1 Mana every 3 seconds, plus 0.1 Mana per second for each +1 Max Heart.\nWhen Mana reaches 30, immediately consume all Mana to gain 1 Hellfire Dragon Communion.\nScorch is altered to deal 150% damage once. While transformed by Dragon's Power, Basic Attacks simultaneously fire a fan of Flame Orbs equal to the number of Hellfire Dragon Communion stacks held.\n\n[ACTIVE]\nConsume 1 Hellfire Dragon Communion to launch a massive sword beam forward. The sword beam pierces enemies and deals continuous multi-hit damage along its path.\n\n[HELLFIRE DRAGON COMMUNION]\nA weapon-exclusive stack that replaces normal Dragon Communion. It cannot be gained beyond its maximum and is not consumed in place of Hearts when taking damage.\nEach stack held increases Flame Orb damage by 10%."
+        }
+      ]
+    },
+    {
+      "folder": "souleater",
+      "weapons": [
+        {
+          "WSAP": "240%",
+          "file": "Soul Eater.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "soul-eater",
+          "cooldown": "10s",
+          "priceType": "Gem",
+          "description": "Strikes down with the scythe, dealing damage.\nConsumes 1 Soul to ignore cooldown and cast instantly."
+        },
+        {
+          "WSAP": "120%",
+          "file": "Occult Mania.png",
+          "tags": [
+            "Darkness"
+          ],
+          "price": "3,000",
+          "urlName": "occult-mania",
+          "cooldown": "7s",
+          "priceType": "Gem",
+          "description": "Creates an area that continuously emits occult energy by slashing space.\nConsumes 1 Soul to ignore cooldown and use the skill.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "vampire",
+      "weapons": [
+        {
+          "WSAP": "60%",
+          "file": "Blood Might.png",
+          "tags": [
+            "Bleed",
+            "Spell",
+            "Magic"
+          ],
+          "price": "0",
+          "urlName": "blood-might",
+          "cooldown": "5s",
+          "priceType": "Gem",
+          "description": "A blood spear rises from the ground to attack.\nEnemies hit by the blood spear have their Bleed Resistance reduced by 1% for 1 second (stacks).\n\nMinimum Vampiric Gauge to cast: 30.\nConsumes 6 Vampiric Gauge per cast (Maximum: 400)."
+        },
+        {
+          "WSAP": "120%",
+          "file": "Longinus.png",
+          "tags": [
+            "Bleed",
+            "Melee",
+            "Physical"
+          ],
+          "price": "3,000",
+          "urlName": "longinus",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Deals area damage to nearby enemies while charging.\nWhen charging is complete, summons Longinus' Spear in front, dealing heavy damage.\nLonginus' Spear final damage is amplified by 1% per Bleed Stack on the hit target.\n\n+1% Longinus' Spear Size per 10 consumed Vampiric Gauge (Maximum: +400%).\n+100% Longinus' Spear Damage per 10 consumed Vampiric Gauge.\n\nMinimum Vampiric Gauge to charge: 50.\nConsumes 50 Vampiric Gauge per charge (Maximum: 1000).\nRecovers half a heart per 1000 Vampiric Gauge consumed during charging.\n\nSuper Armor is applied while charging during Blood Awakening (Passive).",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "bjorn",
+      "weapons": [
+        {
+          "WSAP": "800%",
+          "file": "Shield.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "shield",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "Charges forward a long distance to inflict damage.\nHit enemies are knocked back and stunned for 2 seconds."
+        },
+        {
+          "WSAP": "500%",
+          "file": "Corpse Golem's Essence.png",
+          "tags": [
+            "Poison",
+            "Spell",
+            "Magic"
+          ],
+          "price": "50,000",
+          "urlName": "corpse-golems-essence",
+          "cooldown": "0.5s",
+          "priceType": "Riftstone",
+          "description": "Upon use, cause a [ Flesh Explosion ] in the vicinity equal to your maximum hearts when hit.\n(This is affected by damage nullification effects)\n\n[ Flesh Explosion ]\nCreates a Flesh Explosion around the character.\nThe Flesh Explosion inflicts 160% Poison attribute damage upon hitting an enemy.\nThe number of Flesh Explosions triggered is equal to half of your Max HP (rounded down for odd numbers).",
+          "recommended": 1
+        },
+        {
+          "WSAP": "100%",
+          "file": "Orc Hero's Essence.png",
+          "tags": [],
+          "price": "50,000",
+          "urlName": "orc-heros-essence",
+          "cooldown": "20s",
+          "priceType": "Riftstone",
+          "description": "Yandel roars, removing all status effects and gaining a Gigantification Buff for 15 seconds.\n\nWhile the Gigantification Buff is active, the following effects are applied:\nCharacter Size +12%\nMovement Speed +10%\nAttack Power +2% per 1% of Character Size (Maximum: +50%)\nInflicts continuous damage to nearby enemies every 0.25 seconds."
+        },
+        {
+          "WSAP": "1500%",
+          "file": "Ogre's Essence.png",
+          "tags": [
+            "Darkness",
+            "Melee",
+            "Physical"
+          ],
+          "price": "5,000,000",
+          "urlName": "orgres-essence",
+          "cooldown": "5s",
+          "priceType": "Riftstone",
+          "description": "Passive Effect:\nBasic Skill Size +50%\nBasic Skill Damage +5% per 1 Max HP (Maximum: +60%)\n\nActive Effect:\nSwings the weapon in a wide arc to inflict damage.\n(Inflicts critical damage when hitting a single target and refunds 30% of the Weapon Skill Cooldown)"
+        }
+      ]
+    },
+    {
+      "folder": "doppelganger",
+      "weapons": [
+        {
+          "WSAP": "150%",
+          "file": "Black Sword.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "black-sword",
+          "cooldown": "3s",
+          "priceType": "Gem",
+          "description": "On use, activates Shadowless Sword for 5 seconds.\nCan be reused while Shadowless Sword is active to trigger the Active Skill.\n\nWhen reused while Shadowless Sword is active, slashes an enemy, and all Shadows will dash at the first enemy hit.\n\nIf the Shadowless Sword state ends automatically, the Weapon Skill is reused automatically."
+        },
+        {
+          "WSAP": "100%",
+          "file": "Phantom Blade.png",
+          "tags": [
+            "Curse"
+          ],
+          "price": "3,000",
+          "urlName": "phantom-blade",
+          "cooldown": "3s",
+          "priceType": "Gem",
+          "description": "On use, activate Shadowless Sword for 5 seconds.\nCan be reused while Shadowless Sword is active to trigger the Active Skill.\n\nWhile Shadowless Sword is active, each time you hit an enemy with Shadowless Sword, Attack Speed increases by 15% (Maximum: 100%) (Resets when Shadowless Sword ends).\n\nWhen reused while Shadowless Sword is active, slashes an enemy twice, and all Shadows will dash at the first enemy hit. When Shadows dash, they deal damage to the enemy twice.\n\nIf the Shadowless Sword state ends automatically, the Weapon Skill is reused automatically.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "highroller",
+      "weapons": [
+        {
+          "WSAP": "100",
+          "file": "Flush.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "flush",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "Cards randomly take on the attributes of the skills they posses.\n\nHand Effects\nHigh Card: Fires 1 card\nOne Pair: Fires 2 cards, immediately reloads 1 Special Bullet\nTwo Pair: Fires 4 cards, immediately reloads 2 Special Bullets\nStraight: Fires 5 cards, immediately reloads 3 Special Bullets\nFlush: Fires 5 cards, triggers Betting 1 additional time\nStraight Flush: Fires 10 cards, triggers Betting 2 additional times\nRoyal Flush: Fires 30 cards, triggers Betting 3 additional times"
+        },
+        {
+          "WSAP": "225%",
+          "file": "The Pair.png",
+          "tags": [
+            "Targeting"
+          ],
+          "price": "3,000",
+          "urlName": "the-pair",
+          "cooldown": "1s",
+          "priceType": "Gem",
+          "description": "When using Weapon Skill, summon cards to the nearest enemy to deal damage.\nWeapon Skills affected by Tags.\n\nHand Effects\nKkeut: x1 Multipler\n9 Kkeut: x2 Multiplier, triggers Betting 1 additional time\nAlli / Doksa / Gupping / Jangpping / Jangsa / Seryuk: x3 Multiplier, triggers Betting 1 additional time, Luck +10% on next Betting.\nttaeng: x5 Multiplier, triggers Betting 1 additional time, Luck +35% on next Betting.\n10-ttaeng: x5 Multiplier, triggers Betting 1 additional time, Luck +100% on next Betting.\n1-3 / 1-8 Gwang-ttaeng: x10 Multiplier, triggers Betting 1 additional time, Luck +300% on next Betting, Luck increases by 1% permanently.\n3-8 Gwang-ttaeng: x30 Multiplier, triggers Betting 1 additional time, Luck +500% on next Betting, Luck increases by 3% permanently.",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "inquisitor",
+      "weapons": [
+        {
+          "WSAP": "120%",
+          "file": "Hammer of Judgment.png",
+          "tags": [],
+          "price": "0",
+          "urlName": "hammer-of-judgment",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "When Maximus hits with a skill, gains [Judgment buff].\n\n[Judgment Buff]\nIncreases Enhanced Attack damage and range by 10%. (Duration 5s, Max 5 stacks, Refreshable)"
+        },
+        {
+          "WSAP": "150%",
+          "file": "Amadeus.png",
+          "tags": [
+            "Enchant",
+            "Flame",
+            "Bleed"
+          ],
+          "price": "3,000",
+          "urlName": "amadeus",
+          "cooldown": "8s",
+          "priceType": "Gem",
+          "description": "[Base Effect]\nThe dash preparation animation is removed, and input changes to Key-Down format.\nContinuously dashes forward while holding the key, and direction can be changed.\nPerforms additional surrounding fire when casting dash or jump attacks.\n\n[Enhanced Effect]\nWhen casting enhanced dash or jump attacks, the attack interval decreases by 5% for every 10% of bonus Attack Speed, and decreases by 5% for every 5% of bonus Movement Speed.\n\n[Additional Effect]\nEvery time Stigma explodes 5 times, Attack Speed increases by 5% and Movement Speed increases by 1.5%.\n(Duration 5s, Max 10 stacks, Refreshable)",
+          "recommended": 1
+        }
+      ]
+    },
+    {
+      "folder": "berserker",
+      "weapons": [
+        {
+          "WSAP": "400%",
+          "file": "Thundercaller.png",
+          "tags": [
+            "Lightning"
+          ],
+          "price": "0",
+          "urlName": "thundercaller",
+          "cooldown": "9s",
+          "priceType": "Gem",
+          "description": "[PASSIVE]\nWhen the Fighting Spirit Gauge reaches 1,000, an area lightning strike occurs at your current location.\nWhile enhanced, Basic Attack hits deal Chain Lightning damage to up to 3 nearby enemies besides the original target. This damage is affected by the Chain tag.\n\n[ACTIVE]\nThrow an axe forward. The axe becomes fixed in place when it damages a boss or reaches a wall or the end of its range.\nPicking up the axe directly reduces the remaining cooldown by 50%.\n1 second after throwing it, use the Weapon Skill or dash again to leap to the axe's location and deal slam, Stun, and lightning strike damage.\nThe remaining axe is removed when the Weapon Skill cooldown ends or after 3 seconds."
+        },
+        {
+          "WSAP": "500%",
+          "file": "Blue Overdrive.png",
+          "tags": [
+            "Magic",
+            "Divinity"
+          ],
+          "price": "3,000",
+          "urlName": "blue-overdrive",
+          "cooldown": "5s",
+          "priceType": "PASS",
+          "description": "[PASSIVE]\nBasic Attacks become ranged musical-note projectiles that track enemies ahead.\nWhen the Fighting Spirit Gauge reaches 1,000, a shockwave damages nearby enemies, and Basic Attacks are enhanced to fire one central note and two smaller notes.\nAfter hitting an enemy, the central note bounces to nearby enemies 3 times by default and is affected by Chain effects.\n\n[ACTIVE]\nSlam the guitar into the ground, creating an elliptical shockwave that deals Stun damage to nearby enemies.\nIf you have any Note stacks, consume all of them and summon one amp for each stack consumed.\nGain 1 Note stack every 15 seconds and store up to 3 stacks. For every 100 current Fighting Spirit Gauge, the Note stack cooldown is reduced by 1%.\n\n[AMP]\nWhenever the player uses a Basic Skill, each placed amp recasts the same attack. When replicating a Basic Attack, an amp emits a shockwave around itself.\nFor each amp installed, the range of attacks recast by amps is increased by 5%.\nAttacks recast by amps are treated as Weapon Skills, and their size and damage are increased by 25%. They can also trigger the Main Skill.\nUp to 6 amps can be maintained, each lasting 30 seconds.",
+          "recommended": 1
+        }
+      ]
+    }
+  ]
+}
