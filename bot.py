@@ -298,7 +298,6 @@ class ArtifactSelectView(discord.ui.View):
         await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
     async def artifact_tag_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
-        """Dynamically gathers unique tags/tiers from ARTIFACTS_DATA and suggests matches."""
         unique_tags = set()
         for art in ARTIFACTS_DATA:
             if isinstance(art, dict):
@@ -307,7 +306,6 @@ class ArtifactSelectView(discord.ui.View):
                     for t in tags:
                         if t and t != "-":
                             unique_tags.add(str(t))
-                # Include tier if it exists as a separate field
                 tier = art.get("tier")
                 if tier and tier != "-":
                     unique_tags.add(str(tier))
@@ -319,7 +317,6 @@ class ArtifactSelectView(discord.ui.View):
         ]
         return filtered[:25]
 
-
 @app_commands.choices(
     tier=[
         app_commands.Choice(name="Boss", value="boss"),
@@ -330,6 +327,8 @@ class ArtifactSelectView(discord.ui.View):
         app_commands.Choice(name="Superior", value="superior"),
     ]
 )
+
+
 @bot.tree.command(name="artifact", description="Browse all artifacts or filter by keywords and tags")
 @app_commands.describe(
     query="Artifact name or keyword search",
