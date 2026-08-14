@@ -417,4 +417,4 @@ async def weapon(interaction: discord.Interaction):
   await interaction.response.send_message(embed=embed)
 
 
-bot.run("DISCORD_TOKEN")
+bot.run(DISCORD_TOKEN)
