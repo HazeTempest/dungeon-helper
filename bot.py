@@ -271,6 +271,9 @@ async def skill(
         name="Modifications", value=sk.get("modifications"), inline=False
     )
 
+  await interaction.response.send_message(embed=embed)
+
+
 # ==========================================
 # 5. WEAPON COMMAND (Interactive Dropdowns)
 # ==========================================
@@ -412,9 +415,6 @@ async def weapon(interaction: discord.Interaction):
   await interaction.response.send_message(
       "Select a character folder:", view=view
   )
-
-
-  await interaction.response.send_message(embed=embed)
 
 
 bot.run(DISCORD_TOKEN)
