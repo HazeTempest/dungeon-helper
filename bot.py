@@ -21,13 +21,25 @@ def load_json(filename):
       return json.load(f)
   return {}
 
+# Helper function to normalize JSON data into a searchable list
+def extract_list(data):
+  if isinstance(data, dict):
+      # If the API wrapped the list in a "data" key
+      if "data" in data and isinstance(data["data"], list):
+          return data["data"]
+      # If it's just a dictionary of objects, return the values
+      return list(data.values())
+  elif isinstance(data, list):
+      return data
+  return []
+
 
 # Load local JSON datasets
-CHARACTERS_DATA = load_json("ds_wiki_npoint_character.json")
-ARTIFACTS_DATA = load_json("ds_wiki_npoint_artifacts.json")
-COLLECTIONS_DATA = load_json("ds_wiki_npoint_collections.json")
-SKILLS_DATA = load_json("ds_wiki_npoint_skills.json")
-WEAPONS_DATA = load_json("ds_wiki_npoint_weapons.json")
+CHARACTERS_DATA = extract_list(load_json("ds_wiki_npoint_character.json"))
+ARTIFACTS_DATA = extract_list(load_json("ds_wiki_npoint_artifacts.json"))
+COLLECTIONS_DATA = extract_list(load_json("ds_wiki_npoint_collections.json"))
+SKILLS_DATA = extract_list(load_json("ds_wiki_npoint_skills.json"))
+WEAPONS_DATA = extract_list(load_json("ds_wiki_npoint_weapons.json"))
 
 
 @bot.event
@@ -37,7 +49,7 @@ async def on_ready():
 
 
 # ==========================================
-# 1. CHARACTER COMMAND (Single Embed Layout)
+# 1. CHARACTER COMMAND
 # ==========================================
 @bot.tree.command(
     name="character", description="View character notes, stats, and level perks"
@@ -47,10 +59,9 @@ async def character(interaction: discord.Interaction, name: str):
   key = name.lower()
   char_data = None
 
-  # Case-insensitive search through dataset keys or name fields
-  for k, v in CHARACTERS_DATA.items():
-    if k.lower() == key or v.get("name", "").lower() == key:
-      char_data = v
+  for char in CHARACTERS_DATA:
+    if isinstance(char, dict) and char.get("name", "").lower() == key:
+      char_data = char
       break
 
   if not char_data:
@@ -65,13 +76,11 @@ async def character(interaction: discord.Interaction, name: str):
       color=discord.Color.blue(),
   )
 
-  # Format stats field
   stats = char_data.get("stats", {})
   if stats:
     stats_str = "\n".join([f"**{k}:** {v}" for k, v in stats.items()])
     embed.add_field(name="Stats", value=stats_str, inline=False)
 
-  # Format level perks field
   perks = char_data.get("levelperks", char_data.get("perks", {}))
   if perks:
     perks_str = "\n".join([f"**{k}:** {v}" for k, v in perks.items()])
@@ -81,7 +90,7 @@ async def character(interaction: discord.Interaction, name: str):
 
 
 # ==========================================
-# 2. ARTIFACT COMMAND (Searchable & Filterable)
+# 2. ARTIFACT COMMAND
 # ==========================================
 @app_commands.choices(
     tier=[
@@ -109,7 +118,10 @@ async def artifact(
     tag: str = None,
 ):
   results = []
-  for art_id, art in ARTIFACTS_DATA.items():
+  for art in ARTIFACTS_DATA:
+    if not isinstance(art, dict):
+        continue
+        
     match_query = (
         not query
         or query.lower() in art.get("name", "").lower()
@@ -131,7 +143,6 @@ async def artifact(
     )
     return
 
-  # Display the first matching artifact as an embed card
   art = results[0]
   embed = discord.Embed(
       title=f"Artifact: {art.get('name')}",
@@ -167,9 +178,9 @@ async def collection(interaction: discord.Interaction, name: str):
   key = name.lower()
   col_data = None
 
-  for k, v in COLLECTIONS_DATA.items():
-    if k.lower() == key or v.get("name", "").lower() == key:
-      col_data = v
+  for col in COLLECTIONS_DATA:
+    if isinstance(col, dict) and col.get("name", "").lower() == key:
+      col_data = col
       break
 
   if not col_data:
@@ -198,7 +209,7 @@ async def collection(interaction: discord.Interaction, name: str):
 
 
 # ==========================================
-# 4. SKILL COMMAND (Searchable & Filterable)
+# 4. SKILL COMMAND
 # ==========================================
 @app_commands.choices(
     skill_type=[
@@ -226,7 +237,10 @@ async def skill(
     tag: str = None,
 ):
   results = []
-  for sk_id, sk in SKILLS_DATA.items():
+  for sk in SKILLS_DATA:
+    if not isinstance(sk, dict):
+        continue
+        
     match_query = (
         not query
         or query.lower() in sk.get("name", "").lower()
@@ -270,12 +284,12 @@ async def skill(
     embed.add_field(
         name="Modifications", value=sk.get("modifications"), inline=False
     )
-
+    
   await interaction.response.send_message(embed=embed)
 
 
 # ==========================================
-# 5. WEAPON COMMAND (Interactive Dropdowns)
+# 5. WEAPON COMMAND
 # ==========================================
 class WeaponSelectView(discord.ui.View):
 
@@ -289,8 +303,12 @@ class WeaponSelectView(discord.ui.View):
             value=group.get("folder", ""),
         )
         for group in data
-        if "folder" in group
+        if isinstance(group, dict) and "folder" in group
     ][:25]
+    
+    # Failsafe if options are empty to prevent Discord crash
+    if not char_options:
+        char_options = [discord.SelectOption(label="No characters found", value="none")]
 
     self.char_select = discord.ui.Select(
         placeholder="Choose a character...",
@@ -303,9 +321,11 @@ class WeaponSelectView(discord.ui.View):
 
   async def char_callback(self, interaction: discord.Interaction):
     selected_folder = self.char_select.values[0]
+    if selected_folder == "none":
+        return await interaction.response.send_message("❌ No valid characters loaded.", ephemeral=True)
 
     char_data = next(
-        (g for g in self.data if g.get("folder") == selected_folder), None
+        (g for g in self.data if isinstance(g, dict) and g.get("folder") == selected_folder), None
     )
     if not char_data:
       return await interaction.response.send_message(
@@ -324,7 +344,7 @@ class WeaponSelectView(discord.ui.View):
             value=w.get("urlName", w.get("file", "")),
             description=f"WSAP: {w.get('WSAP', 'N/A')} | Cooldown: {w.get('cooldown', 'N/A')}",
         )
-        for w in weapons
+        for w in weapons if isinstance(w, dict)
     ]
 
     weapon_view = discord.ui.View(timeout=180)
@@ -341,7 +361,7 @@ class WeaponSelectView(discord.ui.View):
           (
               w
               for w in weapons
-              if w.get("urlName", w.get("file", "")) == selected_url_name
+              if isinstance(w, dict) and w.get("urlName", w.get("file", "")) == selected_url_name
           ),
           None,
       )
@@ -402,16 +422,12 @@ class WeaponSelectView(discord.ui.View):
     description="Interactive weapon lookup by character and weapon dropdowns",
 )
 async def weapon(interaction: discord.Interaction):
-  data = WEAPONS_DATA
-  if isinstance(data, dict):
-    data = list(data.values())
-
-  if not data:
+  if not WEAPONS_DATA:
     return await interaction.response.send_message(
         "❌ Weapon data not loaded or empty.", ephemeral=True
     )
 
-  view = WeaponSelectView(data)
+  view = WeaponSelectView(WEAPONS_DATA)
   await interaction.response.send_message(
       "Select a character folder:", view=view
   )
