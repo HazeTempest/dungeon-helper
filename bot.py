@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN") 
+
 # Initialize bot with default intents
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
