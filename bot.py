@@ -26,16 +26,27 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Robustly normalizes nested JSON structures into a valid list of dictionary items."""
+    """Robustly normalizes nested JSON structures and injects tier keys from parent categories."""
     cleaned = []
     
-    def parse_recursive(node):
+    def parse_recursive(node, current_tier=None):
         if isinstance(node, list):
             for item in node:
-                parse_recursive(item)
+                parse_recursive(item, current_tier)
         elif isinstance(node, dict):
-            # If this dictionary looks like an item (has file, urlName, or description)
+            # Check if this level represents a tier category (like boss, lesser, greater, etc.)
+            for key, val in node.items():
+                if isinstance(val, (list, dict)) and key.lower() in ["boss", "cursed", "lesser", "greater", "regular", "superior"]:
+                    parse_recursive(val, current_tier=key)
+                elif key == "list" and isinstance(val, list):
+                    parse_recursive(val, current_tier=current_tier)
+            
+            # If this dictionary looks like an item
             if any(k in node for k in ["file", "urlName", "description", "abilities"]):
+                # Assign tier if found from parent structure
+                if current_tier and not node.get("tier"):
+                    node["tier"] = current_tier
+                
                 # Determine a proper name if 'name' is missing
                 if not node.get("name"):
                     if node.get("file"):
@@ -46,9 +57,11 @@ def extract_list(data):
                         node["name"] = "Unknown Item"
                 cleaned.append(node)
             else:
-                # Otherwise, traverse all values in the dictionary deeper
-                for val in node.values():
-                    parse_recursive(val)
+                # Traverse other values if they aren't already handled
+                for k, val in node.items():
+                    if k.lower() not in ["boss", "cursed", "lesser", "greater", "regular", "superior", "list"]:
+                        if isinstance(val, (dict, list)):
+                            parse_recursive(val, current_tier=current_tier)
 
     parse_recursive(data)
     return cleaned
@@ -115,10 +128,10 @@ class ArtifactSelectView(discord.ui.View):
         desc_lines = []
         for art in page_items:
             name = art.get("name", "Unknown Item")
-            tier = str(art.get("tier", "Regular")).capitalize()
+            tier = str(art.get("tier", "Unknown")).capitalize()
             tags = art.get("tags", [])
             tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
-            desc_lines.append(f"**{name}** - Tags: {tags_str}")
+            desc_lines.append(f"**{name}** - Tier: {tier} | Tags: {tags_str}")
 
         embed = discord.Embed(
             title=f"Artifacts Catalog (Page {self.page + 1}/{self.max_page + 1})",
