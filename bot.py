@@ -80,7 +80,7 @@ async def on_ready():
 
 
 # ==========================================
-# 1. ARTIFACT COMMAND & PAGINATED VIEW
+# 1. ARTIFACT COMMAND (MULTI-PAGE LIST)
 # ==========================================
 class ArtifactSelectView(discord.ui.View):
     def __init__(self, artifacts: list, page: int = 0):
@@ -89,6 +89,25 @@ class ArtifactSelectView(discord.ui.View):
         self.page = page
         self.max_page = max(0, (len(artifacts) - 1) // 25)
         self.update_components()
+
+    def get_list_embed(self) -> discord.Embed:
+        start_idx = self.page * 25
+        page_items = self.artifacts[start_idx:start_idx + 25]
+        
+        desc_lines = []
+        for art in page_items:
+            name = art.get("name", "Unknown Artifact")
+            tier = art.get("tier", "Unknown").capitalize()
+            tags = art.get("tags", [])
+            tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
+            desc_lines.append(f"**{name}** - Tier: {tier} | Tags: {tags_str}")
+
+        embed = discord.Embed(
+            title=f"Artifact Search Results (Page {self.page + 1}/{self.max_page + 1})",
+            description="\n".join(desc_lines) if desc_lines else "No artifacts found.",
+            color=discord.Color.gold()
+        )
+        return embed
 
     def update_components(self):
         self.clear_items()
@@ -100,26 +119,39 @@ class ArtifactSelectView(discord.ui.View):
             discord.SelectOption(
                 label=art.get("name", "Unknown Artifact")[:100],
                 value=art.get("name", "Unknown Artifact")[:100],
-                description=f"Tier: {art.get('tier', 'Unknown')}"[:100]
+                description=f"Tier: {art.get('tier', 'Unknown').capitalize()}"[:100]
             )
             for art in page_items if isinstance(art, dict)
         ]
 
         if options:
             select = discord.ui.Select(
-                placeholder=f"Select Artifact (Page {self.page + 1}/{self.max_page + 1})...",
-                options=options
+                placeholder=f"Select Artifact to view details...",
+                options=options,
+                row=0
             )
             select.callback = self.select_callback
             self.add_item(select)
 
+        # Navigation & List Return Buttons
         if self.max_page > 0:
-            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0))
-            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page))
+            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=1)
+            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=1)
             prev_btn.callback = self.prev_callback
             next_btn.callback = self.next_callback
             self.add_item(prev_btn)
+            
+            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
+            list_btn.callback = self.list_callback
+            self.add_item(list_btn)
             self.add_item(next_btn)
+        else:
+            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
+            list_btn.callback = self.list_callback
+            self.add_item(list_btn)
+
+    async def list_callback(self, interaction: discord.Interaction):
+        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
     async def select_callback(self, interaction: discord.Interaction):
         selected_name = interaction.data["values"][0]
@@ -133,7 +165,7 @@ class ArtifactSelectView(discord.ui.View):
             description=art.get("description", "No description available."),
             color=discord.Color.gold(),
         )
-        embed.add_field(name="Tier", value=art.get("tier", "Unknown"), inline=True)
+        embed.add_field(name="Tier", value=art.get("tier", "Unknown").capitalize(), inline=True)
 
         tags = art.get("tags", [])
         tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
@@ -148,22 +180,12 @@ class ArtifactSelectView(discord.ui.View):
     async def prev_callback(self, interaction: discord.Interaction):
         self.page -= 1
         self.update_components()
-        embed = discord.Embed(
-            title="Artifact Search Results",
-            description=f"Found **{len(self.artifacts)}** artifact(s). Select one below:",
-            color=discord.Color.gold()
-        )
-        await interaction.response.edit_message(embed=embed, view=self)
+        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
     async def next_callback(self, interaction: discord.Interaction):
         self.page += 1
         self.update_components()
-        embed = discord.Embed(
-            title="Artifact Search Results",
-            description=f"Found **{len(self.artifacts)}** artifact(s). Select one below:",
-            color=discord.Color.gold()
-        )
-        await interaction.response.edit_message(embed=embed, view=self)
+        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
 
 @app_commands.choices(
@@ -176,7 +198,7 @@ class ArtifactSelectView(discord.ui.View):
         app_commands.Choice(name="Superior", value="superior"),
     ]
 )
-@bot.tree.command(name="artifact", description="Search or filter artifacts with multi-page dropdowns")
+@bot.tree.command(name="artifact", description="Search or filter artifacts by tier and tags")
 @app_commands.describe(
     query="Artifact name or keyword",
     tier="Filter by artifact tier",
@@ -208,16 +230,11 @@ async def artifact(
         return await interaction.response.send_message("No artifacts found matching your criteria.", ephemeral=True)
 
     view = ArtifactSelectView(results)
-    embed = discord.Embed(
-        title="Artifact Search Results",
-        description=f"Found **{len(results)}** artifact(s). Select an artifact from the drop-down below:",
-        color=discord.Color.gold()
-    )
-    await interaction.response.send_message(embed=embed, view=view)
+    await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
 
 # ==========================================
-# 2. COLLECTION COMMAND (CLEAN MARKDOWN)
+# 2. COLLECTION COMMAND
 # ==========================================
 def create_collection_embed(col_data: dict) -> discord.Embed:
     embed = discord.Embed(
@@ -299,8 +316,28 @@ async def collection(interaction: discord.Interaction, name: str = None):
 
 
 # ==========================================
-# 3. CHARACTER COMMAND (PAGINATED DROPDOWN & AUTOCOMPLETE)
+# 3. CHARACTER COMMAND (AUTOFILL FIX & DROPDOWNS)
 # ==========================================
+def create_character_embed(char_data: dict) -> discord.Embed:
+    embed = discord.Embed(
+        title=char_data.get("name", "Character"),
+        color=discord.Color.blue(),
+    )
+    
+    notes = char_data.get("notes")
+    if notes:
+        embed.description = notes
+        
+    stats = char_data.get("stats", {})
+    if stats:
+        embed.add_field(name="Stats", value=format_field_value(stats), inline=False)
+
+    perks = char_data.get("levelperks", char_data.get("perks", {}))
+    if perks:
+        embed.add_field(name="Level Perks", value=format_field_value(perks), inline=False)
+    return embed
+
+
 class CharacterSelectView(discord.ui.View):
     def __init__(self, characters: list, page: int = 0):
         super().__init__(timeout=180)
@@ -352,28 +389,16 @@ class CharacterSelectView(discord.ui.View):
     async def prev_callback(self, interaction: discord.Interaction):
         self.page -= 1
         self.update_components()
-        await interaction.response.edit_message(content="Select a character from the drop-down:", view=self)
+        first_char = self.characters[self.page * 25]
+        embed = create_character_embed(first_char)
+        await interaction.response.edit_message(content=None, embed=embed, view=self)
 
     async def next_callback(self, interaction: discord.Interaction):
         self.page += 1
         self.update_components()
-        await interaction.response.edit_message(content="Select a character from the drop-down:", view=self)
-
-
-def create_character_embed(char_data: dict) -> discord.Embed:
-    embed = discord.Embed(
-        title=char_data.get("name", "Character"),
-        description=char_data.get("notes", "No notes available."),
-        color=discord.Color.blue(),
-    )
-    stats = char_data.get("stats", {})
-    if stats:
-        embed.add_field(name="Stats", value=format_field_value(stats), inline=False)
-
-    perks = char_data.get("levelperks", char_data.get("perks", {}))
-    if perks:
-        embed.add_field(name="Level Perks", value=format_field_value(perks), inline=False)
-    return embed
+        first_char = self.characters[self.page * 25]
+        embed = create_character_embed(first_char)
+        await interaction.response.edit_message(content=None, embed=embed, view=self)
 
 
 async def character_autocomplete(
@@ -396,25 +421,32 @@ async def character_autocomplete(
 @app_commands.autocomplete(name=character_autocomplete)
 async def character(interaction: discord.Interaction, name: str = None):
     if not name:
-        view = CharacterSelectView(CHARACTERS_DATA)
-        return await interaction.response.send_message("Select a character from the drop-down:", view=view)
+        if not CHARACTERS_DATA:
+            return await interaction.response.send_message("❌ No character data available.", ephemeral=True)
+        view = CharacterSelectView(CHARACTERS_DATA, page=0)
+        embed = create_character_embed(CHARACTERS_DATA[0])
+        return await interaction.response.send_message(embed=embed, view=view)
 
     key = name.lower()
-    char_data = next((c for c in CHARACTERS_DATA if isinstance(c, dict) and c.get("name", "").lower() == key), None)
+    char_index = next((i for i, c in enumerate(CHARACTERS_DATA) if isinstance(c, dict) and c.get("name", "").lower() == key), -1)
 
-    if not char_data:
+    if char_index == -1:
         matches = [c for c in CHARACTERS_DATA if isinstance(c, dict) and key in c.get("name", "").lower()]
         if matches:
             view = CharacterSelectView(matches)
-            return await interaction.response.send_message(f"Multiple characters matched '{name}'. Select one:", view=view)
+            embed = create_character_embed(matches[0])
+            return await interaction.response.send_message(f"Multiple characters matched '{name}'. Showing first match:", embed=embed, view=view)
         return await interaction.response.send_message(f"Character '{name}' not found.", ephemeral=True)
 
+    char_data = CHARACTERS_DATA[char_index]
+    page = char_index // 25
+    view = CharacterSelectView(CHARACTERS_DATA, page=page)
     embed = create_character_embed(char_data)
-    await interaction.response.send_message(embed=embed)
+    await interaction.response.send_message(embed=embed, view=view)
 
 
 # ==========================================
-# 4. SKILL COMMAND & FILTERED SELECTION
+# 4. SKILL COMMAND (MULTI-PAGE LIST)
 # ==========================================
 class SkillSelectView(discord.ui.View):
     def __init__(self, skills: list, page: int = 0):
@@ -423,6 +455,25 @@ class SkillSelectView(discord.ui.View):
         self.page = page
         self.max_page = max(0, (len(skills) - 1) // 25)
         self.update_components()
+
+    def get_list_embed(self) -> discord.Embed:
+        start_idx = self.page * 25
+        page_items = self.skills[start_idx:start_idx + 25]
+        
+        desc_lines = []
+        for sk in page_items:
+            name = sk.get("name", "Unknown Skill")
+            stype = sk.get("type", "Skill").capitalize()
+            tags = sk.get("tags", [])
+            tags_str = ", ".join(tags) if isinstance(tags, list) and tags else "None"
+            desc_lines.append(f"**{name}** - Type: {stype} | Tags: {tags_str}")
+
+        embed = discord.Embed(
+            title=f"Skill Search Results (Page {self.page + 1}/{self.max_page + 1})",
+            description="\n".join(desc_lines) if desc_lines else "No skills found.",
+            color=discord.Color.green()
+        )
+        return embed
 
     def update_components(self):
         self.clear_items()
@@ -441,19 +492,31 @@ class SkillSelectView(discord.ui.View):
 
         if options:
             select = discord.ui.Select(
-                placeholder=f"Select Skill (Page {self.page + 1}/{self.max_page + 1})...",
-                options=options
+                placeholder=f"Select Skill to view details...",
+                options=options,
+                row=0
             )
             select.callback = self.select_callback
             self.add_item(select)
 
         if self.max_page > 0:
-            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0))
-            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page))
+            prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=1)
+            next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=1)
             prev_btn.callback = self.prev_callback
             next_btn.callback = self.next_callback
             self.add_item(prev_btn)
+            
+            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
+            list_btn.callback = self.list_callback
+            self.add_item(list_btn)
             self.add_item(next_btn)
+        else:
+            list_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary, row=1)
+            list_btn.callback = self.list_callback
+            self.add_item(list_btn)
+
+    async def list_callback(self, interaction: discord.Interaction):
+        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
     async def select_callback(self, interaction: discord.Interaction):
         selected_name = interaction.data["values"][0]
@@ -484,22 +547,12 @@ class SkillSelectView(discord.ui.View):
     async def prev_callback(self, interaction: discord.Interaction):
         self.page -= 1
         self.update_components()
-        embed = discord.Embed(
-            title="Skill Search Results",
-            description=f"Found **{len(self.skills)}** matching skill(s). Select one below:",
-            color=discord.Color.green()
-        )
-        await interaction.response.edit_message(embed=embed, view=self)
+        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
     async def next_callback(self, interaction: discord.Interaction):
         self.page += 1
         self.update_components()
-        embed = discord.Embed(
-            title="Skill Search Results",
-            description=f"Found **{len(self.skills)}** matching skill(s). Select one below:",
-            color=discord.Color.green()
-        )
-        await interaction.response.edit_message(embed=embed, view=self)
+        await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
 
 @app_commands.choices(
@@ -547,16 +600,11 @@ async def skill(
         return await interaction.response.send_message("No skills found matching your criteria.", ephemeral=True)
 
     view = SkillSelectView(results)
-    embed = discord.Embed(
-        title="Skill Search Results",
-        description=f"Found **{len(results)}** matching skill(s). Select a skill from the drop-down below:",
-        color=discord.Color.green()
-    )
-    await interaction.response.send_message(embed=embed, view=view)
+    await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
 
 # ==========================================
-# 5. WEAPON COMMAND (AUTOCOMPLETE & DROPDOWNS)
+# 5. WEAPON COMMAND
 # ==========================================
 class WeaponDropdownView(discord.ui.View):
     def __init__(self, char_folder: str, weapons: list):
@@ -568,7 +616,7 @@ class WeaponDropdownView(discord.ui.View):
             discord.SelectOption(
                 label=w.get("file", "").replace(".png", "")[:100],
                 value=w.get("urlName", w.get("file", ""))[:100],
-                description=f"WSAP: {w.get('WSAP', 'N/A')} | Cooldown: {w.get('cooldown', 'N/A')}"[:100],
+                description=f"WSAP: {w.get('WSAP', 'N/A')} | CD: {w.get('cooldown', 'N/A')}"[:100],
             )
             for w in weapons[:25] if isinstance(w, dict)
         ]
