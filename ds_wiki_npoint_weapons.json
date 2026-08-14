@@ -16,9 +16,7 @@
         {
           "WSAP": "140%",
           "file": "Axion.png",
-          "tags": [
-            "Lightning"
-          ],
+          "tags": ["Lightning"],
           "price": "2,000",
           "urlName": "axion",
           "cooldown": "5s",
@@ -28,9 +26,7 @@
         {
           "WSAP": "400%",
           "file": "Slaine.png",
-          "tags": [
-            "Poison"
-          ],
+          "tags": ["Poison"],
           "price": "2,000",
           "urlName": "slaine",
           "cooldown": "3s",
@@ -40,9 +36,7 @@
         {
           "WSAP": "100%",
           "file": "Oberon.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "2,000",
           "urlName": "oberon",
           "cooldown": "1s",
@@ -53,9 +47,7 @@
         {
           "WSAP": "150%",
           "file": "Tarventus.png",
-          "tags": [
-            "Bleed"
-          ],
+          "tags": ["Bleed"],
           "price": "2,000",
           "urlName": "tarventus",
           "cooldown": "1.5s",
@@ -65,10 +57,7 @@
         {
           "WSAP": "80%",
           "file": "Ignis.png",
-          "tags": [
-            "Melee",
-            "Flame"
-          ],
+          "tags": ["Melee", "Flame"],
           "price": "2,000",
           "urlName": "ignis",
           "cooldown": "5s",
@@ -78,11 +67,7 @@
         {
           "WSAP": "50%",
           "file": "Impulse Blade.png",
-          "tags": [
-            "Lightning",
-            "Physical",
-            "Melee"
-          ],
+          "tags": ["Lightning", "Physical", "Melee"],
           "price": "3,000",
           "urlName": "impulse-blade",
           "cooldown": "2s",
@@ -98,9 +83,7 @@
         {
           "WSAP": "250%",
           "file": "Wrist Guard.png",
-          "tags": [
-            "-"
-          ],
+          "tags": ["-"],
           "price": "0",
           "urlName": "wrist-guard",
           "cooldown": "3.5s",
@@ -110,10 +93,7 @@
         {
           "WSAP": "500%",
           "file": "Yagrush.png",
-          "tags": [
-            "Darkness",
-            "Physical"
-          ],
+          "tags": ["Darkness", "Physical"],
           "price": "2,000",
           "urlName": "yagrush",
           "cooldown": "4s",
@@ -123,10 +103,7 @@
         {
           "WSAP": "120%",
           "file": "Taotie.png",
-          "tags": [
-            "Lightning",
-            "Magic"
-          ],
+          "tags": ["Lightning", "Magic"],
           "price": "2,000",
           "urlName": "taotie",
           "cooldown": "1s",
@@ -136,10 +113,7 @@
         {
           "WSAP": "200%",
           "file": "Ayamur.png",
-          "tags": [
-            "Lightning",
-            "Physical"
-          ],
+          "tags": ["Lightning", "Physical"],
           "price": "2,000",
           "urlName": "ayamur",
           "cooldown": "5s",
@@ -149,10 +123,7 @@
         {
           "WSAP": "500%",
           "file": "Draupnir.png",
-          "tags": [
-            "Darkness",
-            "Physical"
-          ],
+          "tags": ["Darkness", "Physical"],
           "price": "2,000",
           "urlName": "draupnir",
           "cooldown": "4s",
@@ -162,10 +133,7 @@
         {
           "WSAP": "120%",
           "file": "Prelude of the Wind.png",
-          "tags": [
-            "Lightning",
-            "Physical"
-          ],
+          "tags": ["Lightning", "Physical"],
           "price": "3,000",
           "urlName": "prelude-of-the-wind",
           "cooldown": "4s",
@@ -181,9 +149,7 @@
         {
           "WSAP": "70%",
           "file": "Blood Scythe.png",
-          "tags": [
-            "-"
-          ],
+          "tags": ["-"],
           "price": "0",
           "urlName": "blood-scythe",
           "cooldown": "6s",
@@ -193,9 +159,7 @@
         {
           "WSAP": "100%",
           "file": "Soul Harvester.png",
-          "tags": [
-            "Poison"
-          ],
+          "tags": ["Poison"],
           "price": "2,000",
           "urlName": "soul-harvester",
           "cooldown": "2s",
@@ -205,9 +169,7 @@
         {
           "WSAP": "1000%",
           "file": "Depth Charge.png",
-          "tags": [
-            "Frost"
-          ],
+          "tags": ["Frost"],
           "price": "2,000",
           "urlName": "depth-charge",
           "cooldown": "10s",
@@ -217,9 +179,7 @@
         {
           "WSAP": "55%",
           "file": "Meat Grinder.png",
-          "tags": [
-            "Bleed"
-          ],
+          "tags": ["Bleed"],
           "price": "2,000",
           "urlName": "meat-grinder",
           "cooldown": "1s",
@@ -230,10 +190,7 @@
         {
           "WSAP": "200%",
           "file": "Vulcanus.png",
-          "tags": [
-            "Flame",
-            "Physical"
-          ],
+          "tags": ["Flame", "Physical"],
           "price": "2,000",
           "urlName": "vulcanus",
           "cooldown": "7s",
@@ -243,9 +200,7 @@
         {
           "WSAP": "125%",
           "file": "Diablo.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "2,000",
           "urlName": "diablo",
           "cooldown": "6s",
@@ -281,9 +236,7 @@
         {
           "WSAP": "40%",
           "file": "Sentry Gun-Flames.png",
-          "tags": [
-            "Flame"
-          ],
+          "tags": ["Flame"],
           "price": "2,000",
           "urlName": "sentry-gun-flames",
           "cooldown": "4s",
@@ -304,9 +257,7 @@
         {
           "WSAP": "350%",
           "file": "Golden Gun.png",
-          "tags": [
-            "Divinity"
-          ],
+          "tags": ["Divinity"],
           "price": "3,000",
           "urlName": "golden-gun",
           "cooldown": "10s",
@@ -321,11 +272,7 @@
         {
           "WSAP": "85%",
           "file": "Blazing Spellbook.png",
-          "tags": [
-            "Magic",
-            "Targeting",
-            "Flame"
-          ],
+          "tags": ["Magic", "Targeting", "Flame"],
           "price": "0",
           "urlName": "blazing-spellbook",
           "cooldown": "0s",
@@ -336,11 +283,7 @@
         {
           "WSAP": "140%",
           "file": "Frozen Spellbook.png",
-          "tags": [
-            "Magic",
-            "Projectile",
-            "Frost"
-          ],
+          "tags": ["Magic", "Projectile", "Frost"],
           "price": "2,000",
           "urlName": "frozen-spellbook",
           "cooldown": "0s",
@@ -350,11 +293,7 @@
         {
           "WSAP": "105%",
           "file": "Flash Spellbook.png",
-          "tags": [
-            "Magic",
-            "Chain",
-            "Lightning"
-          ],
+          "tags": ["Magic", "Chain", "Lightning"],
           "price": "2,000",
           "urlName": "flash-spellbook",
           "cooldown": "0s",
@@ -364,11 +303,7 @@
         {
           "WSAP": "185%",
           "file": "Sphere of Blood.png",
-          "tags": [
-            "Magic",
-            "Spell",
-            "Bleed"
-          ],
+          "tags": ["Magic", "Spell", "Bleed"],
           "price": "3,000",
           "urlName": "sphere-of-blood",
           "cooldown": "0s",
@@ -378,11 +313,7 @@
         {
           "WSAP": "110%",
           "file": "Gem of Darkness.png",
-          "tags": [
-            "Magic",
-            "Targeting",
-            "Darkness"
-          ],
+          "tags": ["Magic", "Targeting", "Darkness"],
           "price": "3,000",
           "urlName": "gem-of-darkness",
           "cooldown": "0s",
@@ -392,11 +323,7 @@
         {
           "WSAP": "80%",
           "file": "Song of the Sun.png",
-          "tags": [
-            "Magic",
-            "Projectile",
-            "Divinity"
-          ],
+          "tags": ["Magic", "Projectile", "Divinity"],
           "price": "3,000",
           "urlName": "song-of-the-sun",
           "cooldown": "0s",
@@ -421,9 +348,7 @@
         {
           "WSAP": "600%",
           "file": "Lava Sword Kyle.png",
-          "tags": [
-            "Flame"
-          ],
+          "tags": ["Flame"],
           "price": "2,000",
           "urlName": "lava-sword-kyle",
           "cooldown": "5s",
@@ -433,9 +358,7 @@
         {
           "WSAP": "550%",
           "file": "Chain Sword Chaptal.png",
-          "tags": [
-            "Divinity"
-          ],
+          "tags": ["Divinity"],
           "price": "2,000",
           "urlName": "chain-sword-chaptal",
           "cooldown": "5s",
@@ -445,9 +368,7 @@
         {
           "WSAP": "200%",
           "file": "Demon Sword Aran.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "3,000",
           "urlName": "demon-sword-aran",
           "cooldown": "6s",
@@ -458,9 +379,7 @@
         {
           "WSAP": "600%",
           "file": "Executioner's Ashen Cleaver.png",
-          "tags": [
-            "Bleed"
-          ],
+          "tags": ["Bleed"],
           "price": "3,000",
           "urlName": "executioners-ashen-cleaver",
           "cooldown": "8s",
@@ -470,9 +389,7 @@
         {
           "WSAP": "600%",
           "file": "Poison Wine Cask Bacchus.png",
-          "tags": [
-            "Poison"
-          ],
+          "tags": ["Poison"],
           "price": "0",
           "urlName": "poison-wine-cask-bacchus",
           "cooldown": "7s",
@@ -487,9 +404,7 @@
         {
           "WSAP": "50%",
           "file": "Multy Shot.png",
-          "tags": [
-            "Projectile"
-          ],
+          "tags": ["Projectile"],
           "price": "0",
           "urlName": "multy-shot",
           "cooldown": "5s",
@@ -499,9 +414,7 @@
         {
           "WSAP": "250%",
           "file": "Chaser.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "2,000",
           "urlName": "chaser",
           "cooldown": "5s",
@@ -511,9 +424,7 @@
         {
           "WSAP": "50%",
           "file": "Blast.png",
-          "tags": [
-            "Lightning"
-          ],
+          "tags": ["Lightning"],
           "price": "2,000",
           "urlName": "blast",
           "cooldown": "4s",
@@ -523,9 +434,7 @@
         {
           "WSAP": "60%",
           "file": "Holy Light.png",
-          "tags": [
-            "Holy"
-          ],
+          "tags": ["Holy"],
           "price": "2,000",
           "urlName": "holy-light",
           "cooldown": "5s",
@@ -535,9 +444,7 @@
         {
           "WSAP": "300%",
           "file": "Demon Hands.png",
-          "tags": [
-            "Flame"
-          ],
+          "tags": ["Flame"],
           "price": "2,000",
           "urlName": "demon-hands",
           "cooldown": "5s",
@@ -548,9 +455,7 @@
         {
           "WSAP": "150%",
           "file": "Frost Queen.png",
-          "tags": [
-            "Frost"
-          ],
+          "tags": ["Frost"],
           "price": "3,000",
           "urlName": "frost-queen",
           "cooldown": "5s",
@@ -560,9 +465,7 @@
         {
           "WSAP": "50%",
           "file": "Thorned Vines of Obsidian.png",
-          "tags": [
-            "Poison"
-          ],
+          "tags": ["Poison"],
           "price": "3,000",
           "urlName": "thorned-vines-of-obsidian",
           "cooldown": "5s",
@@ -587,9 +490,7 @@
         {
           "WSAP": "100%",
           "file": "Blood Katana.png",
-          "tags": [
-            "Bleed"
-          ],
+          "tags": ["Bleed"],
           "price": "0",
           "urlName": "blood-katana",
           "cooldown": "5s",
@@ -600,9 +501,7 @@
         {
           "WSAP": "100%",
           "file": "Evil Katana.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "3,000",
           "urlName": "evil-katana",
           "cooldown": "5s",
@@ -612,9 +511,7 @@
         {
           "WSAP": "100%",
           "file": "Resonance Blade.png",
-          "tags": [
-            "Lightning"
-          ],
+          "tags": ["Lightning"],
           "price": "2,000",
           "urlName": "resonance-blade",
           "cooldown": "5s",
@@ -624,9 +521,7 @@
         {
           "WSAP": "100%",
           "file": "Venomfang.png",
-          "tags": [
-            "Toxin"
-          ],
+          "tags": ["Toxin"],
           "price": "2,000",
           "urlName": "venomfang",
           "cooldown": "5s",
@@ -651,9 +546,7 @@
         {
           "WSAP": "150%",
           "file": "Carve Wounds.png",
-          "tags": [
-            "Bleed"
-          ],
+          "tags": ["Bleed"],
           "price": "3,000",
           "urlName": "carve-wounds",
           "cooldown": "1s",
@@ -664,10 +557,7 @@
         {
           "WSAP": "130%",
           "file": "Glacial Demon Beast Skadi.png",
-          "tags": [
-            "Frost",
-            "Physical"
-          ],
+          "tags": ["Frost", "Physical"],
           "price": "PASS",
           "urlName": "glacial-demon-beast-skadi",
           "cooldown": "5s",
@@ -677,9 +567,7 @@
         {
           "WSAP": "125%",
           "file": "Penetrating Claw.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "2,000",
           "urlName": "penetrating-claw",
           "cooldown": "2s",
@@ -694,11 +582,7 @@
         {
           "WSAP": "100%",
           "file": "Contract_ Earth Elemental.png",
-          "tags": [
-            "Summon",
-            "Melee",
-            "Divinity"
-          ],
+          "tags": ["Summon", "Melee", "Divinity"],
           "price": "0",
           "urlName": "contract-earth-elemental",
           "cooldown": "8s",
@@ -708,10 +592,7 @@
         {
           "WSAP": "100%",
           "file": "Contract_ Magic Rabbit.png",
-          "tags": [
-            "Summon",
-            "Darkness"
-          ],
+          "tags": ["Summon", "Darkness"],
           "price": "3,000",
           "urlName": "contract-magic-rabbit",
           "cooldown": "8s",
@@ -722,10 +603,7 @@
         {
           "WSAP": "100%",
           "file": "Contract_ Lost Red Spirit.png",
-          "tags": [
-            "Summon",
-            "Flame"
-          ],
+          "tags": ["Summon", "Flame"],
           "price": "3,000",
           "urlName": "contract-lost-red-spirit",
           "cooldown": "8s",
@@ -751,9 +629,7 @@
         {
           "WSAP": "225%",
           "file": "Symbol of the Bloodline.png",
-          "tags": [
-            "Bleed"
-          ],
+          "tags": ["Bleed"],
           "price": "3,000",
           "urlName": "symbol-of-the-bloodline",
           "cooldown": "6s",
@@ -779,10 +655,7 @@
         {
           "WSAP": "30%",
           "file": "Monster Hunter.png",
-          "tags": [
-            "Frost",
-            "Physical"
-          ],
+          "tags": ["Frost", "Physical"],
           "price": "3,000",
           "urlName": "monster-hunter",
           "cooldown": "10s",
@@ -792,9 +665,7 @@
         {
           "WSAP": "350%",
           "file": "Immortality.png",
-          "tags": [
-            "Flame"
-          ],
+          "tags": ["Flame"],
           "price": "3,000",
           "urlName": "immortality",
           "cooldown": "10s",
@@ -804,10 +675,7 @@
         {
           "WSAP": "200%",
           "file": "Mistilteinn.png",
-          "tags": [
-            "Poison",
-            "Poison"
-          ],
+          "tags": ["Poison", "Poison"],
           "price": "2,000",
           "urlName": "mistilteinn",
           "cooldown": "8s",
@@ -817,10 +685,7 @@
         {
           "WSAP": "180%",
           "file": "Blood Halberd.png",
-          "tags": [
-            "Bleed",
-            "Physical"
-          ],
+          "tags": ["Bleed", "Physical"],
           "price": "2,000",
           "urlName": "blood-halberd",
           "cooldown": "8s",
@@ -830,10 +695,7 @@
         {
           "WSAP": "500%",
           "file": "Golden Cudgel.png",
-          "tags": [
-            "Divinity",
-            "Melee"
-          ],
+          "tags": ["Divinity", "Melee"],
           "price": "2,000",
           "urlName": "golden-cudgel",
           "cooldown": "8s",
@@ -859,10 +721,7 @@
         {
           "WSAP": "250%",
           "file": "Monster Hunter.png",
-          "tags": [
-            "Physical",
-            "Frost"
-          ],
+          "tags": ["Physical", "Frost"],
           "price": "3,000",
           "urlName": "monster-hunter",
           "cooldown": "5s",
@@ -872,9 +731,7 @@
         {
           "WSAP": "250%",
           "file": "Immortality.png",
-          "tags": [
-            "Flame"
-          ],
+          "tags": ["Flame"],
           "price": "3,000",
           "urlName": "immortality",
           "cooldown": "5s",
@@ -884,10 +741,7 @@
         {
           "WSAP": "150%",
           "file": "Mistilteinn.png",
-          "tags": [
-            "Poison",
-            "Poison"
-          ],
+          "tags": ["Poison", "Poison"],
           "price": "2,000",
           "urlName": "mistilteinn",
           "cooldown": "5s",
@@ -897,10 +751,7 @@
         {
           "WSAP": "180%",
           "file": "Blood Halberd.png",
-          "tags": [
-            "Bleed",
-            "Physical"
-          ],
+          "tags": ["Bleed", "Physical"],
           "price": "2,000",
           "urlName": "blood-halberd",
           "cooldown": "5s",
@@ -911,10 +762,7 @@
         {
           "WSAP": "125%",
           "file": "Golden Cudgel.png",
-          "tags": [
-            "Divinity",
-            "Melee"
-          ],
+          "tags": ["Divinity", "Melee"],
           "price": "2,000",
           "urlName": "golden-cudgel",
           "cooldown": "5s",
@@ -940,10 +788,7 @@
         {
           "WSAP": "50%",
           "file": "Peekaboo.png",
-          "tags": [
-            "Curse",
-            "Darkness"
-          ],
+          "tags": ["Curse", "Darkness"],
           "price": "3,000",
           "urlName": "peekaboo",
           "cooldown": "4s",
@@ -954,9 +799,7 @@
         {
           "WSAP": "100%",
           "file": "Prayer Beads.png",
-          "tags": [
-            "Lightning"
-          ],
+          "tags": ["Lightning"],
           "price": "2,000",
           "urlName": "prayer-beads",
           "cooldown": "6.5s",
@@ -967,10 +810,7 @@
         {
           "WSAP": "500%",
           "file": "Colossus.png",
-          "tags": [
-            "Projectile",
-            "Physical"
-          ],
+          "tags": ["Projectile", "Physical"],
           "price": "2,000",
           "urlName": "colossus",
           "cooldown": "4s",
@@ -995,9 +835,7 @@
         {
           "WSAP": "195%",
           "file": "Zognote's Sacred Blade.png",
-          "tags": [
-            "Divinity"
-          ],
+          "tags": ["Divinity"],
           "price": "3,000",
           "urlName": "zognotes-sacred-blade",
           "cooldown": "4s",
@@ -1008,9 +846,7 @@
         {
           "WSAP": "600%",
           "file": "Inferno Resonator.png",
-          "tags": [
-            "Flame"
-          ],
+          "tags": ["Flame"],
           "price": "PASS",
           "urlName": "inferno-resonator",
           "cooldown": "1s",
@@ -1035,9 +871,7 @@
         {
           "WSAP": "120%",
           "file": "Occult Mania.png",
-          "tags": [
-            "Darkness"
-          ],
+          "tags": ["Darkness"],
           "price": "3,000",
           "urlName": "occult-mania",
           "cooldown": "7s",
@@ -1053,11 +887,7 @@
         {
           "WSAP": "60%",
           "file": "Blood Might.png",
-          "tags": [
-            "Bleed",
-            "Spell",
-            "Magic"
-          ],
+          "tags": ["Bleed", "Spell", "Magic"],
           "price": "0",
           "urlName": "blood-might",
           "cooldown": "5s",
@@ -1067,11 +897,7 @@
         {
           "WSAP": "120%",
           "file": "Longinus.png",
-          "tags": [
-            "Bleed",
-            "Melee",
-            "Physical"
-          ],
+          "tags": ["Bleed", "Melee", "Physical"],
           "price": "3,000",
           "urlName": "longinus",
           "cooldown": "8s",
@@ -1097,11 +923,7 @@
         {
           "WSAP": "500%",
           "file": "Corpse Golem's Essence.png",
-          "tags": [
-            "Poison",
-            "Spell",
-            "Magic"
-          ],
+          "tags": ["Poison", "Spell", "Magic"],
           "price": "50,000",
           "urlName": "corpse-golems-essence",
           "cooldown": "0.5s",
@@ -1122,11 +944,7 @@
         {
           "WSAP": "1500%",
           "file": "Ogre's Essence.png",
-          "tags": [
-            "Darkness",
-            "Melee",
-            "Physical"
-          ],
+          "tags": ["Darkness", "Melee", "Physical"],
           "price": "5,000,000",
           "urlName": "orgres-essence",
           "cooldown": "5s",
@@ -1151,9 +969,7 @@
         {
           "WSAP": "100%",
           "file": "Phantom Blade.png",
-          "tags": [
-            "Curse"
-          ],
+          "tags": ["Curse"],
           "price": "3,000",
           "urlName": "phantom-blade",
           "cooldown": "3s",
@@ -1179,9 +995,7 @@
         {
           "WSAP": "225%",
           "file": "The Pair.png",
-          "tags": [
-            "Targeting"
-          ],
+          "tags": ["Targeting"],
           "price": "3,000",
           "urlName": "the-pair",
           "cooldown": "1s",
@@ -1207,11 +1021,7 @@
         {
           "WSAP": "150%",
           "file": "Amadeus.png",
-          "tags": [
-            "Enchant",
-            "Flame",
-            "Bleed"
-          ],
+          "tags": ["Enchant", "Flame", "Bleed"],
           "price": "3,000",
           "urlName": "amadeus",
           "cooldown": "8s",
@@ -1227,9 +1037,7 @@
         {
           "WSAP": "400%",
           "file": "Thundercaller.png",
-          "tags": [
-            "Lightning"
-          ],
+          "tags": ["Lightning"],
           "price": "0",
           "urlName": "thundercaller",
           "cooldown": "9s",
@@ -1239,10 +1047,7 @@
         {
           "WSAP": "500%",
           "file": "Blue Overdrive.png",
-          "tags": [
-            "Magic",
-            "Divinity"
-          ],
+          "tags": ["Magic", "Divinity"],
           "price": "3,000",
           "urlName": "blue-overdrive",
           "cooldown": "5s",

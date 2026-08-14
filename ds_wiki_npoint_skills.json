@@ -1,1 +1,2385 @@
-{"data":{"subskills":{"list":[{"file":"Hatred Spike.png","stat":{"name":"Damage","value":"160%"},"tags":["Subskill","Physical","Melee","Bleed","CH01"],"unlock":"-","urlName":"hatred-spike","interval":{"name":"Cooldown","value":"2.50"},"description":"Pierces an enemy with a Cursed Spike.\n2 spikes\n10% chance to inflict Bleed","modifications":[{"name":"Chain of Abhorrence","upgrade":"Skill Damage +15%\nSkill Count +1\nSkill Cooldown Reduction -0.5s"},{"name":"Abominator","upgrade":"Skill Damage +5%\nSkill Count +2"},{"name":"Intensifying Abhorrence","upgrade":"Skill Damage +15%\nSkill Size +25%\nSkill Cooldown Reduction -1s"},{"name":"Special Mod","upgrade":"Skill Damage +25%\nSkill Size +15%\nSkill Interval -30%"}]},{"file":"Shuriken Maneuver.png","stat":{"name":"Damage","value":"80%"},"tags":["Subskill","Physical","Targeting","Toxin","CH01"],"unlock":"Acquire <skill>Hatred Spike</skill> skill's modification, Abominator.","urlName":"shuriken-maneuver","interval":{"name":"Cooldown","value":"7.00"},"description":"Throws a shuriken that goes after an enemy.\nShuriken Count 3\n10% chance to apply Poison","modifications":[{"name":"Two-Handed Throw","upgrade":"Skill Count +4"},{"name":"Throwing Practice","upgrade":"Skill Damage +10%\nSkill Count +1\nSkill Cooldown Reduction -1s"},{"name":"Successive Throw","upgrade":"Skill Damage +25%\nSkill Count +1\nSkill Cooldown Reduction -0.5s"},{"name":"Special Mod","upgrade":"Skill Count +8"}]},{"file":"Call Lightning.png","stat":{"name":"Damage","value":"225%"},"tags":["Subskill","Magic","Spell","Lightning","CH01"],"unlock":"Stun 10 enemies with a Plunging attack.","urlName":"call-lightning","interval":{"name":"Cooldown","value":"4.00"},"description":"Lightning strikes down at a random enemy position.\n25% chance to inflict Shock","modifications":[{"name":"Lightning","upgrade":"Skill Damage +25%\nSkill Count +1"},{"name":"Thunderbolt","upgrade":"Skill Damage +35%"},{"name":"Thunder","upgrade":"Skill Count +3"},{"name":"Special Mod","upgrade":"Skill Count +4\nSkill Cooldown Recovery Speed +50%"}]},{"file":"Rampage.png","stat":{"name":"Damage","value":"36%"},"tags":["Subskill","Physical","Targeting","Darkness","CH01"],"unlock":"Defeat 300 enemies with a skill that has a Subskill tag.","urlName":"rampage","interval":{"name":"Cooldown","value":"6.00"},"description":"Summons a spectral gun that targets and attacks nearby enemies.\n6 activations","modifications":[{"name":"Hand Cannon","upgrade":"Skill Damage +35%\nSkill Size +25%"},{"name":"Double-Barreled Gun","upgrade":"Skill Count +3"},{"name":"Quick Reload","upgrade":"Skill Damage +20%\nSkill Cooldown Recovery Speed +35%"},{"name":"Special Mod","upgrade":"Skill Count +7"}]},{"file":"Flame Zone.png","stat":{"name":"Damage","value":"160%"},"tags":["Subskill","Magic","Spell","Flame","CH01"],"unlock":"Inflict Groggy on Chapter 1 Mid-Boss Foreboder using Foreboder's Flame Zone. (Foreboder will move in either a clockwise or anti-clockwise direction, determined by his initial teleportation. Make Foreboder teleport into his own fire by standing on the next platform he will go to.)","urlName":"flame-zone","interval":{"name":"Cooldown","value":"5.00"},"description":"Creates a zone of flames.\n15% chance to inflict Burn","modifications":[{"name":"Flame Dispersion","upgrade":"Skill Damage +15%\nSkill Size +30%"},{"name":"Ignition","upgrade":"Skill Damage +35%"},{"name":"Pyromaniac","upgrade":"Skill Damage +15%\nSkill Duration +20%"},{"name":"Special Mod","upgrade":"Skill Duration +50%"}]},{"file":"Neurotoxin.png","stat":{"name":"Damage","value":"80%"},"tags":["Subskill","Magic","Targeting","Toxin","CH01"],"unlock":"Complete Venom Dispersion skill's modification, Giant Toxic Bubble.","urlName":"neurotoxin","interval":{"name":"Cooldown","value":"7.00"},"description":"Shoots corrosive saliva.\n110% chance to apply Poison to enemies in a small area","modifications":[{"name":"Toxic Combination","upgrade":"Poison Stack +1\nSkill Damage +25%"},{"name":"Venomous Twin Fangs","upgrade":"Skill Count +1"},{"name":"Venom","upgrade":"Skill Damage +45%"},{"name":"Special Mod","upgrade":"Skill Damage +55%"}]},{"file":"Venom Cloud.png","stat":{"name":"Damage","value":"0%"},"tags":["Subskill","Magic","Spell","Toxin","CH01"],"unlock":"Deal a total of 10,000 damage with Poison.","urlName":"venom-cloud","interval":{"name":"Cooldown","value":"5.00"},"description":"Releases a toxic cloud at an enemy.\nInflicts Poison up to 1 time","modifications":[{"name":"Radioactivity","upgrade":"Poison Stack +2\nSkill Size +20%"},{"name":"Intravenous Toxin","upgrade":"Skill Cooldown Recovery Speed +25%"},{"name":"Toxic Torrent","upgrade":"Poison Stack +3"},{"name":"Special Mod","upgrade":"Skill Cooldown Recovery Speed +50%"}]},{"file":"Death Ray.png","stat":{"name":"Damage","value":"90%"},"tags":["Subskill","Magic","Targeting","Divinity","CH02"],"unlock":"Use the <skill>Plasma</skill> (Main Skill) to defeat 500 enemies","urlName":"death-ray","interval":{"name":"Cooldown","value":"7.00"},"description":"Shoots a ray that targets the enemy after one second.\n3 activations","modifications":[{"name":"Extra Ray","upgrade":"Skill Damage +55%"},{"name":"Output Enhancement","upgrade":"Skill Damage +35%\nSkill Cooldown Recovery Speed +15%"},{"name":"Maximum Charge","upgrade":"Skill Damage +25%\nSkill Size +20%"},{"name":"Special Mod","upgrade":"Skill Count +1\nSkill Cooldown Recoverty Speed +35%"}]},{"file":"Fireball.png","stat":{"name":"Damage","value":"220%"},"tags":["Subskill","Magic","Targeting","Flame","CH02"],"unlock":"-","urlName":"fireball","interval":{"name":"Cooldown","value":"7.50"},"description":"Summons a fireball that goes after an enemy and explodes.\n15% chance to inflict Burn","modifications":[{"name":"Living Bomb","upgrade":"1 additional explosion of 50% Damage and Size"},{"name":"Rapid Combustion","upgrade":"Skill Damage +25%\nSkill Size +30%\nSkill Movement Speed -30%"},{"name":"Hot Potato","upgrade":"Skill Damage +55%"},{"name":"Special Mod","upgrade":"Skill Damage +50%\nSkill Size +50%\nBurn Chance +50%"}]},{"file":"Dagger Throw.png","stat":{"name":"Damage","value":"200%"},"tags":["Subskill","Physical","Chain","Toxin","CH02"],"unlock":"Complete all of <skill>Apply Toxin</skill>'s (Buff Skill) modifications and defeat 111 enemies.","urlName":"dagger-throw","interval":{"name":"Cooldown","value":"6.00"},"description":"Throws a dagger laced with toxin that ricochets around while dealing damage to enemies.\n110% chance to inflict Poison on hit","modifications":[{"name":"Dagger Acrobatics","upgrade":"Skill Chain +2"},{"name":"Venom Dagger","upgrade":"Skill Damage +35%"},{"name":"Recoil Dagger","upgrade":"Dagger splits into 2 after hitting the first target"},{"name":"Special Mod","upgrade":"Skill Damage +15%\nSkill Chain +3"}]},{"file":"Justice Sword.png","stat":{"name":"Damage","value":"111%"},"tags":["Subskill","Physical","Targeting","Divinity","CH03"],"unlock":"Defeat skeletons 300 times.","urlName":"justice-sword","interval":{"name":"Cooldown","value":"8.00"},"description":"Summon a Justice sword above the head and launches it towards enemies.\nThe Justice Sword is unaffected by effects that alter its position, direction, or speed.\n5 swords","modifications":[{"name":"Reforge","upgrade":"Skill Damage +15%\nSkill Count +1"},{"name":"Polish","upgrade":"Skill Damage +45%"},{"name":"Execution","upgrade":"Deals 100% additional damage every time the Justice Sword hits a single enemy 3 times."},{"name":"Special Mod","upgrade":"30% chance to create 1 additional Justice Sword after creating the initial one."}]},{"file":"Space Fissure.png","stat":{"name":"Damage","value":"400%"},"tags":["Subskill","Physical","Spell","Darkness","CH03"],"unlock":"Stun 5 enemies simultaneously while using the <artifact>Thick Cape</artifact> (Regular Artifact).","urlName":"space-fissure","interval":{"name":"Cooldown","value":"16.00"},"description":"Creates a spatial fissure to deal damage.","modifications":[{"name":"Massive Fissure","upgrade":"Skill Damage +25%\nSkill Size +15%"},{"name":"Aftershock","upgrade":"Skill Damage +15%\nSkill Size +10%\nSkill Cooldown Recovery Speed +20%"},{"name":"Burst","upgrade":"Skill Damage +50%"},{"name":"Special Mod","upgrade":"Casts a fissure of 60% Size and ATK 1 time, then casts an additional one of 130% Size and ATK 3 seconds later"}]},{"file":"Unleash Blood.png","stat":{"name":"Damage","value":"135%"},"tags":["Subskill","Magic","Spell","Bleed","CH03"],"unlock":"Equip both the artifact, <artifact>Blood Flask</artifact> (Lesser Artifact), and the artifact, <artifact>Red Devil's Contract</artifact> (Regular Artifact).","urlName":"unleash-blood","interval":{"name":"Cooldown","value":"7.00"},"description":"Causes a nearby enemy to hemorrhage blood, inflicting Bleed and dealing damage.\nTargets up to 4 enemies\n65% chance to inflict Bleed","modifications":[{"name":"Bloodletting","upgrade":"Size +5%, ATK +30% per enemy Bleed stack"},{"name":"Tainted Blood","upgrade":"Additional Bleed Buff stack every 0.2 seconds for 2 seconds"},{"name":"Gaping Wound","upgrade":"Skill Damage +45%\nSkill Size +15%"},{"name":"Special Mod","upgrade":"Recasts Unleash Blood 1 additional time to enemies hit by Unleash Blood"}]},{"file":"Ice Arrow.png","stat":{"name":"Damage","value":"100%"},"tags":["Subskill","Magic","Targeting","Frost","CH03"],"unlock":"Use the <skill>Icicle Spike</skill> (Main Skill) (modified 3 times) while using the artifact, <artifact>Ice Spear</artifact> (Greater Artifact).","urlName":"ice-arrow","interval":{"name":"Cooldown","value":"5.00"},"description":"Fires an ice arrow at the enemy.\nNumber of Arrows 3\n15% Chance to apply Freeze to enemies in range","modifications":[{"name":"Snipe","upgrade":"Skill Damage +50%"},{"name":"Crystallization","upgrade":"Skill Damage +35%\nSkill Size +15%"},{"name":"Multishot","upgrade":"Skill Count +1"},{"name":"Special Mod","upgrade":"Skill Count +3"}]},{"file":"Sword Spin.png","stat":{"name":"Damage","value":"70%"},"tags":["Subskill","Physical","Melee","Divinity","CH03"],"unlock":"Reach level 25 on <character>Knight</character> (Character).","urlName":"sword-spin","interval":{"name":"Cooldown","value":"6.50"},"description":"Summons a sword that spins around you","modifications":[{"name":"Extra Spin","upgrade":"Spin Count +1\nSpin SPD +25%"},{"name":"Sharp Sword","upgrade":"Skill Damage +45%"},{"name":"Proficient Summon","upgrade":"Skill Damage +15%\nSkill Size +25%"},{"name":"Special Mod","upgrade":"Skill Count +2"}]},{"file":"Light Flash.png","stat":{"name":"Damage","value":"230%"},"tags":["Subskill","Physical","Targeting","Lightning","CH04"],"unlock":"-","urlName":"light-flash","interval":{"name":"Cooldown","value":"5.50"},"description":"Cut through space using lightning and deals damage to all enemies within its path.\n Attack Count 1\n50% chance to apply Shock","modifications":[{"name":"Long Cut","upgrade":"Skill Search Range +30%"},{"name":"Cut Deep","upgrade":"Skill Damage +35%"},{"name":"Static Slash","upgrade":"If the hit enemy is in 'Electrocuted' state, damage +20%"},{"name":"Special Mod","upgrade":"Enemies killed by Flash explode, dealing equal damage around them"}]},{"file":"Solar Orb.png","stat":{"name":"Damage","value":"80%"},"tags":["Subskill","Magic","Spell","Divinity","CH05"],"unlock":"Enter the Desert of the Red Sun and bask under the sun, no roof,  for 30 seconds.","urlName":"solar-orb","interval":{"name":"Cooldown","value":"8.00"},"description":"Summons a Solar Orb in front to inflict Damage over time.\nThe orb deals greater Explosion damage when it takes Fire Damage.\nExplosive Skill Damage: 300%","modifications":[{"name":"Lament of the End","upgrade":"Explodes upon Solar Orb duration expiration with 35% reduced Explosive Skill Damage"},{"name":"Radiant Overwhelm","upgrade":"Explosive Skill Damage +15%\nExplosive Skill Size +15%"},{"name":"Condensed Radiance","upgrade":"Explosive Skill Damage +45%\nExplosive Skill Size -30%"},{"name":"Special Mod","upgrade":"Explosion triggers other Solar Orms to explode"}]},{"file":"Cactus Bomb.png","stat":{"name":"Damage","value":"180%"},"tags":["Subskill","Physical","Bomb","Bleed","CH05"],"unlock":"Defeat <boss>Kerel</boss> while the <collection>Bomber</collection> Collection is active.","urlName":"cactus-bomb","interval":{"name":"Cooldown","value":"6.00"},"description":"Detonates a bomb filled with cactus thorns from the player's body.\n1 Explosions\n25% chance to inflict Bleeding","modifications":[{"name":"Thorn Blossom in Full Bloom","upgrade":"Skill Size +20%"},{"name":"Red Sand Trace","upgrade":"Bleed Chance +22%"},{"name":"Cactus Dance","upgrade":"Thorn Burst Count +1"},{"name":"Special Mod","upgrade":"Cast at enemy location within range"}]},{"file":"Crimson Rain.png","stat":{"name":"Damage","value":"55%"},"tags":["Subskill","Magic","Spell","Bleed","CH04"],"unlock":"Trigger Stab damage 10 times.","urlName":"crimson-rain","interval":{"name":"Cooldown","value":"20.00"},"description":"Unleashes a torrential rain of blood from the sky to attack.\nNumber of launches 6\n50% chance to inflict Bleed","modifications":[{"name":"Bloodlust","upgrade":"Reduces Skill Cooldown by 1 second when a Basic Attack hits."},{"name":"Bloodstorm Warning","upgrade":"Bleeding Stacks +1"},{"name":"Crimson Monsoon","upgrade":"30% chance on Skill Hit to increase Bleeding Damage by 2% for 5 seconds, stacking up to 10 times."},{"name":"Special Mod","upgrade":"Increases Skill Count based on Bleeding Synergy level."}]},{"file":"Talisman Rain.png","stat":{"name":"Damage","value":"50%"},"tags":["Subskill","Magic","Spell","Lightning","CH05"],"unlock":"Reach level 25 on <character>Shaman</character> (Character).","urlName":"talisman-rain","interval":{"name":"Cooldown","value":"6.00"},"description":"Quickly fires talismans at enemies to deal damage.\nNumber of Talismans 6.\n25% chance to inflict Shock","modifications":[{"name":"Arcane Lightning Conduit","upgrade":"Casts <skill>Call Lightning</skill> (Subskill) every 6 Talisman hits (inherits the upgrade level of Talisman Barrage)."},{"name":"Storm's Omen","upgrade":"Reduces cooldown by 0.1 second per Lightning Synergy obtained"},{"name":"Thunder Sigil","upgrade":"Fires talismans in a straight line."},{"name":"Special Mod","upgrade":"Spell Tag Skill Damage +35%"}]},{"file":"Arcane Beam.png","stat":{"name":"Damage","value":"90%"},"tags":["Subskill","Magic","Projectile","Lightning","CH05"],"unlock":"Enter the Desert of the Red Sun with a specially-modified <skill>Plasma</skill> (Main Skill).","urlName":"arcane-beam","interval":{"name":"Cooldown","value":"6.00"},"description":"Fires a magical beam forward for 1 second, dealing continuous damage.\n Number of Rays 1\n40% chance to inflcit Shock","modifications":[{"name":"Hyper Technology","upgrade":"When a skill hits, Arcane Beam Skill Damage +5% (up to 50%)"},{"name":"Stable Discharge","upgrade":"Skill Duration +0.5 seconds"},{"name":"Void Lightning","upgrade":"Additional Damage to Shocked enemies +15%"},{"name":"Special Mod","upgrade":"Skill Multi-Hit Interval -45%"}]},{"file":"Chain of Death.png","stat":{"name":"Damage","value":"120%"},"tags":["Subskill","Magic","Chain","Darkness","CH05"],"unlock":"Chain 6 times at once with a single Chain skill","urlName":"chain-of-death","interval":{"name":"Cooldown","value":"6.00"},"description":"Applies a Damage over time curse to enemies. Upon killing, the remaining duration transfers to the nearest enemy.\nDamage is increased by Chain Synergy in proportion to the remaining number of chains.\nHits Taken: 4","modifications":[{"name":"Shadow's Testament","upgrade":"Skill Chain +1"},{"name":"Pulse of the Abyss","upgrade":"Skill Damage +15%"},{"name":"Curse Inheritance","upgrade":"Skill Damage +25% each time it transfers to an enemy"},{"name":"Special Mod","upgrade":"When hitting a boss monster, Skill Multi-Hit Interval -50%."}]},{"file":"Shackles of the Netherworld.png","stat":{"name":"Damage","value":"110%"},"tags":["Subskill","Magic","Chain","Frost","CH06"],"unlock":"Revive in The Ancient City of Grandfel with 6-Chain Synergy active.","urlName":"shackles-of-the-netherworld","interval":{"name":"Cooldown","value":"6.00"},"description":"Fires a chain made of ice to strike the enemy.\n10% chance to inflict Frozen","modifications":[{"name":"Chain Extension","upgrade":"Skill Chain +1"},{"name":"Resonant Chain","upgrade":"If at least one enemy hit by the skill is inflicted with Frozen, all other enemies are also inflicted with Frozen."},{"name":"Glacial Spike","upgrade":"Skill Damage +25%"},{"name":"Special Mod","upgrade":"Skill Damage +15%\nFrozen Chance +5%"}]},{"file":"Stellar Orbit.png","stat":{"name":"Damage","value":"120%"},"tags":["Subskill","Magic","Projectile","Flame","CH06"],"unlock":"Defeat monsters in The Ancient City of Grandfel 100 times with <skill>Fireball</skill> while <artifact>Lucky Clover Hammer</artifact> is equipped.","urlName":"stellar-orbit","interval":{"name":"Cooldown","value":"2.00"},"description":"Summons Flame Orbs that rotate around the player.\nBase Count: 3\nEach summoned Flame Orb has a 2-second cooldown.\n15% chance to inflict Burn","modifications":[{"name":"Celestial Acceleration","upgrade":"Spin Speed +15%"},{"name":"Four-Star Constellation","upgrade":"Skill Count +1"},{"name":"Supernova Explosion","upgrade":"Skill Damage +50%"},{"name":"Special Mod","upgrade":"Skill Penetration Count +1"}]}],"color":"#59823e","title":"Subskills"},"buffskills":{"list":[{"file":"Barrier.png","stat":{"name":"Shield","value":"1"},"tags":["Buff","Protection","Magic","Divinity","CH01"],"unlock":"Acquire the Shield item.","urlName":"barrier","description":"Creates a barrier that protects against enemy attacks","modifications":[{"name":"Augment Speed","upgrade":"MOV SPD and ATK SPD +8% while Barrier is active."},{"name":"Barrier Smite","upgrade":"+5% additional damage per hit while Barrier is active"},{"name":"Unleash","upgrade":"Pushes away nearby enemies and causes an explosion that deals 200% ATK damage as the Barrier breaks."},{"name":"Special Mod","upgrade":"Max Barrier +1"}]},{"file":"Ghost Glide.png","stat":{"name":"SPD","value":"7%"},"tags":["Buff","Magic","Lightning","CH01"],"unlock":"-","urlName":"ghost-glide","description":"Increases MOV SPD and ATK SPD","modifications":[{"name":"Nimble Movement","upgrade":"Additional SPD increase +5%"},{"name":"Find Weakness","upgrade":"CRIT Chance +15%"},{"name":"Crystal Tranquility","upgrade":"SPD Increase +10% after avoiding damage for 8 seconds"},{"name":"Special Mod","upgrade":"ATK SPD Increase +10%"}]},{"file":"Meditation.png","stat":{"name":"Skill Haste","value":"10"},"tags":["Buff","CH01"],"unlock":"-","urlName":"meditation","description":"Accelerates Auto-Cast Skill","modifications":[{"name":"Spell Sword","upgrade":"Attack power increased by 10% of Skill Haste (Tags, additional skill cooldown recovery options for skills do not apply)"},{"name":"Stockades Acceleration","upgrade":"Skill Cooldown Recovery Speed +10%"},{"name":"Roulette Of Time","upgrade":"15% chance to reactivate subskill"},{"name":"Special Mod","upgrade":"Skill Haste +5% for each equipped subskill"}]},{"file":"Enchantment.png","stat":{"name":"Activation Chance","value":"5%"},"tags":["Buff","CH01"],"unlock":"-","urlName":"enchantment","description":"Increases Skill Activation Chance","modifications":[{"name":"Quick Stockade","upgrade":"Skill Activation Chance +5%"},{"name":"Multiple Stockades","upgrade":"+1% Skill Activation Chance and +1% Attack Power per 1 Main Skill equipped"},{"name":"Concentration","upgrade":"+0.5% Attack Power per 1% Skill Activation Chance (Max + 50%, tags and additional Skill Activation Chance bonus option from skills are not applied)"},{"name":"Special Mod","upgrade":"Skill Activation Rate +10%"}]},{"file":"Overdrive.png","stat":{"name":"Attack Power","value":"10%"},"tags":["Buff","CH01"],"unlock":"-","urlName":"overdrive","description":"Increases Attack Power","modifications":[{"name":"Concentration","upgrade":"Attack power +7% if not attacked for 8 seconds"},{"name":"Load","upgrade":"Attack power +5% additional increase"},{"name":"Platform","upgrade":"ATK +10% when current HP is 3 or less"},{"name":"Special Mod","upgrade":"Damage dealt to bosses +15%"}]},{"file":"Apply Toxin.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Physical","Toxin","CH02"],"unlock":"Do 500 Poison damage while equipped with the successfully modified skill <skill>Venom Cloud</skill> (Subskill).","urlName":"apply-toxin","description":"Applies a special toxin on a weapon to inflict poison with all attacks.\n30% chance to inflict Poison","modifications":[{"name":"Neurotoxin","upgrade":"Poison ATK +50%"},{"name":"Hemotoxin","upgrade":"Once Poisoned, 30% chance to inflict Bleed as well."},{"name":"Cytotoxin","upgrade":"Poison Acceleration +30"},{"name":"Special Mod","upgrade":"Poison Acceleration +50\nPoison Duration +50%"}]},{"file":"Plasma Barrier.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Protection","Magic","Chain","Lightning","CH03"],"unlock":"Activate <skill>Barrier</skill> (Buff Skill) and own 3 different skills with Lightning tags.","urlName":"plasma-barrier","description":"Unleashes lightning around you when hit, and reduces damage received in proportion to the time where damage is avoided.\nIt is not affected by cooldown.\nReduces damage received by 1 every 30.00 seconds","modifications":[{"name":"Electric Pulse","upgrade":"Unleashes a chain of lightning upon nearby enemies every 7 seconds, even if you avoid hits."},{"name":"High Voltage","upgrade":"Shock Chance +100%"},{"name":"Shock Enhancement","upgrade":"Damage to Shock-inflicted enemies +10%"},{"name":"Special Mod","upgrade":"Skill Cooldown Recovery Speed +30%"}]},{"file":"Niflheim Swordsmanship.png","stat":{"name":"Attack Power\nCritical Chance","value":"5%"},"tags":["Buff","Physical","Darkness","CH03"],"unlock":"Enter Chapter 3: Outskirts of Niflheim.","urlName":"niflheim-swordsmanship","description":"Increases ATK and CRIT chances for Basic/ Melee skills","modifications":[{"name":"Moderation","upgrade":"Basic Skill ATK +15%\nMelee Skill ATK +15%"},{"name":"Instinct","upgrade":"CRIT Chance +10%\nApplies CRIT Chance to Melee Skill"},{"name":"Train","upgrade":"Max HP +1."},{"name":"Special Mod","upgrade":"CRIT Damage +35%"}]},{"file":"Dragon's Prudence.png","stat":{"name":"Basic Skill Damage","value":"8%"},"tags":["Buff","Physical","Darkness","CH03"],"unlock":"Reach level 25 on <character>Fighter</character> (Character).","urlName":"dragons-prudence","description":"Basic Skill Damage Increase.","modifications":[{"name":"Earth Dragon's Hardness","upgrade":"Attack +0.7 for each intact heart you currently have."},{"name":"Black Dragon's Fear","upgrade":"When attacking an enemy, Basic Skill Damage +3% for 2 seconds (up to 30%)"},{"name":"Fire Dragon's Blazing","upgrade":"Base Skill Damage +15%"},{"name":"Special Mod","upgrade":"+1% additional Basic Skill Damage per 1 current Attack Power (up to 50%)"}]},{"file":"Bloody Sword Strike.png","stat":{"name":"Damage","value":"160%"},"tags":["Buff","Physical","Melee","Bleed","CH03"],"unlock":"Reach level 25 on <character>Slayer</character> (Character).","urlName":"bloody-sword-strike","description":"Unleashes Bloody Sword Strike every time a basic attack hits 5 times.\n30% chance to inflict Bleed","modifications":[{"name":"Bleed Enhancement","upgrade":"Bleed Stack +1\nBleed Chance +25%"},{"name":"Bloody Desire","upgrade":"Skill Damage +25%\nBleed Chance +25%"},{"name":"Successive Attack","upgrade":"Skill Damage -40%\nSkill Size +15%\nSkill Count +1"},{"name":"Special Mod","upgrade":"Required Basic Attack Count for Activation -2"}]},{"file":"Glacial Shield.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Protection","Frost","CH04"],"unlock":"Consume 200 Frozen Shields.","urlName":"glacial-shield","description":"Generates a status immunity shield that is destroyed upon being hit.\nAfter the shield is destroyed, status immunity effect lasts for 2 seconds.\nRegeneration Cooldown: 8 seconds","modifications":[{"name":"Ice Wall","upgrade":"When the shield is destroyed, activates the World of Ice ability once."},{"name":"Crevasse","upgrade":"When the shield is destroyed, activation effect duration +1 second."},{"name":"Frostbite","upgrade":"When the shield is destroyed, Freeze Chance +20% for 2 seconds."},{"name":"Special Mod","upgrade":"When the shield is destroyed, Attack Power +2 for 2 seconds."}]},{"file":"Guardian's Shield.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","CH05"],"unlock":"Reach level 25 on <character>Guardian</character> (Character).","urlName":"guardians-shield","description":"15% chance to generate a shield when taking damage","modifications":[{"name":"Numb","upgrade":"Grants 1-time Super Armor when a shield is generated"},{"name":"Iron Wall","upgrade":"10% chance to ignore damage while a shield is active"},{"name":"Danger Sense","upgrade":"Shield generation chance +5% when taking damage"},{"name":"Special Mod","upgrade":"When hit, if a shield if held or generated, hurl it at the attacker to deal 100% damage and inflict stun on up to 3 enemies."}]},{"file":"Flame Dragon's Tribute.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Flame","CH05"],"unlock":"Reach level 25 on <character>Dragonian</character> (Character).","urlName":"flame-dragons-tribute","description":"Gain a buff for each intact heart (up to 5 stacks)\nFor each Heart: Attack Power, Attack Speed, and Movement Speed +1%","modifications":[{"name":"Power of the Dragon","upgrade":"Max Hearts +1"},{"name":"Blazing Core","upgrade":"For each current Heart, Flame Skill Activation Chance and Skill Haste +1%"},{"name":"Eruption","upgrade":"Attack Speed +8%\nBurn Damage +15%"},{"name":"Special Mod","upgrade":"Max Hearts +1\nBasic Skill has a 15% chance to inflict Burn"}]},{"file":"Vessel of Souls.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","CH05"],"unlock":"Reach level 25 on <character>Soul Eater</character> (Character).","urlName":"vessel-of-souls","description":"Converts all Tag Skill Damage bonuses from relics into Basic Skill Damage (up to 100%)","modifications":[{"name":"Arcane Lightning Conduit","upgrade":"Basic Skill Damage +15%"},{"name":"Storm's Omen","upgrade":"For each activated Attribute Synergy (Collections) or Tag Synergy, Attack Power and Attack Speed +2% (up to 10%)"},{"name":"Thunder Sigil","upgrade":"Weapon Skill Cooldown reduced by 1% on enemy kill"},{"name":"Special Mod","upgrade":"Critical damage increases proportionally to Basic Skill Damage increased by Skill Effects (up to 15%)"}]},{"file":"Sand Barrier.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Divinity","CH05"],"unlock":"Enter the Desert of the Red Sun chapter while wearing <artifact>Chalice</artifact> (Greater Artifact).","urlName":"sand-barrier","description":"Generates a Soul Heart by shielding yourself with sand.","modifications":[{"name":"Heaven's Answer","upgrade":"Divinity Ray +1"},{"name":"Touch of the Sun God","upgrade":"Divinity Skill Damage +10%"},{"name":"Peace Upon the Sands","upgrade":"+1 Soul Heart"},{"name":"Special Mod","upgrade":"If you have fewer than 2 Soul Hearts and a Divine revival has been consumed, generate 1 Soul Heart every 90 seconds"}]},{"file":"Frostscale Shield.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Frost","CH06"],"unlock":"Defeat Earth Dragon Karakum with <skill>Glacial Shield</skill> equipped.","urlName":"frostscale-shield","description":"Generates a Frostscale Shield that blocks a projectile 1 time.\nRegeneration Cooldown: 30s\nAffected by Skill Haste.","modifications":[{"name":"Giant Scales","upgrade":"Skill Size +25%"},{"name":"Quick Molting","upgrade":"Skill Cooldown Reduction -5s"},{"name":"Third Scale","upgrade":"The shield is also generated in front."},{"name":"Special Mod","upgrade":"Shield Durability +1"}]},{"file":"Khēmia's Venomcraft.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Toxin","CH06"],"unlock":"Enter The Ancient City of Grandfel with <skill>Apply Toxin</skill> equipped.","urlName":"khemias-venomcraft","description":"Poison Infliction Chance +50%","modifications":[{"name":"Khēmia's Catalyst","upgrade":"Poison Skill Damage +0.25% per 10 Poison Stacks"},{"name":"Natron Decay","upgrade":"Poison Damage +1% per 10 Poison Stacks"},{"name":"Noxious Mixture","upgrade":"Poison Duration +1s"},{"name":"Special Mod","upgrade":"+10 Max Poison Stacks per Unique Poison Skill Equipped"}]},{"file":"Boiling Flames.png","stat":{"name":"Damage","value":"0%"},"tags":["Buff","Magic","Flame","CH06"],"unlock":"Enter the Desert of the Red Sun with 7 types of Flame-tagged Artifacts equipped.","urlName":"boiling-flames","description":"Gain 1 stack upon casting a Flame Skill (Max 10 stacks).\nFlame Skill Damage +1% per stack\nDuration: 3s","modifications":[{"name":"Fuel to the Fire","upgrade":"+5 Max Stacks"},{"name":"Lingering Embers","upgrade":"Duration +2s"},{"name":"Ashes","upgrade":"Burn Damage +15%"},{"name":"Special Mod","upgrade":"At max stacks, Flame Skill Activation Chance +10%\nFlame Skill Haste +20%"}]}],"color":"#173885","title":"Buff Skills"},"mainskills":{"list":[{"file":"Successive Strike.png","stat":{"name":"Damage","value":"120%"},"tags":["Main Skill","Physical","Melee","Bleed","CH01"],"unlock":"-","urlName":"successive-strike","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons a sword that slashes and deals damage to the front.\n2 hits\n60% chance to inflict Bleed.","modifications":[{"name":"Rapid Slash","upgrade":"Skill Count +1\nSkill Casting Speed +15"},{"name":"Cross Slash","upgrade":"Skill Damage +40%\nSkill Size +15%"},{"name":"Charging Slash","upgrade":"Advances slightly with each cast\nSkill Size +15%\nSkill Count +1"},{"name":"Special Mod","upgrade":"Skill Damage +15%\nSkill Count +3\nSkill Casting Speed +50"}]},{"file":"Sever Blade.png","stat":{"name":"Damage","value":"55%"},"tags":["Main Skill","Physical","Projectile","Bleed","CH01"],"unlock":"Inflict Bleed into enemies 100 times.","urlName":"sever-blade","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Throws a dagger that pierces an enemy.\n30% chance to inflict Bleed","modifications":[{"name":"Boomerang","upgrade":"Sever Blade advances and returns"},{"name":"Sharp Sword","upgrade":"Skill Damage +15%\nBleed Chance +5%"},{"name":"Whetstone","upgrade":"Bleed Chance +10%"},{"name":"Special Mod","upgrade":"Throws an additional Shadow Sever Blade\n(50% of Sever Blade ATK)"}]},{"file":"Chain Lightning.png","stat":{"name":"Damage","value":"300%"},"tags":["Main Skill","Magic","Chain","Lightning","CH01"],"unlock":"Modify the <skill>Call Lightning</skill> (Subskill) 2 times in one game.","urlName":"chain-lightning","interval":{"name":"Activation Chance","value":"18.00%"},"description":"Creates streaks of lightning that chain to nearby enemies.\nTarget up to 4 enemies\n25% chance to inflict Shock","modifications":[{"name":"Static","upgrade":"Skill Activation Chance +10%\nSkill Chain +2"},{"name":"Conductor","upgrade":"Skill Activation Chance +25%\nSkill Chain +1"},{"name":"Electric Dispersion","upgrade":"Skill Activation Chance +15%"},{"name":"Special Mod","upgrade":"Skill Damage +30%\nSkill Chain +5"}]},{"file":"Venom Dispersion.png","stat":{"name":"Damage","value":"110%"},"tags":["Main Skill","Magic","Projectile","Toxin","CH01"],"unlock":"Inflict Poison onto an enemy","urlName":"venom-dispersion","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Sprays toxic liquid in a circle.\nSprays 3 toxic bubbles\n60% chance to inflict Poison","modifications":[{"name":"Giant Toxic Bubble","upgrade":"Explodes upon enemy contact\nSkill Damage +10%\nSkill Size +50%"},{"name":"Spreading Plague","upgrade":"Skill Count +3\nSkill Penetration Count +2"},{"name":"Terrible Toxin","upgrade":"Skill Count +2\nPoison Chance +15%"},{"name":"Special Mod","upgrade":"Skill Count +5"}]},{"file":"Traumatic Smite.png","stat":{"name":"Damage","value":"333%"},"tags":["Main Skill","Physical","Melee","Divinity","CH01"],"unlock":"Defeat Mid-Boss <boss>Punisher</boss>","urlName":"traumatic-smite","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Swings a hammer to knock back the enemy.\nIncreases the Activation Chances of all Main Skills for 2 seconds upon use.\nMain Skill Activation Chance +8%","modifications":[{"name":"Massive Impact","upgrade":"Skill Damage +35%\nSkill Size +15%"},{"name":"Blacksmith","upgrade":"Activation Chance +3%"},{"name":"Weakness Strike","upgrade":"15% chance to deal 3  times damage\nSkill Damage +25%"},{"name":"Special Mod","upgrade":"Skill Size +35%\nSkill Count +1"}]},{"file":"Frost Bomb Throw.png","stat":{"name":"Damage","value":"200%"},"tags":["Main Skill","Magic","Bomb","Frost","CH01"],"unlock":"Defeat Chapter 1 monster, Blue Watcher (M007), 100 times.","urlName":"frost-bomb-throw","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Throws multiple frost bombs nearby.\n30% chance to inflict Freeze\n3 bombs","modifications":[{"name":"Bomb Mod","upgrade":"Skill Size +30%\nSkill Count +1"},{"name":"Firepower Mod","upgrade":"Skill Damage +25%\nSkill Activation Chance +10%"},{"name":"Bomb Bag","upgrade":"Skill Count +2"},{"name":"Special Mod","upgrade":"Set Time Till Explosion to 0.3 seconds\nSkill Damage +20%\nSkill Size +50%"}]},{"file":"Flame Bomb Throw.png","stat":{"name":"Damage","value":"225%"},"tags":["Main Skill","Magic","Bomb","Flame","CH01"],"unlock":"Defeat Chapter 1 monster, Red Watcher (M006), 100 times.","urlName":"flame-bomb-throw","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Throws multiple flame bombs nearby.\n80% chance to inflict Burn\n3 bombs","modifications":[{"name":"Lava Bomb","upgrade":"Skill Damage +30%\nSkill Size +20%"},{"name":"Scatter Bomb","upgrade":"Skill Damage +20%\nSkill Activation Chance +5%"},{"name":"Short Wick","upgrade":"Time Till Explosion -0.5 seconds\nSkill Damage +25%"},{"name":"Special Mod","upgrade":"Skill Damage +50%\nSkill Size +100%"}]},{"file":"Plasma.png","stat":{"name":"Damage","value":"140%"},"tags":["Main Skill","Magic","Projectile","Lightning","CH01"],"unlock":"Complete <skill>Chain Lightning</skill>'s (Main Skill) special modification successfully.","urlName":"plasma","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons a plasma sphere that charges at nearby enemies and deals damage.\n25% chance to inflict Shock\nCan target up to 3 enemies","modifications":[{"name":"Stabilized Sphere","upgrade":"Skill Activation Chance +10%\nSkill Movement Speed -20%\nSkill Duration +1 second"},{"name":"Gravity Field","upgrade":"Skill Damage +25%\nSkill Size +30%"},{"name":"Nuclear Enhancement","upgrade":"Skill Multi-Hit Interval -20%"},{"name":"Special Mod","upgrade":"Skill Multi-Hit Interval -50%"}]},{"file":"Ice Spear.png","stat":{"name":"Damage","value":"115%"},"tags":["Main Skill","Magic","Melee","Frost","CH02"],"unlock":"-","urlName":"ice-spear","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons an Ice Spear that spikes up at the front.\nActivation Count 5\n15% chance to inflict Freeze","modifications":[{"name":"Ice Path","upgrade":"Skill Activation Chance +10%\nSkill Count +2"},{"name":"Sharp Speartip","upgrade":"Skill Damage +60%"},{"name":"Permanent Snow","upgrade":"Skill Damage +25%\nSkill Activation Chance +5%\nSkill Count +1\nFrozen Chance +5%"},{"name":"Special Mod","upgrade":"Ice Spear spikes up at the enemies in back as well.\nSkill Count +10"}]},{"file":"Toxic Gas Explosion.png","stat":{"name":"Damage","value":"225%"},"tags":["Main Skill","Magic","Spell","Toxin","CH02"],"unlock":"Equip the artifact, <artifact>Poisonous Mushroom</artifact> and defeat 100 enemies.","urlName":"toxic-gas-explosion","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Causes a toxic gas explosion under the enemy's feet.\nOn Hit, guaranteed to inflict Poison","modifications":[{"name":"Gigantic Explosion","upgrade":"Skill Damage +15%\nSkill Size +30%"},{"name":"Concentrated Explosion","upgrade":"Skill Damage +25%\nSkill Size +20%"},{"name":"Non-toxic","upgrade":"Does not inflict Poison\nSkill Damage +40%"},{"name":"Special Mod","upgrade":"2 additional explosions at a random location within a narrow range of the enemy.\nSkill Size -30%"}]},{"file":"Toxic Blade.png","stat":{"name":"Damage","value":"240%"},"tags":["Main Skill","Physical","Melee","Toxin","CH02"],"unlock":"Acquire the <skill>Apply Toxin</skill> (Buff Skill) and then acquire at least 3 kinds of Physical tag skills","urlName":"toxic-blade","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons a venomous sword and swings it to consume the poison of an enemy in front, dealing damage proportional to the amount consumed.\nFor each Poison stack, Toxic Blade damage +1%\n10% chance to inflict Poison","modifications":[{"name":"Swing Slash","upgrade":"Skill Damage +30%\nSkill Size +35%"},{"name":"Spin Slash","upgrade":"Toxic Blade's Additional Effect: ATK +2% per Poison stack."},{"name":"Double Rush","upgrade":"Skill Count +1"},{"name":"Special Mod","upgrade":"Removes Slash\nActivates immediately on enemies within a wide range\nSkill Activation Chance +30%"}]},{"file":"Icicle Spike.png","stat":{"name":"Damage","value":"62%"},"tags":["Main Skill","Magic","Projectile","Frost","CH02"],"unlock":"Acquire the artifact, <artifact>Suspicious Ice Shard</artifact>, then use the <skill>Ice Spear</skill> (Main Skill) with all mods completed.","urlName":"icicle-spike","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons and fires an icicle spike to the front.\nFires 3 times\n15% chance to inflict Freeze","modifications":[{"name":"Creeping Icicle","upgrade":"Skill Activation Chance +5%\nSkill Count +3"},{"name":"Frigid Frost","upgrade":"Skill Damage +25%\nFrozen Chance +15%"},{"name":"Creeping Chill","upgrade":"Skill Damage +15%\nSkill Count +2\nSkill Movement Speed +60%"},{"name":"Special Mod","upgrade":"Skill Activation Chance +5%\nSkill Count +10"}]},{"file":"Rock Shot.png","stat":{"name":"Damage","value":"230%"},"tags":["Main Skill","Physical","Projectile","Divinity","CH03"],"unlock":"Use the <skill>Icicle Spike<skill> (Main Skill) and deal damage to Chapter 3's Stone Golem (M212) 100 times.","urlName":"rock-shot","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Blasts a huge rock fragment to the front.\nExplodes upon hitting the first enemy.","modifications":[{"name":"Massive Explosion","upgrade":"Skill Damage +25%\nSkill Size +35%"},{"name":"Compressed Rock","upgrade":"The stone does not penetrate enemies.\nFor each additional penetration, basic damage of stone shot increases by +100%"},{"name":"Shooting Practice","upgrade":"Skill Damage +35%\nSkill Movement Speed +60%"},{"name":"Special Mod","upgrade":"Skill Damage +300%\nSkill Size +60%\n(Currently not working)"}]},{"file":"Dark Sphere.png","stat":{"name":"Damage","value":"120%"},"tags":["Main Skill","Magic","Projectile","Darkness","CH03"],"unlock":"Cast the <skill>Plasma</skill> skill (modified 3 times) 200 times while using the artifact, <artifact>Horseshoe Magnet</artifact>.","urlName":"dark-sphere","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Creates a multi-hit dark sphere and fires it forward.","modifications":[{"name":"Void","upgrade":"Skill Size +35%\nSkill Multi-Hit Interval -10%"},{"name":"Inhalation","upgrade":"Skill Damage +50%"},{"name":"Plasma","upgrade":"Skill Activation Chance +25%\nSkill Multi-Hit Interval -10%"},{"name":"Special Mod","upgrade":"Reduces the critical resistance of the hit enemy by 25% for 3 seconds.\n(Only one stack can be applied with a single skill.)\n(Critical resistance increases or decreases the critical damage received.)"}]},{"file":"Freezing Smite.png","stat":{"name":"Damage","value":"150%"},"tags":["Main Skill","Physical","Melee","Frost","CH03"],"unlock":"Equip the artifact, <artifact>Frozen Gauntlet</artifact> (Regular Artifact), and hit enemies inflicted with Freeze 50 times.","urlName":"freezing-smite","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Has freezing energy explode from within an enemy.\n10% chance to inflict Freeze","modifications":[{"name":"Cooling","upgrade":"Skill Activation Chance +8%\nFrozen Chance +5%"},{"name":"Ice Punch","upgrade":"Skill Damage +15%\nSkill Size +25%\nFrozen Chance +5%"},{"name":"Enchant!","upgrade":"Triggers Freezing Smite for the next 1 basic attacks after initially casting Freezing Smite.\nCan charge up to 3 times"},{"name":"Special Mod","upgrade":"Skill Damage +55%\nSkill Activation Chance +15%"}]},{"file":"Flame Vortex.png","stat":{"name":"Damage","value":"130%"},"tags":["Main Skill","Magic","Projectile","Flame","CH03"],"unlock":"Acquire the artifact, <artifact>Unidentified Staff</artifact> (Lesser Artifact), then use the <skill>Flame Zone</skill> (Subskill) (modified 3 times) 100 times.","urlName":"flame-vortex","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Sends out a vortex of flame to the front.\n30% chance to inflict Burn","modifications":[{"name":"Intense Heat","upgrade":"Skill Damage +25%\nSkill Size +15%"},{"name":"Persistent Fire","upgrade":"Skill Damage +15%\nSkill Duration +1 second"},{"name":"Rapid Spin","upgrade":"Skill Multi-Hit Interval -35%"},{"name":"Special Mod","upgrade":"Creates a Flame Zone along the path of the Vortex.\nApplies Flame Zone's enhancement effect."}]},{"file":"Explosive Marble.png","stat":{"name":"Damage","value":"200%"},"tags":["Main Skill","Physical","Bomb","Divinity","CH03"],"unlock":"-","urlName":"explosive-marble","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Fires an explosive marble that bounces to the front.","modifications":[{"name":"Bouncy Ball","upgrade":"Skill Damage +25%\nSkill Size +15%"},{"name":"Gigantic Explosion","upgrade":"Skill Damage +15%\nSkill Size +35%"},{"name":"Pocket Bomb","upgrade":"Skill Count +1"},{"name":"Special Mod","upgrade":"Skill Size +20%\nSkill Count +3"}]},{"file":"Blazing Ray.png","stat":{"name":"Damage","value":"150%"},"tags":["Main Skill","Physical","Melee","Flame","CH03"],"unlock":"Use the <weapon>Blazing Spellbook</weapon> (Weapon) Weapon Skill 66 times as a <character>Mage</character> (Character).","urlName":"blazing-ray","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Slashes at the front with a Blazing Sword and inflicts Burn. 15% chance to inflict Burn","modifications":[{"name":"Rapid Slash","upgrade":"Skill Damage +30%\nSkill Casting Speed +15"},{"name":"Cross Slash","upgrade":"Skill Damage +55%\nSkill Size +15%"},{"name":"Charging Slash","upgrade":"Skill Damage +25%\nSkill Size +10%\nSkill Activation Chance +5%"},{"name":"Special Mod","upgrade":"Skill Damage +125%\nSkill Size +35%"}]},{"file":"Ignition.png","stat":{"name":"Damage","value":"200%"},"tags":["Main Skill","Magic","Spell","Flame","CH03"],"unlock":"Reach level 25 on <character>Mage</character> (Character).","urlName":"ignition","interval":{"name":"Activation Chance","value":"30.00%"},"description":"Summons a wave of flames around the enemy.\nEnemies hit by these flames are set on fire for 5 seconds and receive Damage Over Time every second.\nStacks up to 7 times\n15% chance to inflict Burn","modifications":[{"name":"Intense Fire","upgrade":"Skill Damage +35%"},{"name":"Flaming Soul","upgrade":"Skill Multi-Hit Interval -15%"},{"name":"Burst of Fire","upgrade":"Skill Damage +15%\nSkill Size +25%"},{"name":"Special Mod","upgrade":"Ignition Stack Limit +3\nAdditional Ignite +1 when ignited"}]},{"file":"Super Smite.png","stat":{"name":"Damage","value":"200%"},"tags":["Main Skill","Physical","Melee","Darkness","CH03"],"unlock":"Reach level 25 on <character>Mercenary</character> (Character).","urlName":"super-smite","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Powerfully smites the enemy and sends them flying","modifications":[{"name":"Dragon Smite","upgrade":"Deals damage to enemies on hit when knocked back.\nCritical damage increased by 15%."},{"name":"Deep Smite","upgrade":"Knock Back Distance -90%\nDirect Hit ATK +30%"},{"name":"Double Smite","upgrade":"Direct Hit ATK +50%"},{"name":"Special Mod","upgrade":"Direct Hit ATK +250%"}]},{"file":"Tornado Arrow.png","stat":{"name":"Damage","value":"100%"},"tags":["Main Skill","Physical","Projectile","Bleed","CH03"],"unlock":"Reach level 25 on <character>Hunter</character> (Character).","urlName":"tornado-arrow","interval":{"name":"Activation Chance","value":"40.00%"},"description":"Fires an arrow that splits after flying a certain distance.\nSplit Count 5\n20% chance to inflict Bleed","modifications":[{"name":"Short shot","upgrade":"Distance till Tornado Shot Explodes -25%\nSkill Damage +15%"},{"name":"Split Arrow","upgrade":"Splitting Arrow Count +2"},{"name":"Arrowhead Mod","upgrade":"Skill Damage +35%"},{"name":"Special Mod","upgrade":"Immediately explodes when a Tornado Arrow touches the enemy."}]},{"file":"Lightning Strike.png","stat":{"name":"Damage","value":"45%"},"tags":["Main Skill","Physical","Melee","Lightning","CH04"],"unlock":"Reach level 6 of the Lightning synergy.","urlName":"lightning-strike","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Quickly stabs forward with the power of lightning and deals damage\n Attack Count 6\n25% chance to inflict Shock","modifications":[{"name":"Consecutive Stabs","upgrade":"Skill Count +2"},{"name":"Elaborate Stab","upgrade":"Skill Damage +35%"},{"name":"Sharp Thrust","upgrade":"Skill Activation Chance +7%\nSkill Count +1"},{"name":"Special Mod","upgrade":"Lightning Stab's base damage increases by 105% per number of attacks.\nSize of Lightning Stab increases by +10% per attack.\nNumber of attacks is fixed at 1."}]},{"file":"Pulse Bomb.png","stat":{"name":"Damage","value":"100%"},"tags":["Main Skill","Magic","Bomb","Lightning","CH04"],"unlock":"Inflict skill damage with the 'Bomb' tag to an electrocuted enemy while equipped with <artifact>Spark Powder</artifact>.","urlName":"pulse-bomb","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Throws a bombs that pulsates.\n3 Pulse Release\n40% chance to inflict Shock","modifications":[{"name":"Unstable Explosion","upgrade":"Pulse Blast count +1"},{"name":"Extra Blast","upgrade":"Skill Activation Chance +5%\nSkill Count +1"},{"name":"Strong Pulse","upgrade":"Skill Damage +15%\nSkill Size +20%"},{"name":"Special Mod","upgrade":"Enemies hit by the pulse are limited to 1 pulse chain reaction.\nSkill Count +2"}]},{"file":"Needle Throw.png","stat":{"name":"Damage","value":"65%"},"tags":["Main Skill","Physical","Targeting","Bleed","CH04"],"unlock":"Activate the Bleed Synergy Level 4 while using the <artifact>Crimson Resin</artifact> (Regular Artifact).","urlName":"needle-throw","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Fires needles in a fan-like methos that inflicts Bleed and deals damage that reduces Bleed Resistance. The attack angle does not exceed 60 degrees.\nReduces enemy's Bleeding Resistance by 25% for 3 seconds\n 25% chance to inflict Bleed","modifications":[{"name":"Sharp Thorns","upgrade":"Skill Penetration Count +1"},{"name":"More Thorns","upgrade":"Skill Activation Chance +5%\nSkill Count +2"},{"name":"Sharp Thorns","upgrade":"Skill Damage +10%\nSkill Count +2"},{"name":"Special Mod","upgrade":"Bleed Resistance of hit enemies -35% for 8 seconds"}]},{"file":"Flame Spear.png","stat":{"name":"Damage","value":"275%"},"tags":["Main Skill","Physical","Projectile","Flame","CH04"],"unlock":"Equip a flaming sword while reaching level 6 of the flame synergy.","urlName":"flame-spear","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons and launches a spear of fire which pierces the enemy once.\nMaximum Pierces 1\n15% chance to inflict Burn","modifications":[{"name":"Burning Spear","upgrade":"Skill Damage +35%"},{"name":"Pierce","upgrade":"Skill Damage +15%\nSkill Penetration Count +2"},{"name":"Neat Penetrating","upgrade":"Damage +15% per remaining penetration count"},{"name":"Special Mod","upgrade":"Returns when maximum distance is reached with remaining number of penetrations"}]},{"file":"Flash.png","stat":{"name":"Damage","value":"280%"},"tags":["Main Skill","Physical","Targeting","Bleed","CH04"],"unlock":"Reach level 25 on <character>Ronin</character> (Character).","urlName":"flash","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Cuts through a wide space in a straight line, bisecting it.\n 110% chance to inflict Bleed","modifications":[{"name":"One Hit Kill","upgrade":"Fix skill count to 1\n For each additional skill count, base damage +105%\nSkill size does not increase"},{"name":"Mind's Eye","upgrade":"Skill Damage +40%"},{"name":"Quick Claw","upgrade":"Skill Count +1"},{"name":"Special Mod","upgrade":"Reactivate immediately upon killing an enemy"}]},{"file":"Crimson Touch.png","stat":{"name":"Damage","value":"150%"},"tags":["Main Skill","Magic","Chain","Bleed"],"unlock":"Reach level 6 of the Bleeding synergy.","urlName":"crimson-touch","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Attacks enemies by firing a chain of red beams and inflicting Bleed.\nMaximum Chain 4\n110% chance to inflict Bleed","modifications":[{"name":"Many Hands","upgrade":"Skill Damage +20%\nSkill Chain +2"},{"name":"Wide Touch","upgrade":"Chain distance +30%\nSkill Damage +10%"},{"name":"Blood Touch","upgrade":"When an enemy is killed with this skill, 'Blood Discharge' is activated in the basic state that has not been modified.\nSkill Damage +10%"},{"name":"Special Mod","upgrade":"If there is no target to be chained nearby, chain to the same enemy at 30% power."}]},{"file":"Flame Haze.png","stat":{"name":"Damage","value":"280%"},"tags":["Main Skill","Magic","Spell","Flame"],"unlock":"Defeat Hero King <boss>Benedict</boss> (CH04 Hidden Boss) 5 times","urlName":"flame-haze","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summon a flame orb and make it explode.\n35% chance to inflict Burn","modifications":[{"name":"Condensation","upgrade":"Skill Size +10%\nSkill Duration -10%\nSkill Multi-Hit Interval -10%"},{"name":"Firepower","upgrade":"Skill Damage +30%"},{"name":"Flammability","upgrade":"Skill Damage +20%\nSkill Duration -20%\nSkill Multi-Hit Interval -20%"},{"name":"Special Mod","upgrade":"After Skill Explosion, creates a Flame Haze with 35% Size and Damage.\nSkill Damage +10%"}]},{"file":"Flame Arrow.png","stat":{"name":"Damage","value":"100%"},"tags":["Main Skill","Magic","Targeting","Flame"],"unlock":"Defeat Ironblood Lord <boss>Benedict</boss> (CH04 Hidden Boss) 5 times.","urlName":"flame-arrow","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summon a flame arrow above the enemy's head and shoot it.\n115% chance to inflict Burn","modifications":[{"name":"Rapid Fire","upgrade":"Skill Damage +10%\nSkill Activation Chance +8%"},{"name":"Additional hit","upgrade":"Skill Damage +10%\nSkill Count +1"},{"name":"Piercing Shot","upgrade":"Skill Damage +10%\nSkill Penetration Count +1"},{"name":"Special Mod","upgrade":"Skill Damage +55%\nSkill Count +1"}]},{"file":"Crushing Bite.png","stat":{"name":"Damage","value":"190%"},"tags":["Main Skill","Physical","Melee","Bleed","CH05"],"unlock":"Reach level 25 on <character>Werewolf</character> (Character).","urlName":"crushing-bite","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons the fangs of a giant wolf to bite and damage enemies.\nHits 2 times.\n25% chance to inflcit Bleed.","modifications":[{"name":"Final Execution","upgrade":"20% chance of Skill Reactivation"},{"name":"Target Locked","upgrade":"Skill Activation Chance +25%"},{"name":"Sharp Teeth","upgrade":"Skill Damage +10%\nBleed Chance +18%"},{"name":"Special Mod","upgrade":"Grants [Burst - Crushing Bite] on Skill Hit\nMaximum Burst stacks +20\n\n[Burst - Crushing Bite]: Damage taken from this skill +1% per stack"}]},{"file":"Blood Spear.png","stat":{"name":"Damage","value":"100%"},"tags":["Main Skill","Physical","Melee","Bleed","CH04"],"unlock":"Defeat 300 enemies while in <character>Vampire</character>'s (Character) Blood Awakening (Passive) Stage 3.","urlName":"blood-spear","interval":{"name":"Activation Chance","value":"15.00%"},"description":"A Blood Spear erupts from the ground to strike enemies.\n 40% chance to inflict Bleed","modifications":[{"name":"Weak Point Attack","upgrade":"Skill Damage +50% to bleeding targets."},{"name":"Burst","upgrade":"Triggers Bleeding immediately on hit.\nBleed Chance +20%"},{"name":"Shadow Strike","upgrade":"Skill spawns at the enemy's location.\nSkill Damage -30%\nSkill Count +1"},{"name":"Special Mod","upgrade":"Skill Count increases per 50% additional Bleed Chance (Maximum: 3)."}]},{"file":"Abyssal Execution.png","stat":{"name":"Damage","value":"150%"},"tags":["Main Skill","Physical","Melee","Frost","CH05"],"unlock":"Reach level 25 on <character>Predator</character> (Character).","urlName":"abyssal-execution","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Deals Frost damage to enemies, and deals 35% additional damage when the enemy's health is below 25%.\n 10% chance to inflict Freeze","modifications":[{"name":"Ruthless","upgrade":"Low HP Threshold +10%\nSkill Damage +20%"},{"name":"Execution Rite","upgrade":"Triggers a skill on Plunging Attack hit"},{"name":"Into the Abyss","upgrade":"15% increased Skill Activation Chance when attacking low HP enemies"},{"name":"Special Mod","upgrade":"Skill Damage +35% when attacking Bosses"}]},{"file":"Sandspike.png","stat":{"name":"Damage","value":"150%"},"tags":["Main Skill","Physical","Melee","Bleed","CH05"],"unlock":"Enter the Desert of the Red Sun with a specially-modified <skill>Hatred Spike</skill> (Subskill).","urlName":"sandspike","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Strikes forward with spikes of sand.\nNumber of Spikes 1\n25% chance to inflict Bleed","modifications":[{"name":"Crimson Wind","upgrade":"Bleed Chance +15%"},{"name":"Spire of the Dunes","upgrade":"Skill Size +20%"},{"name":"Judgement of the Dunes","upgrade":"Skill Damage +33%"},{"name":"Special Mod","upgrade":"Sandspike is recast once.\nThe recast increases in size based on Bleed chance (up to +100%)."}]},{"file":"Desert Vortex.png","stat":{"name":"Damage","value":"100%"},"tags":["Main Skill","Physical","Spell","Darkness","CH05"],"unlock":"Stay buried in the sand for a total of 100 seconds in the Desert of the Red Sun chapter.","urlName":"desert-vortex","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons a Desert Vortex that deals damage to enemies within range.","modifications":[{"name":"Accelerated Collapse","upgrade":"Skill Duration -10%\nSkill Multi-Hit Interval -10%"},{"name":"Predator of the Desert","upgrade":"Skill Damage +20%"},{"name":"Whim of the Sand","upgrade":"Skill Activation Chance +15%"},{"name":"Special Mod","upgrade":"Skill Size +15%\nSkill Duration +15%\nEffect doubled when hitting a boss."}]},{"file":"Sacrificial Stake.png","stat":{"name":"Damage","value":"100%"},"tags":["Main Skill","Magic","Spell","Divinity","CH05"],"unlock":"Lose a total of 6 Soul Hearts after reviving through Divinity in a single game.","urlName":"sacrificial-stake","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Summons a sacrificial stake that forces sacrifice upon enemies, dealing damage.\nThe more Soul Hearts the player has lost, the greater the damage.\nSkill Damage +5% per Soul Heart lost (up to 50%)","modifications":[{"name":"Whispering Prayer","upgrade":"Skill Activation Chance +18%"},{"name":"Minor Fury","upgrade":"Skill Damage +25%\nSkill Size -30%"},{"name":"Cracked Revelation","upgrade":"Skill Damage -15%\nSkill Count +1"},{"name":"Special Mod","upgrade":"5% chance to retrigger skill per lost Soul Heart (up to 25%)"}]},{"file":"Pact of Immortality.png","stat":{"name":"Damage","value":"90%"},"tags":["Main Skill","Magic","Spell","Toxin","CH05"],"unlock":"Revive a total of 6 times through Divinity.","urlName":"pact-of-immortality","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Cast Undying Pact on a monster.\nThe contracted monster deals continuous damage to nearby enemies and leaves an afterimage for 1 second upon death.\nNumber of Hits  4\n10% chance to inflict Poison","modifications":[{"name":"Venomous Signature","upgrade":"Skill Damage +25%"},{"name":"Edict of Contagion","upgrade":"Poison Chance +15%"},{"name":"Cruel Edge","upgrade":"Skill Size +15%"},{"name":"Special Mod","upgrade":"Afterimage duration +1 second"}]},{"file":"Sand Arrow.png","stat":{"name":"Damage","value":"90%"},"tags":["Main Skill","Physical","Targeting","Divinity","CH05"],"unlock":"Take 1 hit from a Desert Wasp (M406) attack.","urlName":"sand-arrow","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Creates sand arrows from the ground around the player and fires them at enemies.\nNumber of arrows 3","modifications":[{"name":"Graceful Descent","upgrade":"Skill Count increases by 1 for each Divinity Synergy level"},{"name":"Lightbreaker","upgrade":"Skill Activation Chance +15%"},{"name":"Judgement of the Dunes","upgrade":"Skill Damage +20%"},{"name":"Special Mod","upgrade":"Sand Arrow SKill Damage Multiplier +20%, now 120%"}]},{"file":"Sand Soldier.png","stat":{"name":"Damage","value":"120%"},"tags":["Main Skill","Magic","Melee","Divinity","CH05"],"unlock":"Defeat 300 Desert Goblins (M409, M410, M411).","urlName":"sand-soldier","interval":{"name":"Activation Chance","value":"15.00%"},"description":"A sand soldier appears behind the player, charges forward to deal damage, and then thrusts once more.","modifications":[{"name":"Sandstorm Legion","upgrade":"For every 20% increase in Skill Size, Skill Count +1"},{"name":"Scattered Formation","upgrade":"Skill Damage -30%\nSkill Count +1"},{"name":"White Soldiers of Sand","upgrade":"Skill Damage +40%\nSkill Activation Chance -10%"},{"name":"Special Mod","upgrade":"For each additional skill count, skill damage +50%"}]},{"file":"Gravity Bomb.png","stat":{"name":"Damage","value":"150%"},"tags":["Main Skill","Physical","Bomb","Darkness","CH06"],"unlock":"Deal damage to the Bomber with the <artifact>Dud Dynamite</artifact>.","urlName":"gravity-bomb","interval":{"name":"Activation Chance","value":"15.00%"},"description":"Throws a bomb that pulls in nearby enemies upon detonation.","modifications":[{"name":"Unstable Core","upgrade":"Skill Activation Chance +10%"},{"name":"Event Horizon","upgrade":"Skill Size +30%"},{"name":"Singularity Collapse","upgrade":"Skill Damage +50%"},{"name":"Special Mod","upgrade":"Skill Count +1"}]}],"color":"#851717","title":"Main Skills"},"curseskills":{"list":[{"file":"Electric Stigma.png","stat":{"name":"Damage","value":"80%"},"tags":["Magic","Curse","Lightning","CH01"],"unlock":"Become inflicted with Shock (Challenge mode).","urlName":"electric-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\nInflicts Shock with a 55% chance.","modifications":[{"name":"Curse Enhancement I","upgrade":"Lightning skill damage received by monsters within the brand of electricity +20%"},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Skill Count +1\nSkill Hit Count +1"}]},{"file":"Flame Stigma.png","stat":{"name":"Damage","value":"100%"},"tags":["Magic","Curse","Flame","CH01"],"unlock":"Become inflicted with Burn.","urlName":"flame-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\nInflicts Burn with a 45% chance","modifications":[{"name":"Curse Enhancement I","upgrade":"Burn skill damage received by monsters within the brand of flame +20%"},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Skill Count +1\nBurn Chance +30%"}]},{"file":"Ice Stigma.png","stat":{"name":"Damage","value":"100%"},"tags":["Magic","Curse","Frost","CH01"],"unlock":"Become inflicted with Freeze (Challenge mode or <artifact>Eternal Flower</artifact>).","urlName":"ice-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\nInflicts Freeze with a 40% chance","modifications":[{"name":"Curse Enhancement I","upgrade":"Ice skill damage received by monsters within the brand of ice +20%"},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Skill Count +1\nSkill Duration +1 second"}]},{"file":"Death Stigma.png","stat":{"name":"Damage","value":"80%"},"tags":["Magic","Curse","Darkness","CH04"],"unlock":"Die from being hit my Chapter 1 Boss <boss>Greed</Boss>'s 'Dark Arrival'. (Let Greed kill you in the phase where everything goes black and you need to light up the 4 totems.)","urlName":"death-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\nReduces critical hit resistance by 10% for 3 seconds with a probability of 40%.","modifications":[{"name":"Curse Enhancement I","upgrade":"Dark skill damage received by monsters within brand of darkness +20%"},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Increases critical hit resistance reduction duration by +2 seconds and reduces critical hit resistance by -5%."}]},{"file":"Radiance Stigma.png","stat":{"name":"Damage","value":"100%"},"tags":["Magic","Curse","Divinity","CH04"],"unlock":"Reach level 6 of the Divnity synergy.","urlName":"radiance-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\nWhile the Mark of Radiance is engraved, the following effects are applied:\n- Skill activation probability increases by 15%\n- Skill cooldown recovery speed increases by 10%","modifications":[{"name":"Curse Enhancement I","upgrade":"Holy skill damage received by monsters within brand of divinity +20%"},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Skill Count +1\nSkill Duration +1 second"}]},{"file":"Bleeding Stigma.png","stat":{"name":"Damage","value":"100%"},"tags":["Magic","Curse","Bleed","CH04"],"unlock":"Get inflicted with the status effect 'Bleed'.","urlName":"bleeding-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\n40% chance to reduce bleed resistance by 15%","modifications":[{"name":"Curse Enhancement I","upgrade":"Bleed skill damage received by monsters within brand of blood +20%"},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Skill Count +1\nSkill Duration +1 second"}]},{"file":"Assassination.png","stat":{"name":"Damage","value":"100%"},"tags":["Physical","Curse","Darkness","CH05"],"unlock":"Reach level 25 on <character>Assassin</character> (Character).","urlName":"assassination","interval":{"name":"Cooldown","value":"6.00"},"description":"Marks the strongest enemy for 5 seconds, who takes 10% additional damage.","modifications":[{"name":"Power Strike","upgrade":"On activation, Critical Hit Chance +100% for 0.5 seconds"},{"name":"Agility","upgrade":"Hitting a Marked target reduces Dash Cooldown by 0.25 seconds"},{"name":"Target Confirmed","upgrade":"Marks target takes +20% Physical Skill Damage"},{"name":"Special Mod","upgrade":"Instantly recast on killing a marked target"}]},{"file":"Poison Stigma.png","stat":{"name":"Damage","value":"100%"},"tags":["Magic","Curse","Toxin","CH05"],"unlock":"Reach level 6 of the Toxin synergy.","urlName":"poison-stigma","interval":{"name":"Cooldown","value":"6.00"},"description":"Creates a cursed zone that deals continuous damage for 5 seconds.\n40% chance to reduce poison resistance by 15% for 5 seconds.\n100% chance to inflict Poison.","modifications":[{"name":"Curse Enhancement I","upgrade":"Monsters affected by Poison Stigma take 20% amplified Poison Skill Damage."},{"name":"Curse Enhancement II","upgrade":"Skill Size +20%"},{"name":"Curse Enhancement III","upgrade":"Skill Duration +1 second"},{"name":"Special Mod","upgrade":"Skill Count +1\nSkill Duration +1 second"}]}],"color":"#731785","title":"Curse Skills"},"summonskills":{"list":[{"file":"Ice Familiar.png","stat":{"name":"Damage","value":"200%"},"tags":["Summon","Magic","Melee","Frost","CH03"],"unlock":"Use a Frost tag skill 200 times while owning the artifact, <artifact>Soul Whistle</artifact> (Regular Artifact).","urlName":"ice-familiar","interval":{"name":"Cooldown","value":"2.00"},"description":"Summons an Ice Familiar that flies to a nearby enemy and explodes.\nFires 3 times.\n10% chance to inflict Freeze.","modifications":[{"name":"Madness Included","upgrade":"Skill Damage +10%\nEnemy Detection Range +25%"},{"name":"Split Included","upgrade":"Attack Count +20%"},{"name":"Friend Included","upgrade":"Freeze Chance +15%"},{"name":"Special Mod","upgrade":"Skill Damage +50%\nFire 1 Icicle Spike on each attack"}]},{"file":"Shooter Drone.png","stat":{"name":"Damage","value":"150%"},"tags":["Summon","Physical","Targeting","Darkness","CH03"],"unlock":"Reach level 25 on <character>Gunner</character> (Character).","urlName":"shooter-drone","interval":{"name":"Cooldown","value":"1.50"},"description":"Summons a drone that tracks nearby enemies and attacks.\nShoots 3 times.","modifications":[{"name":"Quick Assemble","upgrade":"Attack Speed +25%"},{"name":"Drone Mod","upgrade":"Attack Count +1"},{"name":"Modified Bullet","upgrade":"Skill Damage +35%"},{"name":"Special Mod","upgrade":"When Shooter Drone hits, the bullet ricochets to 1 nearby enemy, dealing 45% damage.\nSkill Count +50%."}]},{"file":"Earth Spirit.png","stat":{"name":"Damage","value":"80%"},"tags":["Summon","Magic","Projectile","Divinity","CH05"],"unlock":"Reach level 25 with the Summoner character.","urlName":"earth-spirit","interval":{"name":"Cooldown","value":"3.00"},"description":"Summons an Earth Spirit that continuously hurls rocks at enemies, dealing damage.","modifications":[{"name":"Wrath of the Earth","upgrade":"Skill Cooldown -40%"},{"name":"Tremor of the Earth","upgrade":"Projectile Count +1"},{"name":"Power of the Earth","upgrade":"Skill Damage +30%"},{"name":"Special Mod","upgrade":"1 projectile per 2 summoned summons."}]},{"file":"Contracted Cactus.png","stat":{"name":"Damage","value":"90%"},"tags":["Summon","Physical","Projectile","Bleed","CH05"],"unlock":"Defeat Ancient Weapon <boss>Akron</boss> (CH05 Final Boss) with the <pet>Smiling Cactus</pet> (Pet).","urlName":"contracted-cactus","interval":{"name":"Cooldown","value":"3.00"},"description":"Approaches nearby enemies and fires thorns once to deal damage..","modifications":[{"name":"Chlorophyll Mutation","upgrade":"Skill Count + 1"},{"name":"Sharp Thorns","upgrade":"Skill Damage +25%"},{"name":"Bleeding Powder","upgrade":"Bleed Chance +15%"},{"name":"Special Mod","upgrade":"When attacking, thorns are rapidly fired in 8 directions from the center of the cactus."}]}],"color":"#787878","title":"Summon Skills"},"enchantskills":{"list":[{"file":"Bleed Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Bleed"],"unlock":"Reach level 10 of the Bleed Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"bleed-smite","description":"Imbues the weapon with the power of blood. Basic Skills have 10% chance to inflict Bleed.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Blood Wave","upgrade":"Triggers a giant Bleed wave upon Deep Wound activation (Cooldown: 3 seconds)"},{"name":"Special Mod","upgrade":"Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."}]},{"file":"Frost Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Frost"],"unlock":"Reach level 10 of the Frost Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"frost-smite","description":"Imbues the weapon with the power of frost. Basic Skills have 10% chance to inflict Freeze.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Frost Scale","upgrade":"Frozen Shield +1"},{"name":"Special Mod","upgrade":"Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."}]},{"file":"Darkness Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Darkness"],"unlock":"Reach level 10 of the Darkness Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"darkness-smite","description":"Imbues the weapon with the power of darkness. Critical Hit Chance increases by 10%.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Critical Strike","upgrade":"Critical Hit Chance +10%"},{"name":"Special Mod","upgrade":"Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."}]},{"file":"Toxin Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Toxin"],"unlock":"Reach level 10 of the Toxin Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"toxin-smite","description":"Imbues the weapon with the power of toxin. Basic Skills have 10% chance to inflict Poison.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Source of Plague","upgrade":"Applies 1 stack of Poison to enemies within 2.5 range every 0.2 seconds"},{"name":"Special Mod","upgrade":"Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."}]},{"file":"Flame Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Flame"],"unlock":"Reach level 10 of the Flame Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"flame-smite","description":"Imbues the weapon with the power of flame. Basic Skills have 15% chance to inflict Burn.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Flammable Material","upgrade":"Burn Damage +25%"},{"name":"Special Mod","upgrade":"Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."}]},{"file":"Divinity Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Divinity"],"unlock":"Reach level 10 of the Divinity Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"divinity-smite","description":"Imbues the weapon with the power of divinity. Basic Skills have 10% chance to trigger a Divine Ray.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Sanctified Domain","upgrade":"Divine Ray Width +5%\nDivine Ray Duration +5%"},{"name":"Special Mod","upgrade":"Main Skill, Subskill, and Summon Skill cannot be activated Weapon Skill damage +1% per 1% Conversion Attack Power +1% and Movement Speed +0.5% per modification of disabled skills"}]},{"file":"Lightning Smite.png","stat":{"name":"Conversion","value":"25%"},"tags":["Enchant","Lightning"],"unlock":"Reach level 10 of the Lightning Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).","urlName":"lightning-smite","description":"Imbues the weapon with the power of lightning. Basic Skills have 25% chance to inflict Shock.","modifications":[{"name":"Additional Conversion","upgrade":"Conversion +10%"},{"name":"Conversion Sync","upgrade":"Skill Damage +1% per 1% Conversion (Max: 100%)"},{"name":"Overload","upgrade":"Max Shock Stack +10"},{"name":"Special Mod","upgrade":"Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."}]}],"color":"#f5d742","title":"Enchant Skills"}},"filePath":"/res/skills/","statOptions":["Damage","Shield","Speed Up","Skill Haste","Activation Chance","Damage Critical Chance","Basic Attack Damage","Conversion"],"intervalOptions":["Activation Chance","Cooldown"]}
+{
+  "data": {
+    "subskills": {
+      "list": [
+        {
+          "file": "Hatred Spike.png",
+          "stat": { "name": "Damage", "value": "160%" },
+          "tags": ["Subskill", "Physical", "Melee", "Bleed", "CH01"],
+          "unlock": "-",
+          "urlName": "hatred-spike",
+          "interval": { "name": "Cooldown", "value": "2.50" },
+          "description": "Pierces an enemy with a Cursed Spike.\n2 spikes\n10% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Chain of Abhorrence",
+              "upgrade": "Skill Damage +15%\nSkill Count +1\nSkill Cooldown Reduction -0.5s"
+            },
+            {
+              "name": "Abominator",
+              "upgrade": "Skill Damage +5%\nSkill Count +2"
+            },
+            {
+              "name": "Intensifying Abhorrence",
+              "upgrade": "Skill Damage +15%\nSkill Size +25%\nSkill Cooldown Reduction -1s"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +25%\nSkill Size +15%\nSkill Interval -30%"
+            }
+          ]
+        },
+        {
+          "file": "Shuriken Maneuver.png",
+          "stat": { "name": "Damage", "value": "80%" },
+          "tags": ["Subskill", "Physical", "Targeting", "Toxin", "CH01"],
+          "unlock": "Acquire <skill>Hatred Spike</skill> skill's modification, Abominator.",
+          "urlName": "shuriken-maneuver",
+          "interval": { "name": "Cooldown", "value": "7.00" },
+          "description": "Throws a shuriken that goes after an enemy.\nShuriken Count 3\n10% chance to apply Poison",
+          "modifications": [
+            { "name": "Two-Handed Throw", "upgrade": "Skill Count +4" },
+            {
+              "name": "Throwing Practice",
+              "upgrade": "Skill Damage +10%\nSkill Count +1\nSkill Cooldown Reduction -1s"
+            },
+            {
+              "name": "Successive Throw",
+              "upgrade": "Skill Damage +25%\nSkill Count +1\nSkill Cooldown Reduction -0.5s"
+            },
+            { "name": "Special Mod", "upgrade": "Skill Count +8" }
+          ]
+        },
+        {
+          "file": "Call Lightning.png",
+          "stat": { "name": "Damage", "value": "225%" },
+          "tags": ["Subskill", "Magic", "Spell", "Lightning", "CH01"],
+          "unlock": "Stun 10 enemies with a Plunging attack.",
+          "urlName": "call-lightning",
+          "interval": { "name": "Cooldown", "value": "4.00" },
+          "description": "Lightning strikes down at a random enemy position.\n25% chance to inflict Shock",
+          "modifications": [
+            {
+              "name": "Lightning",
+              "upgrade": "Skill Damage +25%\nSkill Count +1"
+            },
+            { "name": "Thunderbolt", "upgrade": "Skill Damage +35%" },
+            { "name": "Thunder", "upgrade": "Skill Count +3" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +4\nSkill Cooldown Recovery Speed +50%"
+            }
+          ]
+        },
+        {
+          "file": "Rampage.png",
+          "stat": { "name": "Damage", "value": "36%" },
+          "tags": ["Subskill", "Physical", "Targeting", "Darkness", "CH01"],
+          "unlock": "Defeat 300 enemies with a skill that has a Subskill tag.",
+          "urlName": "rampage",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Summons a spectral gun that targets and attacks nearby enemies.\n6 activations",
+          "modifications": [
+            {
+              "name": "Hand Cannon",
+              "upgrade": "Skill Damage +35%\nSkill Size +25%"
+            },
+            { "name": "Double-Barreled Gun", "upgrade": "Skill Count +3" },
+            {
+              "name": "Quick Reload",
+              "upgrade": "Skill Damage +20%\nSkill Cooldown Recovery Speed +35%"
+            },
+            { "name": "Special Mod", "upgrade": "Skill Count +7" }
+          ]
+        },
+        {
+          "file": "Flame Zone.png",
+          "stat": { "name": "Damage", "value": "160%" },
+          "tags": ["Subskill", "Magic", "Spell", "Flame", "CH01"],
+          "unlock": "Inflict Groggy on Chapter 1 Mid-Boss Foreboder using Foreboder's Flame Zone. (Foreboder will move in either a clockwise or anti-clockwise direction, determined by his initial teleportation. Make Foreboder teleport into his own fire by standing on the next platform he will go to.)",
+          "urlName": "flame-zone",
+          "interval": { "name": "Cooldown", "value": "5.00" },
+          "description": "Creates a zone of flames.\n15% chance to inflict Burn",
+          "modifications": [
+            {
+              "name": "Flame Dispersion",
+              "upgrade": "Skill Damage +15%\nSkill Size +30%"
+            },
+            { "name": "Ignition", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Pyromaniac",
+              "upgrade": "Skill Damage +15%\nSkill Duration +20%"
+            },
+            { "name": "Special Mod", "upgrade": "Skill Duration +50%" }
+          ]
+        },
+        {
+          "file": "Neurotoxin.png",
+          "stat": { "name": "Damage", "value": "80%" },
+          "tags": ["Subskill", "Magic", "Targeting", "Toxin", "CH01"],
+          "unlock": "Complete Venom Dispersion skill's modification, Giant Toxic Bubble.",
+          "urlName": "neurotoxin",
+          "interval": { "name": "Cooldown", "value": "7.00" },
+          "description": "Shoots corrosive saliva.\n110% chance to apply Poison to enemies in a small area",
+          "modifications": [
+            {
+              "name": "Toxic Combination",
+              "upgrade": "Poison Stack +1\nSkill Damage +25%"
+            },
+            { "name": "Venomous Twin Fangs", "upgrade": "Skill Count +1" },
+            { "name": "Venom", "upgrade": "Skill Damage +45%" },
+            { "name": "Special Mod", "upgrade": "Skill Damage +55%" }
+          ]
+        },
+        {
+          "file": "Venom Cloud.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Subskill", "Magic", "Spell", "Toxin", "CH01"],
+          "unlock": "Deal a total of 10,000 damage with Poison.",
+          "urlName": "venom-cloud",
+          "interval": { "name": "Cooldown", "value": "5.00" },
+          "description": "Releases a toxic cloud at an enemy.\nInflicts Poison up to 1 time",
+          "modifications": [
+            {
+              "name": "Radioactivity",
+              "upgrade": "Poison Stack +2\nSkill Size +20%"
+            },
+            {
+              "name": "Intravenous Toxin",
+              "upgrade": "Skill Cooldown Recovery Speed +25%"
+            },
+            { "name": "Toxic Torrent", "upgrade": "Poison Stack +3" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Cooldown Recovery Speed +50%"
+            }
+          ]
+        },
+        {
+          "file": "Death Ray.png",
+          "stat": { "name": "Damage", "value": "90%" },
+          "tags": ["Subskill", "Magic", "Targeting", "Divinity", "CH02"],
+          "unlock": "Use the <skill>Plasma</skill> (Main Skill) to defeat 500 enemies",
+          "urlName": "death-ray",
+          "interval": { "name": "Cooldown", "value": "7.00" },
+          "description": "Shoots a ray that targets the enemy after one second.\n3 activations",
+          "modifications": [
+            { "name": "Extra Ray", "upgrade": "Skill Damage +55%" },
+            {
+              "name": "Output Enhancement",
+              "upgrade": "Skill Damage +35%\nSkill Cooldown Recovery Speed +15%"
+            },
+            {
+              "name": "Maximum Charge",
+              "upgrade": "Skill Damage +25%\nSkill Size +20%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nSkill Cooldown Recoverty Speed +35%"
+            }
+          ]
+        },
+        {
+          "file": "Fireball.png",
+          "stat": { "name": "Damage", "value": "220%" },
+          "tags": ["Subskill", "Magic", "Targeting", "Flame", "CH02"],
+          "unlock": "-",
+          "urlName": "fireball",
+          "interval": { "name": "Cooldown", "value": "7.50" },
+          "description": "Summons a fireball that goes after an enemy and explodes.\n15% chance to inflict Burn",
+          "modifications": [
+            {
+              "name": "Living Bomb",
+              "upgrade": "1 additional explosion of 50% Damage and Size"
+            },
+            {
+              "name": "Rapid Combustion",
+              "upgrade": "Skill Damage +25%\nSkill Size +30%\nSkill Movement Speed -30%"
+            },
+            { "name": "Hot Potato", "upgrade": "Skill Damage +55%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +50%\nSkill Size +50%\nBurn Chance +50%"
+            }
+          ]
+        },
+        {
+          "file": "Dagger Throw.png",
+          "stat": { "name": "Damage", "value": "200%" },
+          "tags": ["Subskill", "Physical", "Chain", "Toxin", "CH02"],
+          "unlock": "Complete all of <skill>Apply Toxin</skill>'s (Buff Skill) modifications and defeat 111 enemies.",
+          "urlName": "dagger-throw",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Throws a dagger laced with toxin that ricochets around while dealing damage to enemies.\n110% chance to inflict Poison on hit",
+          "modifications": [
+            { "name": "Dagger Acrobatics", "upgrade": "Skill Chain +2" },
+            { "name": "Venom Dagger", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Recoil Dagger",
+              "upgrade": "Dagger splits into 2 after hitting the first target"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +15%\nSkill Chain +3"
+            }
+          ]
+        },
+        {
+          "file": "Justice Sword.png",
+          "stat": { "name": "Damage", "value": "111%" },
+          "tags": ["Subskill", "Physical", "Targeting", "Divinity", "CH03"],
+          "unlock": "Defeat skeletons 300 times.",
+          "urlName": "justice-sword",
+          "interval": { "name": "Cooldown", "value": "8.00" },
+          "description": "Summon a Justice sword above the head and launches it towards enemies.\nThe Justice Sword is unaffected by effects that alter its position, direction, or speed.\n5 swords",
+          "modifications": [
+            {
+              "name": "Reforge",
+              "upgrade": "Skill Damage +15%\nSkill Count +1"
+            },
+            { "name": "Polish", "upgrade": "Skill Damage +45%" },
+            {
+              "name": "Execution",
+              "upgrade": "Deals 100% additional damage every time the Justice Sword hits a single enemy 3 times."
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "30% chance to create 1 additional Justice Sword after creating the initial one."
+            }
+          ]
+        },
+        {
+          "file": "Space Fissure.png",
+          "stat": { "name": "Damage", "value": "400%" },
+          "tags": ["Subskill", "Physical", "Spell", "Darkness", "CH03"],
+          "unlock": "Stun 5 enemies simultaneously while using the <artifact>Thick Cape</artifact> (Regular Artifact).",
+          "urlName": "space-fissure",
+          "interval": { "name": "Cooldown", "value": "16.00" },
+          "description": "Creates a spatial fissure to deal damage.",
+          "modifications": [
+            {
+              "name": "Massive Fissure",
+              "upgrade": "Skill Damage +25%\nSkill Size +15%"
+            },
+            {
+              "name": "Aftershock",
+              "upgrade": "Skill Damage +15%\nSkill Size +10%\nSkill Cooldown Recovery Speed +20%"
+            },
+            { "name": "Burst", "upgrade": "Skill Damage +50%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Casts a fissure of 60% Size and ATK 1 time, then casts an additional one of 130% Size and ATK 3 seconds later"
+            }
+          ]
+        },
+        {
+          "file": "Unleash Blood.png",
+          "stat": { "name": "Damage", "value": "135%" },
+          "tags": ["Subskill", "Magic", "Spell", "Bleed", "CH03"],
+          "unlock": "Equip both the artifact, <artifact>Blood Flask</artifact> (Lesser Artifact), and the artifact, <artifact>Red Devil's Contract</artifact> (Regular Artifact).",
+          "urlName": "unleash-blood",
+          "interval": { "name": "Cooldown", "value": "7.00" },
+          "description": "Causes a nearby enemy to hemorrhage blood, inflicting Bleed and dealing damage.\nTargets up to 4 enemies\n65% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Bloodletting",
+              "upgrade": "Size +5%, ATK +30% per enemy Bleed stack"
+            },
+            {
+              "name": "Tainted Blood",
+              "upgrade": "Additional Bleed Buff stack every 0.2 seconds for 2 seconds"
+            },
+            {
+              "name": "Gaping Wound",
+              "upgrade": "Skill Damage +45%\nSkill Size +15%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Recasts Unleash Blood 1 additional time to enemies hit by Unleash Blood"
+            }
+          ]
+        },
+        {
+          "file": "Ice Arrow.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Subskill", "Magic", "Targeting", "Frost", "CH03"],
+          "unlock": "Use the <skill>Icicle Spike</skill> (Main Skill) (modified 3 times) while using the artifact, <artifact>Ice Spear</artifact> (Greater Artifact).",
+          "urlName": "ice-arrow",
+          "interval": { "name": "Cooldown", "value": "5.00" },
+          "description": "Fires an ice arrow at the enemy.\nNumber of Arrows 3\n15% Chance to apply Freeze to enemies in range",
+          "modifications": [
+            { "name": "Snipe", "upgrade": "Skill Damage +50%" },
+            {
+              "name": "Crystallization",
+              "upgrade": "Skill Damage +35%\nSkill Size +15%"
+            },
+            { "name": "Multishot", "upgrade": "Skill Count +1" },
+            { "name": "Special Mod", "upgrade": "Skill Count +3" }
+          ]
+        },
+        {
+          "file": "Sword Spin.png",
+          "stat": { "name": "Damage", "value": "70%" },
+          "tags": ["Subskill", "Physical", "Melee", "Divinity", "CH03"],
+          "unlock": "Reach level 25 on <character>Knight</character> (Character).",
+          "urlName": "sword-spin",
+          "interval": { "name": "Cooldown", "value": "6.50" },
+          "description": "Summons a sword that spins around you",
+          "modifications": [
+            { "name": "Extra Spin", "upgrade": "Spin Count +1\nSpin SPD +25%" },
+            { "name": "Sharp Sword", "upgrade": "Skill Damage +45%" },
+            {
+              "name": "Proficient Summon",
+              "upgrade": "Skill Damage +15%\nSkill Size +25%"
+            },
+            { "name": "Special Mod", "upgrade": "Skill Count +2" }
+          ]
+        },
+        {
+          "file": "Light Flash.png",
+          "stat": { "name": "Damage", "value": "230%" },
+          "tags": ["Subskill", "Physical", "Targeting", "Lightning", "CH04"],
+          "unlock": "-",
+          "urlName": "light-flash",
+          "interval": { "name": "Cooldown", "value": "5.50" },
+          "description": "Cut through space using lightning and deals damage to all enemies within its path.\n Attack Count 1\n50% chance to apply Shock",
+          "modifications": [
+            { "name": "Long Cut", "upgrade": "Skill Search Range +30%" },
+            { "name": "Cut Deep", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Static Slash",
+              "upgrade": "If the hit enemy is in 'Electrocuted' state, damage +20%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Enemies killed by Flash explode, dealing equal damage around them"
+            }
+          ]
+        },
+        {
+          "file": "Solar Orb.png",
+          "stat": { "name": "Damage", "value": "80%" },
+          "tags": ["Subskill", "Magic", "Spell", "Divinity", "CH05"],
+          "unlock": "Enter the Desert of the Red Sun and bask under the sun, no roof,  for 30 seconds.",
+          "urlName": "solar-orb",
+          "interval": { "name": "Cooldown", "value": "8.00" },
+          "description": "Summons a Solar Orb in front to inflict Damage over time.\nThe orb deals greater Explosion damage when it takes Fire Damage.\nExplosive Skill Damage: 300%",
+          "modifications": [
+            {
+              "name": "Lament of the End",
+              "upgrade": "Explodes upon Solar Orb duration expiration with 35% reduced Explosive Skill Damage"
+            },
+            {
+              "name": "Radiant Overwhelm",
+              "upgrade": "Explosive Skill Damage +15%\nExplosive Skill Size +15%"
+            },
+            {
+              "name": "Condensed Radiance",
+              "upgrade": "Explosive Skill Damage +45%\nExplosive Skill Size -30%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Explosion triggers other Solar Orms to explode"
+            }
+          ]
+        },
+        {
+          "file": "Cactus Bomb.png",
+          "stat": { "name": "Damage", "value": "180%" },
+          "tags": ["Subskill", "Physical", "Bomb", "Bleed", "CH05"],
+          "unlock": "Defeat <boss>Kerel</boss> while the <collection>Bomber</collection> Collection is active.",
+          "urlName": "cactus-bomb",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Detonates a bomb filled with cactus thorns from the player's body.\n1 Explosions\n25% chance to inflict Bleeding",
+          "modifications": [
+            {
+              "name": "Thorn Blossom in Full Bloom",
+              "upgrade": "Skill Size +20%"
+            },
+            { "name": "Red Sand Trace", "upgrade": "Bleed Chance +22%" },
+            { "name": "Cactus Dance", "upgrade": "Thorn Burst Count +1" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Cast at enemy location within range"
+            }
+          ]
+        },
+        {
+          "file": "Crimson Rain.png",
+          "stat": { "name": "Damage", "value": "55%" },
+          "tags": ["Subskill", "Magic", "Spell", "Bleed", "CH04"],
+          "unlock": "Trigger Stab damage 10 times.",
+          "urlName": "crimson-rain",
+          "interval": { "name": "Cooldown", "value": "20.00" },
+          "description": "Unleashes a torrential rain of blood from the sky to attack.\nNumber of launches 6\n50% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Bloodlust",
+              "upgrade": "Reduces Skill Cooldown by 1 second when a Basic Attack hits."
+            },
+            { "name": "Bloodstorm Warning", "upgrade": "Bleeding Stacks +1" },
+            {
+              "name": "Crimson Monsoon",
+              "upgrade": "30% chance on Skill Hit to increase Bleeding Damage by 2% for 5 seconds, stacking up to 10 times."
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Increases Skill Count based on Bleeding Synergy level."
+            }
+          ]
+        },
+        {
+          "file": "Talisman Rain.png",
+          "stat": { "name": "Damage", "value": "50%" },
+          "tags": ["Subskill", "Magic", "Spell", "Lightning", "CH05"],
+          "unlock": "Reach level 25 on <character>Shaman</character> (Character).",
+          "urlName": "talisman-rain",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Quickly fires talismans at enemies to deal damage.\nNumber of Talismans 6.\n25% chance to inflict Shock",
+          "modifications": [
+            {
+              "name": "Arcane Lightning Conduit",
+              "upgrade": "Casts <skill>Call Lightning</skill> (Subskill) every 6 Talisman hits (inherits the upgrade level of Talisman Barrage)."
+            },
+            {
+              "name": "Storm's Omen",
+              "upgrade": "Reduces cooldown by 0.1 second per Lightning Synergy obtained"
+            },
+            {
+              "name": "Thunder Sigil",
+              "upgrade": "Fires talismans in a straight line."
+            },
+            { "name": "Special Mod", "upgrade": "Spell Tag Skill Damage +35%" }
+          ]
+        },
+        {
+          "file": "Arcane Beam.png",
+          "stat": { "name": "Damage", "value": "90%" },
+          "tags": ["Subskill", "Magic", "Projectile", "Lightning", "CH05"],
+          "unlock": "Enter the Desert of the Red Sun with a specially-modified <skill>Plasma</skill> (Main Skill).",
+          "urlName": "arcane-beam",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Fires a magical beam forward for 1 second, dealing continuous damage.\n Number of Rays 1\n40% chance to inflcit Shock",
+          "modifications": [
+            {
+              "name": "Hyper Technology",
+              "upgrade": "When a skill hits, Arcane Beam Skill Damage +5% (up to 50%)"
+            },
+            {
+              "name": "Stable Discharge",
+              "upgrade": "Skill Duration +0.5 seconds"
+            },
+            {
+              "name": "Void Lightning",
+              "upgrade": "Additional Damage to Shocked enemies +15%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Multi-Hit Interval -45%"
+            }
+          ]
+        },
+        {
+          "file": "Chain of Death.png",
+          "stat": { "name": "Damage", "value": "120%" },
+          "tags": ["Subskill", "Magic", "Chain", "Darkness", "CH05"],
+          "unlock": "Chain 6 times at once with a single Chain skill",
+          "urlName": "chain-of-death",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Applies a Damage over time curse to enemies. Upon killing, the remaining duration transfers to the nearest enemy.\nDamage is increased by Chain Synergy in proportion to the remaining number of chains.\nHits Taken: 4",
+          "modifications": [
+            { "name": "Shadow's Testament", "upgrade": "Skill Chain +1" },
+            { "name": "Pulse of the Abyss", "upgrade": "Skill Damage +15%" },
+            {
+              "name": "Curse Inheritance",
+              "upgrade": "Skill Damage +25% each time it transfers to an enemy"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "When hitting a boss monster, Skill Multi-Hit Interval -50%."
+            }
+          ]
+        },
+        {
+          "file": "Shackles of the Netherworld.png",
+          "stat": { "name": "Damage", "value": "110%" },
+          "tags": ["Subskill", "Magic", "Chain", "Frost", "CH06"],
+          "unlock": "Revive in The Ancient City of Grandfel with 6-Chain Synergy active.",
+          "urlName": "shackles-of-the-netherworld",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Fires a chain made of ice to strike the enemy.\n10% chance to inflict Frozen",
+          "modifications": [
+            { "name": "Chain Extension", "upgrade": "Skill Chain +1" },
+            {
+              "name": "Resonant Chain",
+              "upgrade": "If at least one enemy hit by the skill is inflicted with Frozen, all other enemies are also inflicted with Frozen."
+            },
+            { "name": "Glacial Spike", "upgrade": "Skill Damage +25%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +15%\nFrozen Chance +5%"
+            }
+          ]
+        },
+        {
+          "file": "Stellar Orbit.png",
+          "stat": { "name": "Damage", "value": "120%" },
+          "tags": ["Subskill", "Magic", "Projectile", "Flame", "CH06"],
+          "unlock": "Defeat monsters in The Ancient City of Grandfel 100 times with <skill>Fireball</skill> while <artifact>Lucky Clover Hammer</artifact> is equipped.",
+          "urlName": "stellar-orbit",
+          "interval": { "name": "Cooldown", "value": "2.00" },
+          "description": "Summons Flame Orbs that rotate around the player.\nBase Count: 3\nEach summoned Flame Orb has a 2-second cooldown.\n15% chance to inflict Burn",
+          "modifications": [
+            { "name": "Celestial Acceleration", "upgrade": "Spin Speed +15%" },
+            { "name": "Four-Star Constellation", "upgrade": "Skill Count +1" },
+            { "name": "Supernova Explosion", "upgrade": "Skill Damage +50%" },
+            { "name": "Special Mod", "upgrade": "Skill Penetration Count +1" }
+          ]
+        }
+      ],
+      "color": "#59823e",
+      "title": "Subskills"
+    },
+    "buffskills": {
+      "list": [
+        {
+          "file": "Barrier.png",
+          "stat": { "name": "Shield", "value": "1" },
+          "tags": ["Buff", "Protection", "Magic", "Divinity", "CH01"],
+          "unlock": "Acquire the Shield item.",
+          "urlName": "barrier",
+          "description": "Creates a barrier that protects against enemy attacks",
+          "modifications": [
+            {
+              "name": "Augment Speed",
+              "upgrade": "MOV SPD and ATK SPD +8% while Barrier is active."
+            },
+            {
+              "name": "Barrier Smite",
+              "upgrade": "+5% additional damage per hit while Barrier is active"
+            },
+            {
+              "name": "Unleash",
+              "upgrade": "Pushes away nearby enemies and causes an explosion that deals 200% ATK damage as the Barrier breaks."
+            },
+            { "name": "Special Mod", "upgrade": "Max Barrier +1" }
+          ]
+        },
+        {
+          "file": "Ghost Glide.png",
+          "stat": { "name": "SPD", "value": "7%" },
+          "tags": ["Buff", "Magic", "Lightning", "CH01"],
+          "unlock": "-",
+          "urlName": "ghost-glide",
+          "description": "Increases MOV SPD and ATK SPD",
+          "modifications": [
+            {
+              "name": "Nimble Movement",
+              "upgrade": "Additional SPD increase +5%"
+            },
+            { "name": "Find Weakness", "upgrade": "CRIT Chance +15%" },
+            {
+              "name": "Crystal Tranquility",
+              "upgrade": "SPD Increase +10% after avoiding damage for 8 seconds"
+            },
+            { "name": "Special Mod", "upgrade": "ATK SPD Increase +10%" }
+          ]
+        },
+        {
+          "file": "Meditation.png",
+          "stat": { "name": "Skill Haste", "value": "10" },
+          "tags": ["Buff", "CH01"],
+          "unlock": "-",
+          "urlName": "meditation",
+          "description": "Accelerates Auto-Cast Skill",
+          "modifications": [
+            {
+              "name": "Spell Sword",
+              "upgrade": "Attack power increased by 10% of Skill Haste (Tags, additional skill cooldown recovery options for skills do not apply)"
+            },
+            {
+              "name": "Stockades Acceleration",
+              "upgrade": "Skill Cooldown Recovery Speed +10%"
+            },
+            {
+              "name": "Roulette Of Time",
+              "upgrade": "15% chance to reactivate subskill"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Haste +5% for each equipped subskill"
+            }
+          ]
+        },
+        {
+          "file": "Enchantment.png",
+          "stat": { "name": "Activation Chance", "value": "5%" },
+          "tags": ["Buff", "CH01"],
+          "unlock": "-",
+          "urlName": "enchantment",
+          "description": "Increases Skill Activation Chance",
+          "modifications": [
+            {
+              "name": "Quick Stockade",
+              "upgrade": "Skill Activation Chance +5%"
+            },
+            {
+              "name": "Multiple Stockades",
+              "upgrade": "+1% Skill Activation Chance and +1% Attack Power per 1 Main Skill equipped"
+            },
+            {
+              "name": "Concentration",
+              "upgrade": "+0.5% Attack Power per 1% Skill Activation Chance (Max + 50%, tags and additional Skill Activation Chance bonus option from skills are not applied)"
+            },
+            { "name": "Special Mod", "upgrade": "Skill Activation Rate +10%" }
+          ]
+        },
+        {
+          "file": "Overdrive.png",
+          "stat": { "name": "Attack Power", "value": "10%" },
+          "tags": ["Buff", "CH01"],
+          "unlock": "-",
+          "urlName": "overdrive",
+          "description": "Increases Attack Power",
+          "modifications": [
+            {
+              "name": "Concentration",
+              "upgrade": "Attack power +7% if not attacked for 8 seconds"
+            },
+            {
+              "name": "Load",
+              "upgrade": "Attack power +5% additional increase"
+            },
+            {
+              "name": "Platform",
+              "upgrade": "ATK +10% when current HP is 3 or less"
+            },
+            { "name": "Special Mod", "upgrade": "Damage dealt to bosses +15%" }
+          ]
+        },
+        {
+          "file": "Apply Toxin.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Physical", "Toxin", "CH02"],
+          "unlock": "Do 500 Poison damage while equipped with the successfully modified skill <skill>Venom Cloud</skill> (Subskill).",
+          "urlName": "apply-toxin",
+          "description": "Applies a special toxin on a weapon to inflict poison with all attacks.\n30% chance to inflict Poison",
+          "modifications": [
+            { "name": "Neurotoxin", "upgrade": "Poison ATK +50%" },
+            {
+              "name": "Hemotoxin",
+              "upgrade": "Once Poisoned, 30% chance to inflict Bleed as well."
+            },
+            { "name": "Cytotoxin", "upgrade": "Poison Acceleration +30" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Poison Acceleration +50\nPoison Duration +50%"
+            }
+          ]
+        },
+        {
+          "file": "Plasma Barrier.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Protection", "Magic", "Chain", "Lightning", "CH03"],
+          "unlock": "Activate <skill>Barrier</skill> (Buff Skill) and own 3 different skills with Lightning tags.",
+          "urlName": "plasma-barrier",
+          "description": "Unleashes lightning around you when hit, and reduces damage received in proportion to the time where damage is avoided.\nIt is not affected by cooldown.\nReduces damage received by 1 every 30.00 seconds",
+          "modifications": [
+            {
+              "name": "Electric Pulse",
+              "upgrade": "Unleashes a chain of lightning upon nearby enemies every 7 seconds, even if you avoid hits."
+            },
+            { "name": "High Voltage", "upgrade": "Shock Chance +100%" },
+            {
+              "name": "Shock Enhancement",
+              "upgrade": "Damage to Shock-inflicted enemies +10%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Cooldown Recovery Speed +30%"
+            }
+          ]
+        },
+        {
+          "file": "Niflheim Swordsmanship.png",
+          "stat": { "name": "Attack Power\nCritical Chance", "value": "5%" },
+          "tags": ["Buff", "Physical", "Darkness", "CH03"],
+          "unlock": "Enter Chapter 3: Outskirts of Niflheim.",
+          "urlName": "niflheim-swordsmanship",
+          "description": "Increases ATK and CRIT chances for Basic/ Melee skills",
+          "modifications": [
+            {
+              "name": "Moderation",
+              "upgrade": "Basic Skill ATK +15%\nMelee Skill ATK +15%"
+            },
+            {
+              "name": "Instinct",
+              "upgrade": "CRIT Chance +10%\nApplies CRIT Chance to Melee Skill"
+            },
+            { "name": "Train", "upgrade": "Max HP +1." },
+            { "name": "Special Mod", "upgrade": "CRIT Damage +35%" }
+          ]
+        },
+        {
+          "file": "Dragon's Prudence.png",
+          "stat": { "name": "Basic Skill Damage", "value": "8%" },
+          "tags": ["Buff", "Physical", "Darkness", "CH03"],
+          "unlock": "Reach level 25 on <character>Fighter</character> (Character).",
+          "urlName": "dragons-prudence",
+          "description": "Basic Skill Damage Increase.",
+          "modifications": [
+            {
+              "name": "Earth Dragon's Hardness",
+              "upgrade": "Attack +0.7 for each intact heart you currently have."
+            },
+            {
+              "name": "Black Dragon's Fear",
+              "upgrade": "When attacking an enemy, Basic Skill Damage +3% for 2 seconds (up to 30%)"
+            },
+            {
+              "name": "Fire Dragon's Blazing",
+              "upgrade": "Base Skill Damage +15%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "+1% additional Basic Skill Damage per 1 current Attack Power (up to 50%)"
+            }
+          ]
+        },
+        {
+          "file": "Bloody Sword Strike.png",
+          "stat": { "name": "Damage", "value": "160%" },
+          "tags": ["Buff", "Physical", "Melee", "Bleed", "CH03"],
+          "unlock": "Reach level 25 on <character>Slayer</character> (Character).",
+          "urlName": "bloody-sword-strike",
+          "description": "Unleashes Bloody Sword Strike every time a basic attack hits 5 times.\n30% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Bleed Enhancement",
+              "upgrade": "Bleed Stack +1\nBleed Chance +25%"
+            },
+            {
+              "name": "Bloody Desire",
+              "upgrade": "Skill Damage +25%\nBleed Chance +25%"
+            },
+            {
+              "name": "Successive Attack",
+              "upgrade": "Skill Damage -40%\nSkill Size +15%\nSkill Count +1"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Required Basic Attack Count for Activation -2"
+            }
+          ]
+        },
+        {
+          "file": "Glacial Shield.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Protection", "Frost", "CH04"],
+          "unlock": "Consume 200 Frozen Shields.",
+          "urlName": "glacial-shield",
+          "description": "Generates a status immunity shield that is destroyed upon being hit.\nAfter the shield is destroyed, status immunity effect lasts for 2 seconds.\nRegeneration Cooldown: 8 seconds",
+          "modifications": [
+            {
+              "name": "Ice Wall",
+              "upgrade": "When the shield is destroyed, activates the World of Ice ability once."
+            },
+            {
+              "name": "Crevasse",
+              "upgrade": "When the shield is destroyed, activation effect duration +1 second."
+            },
+            {
+              "name": "Frostbite",
+              "upgrade": "When the shield is destroyed, Freeze Chance +20% for 2 seconds."
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "When the shield is destroyed, Attack Power +2 for 2 seconds."
+            }
+          ]
+        },
+        {
+          "file": "Guardian's Shield.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "CH05"],
+          "unlock": "Reach level 25 on <character>Guardian</character> (Character).",
+          "urlName": "guardians-shield",
+          "description": "15% chance to generate a shield when taking damage",
+          "modifications": [
+            {
+              "name": "Numb",
+              "upgrade": "Grants 1-time Super Armor when a shield is generated"
+            },
+            {
+              "name": "Iron Wall",
+              "upgrade": "10% chance to ignore damage while a shield is active"
+            },
+            {
+              "name": "Danger Sense",
+              "upgrade": "Shield generation chance +5% when taking damage"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "When hit, if a shield if held or generated, hurl it at the attacker to deal 100% damage and inflict stun on up to 3 enemies."
+            }
+          ]
+        },
+        {
+          "file": "Flame Dragon's Tribute.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Flame", "CH05"],
+          "unlock": "Reach level 25 on <character>Dragonian</character> (Character).",
+          "urlName": "flame-dragons-tribute",
+          "description": "Gain a buff for each intact heart (up to 5 stacks)\nFor each Heart: Attack Power, Attack Speed, and Movement Speed +1%",
+          "modifications": [
+            { "name": "Power of the Dragon", "upgrade": "Max Hearts +1" },
+            {
+              "name": "Blazing Core",
+              "upgrade": "For each current Heart, Flame Skill Activation Chance and Skill Haste +1%"
+            },
+            {
+              "name": "Eruption",
+              "upgrade": "Attack Speed +8%\nBurn Damage +15%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Max Hearts +1\nBasic Skill has a 15% chance to inflict Burn"
+            }
+          ]
+        },
+        {
+          "file": "Vessel of Souls.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "CH05"],
+          "unlock": "Reach level 25 on <character>Soul Eater</character> (Character).",
+          "urlName": "vessel-of-souls",
+          "description": "Converts all Tag Skill Damage bonuses from relics into Basic Skill Damage (up to 100%)",
+          "modifications": [
+            {
+              "name": "Arcane Lightning Conduit",
+              "upgrade": "Basic Skill Damage +15%"
+            },
+            {
+              "name": "Storm's Omen",
+              "upgrade": "For each activated Attribute Synergy (Collections) or Tag Synergy, Attack Power and Attack Speed +2% (up to 10%)"
+            },
+            {
+              "name": "Thunder Sigil",
+              "upgrade": "Weapon Skill Cooldown reduced by 1% on enemy kill"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Critical damage increases proportionally to Basic Skill Damage increased by Skill Effects (up to 15%)"
+            }
+          ]
+        },
+        {
+          "file": "Sand Barrier.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Divinity", "CH05"],
+          "unlock": "Enter the Desert of the Red Sun chapter while wearing <artifact>Chalice</artifact> (Greater Artifact).",
+          "urlName": "sand-barrier",
+          "description": "Generates a Soul Heart by shielding yourself with sand.",
+          "modifications": [
+            { "name": "Heaven's Answer", "upgrade": "Divinity Ray +1" },
+            {
+              "name": "Touch of the Sun God",
+              "upgrade": "Divinity Skill Damage +10%"
+            },
+            { "name": "Peace Upon the Sands", "upgrade": "+1 Soul Heart" },
+            {
+              "name": "Special Mod",
+              "upgrade": "If you have fewer than 2 Soul Hearts and a Divine revival has been consumed, generate 1 Soul Heart every 90 seconds"
+            }
+          ]
+        },
+        {
+          "file": "Frostscale Shield.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Frost", "CH06"],
+          "unlock": "Defeat Earth Dragon Karakum with <skill>Glacial Shield</skill> equipped.",
+          "urlName": "frostscale-shield",
+          "description": "Generates a Frostscale Shield that blocks a projectile 1 time.\nRegeneration Cooldown: 30s\nAffected by Skill Haste.",
+          "modifications": [
+            { "name": "Giant Scales", "upgrade": "Skill Size +25%" },
+            {
+              "name": "Quick Molting",
+              "upgrade": "Skill Cooldown Reduction -5s"
+            },
+            {
+              "name": "Third Scale",
+              "upgrade": "The shield is also generated in front."
+            },
+            { "name": "Special Mod", "upgrade": "Shield Durability +1" }
+          ]
+        },
+        {
+          "file": "Khēmia's Venomcraft.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Toxin", "CH06"],
+          "unlock": "Enter The Ancient City of Grandfel with <skill>Apply Toxin</skill> equipped.",
+          "urlName": "khemias-venomcraft",
+          "description": "Poison Infliction Chance +50%",
+          "modifications": [
+            {
+              "name": "Khēmia's Catalyst",
+              "upgrade": "Poison Skill Damage +0.25% per 10 Poison Stacks"
+            },
+            {
+              "name": "Natron Decay",
+              "upgrade": "Poison Damage +1% per 10 Poison Stacks"
+            },
+            { "name": "Noxious Mixture", "upgrade": "Poison Duration +1s" },
+            {
+              "name": "Special Mod",
+              "upgrade": "+10 Max Poison Stacks per Unique Poison Skill Equipped"
+            }
+          ]
+        },
+        {
+          "file": "Boiling Flames.png",
+          "stat": { "name": "Damage", "value": "0%" },
+          "tags": ["Buff", "Magic", "Flame", "CH06"],
+          "unlock": "Enter the Desert of the Red Sun with 7 types of Flame-tagged Artifacts equipped.",
+          "urlName": "boiling-flames",
+          "description": "Gain 1 stack upon casting a Flame Skill (Max 10 stacks).\nFlame Skill Damage +1% per stack\nDuration: 3s",
+          "modifications": [
+            { "name": "Fuel to the Fire", "upgrade": "+5 Max Stacks" },
+            { "name": "Lingering Embers", "upgrade": "Duration +2s" },
+            { "name": "Ashes", "upgrade": "Burn Damage +15%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "At max stacks, Flame Skill Activation Chance +10%\nFlame Skill Haste +20%"
+            }
+          ]
+        }
+      ],
+      "color": "#173885",
+      "title": "Buff Skills"
+    },
+    "mainskills": {
+      "list": [
+        {
+          "file": "Successive Strike.png",
+          "stat": { "name": "Damage", "value": "120%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Bleed", "CH01"],
+          "unlock": "-",
+          "urlName": "successive-strike",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons a sword that slashes and deals damage to the front.\n2 hits\n60% chance to inflict Bleed.",
+          "modifications": [
+            {
+              "name": "Rapid Slash",
+              "upgrade": "Skill Count +1\nSkill Casting Speed +15"
+            },
+            {
+              "name": "Cross Slash",
+              "upgrade": "Skill Damage +40%\nSkill Size +15%"
+            },
+            {
+              "name": "Charging Slash",
+              "upgrade": "Advances slightly with each cast\nSkill Size +15%\nSkill Count +1"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +15%\nSkill Count +3\nSkill Casting Speed +50"
+            }
+          ]
+        },
+        {
+          "file": "Sever Blade.png",
+          "stat": { "name": "Damage", "value": "55%" },
+          "tags": ["Main Skill", "Physical", "Projectile", "Bleed", "CH01"],
+          "unlock": "Inflict Bleed into enemies 100 times.",
+          "urlName": "sever-blade",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Throws a dagger that pierces an enemy.\n30% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Boomerang",
+              "upgrade": "Sever Blade advances and returns"
+            },
+            {
+              "name": "Sharp Sword",
+              "upgrade": "Skill Damage +15%\nBleed Chance +5%"
+            },
+            { "name": "Whetstone", "upgrade": "Bleed Chance +10%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Throws an additional Shadow Sever Blade\n(50% of Sever Blade ATK)"
+            }
+          ]
+        },
+        {
+          "file": "Chain Lightning.png",
+          "stat": { "name": "Damage", "value": "300%" },
+          "tags": ["Main Skill", "Magic", "Chain", "Lightning", "CH01"],
+          "unlock": "Modify the <skill>Call Lightning</skill> (Subskill) 2 times in one game.",
+          "urlName": "chain-lightning",
+          "interval": { "name": "Activation Chance", "value": "18.00%" },
+          "description": "Creates streaks of lightning that chain to nearby enemies.\nTarget up to 4 enemies\n25% chance to inflict Shock",
+          "modifications": [
+            {
+              "name": "Static",
+              "upgrade": "Skill Activation Chance +10%\nSkill Chain +2"
+            },
+            {
+              "name": "Conductor",
+              "upgrade": "Skill Activation Chance +25%\nSkill Chain +1"
+            },
+            {
+              "name": "Electric Dispersion",
+              "upgrade": "Skill Activation Chance +15%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +30%\nSkill Chain +5"
+            }
+          ]
+        },
+        {
+          "file": "Venom Dispersion.png",
+          "stat": { "name": "Damage", "value": "110%" },
+          "tags": ["Main Skill", "Magic", "Projectile", "Toxin", "CH01"],
+          "unlock": "Inflict Poison onto an enemy",
+          "urlName": "venom-dispersion",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Sprays toxic liquid in a circle.\nSprays 3 toxic bubbles\n60% chance to inflict Poison",
+          "modifications": [
+            {
+              "name": "Giant Toxic Bubble",
+              "upgrade": "Explodes upon enemy contact\nSkill Damage +10%\nSkill Size +50%"
+            },
+            {
+              "name": "Spreading Plague",
+              "upgrade": "Skill Count +3\nSkill Penetration Count +2"
+            },
+            {
+              "name": "Terrible Toxin",
+              "upgrade": "Skill Count +2\nPoison Chance +15%"
+            },
+            { "name": "Special Mod", "upgrade": "Skill Count +5" }
+          ]
+        },
+        {
+          "file": "Traumatic Smite.png",
+          "stat": { "name": "Damage", "value": "333%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Divinity", "CH01"],
+          "unlock": "Defeat Mid-Boss <boss>Punisher</boss>",
+          "urlName": "traumatic-smite",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Swings a hammer to knock back the enemy.\nIncreases the Activation Chances of all Main Skills for 2 seconds upon use.\nMain Skill Activation Chance +8%",
+          "modifications": [
+            {
+              "name": "Massive Impact",
+              "upgrade": "Skill Damage +35%\nSkill Size +15%"
+            },
+            { "name": "Blacksmith", "upgrade": "Activation Chance +3%" },
+            {
+              "name": "Weakness Strike",
+              "upgrade": "15% chance to deal 3  times damage\nSkill Damage +25%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Size +35%\nSkill Count +1"
+            }
+          ]
+        },
+        {
+          "file": "Frost Bomb Throw.png",
+          "stat": { "name": "Damage", "value": "200%" },
+          "tags": ["Main Skill", "Magic", "Bomb", "Frost", "CH01"],
+          "unlock": "Defeat Chapter 1 monster, Blue Watcher (M007), 100 times.",
+          "urlName": "frost-bomb-throw",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Throws multiple frost bombs nearby.\n30% chance to inflict Freeze\n3 bombs",
+          "modifications": [
+            {
+              "name": "Bomb Mod",
+              "upgrade": "Skill Size +30%\nSkill Count +1"
+            },
+            {
+              "name": "Firepower Mod",
+              "upgrade": "Skill Damage +25%\nSkill Activation Chance +10%"
+            },
+            { "name": "Bomb Bag", "upgrade": "Skill Count +2" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Set Time Till Explosion to 0.3 seconds\nSkill Damage +20%\nSkill Size +50%"
+            }
+          ]
+        },
+        {
+          "file": "Flame Bomb Throw.png",
+          "stat": { "name": "Damage", "value": "225%" },
+          "tags": ["Main Skill", "Magic", "Bomb", "Flame", "CH01"],
+          "unlock": "Defeat Chapter 1 monster, Red Watcher (M006), 100 times.",
+          "urlName": "flame-bomb-throw",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Throws multiple flame bombs nearby.\n80% chance to inflict Burn\n3 bombs",
+          "modifications": [
+            {
+              "name": "Lava Bomb",
+              "upgrade": "Skill Damage +30%\nSkill Size +20%"
+            },
+            {
+              "name": "Scatter Bomb",
+              "upgrade": "Skill Damage +20%\nSkill Activation Chance +5%"
+            },
+            {
+              "name": "Short Wick",
+              "upgrade": "Time Till Explosion -0.5 seconds\nSkill Damage +25%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +50%\nSkill Size +100%"
+            }
+          ]
+        },
+        {
+          "file": "Plasma.png",
+          "stat": { "name": "Damage", "value": "140%" },
+          "tags": ["Main Skill", "Magic", "Projectile", "Lightning", "CH01"],
+          "unlock": "Complete <skill>Chain Lightning</skill>'s (Main Skill) special modification successfully.",
+          "urlName": "plasma",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons a plasma sphere that charges at nearby enemies and deals damage.\n25% chance to inflict Shock\nCan target up to 3 enemies",
+          "modifications": [
+            {
+              "name": "Stabilized Sphere",
+              "upgrade": "Skill Activation Chance +10%\nSkill Movement Speed -20%\nSkill Duration +1 second"
+            },
+            {
+              "name": "Gravity Field",
+              "upgrade": "Skill Damage +25%\nSkill Size +30%"
+            },
+            {
+              "name": "Nuclear Enhancement",
+              "upgrade": "Skill Multi-Hit Interval -20%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Multi-Hit Interval -50%"
+            }
+          ]
+        },
+        {
+          "file": "Ice Spear.png",
+          "stat": { "name": "Damage", "value": "115%" },
+          "tags": ["Main Skill", "Magic", "Melee", "Frost", "CH02"],
+          "unlock": "-",
+          "urlName": "ice-spear",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons an Ice Spear that spikes up at the front.\nActivation Count 5\n15% chance to inflict Freeze",
+          "modifications": [
+            {
+              "name": "Ice Path",
+              "upgrade": "Skill Activation Chance +10%\nSkill Count +2"
+            },
+            { "name": "Sharp Speartip", "upgrade": "Skill Damage +60%" },
+            {
+              "name": "Permanent Snow",
+              "upgrade": "Skill Damage +25%\nSkill Activation Chance +5%\nSkill Count +1\nFrozen Chance +5%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Ice Spear spikes up at the enemies in back as well.\nSkill Count +10"
+            }
+          ]
+        },
+        {
+          "file": "Toxic Gas Explosion.png",
+          "stat": { "name": "Damage", "value": "225%" },
+          "tags": ["Main Skill", "Magic", "Spell", "Toxin", "CH02"],
+          "unlock": "Equip the artifact, <artifact>Poisonous Mushroom</artifact> and defeat 100 enemies.",
+          "urlName": "toxic-gas-explosion",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Causes a toxic gas explosion under the enemy's feet.\nOn Hit, guaranteed to inflict Poison",
+          "modifications": [
+            {
+              "name": "Gigantic Explosion",
+              "upgrade": "Skill Damage +15%\nSkill Size +30%"
+            },
+            {
+              "name": "Concentrated Explosion",
+              "upgrade": "Skill Damage +25%\nSkill Size +20%"
+            },
+            {
+              "name": "Non-toxic",
+              "upgrade": "Does not inflict Poison\nSkill Damage +40%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "2 additional explosions at a random location within a narrow range of the enemy.\nSkill Size -30%"
+            }
+          ]
+        },
+        {
+          "file": "Toxic Blade.png",
+          "stat": { "name": "Damage", "value": "240%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Toxin", "CH02"],
+          "unlock": "Acquire the <skill>Apply Toxin</skill> (Buff Skill) and then acquire at least 3 kinds of Physical tag skills",
+          "urlName": "toxic-blade",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons a venomous sword and swings it to consume the poison of an enemy in front, dealing damage proportional to the amount consumed.\nFor each Poison stack, Toxic Blade damage +1%\n10% chance to inflict Poison",
+          "modifications": [
+            {
+              "name": "Swing Slash",
+              "upgrade": "Skill Damage +30%\nSkill Size +35%"
+            },
+            {
+              "name": "Spin Slash",
+              "upgrade": "Toxic Blade's Additional Effect: ATK +2% per Poison stack."
+            },
+            { "name": "Double Rush", "upgrade": "Skill Count +1" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Removes Slash\nActivates immediately on enemies within a wide range\nSkill Activation Chance +30%"
+            }
+          ]
+        },
+        {
+          "file": "Icicle Spike.png",
+          "stat": { "name": "Damage", "value": "62%" },
+          "tags": ["Main Skill", "Magic", "Projectile", "Frost", "CH02"],
+          "unlock": "Acquire the artifact, <artifact>Suspicious Ice Shard</artifact>, then use the <skill>Ice Spear</skill> (Main Skill) with all mods completed.",
+          "urlName": "icicle-spike",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons and fires an icicle spike to the front.\nFires 3 times\n15% chance to inflict Freeze",
+          "modifications": [
+            {
+              "name": "Creeping Icicle",
+              "upgrade": "Skill Activation Chance +5%\nSkill Count +3"
+            },
+            {
+              "name": "Frigid Frost",
+              "upgrade": "Skill Damage +25%\nFrozen Chance +15%"
+            },
+            {
+              "name": "Creeping Chill",
+              "upgrade": "Skill Damage +15%\nSkill Count +2\nSkill Movement Speed +60%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Activation Chance +5%\nSkill Count +10"
+            }
+          ]
+        },
+        {
+          "file": "Rock Shot.png",
+          "stat": { "name": "Damage", "value": "230%" },
+          "tags": ["Main Skill", "Physical", "Projectile", "Divinity", "CH03"],
+          "unlock": "Use the <skill>Icicle Spike<skill> (Main Skill) and deal damage to Chapter 3's Stone Golem (M212) 100 times.",
+          "urlName": "rock-shot",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Blasts a huge rock fragment to the front.\nExplodes upon hitting the first enemy.",
+          "modifications": [
+            {
+              "name": "Massive Explosion",
+              "upgrade": "Skill Damage +25%\nSkill Size +35%"
+            },
+            {
+              "name": "Compressed Rock",
+              "upgrade": "The stone does not penetrate enemies.\nFor each additional penetration, basic damage of stone shot increases by +100%"
+            },
+            {
+              "name": "Shooting Practice",
+              "upgrade": "Skill Damage +35%\nSkill Movement Speed +60%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +300%\nSkill Size +60%\n(Currently not working)"
+            }
+          ]
+        },
+        {
+          "file": "Dark Sphere.png",
+          "stat": { "name": "Damage", "value": "120%" },
+          "tags": ["Main Skill", "Magic", "Projectile", "Darkness", "CH03"],
+          "unlock": "Cast the <skill>Plasma</skill> skill (modified 3 times) 200 times while using the artifact, <artifact>Horseshoe Magnet</artifact>.",
+          "urlName": "dark-sphere",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Creates a multi-hit dark sphere and fires it forward.",
+          "modifications": [
+            {
+              "name": "Void",
+              "upgrade": "Skill Size +35%\nSkill Multi-Hit Interval -10%"
+            },
+            { "name": "Inhalation", "upgrade": "Skill Damage +50%" },
+            {
+              "name": "Plasma",
+              "upgrade": "Skill Activation Chance +25%\nSkill Multi-Hit Interval -10%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Reduces the critical resistance of the hit enemy by 25% for 3 seconds.\n(Only one stack can be applied with a single skill.)\n(Critical resistance increases or decreases the critical damage received.)"
+            }
+          ]
+        },
+        {
+          "file": "Freezing Smite.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Frost", "CH03"],
+          "unlock": "Equip the artifact, <artifact>Frozen Gauntlet</artifact> (Regular Artifact), and hit enemies inflicted with Freeze 50 times.",
+          "urlName": "freezing-smite",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Has freezing energy explode from within an enemy.\n10% chance to inflict Freeze",
+          "modifications": [
+            {
+              "name": "Cooling",
+              "upgrade": "Skill Activation Chance +8%\nFrozen Chance +5%"
+            },
+            {
+              "name": "Ice Punch",
+              "upgrade": "Skill Damage +15%\nSkill Size +25%\nFrozen Chance +5%"
+            },
+            {
+              "name": "Enchant!",
+              "upgrade": "Triggers Freezing Smite for the next 1 basic attacks after initially casting Freezing Smite.\nCan charge up to 3 times"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +55%\nSkill Activation Chance +15%"
+            }
+          ]
+        },
+        {
+          "file": "Flame Vortex.png",
+          "stat": { "name": "Damage", "value": "130%" },
+          "tags": ["Main Skill", "Magic", "Projectile", "Flame", "CH03"],
+          "unlock": "Acquire the artifact, <artifact>Unidentified Staff</artifact> (Lesser Artifact), then use the <skill>Flame Zone</skill> (Subskill) (modified 3 times) 100 times.",
+          "urlName": "flame-vortex",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Sends out a vortex of flame to the front.\n30% chance to inflict Burn",
+          "modifications": [
+            {
+              "name": "Intense Heat",
+              "upgrade": "Skill Damage +25%\nSkill Size +15%"
+            },
+            {
+              "name": "Persistent Fire",
+              "upgrade": "Skill Damage +15%\nSkill Duration +1 second"
+            },
+            {
+              "name": "Rapid Spin",
+              "upgrade": "Skill Multi-Hit Interval -35%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Creates a Flame Zone along the path of the Vortex.\nApplies Flame Zone's enhancement effect."
+            }
+          ]
+        },
+        {
+          "file": "Explosive Marble.png",
+          "stat": { "name": "Damage", "value": "200%" },
+          "tags": ["Main Skill", "Physical", "Bomb", "Divinity", "CH03"],
+          "unlock": "-",
+          "urlName": "explosive-marble",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Fires an explosive marble that bounces to the front.",
+          "modifications": [
+            {
+              "name": "Bouncy Ball",
+              "upgrade": "Skill Damage +25%\nSkill Size +15%"
+            },
+            {
+              "name": "Gigantic Explosion",
+              "upgrade": "Skill Damage +15%\nSkill Size +35%"
+            },
+            { "name": "Pocket Bomb", "upgrade": "Skill Count +1" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Size +20%\nSkill Count +3"
+            }
+          ]
+        },
+        {
+          "file": "Blazing Ray.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Flame", "CH03"],
+          "unlock": "Use the <weapon>Blazing Spellbook</weapon> (Weapon) Weapon Skill 66 times as a <character>Mage</character> (Character).",
+          "urlName": "blazing-ray",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Slashes at the front with a Blazing Sword and inflicts Burn. 15% chance to inflict Burn",
+          "modifications": [
+            {
+              "name": "Rapid Slash",
+              "upgrade": "Skill Damage +30%\nSkill Casting Speed +15"
+            },
+            {
+              "name": "Cross Slash",
+              "upgrade": "Skill Damage +55%\nSkill Size +15%"
+            },
+            {
+              "name": "Charging Slash",
+              "upgrade": "Skill Damage +25%\nSkill Size +10%\nSkill Activation Chance +5%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +125%\nSkill Size +35%"
+            }
+          ]
+        },
+        {
+          "file": "Ignition.png",
+          "stat": { "name": "Damage", "value": "200%" },
+          "tags": ["Main Skill", "Magic", "Spell", "Flame", "CH03"],
+          "unlock": "Reach level 25 on <character>Mage</character> (Character).",
+          "urlName": "ignition",
+          "interval": { "name": "Activation Chance", "value": "30.00%" },
+          "description": "Summons a wave of flames around the enemy.\nEnemies hit by these flames are set on fire for 5 seconds and receive Damage Over Time every second.\nStacks up to 7 times\n15% chance to inflict Burn",
+          "modifications": [
+            { "name": "Intense Fire", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Flaming Soul",
+              "upgrade": "Skill Multi-Hit Interval -15%"
+            },
+            {
+              "name": "Burst of Fire",
+              "upgrade": "Skill Damage +15%\nSkill Size +25%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Ignition Stack Limit +3\nAdditional Ignite +1 when ignited"
+            }
+          ]
+        },
+        {
+          "file": "Super Smite.png",
+          "stat": { "name": "Damage", "value": "200%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Darkness", "CH03"],
+          "unlock": "Reach level 25 on <character>Mercenary</character> (Character).",
+          "urlName": "super-smite",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Powerfully smites the enemy and sends them flying",
+          "modifications": [
+            {
+              "name": "Dragon Smite",
+              "upgrade": "Deals damage to enemies on hit when knocked back.\nCritical damage increased by 15%."
+            },
+            {
+              "name": "Deep Smite",
+              "upgrade": "Knock Back Distance -90%\nDirect Hit ATK +30%"
+            },
+            { "name": "Double Smite", "upgrade": "Direct Hit ATK +50%" },
+            { "name": "Special Mod", "upgrade": "Direct Hit ATK +250%" }
+          ]
+        },
+        {
+          "file": "Tornado Arrow.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Main Skill", "Physical", "Projectile", "Bleed", "CH03"],
+          "unlock": "Reach level 25 on <character>Hunter</character> (Character).",
+          "urlName": "tornado-arrow",
+          "interval": { "name": "Activation Chance", "value": "40.00%" },
+          "description": "Fires an arrow that splits after flying a certain distance.\nSplit Count 5\n20% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Short shot",
+              "upgrade": "Distance till Tornado Shot Explodes -25%\nSkill Damage +15%"
+            },
+            { "name": "Split Arrow", "upgrade": "Splitting Arrow Count +2" },
+            { "name": "Arrowhead Mod", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Immediately explodes when a Tornado Arrow touches the enemy."
+            }
+          ]
+        },
+        {
+          "file": "Lightning Strike.png",
+          "stat": { "name": "Damage", "value": "45%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Lightning", "CH04"],
+          "unlock": "Reach level 6 of the Lightning synergy.",
+          "urlName": "lightning-strike",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Quickly stabs forward with the power of lightning and deals damage\n Attack Count 6\n25% chance to inflict Shock",
+          "modifications": [
+            { "name": "Consecutive Stabs", "upgrade": "Skill Count +2" },
+            { "name": "Elaborate Stab", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Sharp Thrust",
+              "upgrade": "Skill Activation Chance +7%\nSkill Count +1"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Lightning Stab's base damage increases by 105% per number of attacks.\nSize of Lightning Stab increases by +10% per attack.\nNumber of attacks is fixed at 1."
+            }
+          ]
+        },
+        {
+          "file": "Pulse Bomb.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Main Skill", "Magic", "Bomb", "Lightning", "CH04"],
+          "unlock": "Inflict skill damage with the 'Bomb' tag to an electrocuted enemy while equipped with <artifact>Spark Powder</artifact>.",
+          "urlName": "pulse-bomb",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Throws a bombs that pulsates.\n3 Pulse Release\n40% chance to inflict Shock",
+          "modifications": [
+            { "name": "Unstable Explosion", "upgrade": "Pulse Blast count +1" },
+            {
+              "name": "Extra Blast",
+              "upgrade": "Skill Activation Chance +5%\nSkill Count +1"
+            },
+            {
+              "name": "Strong Pulse",
+              "upgrade": "Skill Damage +15%\nSkill Size +20%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Enemies hit by the pulse are limited to 1 pulse chain reaction.\nSkill Count +2"
+            }
+          ]
+        },
+        {
+          "file": "Needle Throw.png",
+          "stat": { "name": "Damage", "value": "65%" },
+          "tags": ["Main Skill", "Physical", "Targeting", "Bleed", "CH04"],
+          "unlock": "Activate the Bleed Synergy Level 4 while using the <artifact>Crimson Resin</artifact> (Regular Artifact).",
+          "urlName": "needle-throw",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Fires needles in a fan-like methos that inflicts Bleed and deals damage that reduces Bleed Resistance. The attack angle does not exceed 60 degrees.\nReduces enemy's Bleeding Resistance by 25% for 3 seconds\n 25% chance to inflict Bleed",
+          "modifications": [
+            { "name": "Sharp Thorns", "upgrade": "Skill Penetration Count +1" },
+            {
+              "name": "More Thorns",
+              "upgrade": "Skill Activation Chance +5%\nSkill Count +2"
+            },
+            {
+              "name": "Sharp Thorns",
+              "upgrade": "Skill Damage +10%\nSkill Count +2"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Bleed Resistance of hit enemies -35% for 8 seconds"
+            }
+          ]
+        },
+        {
+          "file": "Flame Spear.png",
+          "stat": { "name": "Damage", "value": "275%" },
+          "tags": ["Main Skill", "Physical", "Projectile", "Flame", "CH04"],
+          "unlock": "Equip a flaming sword while reaching level 6 of the flame synergy.",
+          "urlName": "flame-spear",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons and launches a spear of fire which pierces the enemy once.\nMaximum Pierces 1\n15% chance to inflict Burn",
+          "modifications": [
+            { "name": "Burning Spear", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Pierce",
+              "upgrade": "Skill Damage +15%\nSkill Penetration Count +2"
+            },
+            {
+              "name": "Neat Penetrating",
+              "upgrade": "Damage +15% per remaining penetration count"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Returns when maximum distance is reached with remaining number of penetrations"
+            }
+          ]
+        },
+        {
+          "file": "Flash.png",
+          "stat": { "name": "Damage", "value": "280%" },
+          "tags": ["Main Skill", "Physical", "Targeting", "Bleed", "CH04"],
+          "unlock": "Reach level 25 on <character>Ronin</character> (Character).",
+          "urlName": "flash",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Cuts through a wide space in a straight line, bisecting it.\n 110% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "One Hit Kill",
+              "upgrade": "Fix skill count to 1\n For each additional skill count, base damage +105%\nSkill size does not increase"
+            },
+            { "name": "Mind's Eye", "upgrade": "Skill Damage +40%" },
+            { "name": "Quick Claw", "upgrade": "Skill Count +1" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Reactivate immediately upon killing an enemy"
+            }
+          ]
+        },
+        {
+          "file": "Crimson Touch.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Main Skill", "Magic", "Chain", "Bleed"],
+          "unlock": "Reach level 6 of the Bleeding synergy.",
+          "urlName": "crimson-touch",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Attacks enemies by firing a chain of red beams and inflicting Bleed.\nMaximum Chain 4\n110% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Many Hands",
+              "upgrade": "Skill Damage +20%\nSkill Chain +2"
+            },
+            {
+              "name": "Wide Touch",
+              "upgrade": "Chain distance +30%\nSkill Damage +10%"
+            },
+            {
+              "name": "Blood Touch",
+              "upgrade": "When an enemy is killed with this skill, 'Blood Discharge' is activated in the basic state that has not been modified.\nSkill Damage +10%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "If there is no target to be chained nearby, chain to the same enemy at 30% power."
+            }
+          ]
+        },
+        {
+          "file": "Flame Haze.png",
+          "stat": { "name": "Damage", "value": "280%" },
+          "tags": ["Main Skill", "Magic", "Spell", "Flame"],
+          "unlock": "Defeat Hero King <boss>Benedict</boss> (CH04 Hidden Boss) 5 times",
+          "urlName": "flame-haze",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summon a flame orb and make it explode.\n35% chance to inflict Burn",
+          "modifications": [
+            {
+              "name": "Condensation",
+              "upgrade": "Skill Size +10%\nSkill Duration -10%\nSkill Multi-Hit Interval -10%"
+            },
+            { "name": "Firepower", "upgrade": "Skill Damage +30%" },
+            {
+              "name": "Flammability",
+              "upgrade": "Skill Damage +20%\nSkill Duration -20%\nSkill Multi-Hit Interval -20%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "After Skill Explosion, creates a Flame Haze with 35% Size and Damage.\nSkill Damage +10%"
+            }
+          ]
+        },
+        {
+          "file": "Flame Arrow.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Main Skill", "Magic", "Targeting", "Flame"],
+          "unlock": "Defeat Ironblood Lord <boss>Benedict</boss> (CH04 Hidden Boss) 5 times.",
+          "urlName": "flame-arrow",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summon a flame arrow above the enemy's head and shoot it.\n115% chance to inflict Burn",
+          "modifications": [
+            {
+              "name": "Rapid Fire",
+              "upgrade": "Skill Damage +10%\nSkill Activation Chance +8%"
+            },
+            {
+              "name": "Additional hit",
+              "upgrade": "Skill Damage +10%\nSkill Count +1"
+            },
+            {
+              "name": "Piercing Shot",
+              "upgrade": "Skill Damage +10%\nSkill Penetration Count +1"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +55%\nSkill Count +1"
+            }
+          ]
+        },
+        {
+          "file": "Crushing Bite.png",
+          "stat": { "name": "Damage", "value": "190%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Bleed", "CH05"],
+          "unlock": "Reach level 25 on <character>Werewolf</character> (Character).",
+          "urlName": "crushing-bite",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons the fangs of a giant wolf to bite and damage enemies.\nHits 2 times.\n25% chance to inflcit Bleed.",
+          "modifications": [
+            {
+              "name": "Final Execution",
+              "upgrade": "20% chance of Skill Reactivation"
+            },
+            {
+              "name": "Target Locked",
+              "upgrade": "Skill Activation Chance +25%"
+            },
+            {
+              "name": "Sharp Teeth",
+              "upgrade": "Skill Damage +10%\nBleed Chance +18%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Grants [Burst - Crushing Bite] on Skill Hit\nMaximum Burst stacks +20\n\n[Burst - Crushing Bite]: Damage taken from this skill +1% per stack"
+            }
+          ]
+        },
+        {
+          "file": "Blood Spear.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Bleed", "CH04"],
+          "unlock": "Defeat 300 enemies while in <character>Vampire</character>'s (Character) Blood Awakening (Passive) Stage 3.",
+          "urlName": "blood-spear",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "A Blood Spear erupts from the ground to strike enemies.\n 40% chance to inflict Bleed",
+          "modifications": [
+            {
+              "name": "Weak Point Attack",
+              "upgrade": "Skill Damage +50% to bleeding targets."
+            },
+            {
+              "name": "Burst",
+              "upgrade": "Triggers Bleeding immediately on hit.\nBleed Chance +20%"
+            },
+            {
+              "name": "Shadow Strike",
+              "upgrade": "Skill spawns at the enemy's location.\nSkill Damage -30%\nSkill Count +1"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count increases per 50% additional Bleed Chance (Maximum: 3)."
+            }
+          ]
+        },
+        {
+          "file": "Abyssal Execution.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Frost", "CH05"],
+          "unlock": "Reach level 25 on <character>Predator</character> (Character).",
+          "urlName": "abyssal-execution",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Deals Frost damage to enemies, and deals 35% additional damage when the enemy's health is below 25%.\n 10% chance to inflict Freeze",
+          "modifications": [
+            {
+              "name": "Ruthless",
+              "upgrade": "Low HP Threshold +10%\nSkill Damage +20%"
+            },
+            {
+              "name": "Execution Rite",
+              "upgrade": "Triggers a skill on Plunging Attack hit"
+            },
+            {
+              "name": "Into the Abyss",
+              "upgrade": "15% increased Skill Activation Chance when attacking low HP enemies"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +35% when attacking Bosses"
+            }
+          ]
+        },
+        {
+          "file": "Sandspike.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Main Skill", "Physical", "Melee", "Bleed", "CH05"],
+          "unlock": "Enter the Desert of the Red Sun with a specially-modified <skill>Hatred Spike</skill> (Subskill).",
+          "urlName": "sandspike",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Strikes forward with spikes of sand.\nNumber of Spikes 1\n25% chance to inflict Bleed",
+          "modifications": [
+            { "name": "Crimson Wind", "upgrade": "Bleed Chance +15%" },
+            { "name": "Spire of the Dunes", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Judgement of the Dunes",
+              "upgrade": "Skill Damage +33%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Sandspike is recast once.\nThe recast increases in size based on Bleed chance (up to +100%)."
+            }
+          ]
+        },
+        {
+          "file": "Desert Vortex.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Main Skill", "Physical", "Spell", "Darkness", "CH05"],
+          "unlock": "Stay buried in the sand for a total of 100 seconds in the Desert of the Red Sun chapter.",
+          "urlName": "desert-vortex",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons a Desert Vortex that deals damage to enemies within range.",
+          "modifications": [
+            {
+              "name": "Accelerated Collapse",
+              "upgrade": "Skill Duration -10%\nSkill Multi-Hit Interval -10%"
+            },
+            {
+              "name": "Predator of the Desert",
+              "upgrade": "Skill Damage +20%"
+            },
+            {
+              "name": "Whim of the Sand",
+              "upgrade": "Skill Activation Chance +15%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Size +15%\nSkill Duration +15%\nEffect doubled when hitting a boss."
+            }
+          ]
+        },
+        {
+          "file": "Sacrificial Stake.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Main Skill", "Magic", "Spell", "Divinity", "CH05"],
+          "unlock": "Lose a total of 6 Soul Hearts after reviving through Divinity in a single game.",
+          "urlName": "sacrificial-stake",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Summons a sacrificial stake that forces sacrifice upon enemies, dealing damage.\nThe more Soul Hearts the player has lost, the greater the damage.\nSkill Damage +5% per Soul Heart lost (up to 50%)",
+          "modifications": [
+            {
+              "name": "Whispering Prayer",
+              "upgrade": "Skill Activation Chance +18%"
+            },
+            {
+              "name": "Minor Fury",
+              "upgrade": "Skill Damage +25%\nSkill Size -30%"
+            },
+            {
+              "name": "Cracked Revelation",
+              "upgrade": "Skill Damage -15%\nSkill Count +1"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "5% chance to retrigger skill per lost Soul Heart (up to 25%)"
+            }
+          ]
+        },
+        {
+          "file": "Pact of Immortality.png",
+          "stat": { "name": "Damage", "value": "90%" },
+          "tags": ["Main Skill", "Magic", "Spell", "Toxin", "CH05"],
+          "unlock": "Revive a total of 6 times through Divinity.",
+          "urlName": "pact-of-immortality",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Cast Undying Pact on a monster.\nThe contracted monster deals continuous damage to nearby enemies and leaves an afterimage for 1 second upon death.\nNumber of Hits  4\n10% chance to inflict Poison",
+          "modifications": [
+            { "name": "Venomous Signature", "upgrade": "Skill Damage +25%" },
+            { "name": "Edict of Contagion", "upgrade": "Poison Chance +15%" },
+            { "name": "Cruel Edge", "upgrade": "Skill Size +15%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Afterimage duration +1 second"
+            }
+          ]
+        },
+        {
+          "file": "Sand Arrow.png",
+          "stat": { "name": "Damage", "value": "90%" },
+          "tags": ["Main Skill", "Physical", "Targeting", "Divinity", "CH05"],
+          "unlock": "Take 1 hit from a Desert Wasp (M406) attack.",
+          "urlName": "sand-arrow",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Creates sand arrows from the ground around the player and fires them at enemies.\nNumber of arrows 3",
+          "modifications": [
+            {
+              "name": "Graceful Descent",
+              "upgrade": "Skill Count increases by 1 for each Divinity Synergy level"
+            },
+            {
+              "name": "Lightbreaker",
+              "upgrade": "Skill Activation Chance +15%"
+            },
+            {
+              "name": "Judgement of the Dunes",
+              "upgrade": "Skill Damage +20%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Sand Arrow SKill Damage Multiplier +20%, now 120%"
+            }
+          ]
+        },
+        {
+          "file": "Sand Soldier.png",
+          "stat": { "name": "Damage", "value": "120%" },
+          "tags": ["Main Skill", "Magic", "Melee", "Divinity", "CH05"],
+          "unlock": "Defeat 300 Desert Goblins (M409, M410, M411).",
+          "urlName": "sand-soldier",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "A sand soldier appears behind the player, charges forward to deal damage, and then thrusts once more.",
+          "modifications": [
+            {
+              "name": "Sandstorm Legion",
+              "upgrade": "For every 20% increase in Skill Size, Skill Count +1"
+            },
+            {
+              "name": "Scattered Formation",
+              "upgrade": "Skill Damage -30%\nSkill Count +1"
+            },
+            {
+              "name": "White Soldiers of Sand",
+              "upgrade": "Skill Damage +40%\nSkill Activation Chance -10%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "For each additional skill count, skill damage +50%"
+            }
+          ]
+        },
+        {
+          "file": "Gravity Bomb.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Main Skill", "Physical", "Bomb", "Darkness", "CH06"],
+          "unlock": "Deal damage to the Bomber with the <artifact>Dud Dynamite</artifact>.",
+          "urlName": "gravity-bomb",
+          "interval": { "name": "Activation Chance", "value": "15.00%" },
+          "description": "Throws a bomb that pulls in nearby enemies upon detonation.",
+          "modifications": [
+            {
+              "name": "Unstable Core",
+              "upgrade": "Skill Activation Chance +10%"
+            },
+            { "name": "Event Horizon", "upgrade": "Skill Size +30%" },
+            { "name": "Singularity Collapse", "upgrade": "Skill Damage +50%" },
+            { "name": "Special Mod", "upgrade": "Skill Count +1" }
+          ]
+        }
+      ],
+      "color": "#851717",
+      "title": "Main Skills"
+    },
+    "curseskills": {
+      "list": [
+        {
+          "file": "Electric Stigma.png",
+          "stat": { "name": "Damage", "value": "80%" },
+          "tags": ["Magic", "Curse", "Lightning", "CH01"],
+          "unlock": "Become inflicted with Shock (Challenge mode).",
+          "urlName": "electric-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\nInflicts Shock with a 55% chance.",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Lightning skill damage received by monsters within the brand of electricity +20%"
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nSkill Hit Count +1"
+            }
+          ]
+        },
+        {
+          "file": "Flame Stigma.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Magic", "Curse", "Flame", "CH01"],
+          "unlock": "Become inflicted with Burn.",
+          "urlName": "flame-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\nInflicts Burn with a 45% chance",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Burn skill damage received by monsters within the brand of flame +20%"
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nBurn Chance +30%"
+            }
+          ]
+        },
+        {
+          "file": "Ice Stigma.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Magic", "Curse", "Frost", "CH01"],
+          "unlock": "Become inflicted with Freeze (Challenge mode or <artifact>Eternal Flower</artifact>).",
+          "urlName": "ice-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\nInflicts Freeze with a 40% chance",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Ice skill damage received by monsters within the brand of ice +20%"
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nSkill Duration +1 second"
+            }
+          ]
+        },
+        {
+          "file": "Death Stigma.png",
+          "stat": { "name": "Damage", "value": "80%" },
+          "tags": ["Magic", "Curse", "Darkness", "CH04"],
+          "unlock": "Die from being hit my Chapter 1 Boss <boss>Greed</Boss>'s 'Dark Arrival'. (Let Greed kill you in the phase where everything goes black and you need to light up the 4 totems.)",
+          "urlName": "death-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\nReduces critical hit resistance by 10% for 3 seconds with a probability of 40%.",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Dark skill damage received by monsters within brand of darkness +20%"
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Increases critical hit resistance reduction duration by +2 seconds and reduces critical hit resistance by -5%."
+            }
+          ]
+        },
+        {
+          "file": "Radiance Stigma.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Magic", "Curse", "Divinity", "CH04"],
+          "unlock": "Reach level 6 of the Divnity synergy.",
+          "urlName": "radiance-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\nWhile the Mark of Radiance is engraved, the following effects are applied:\n- Skill activation probability increases by 15%\n- Skill cooldown recovery speed increases by 10%",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Holy skill damage received by monsters within brand of divinity +20%"
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nSkill Duration +1 second"
+            }
+          ]
+        },
+        {
+          "file": "Bleeding Stigma.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Magic", "Curse", "Bleed", "CH04"],
+          "unlock": "Get inflicted with the status effect 'Bleed'.",
+          "urlName": "bleeding-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\n40% chance to reduce bleed resistance by 15%",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Bleed skill damage received by monsters within brand of blood +20%"
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nSkill Duration +1 second"
+            }
+          ]
+        },
+        {
+          "file": "Assassination.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Physical", "Curse", "Darkness", "CH05"],
+          "unlock": "Reach level 25 on <character>Assassin</character> (Character).",
+          "urlName": "assassination",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Marks the strongest enemy for 5 seconds, who takes 10% additional damage.",
+          "modifications": [
+            {
+              "name": "Power Strike",
+              "upgrade": "On activation, Critical Hit Chance +100% for 0.5 seconds"
+            },
+            {
+              "name": "Agility",
+              "upgrade": "Hitting a Marked target reduces Dash Cooldown by 0.25 seconds"
+            },
+            {
+              "name": "Target Confirmed",
+              "upgrade": "Marks target takes +20% Physical Skill Damage"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Instantly recast on killing a marked target"
+            }
+          ]
+        },
+        {
+          "file": "Poison Stigma.png",
+          "stat": { "name": "Damage", "value": "100%" },
+          "tags": ["Magic", "Curse", "Toxin", "CH05"],
+          "unlock": "Reach level 6 of the Toxin synergy.",
+          "urlName": "poison-stigma",
+          "interval": { "name": "Cooldown", "value": "6.00" },
+          "description": "Creates a cursed zone that deals continuous damage for 5 seconds.\n40% chance to reduce poison resistance by 15% for 5 seconds.\n100% chance to inflict Poison.",
+          "modifications": [
+            {
+              "name": "Curse Enhancement I",
+              "upgrade": "Monsters affected by Poison Stigma take 20% amplified Poison Skill Damage."
+            },
+            { "name": "Curse Enhancement II", "upgrade": "Skill Size +20%" },
+            {
+              "name": "Curse Enhancement III",
+              "upgrade": "Skill Duration +1 second"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Count +1\nSkill Duration +1 second"
+            }
+          ]
+        }
+      ],
+      "color": "#731785",
+      "title": "Curse Skills"
+    },
+    "summonskills": {
+      "list": [
+        {
+          "file": "Ice Familiar.png",
+          "stat": { "name": "Damage", "value": "200%" },
+          "tags": ["Summon", "Magic", "Melee", "Frost", "CH03"],
+          "unlock": "Use a Frost tag skill 200 times while owning the artifact, <artifact>Soul Whistle</artifact> (Regular Artifact).",
+          "urlName": "ice-familiar",
+          "interval": { "name": "Cooldown", "value": "2.00" },
+          "description": "Summons an Ice Familiar that flies to a nearby enemy and explodes.\nFires 3 times.\n10% chance to inflict Freeze.",
+          "modifications": [
+            {
+              "name": "Madness Included",
+              "upgrade": "Skill Damage +10%\nEnemy Detection Range +25%"
+            },
+            { "name": "Split Included", "upgrade": "Attack Count +20%" },
+            { "name": "Friend Included", "upgrade": "Freeze Chance +15%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Skill Damage +50%\nFire 1 Icicle Spike on each attack"
+            }
+          ]
+        },
+        {
+          "file": "Shooter Drone.png",
+          "stat": { "name": "Damage", "value": "150%" },
+          "tags": ["Summon", "Physical", "Targeting", "Darkness", "CH03"],
+          "unlock": "Reach level 25 on <character>Gunner</character> (Character).",
+          "urlName": "shooter-drone",
+          "interval": { "name": "Cooldown", "value": "1.50" },
+          "description": "Summons a drone that tracks nearby enemies and attacks.\nShoots 3 times.",
+          "modifications": [
+            { "name": "Quick Assemble", "upgrade": "Attack Speed +25%" },
+            { "name": "Drone Mod", "upgrade": "Attack Count +1" },
+            { "name": "Modified Bullet", "upgrade": "Skill Damage +35%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "When Shooter Drone hits, the bullet ricochets to 1 nearby enemy, dealing 45% damage.\nSkill Count +50%."
+            }
+          ]
+        },
+        {
+          "file": "Earth Spirit.png",
+          "stat": { "name": "Damage", "value": "80%" },
+          "tags": ["Summon", "Magic", "Projectile", "Divinity", "CH05"],
+          "unlock": "Reach level 25 with the Summoner character.",
+          "urlName": "earth-spirit",
+          "interval": { "name": "Cooldown", "value": "3.00" },
+          "description": "Summons an Earth Spirit that continuously hurls rocks at enemies, dealing damage.",
+          "modifications": [
+            { "name": "Wrath of the Earth", "upgrade": "Skill Cooldown -40%" },
+            { "name": "Tremor of the Earth", "upgrade": "Projectile Count +1" },
+            { "name": "Power of the Earth", "upgrade": "Skill Damage +30%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "1 projectile per 2 summoned summons."
+            }
+          ]
+        },
+        {
+          "file": "Contracted Cactus.png",
+          "stat": { "name": "Damage", "value": "90%" },
+          "tags": ["Summon", "Physical", "Projectile", "Bleed", "CH05"],
+          "unlock": "Defeat Ancient Weapon <boss>Akron</boss> (CH05 Final Boss) with the <pet>Smiling Cactus</pet> (Pet).",
+          "urlName": "contracted-cactus",
+          "interval": { "name": "Cooldown", "value": "3.00" },
+          "description": "Approaches nearby enemies and fires thorns once to deal damage..",
+          "modifications": [
+            { "name": "Chlorophyll Mutation", "upgrade": "Skill Count + 1" },
+            { "name": "Sharp Thorns", "upgrade": "Skill Damage +25%" },
+            { "name": "Bleeding Powder", "upgrade": "Bleed Chance +15%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "When attacking, thorns are rapidly fired in 8 directions from the center of the cactus."
+            }
+          ]
+        }
+      ],
+      "color": "#787878",
+      "title": "Summon Skills"
+    },
+    "enchantskills": {
+      "list": [
+        {
+          "file": "Bleed Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Bleed"],
+          "unlock": "Reach level 10 of the Bleed Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "bleed-smite",
+          "description": "Imbues the weapon with the power of blood. Basic Skills have 10% chance to inflict Bleed.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            {
+              "name": "Blood Wave",
+              "upgrade": "Triggers a giant Bleed wave upon Deep Wound activation (Cooldown: 3 seconds)"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."
+            }
+          ]
+        },
+        {
+          "file": "Frost Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Frost"],
+          "unlock": "Reach level 10 of the Frost Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "frost-smite",
+          "description": "Imbues the weapon with the power of frost. Basic Skills have 10% chance to inflict Freeze.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            { "name": "Frost Scale", "upgrade": "Frozen Shield +1" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."
+            }
+          ]
+        },
+        {
+          "file": "Darkness Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Darkness"],
+          "unlock": "Reach level 10 of the Darkness Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "darkness-smite",
+          "description": "Imbues the weapon with the power of darkness. Critical Hit Chance increases by 10%.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            {
+              "name": "Critical Strike",
+              "upgrade": "Critical Hit Chance +10%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."
+            }
+          ]
+        },
+        {
+          "file": "Toxin Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Toxin"],
+          "unlock": "Reach level 10 of the Toxin Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "toxin-smite",
+          "description": "Imbues the weapon with the power of toxin. Basic Skills have 10% chance to inflict Poison.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            {
+              "name": "Source of Plague",
+              "upgrade": "Applies 1 stack of Poison to enemies within 2.5 range every 0.2 seconds"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."
+            }
+          ]
+        },
+        {
+          "file": "Flame Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Flame"],
+          "unlock": "Reach level 10 of the Flame Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "flame-smite",
+          "description": "Imbues the weapon with the power of flame. Basic Skills have 15% chance to inflict Burn.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            { "name": "Flammable Material", "upgrade": "Burn Damage +25%" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."
+            }
+          ]
+        },
+        {
+          "file": "Divinity Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Divinity"],
+          "unlock": "Reach level 10 of the Divinity Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "divinity-smite",
+          "description": "Imbues the weapon with the power of divinity. Basic Skills have 10% chance to trigger a Divine Ray.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            {
+              "name": "Sanctified Domain",
+              "upgrade": "Divine Ray Width +5%\nDivine Ray Duration +5%"
+            },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skill, Subskill, and Summon Skill cannot be activated Weapon Skill damage +1% per 1% Conversion Attack Power +1% and Movement Speed +0.5% per modification of disabled skills"
+            }
+          ]
+        },
+        {
+          "file": "Lightning Smite.png",
+          "stat": { "name": "Conversion", "value": "25%" },
+          "tags": ["Enchant", "Lightning"],
+          "unlock": "Reach level 10 of the Lightning Synergy and defeat Heroic Spirit <boss>Benedict</boss> (CH04 Hidden Boss).",
+          "urlName": "lightning-smite",
+          "description": "Imbues the weapon with the power of lightning. Basic Skills have 25% chance to inflict Shock.",
+          "modifications": [
+            { "name": "Additional Conversion", "upgrade": "Conversion +10%" },
+            {
+              "name": "Conversion Sync",
+              "upgrade": "Skill Damage +1% per 1% Conversion (Max: 100%)"
+            },
+            { "name": "Overload", "upgrade": "Max Shock Stack +10" },
+            {
+              "name": "Special Mod",
+              "upgrade": "Main Skills, Subskills, and Summon Skills cannot be activated.\nWeapon Skill Damage +1% per 1% Conversion\nAttack Power +1% and Movement SPD +0.5% per modification of disabled skills."
+            }
+          ]
+        }
+      ],
+      "color": "#f5d742",
+      "title": "Enchant Skills"
+    }
+  },
+  "filePath": "/res/skills/",
+  "statOptions": [
+    "Damage",
+    "Shield",
+    "Speed Up",
+    "Skill Haste",
+    "Activation Chance",
+    "Damage Critical Chance",
+    "Basic Attack Damage",
+    "Conversion"
+  ],
+  "intervalOptions": ["Activation Chance", "Cooldown"]
+}

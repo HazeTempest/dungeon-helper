@@ -1,1 +1,1716 @@
-{"data":[{"name":"Universal Fighter","effects":["On basic skill attack, Attack Speed +15% for 1.5 seconds."],"urlName":"universal-fighter","description":"A great battle begins.","requirements":["a:Rugged Bodyarmor","a:Broken Pauldron"]},{"name":"Megamorph Potion","effects":["All Player's Sizes +25%","Attack Power +25%"],"urlName":"megamorph-potion","description":"So that's what this effect is!","requirements":["a:Blood Flask","a:Golden Flask","a:Black Flask"]},{"name":"Memories of the Past","effects":["If 3 types of the artifact are in possession, removes the Torn Journals' ATK reduction penalty"],"urlName":"memories-of-the-past-i","description":"The memories are coming back.","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V"]},{"name":"Memories of the Past","effects":["When possessing 4 types Artifacts, removes the damage reduction penalty if Torn Journal","Projectile tag skill count +2"],"urlName":"memories-of-the-past-ii","description":"The memories are coming back.","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V"]},{"name":"Gambler","effects":["Subskill Reactivation"],"urlName":"gambler","description":"6,6 ... and 6.","requirements":["a:Dice","a:God's Dice","a:Flagellant's Gold Coin"]},{"name":"Explosion Fanatic","effects":["When hit, triggers 1 to 5 fire attribute explosions around you and stuns enemies."],"urlName":"explosion-fanatic","description":"B-b-b-Boooom!","requirements":["a:Coal","a:F' Rune"]},{"name":"Pyromaniac","effects":["Flame Synergy Explosion Damage +150% Amplified"],"urlName":"pyromaniac","description":"You feel warm.","requirements":["a:F' Rune","a:Firewood","a:Lava in a Cup","a:Bandage"]},{"name":"Witch's Recipe","effects":["<artifact>Witch's Textbook</artifact> Base Cooldown changed to 1.5 seconds","<artifact>Madness Potion</artifact> Skill Count changed to 0-20","Toxin-tagged Projectile Skill Damage +100%"],"urlName":"witchs-recipe","description":"First step as a witch","requirements":["a:Madness Potion","a:Witch's Textbook","a:Moldy Mushroom","a:The Devil Eye"]},{"name":"Eccentric Epicure","effects":["+0.25 Maximum Stacks of Poison on kill (Maximum: 100 stacks).","Resets when Collection is deactivated."],"urlName":"eccentric-epicure","description":"Between the two of you, one will die from eating this","requirements":["a:Mysterious Egg","a:Poison Sac","a:Lizard Skewer"]},{"name":"Hey, Rookie!","effects":["Super Armor (Prevents flinching when taking hits)"],"urlName":"hey-rookie","description":"Thousand times the courage!","requirements":["a:Inscribed Stone","a:Broken Horn","a:Broken Pauldron"]},{"name":"Brave Fighter","effects":["Adds Bleed tags to all Melee tag skills"],"urlName":"brave-fighter","description":"WAAAAAARRR!!","requirements":["a:Blood Flask","a:Soldier's Seal","a:Niflheim's Symbol"]},{"name":"The Hands of Midas","effects":["All chests change to Unique grade"],"urlName":"the-hands-of-midas","description":"Everything I touch becomes unique...","requirements":["a:Silver Coin","a:Flagellant's Gold Coin","a:Fortune Coin"]},{"name":"Body Cart","effects":["Movement Speed -15%","Attack Power +1% per bonus 0.02 Movement Speed (Maximum: +100%)"],"urlName":"body-cart","description":"It's heavy","requirements":["a:Silver Coin","a:Wooden Sled","a:Steel Boots"]},{"name":"Safety Matters","effects":["Attack Power +1 for each full heart."],"urlName":"safety-matters","description":"The head is a precious thing.","requirements":["a:Skull Head","a:White Mask"]},{"name":"Goods from the Otherworld","effects":["Spell tag skill also casts on player's rear"],"urlName":"goods-from-the-otherworld","description":"What have you done to my body!?","requirements":["a:Floating Stone","a:Mysterious Branch","a:Unidentified Staff"]},{"name":"Parasitic Devil","effects":["If hit, Poison stacks +10 to nearby enemies"],"urlName":"parasitic-devil","description":"Spores and plants will grow from your body.","requirements":["a:Yearning Vine","a:Spore","a:Poisonous Mushroom"]},{"name":"Spin of Madness","effects":["When possessing the <artifact>Lucky Clover Hammer</artifact> + <artifact>Torn Journal V</artifact> or <artifact>Madness Potion</artifact>, radius of spin gets larger","Spin begins from the player"],"urlName":"spin-of-madness","description":"Go ahead and spin!.","requirements":["a:Lucky Clover Hammer","a:Torn Journal V","a:Madness Potion"]},{"name":"Sever by Laser","effects":["The <skill>Death Ray</skill> spins relative to the player."],"urlName":"sever-by-laser","description":"What Men Want","requirements":["s:Death Ray","a:Lucky Clover Hammer"]},{"name":"Zeus","effects":["Creates <skill>Plasma</skill> on the body","Chance to Shock +15%"],"urlName":"zeus","description":"Can't hide my power.","requirements":["s:Plasma","a:Mechanical Arm","a:Lightning Rod","a:Coil"]},{"name":"Spiky Devil","effects":["Generates as many <skill>Hatred Spike</skill>s beneath nearby enemies as the current number of enemies nearby.","<skill>Hatred Spike</skill>s' Base Damage +60%."],"urlName":"spiky-devil","description":"Spikes endlessly comes out of the body","requirements":["s:Hatred Spike","a:Steel Boots","a:Strange God's Mask"]},{"name":"Goods from Another World","effects":["When hit, deals 500 true damage to enemies within range and stuns them for 1 second."],"urlName":"goods-from-another-world","description":"Shooting blanks!","requirements":["a:Skull Head","a:Mechanical Arm","a:Cell Nucleus"]},{"name":"Ninpo","effects":["Number of shurikens fired +3","Shurikens penetration count +1","Adds Bleed and Projectile tags"],"urlName":"ninpo","description":"It's time to summon.","requirements":["a:Summon Scroll","a:Kunai"]},{"name":"Handle","effects":["Skill Damage +30%"],"urlName":"handle","description":"Aren't horns called handles?","requirements":["a:Broken Horn","a:Demon Horn"]},{"name":"Eternal's Gauntlet","effects":["If enemy is defeated, 5% chance to defeat all monsters"],"urlName":"eternals-gauntlet","description":"(Finger Snap)","requirements":["a:Blood Essence","a:Power Gauntlet","a:Blighted Soulstone","a:Ominous Fragment"]},{"name":"Corrupted Dragonkin","effects":["Projectile Tag Skill Damage +50%"],"urlName":"corrupted-dragonkin","description":"Sold my soul to the Devil","requirements":["a:Skull Head","a:The Devil Eye","a:Dragon Eye"]},{"name":"Sans Bad Time","effects":["Max HP +1"],"urlName":"sans-bad-time","description":"The birds are chirping...","requirements":["a:Skull Head","a:Kitchen Knife"]},{"name":"Bluebane Arm","effects":["During Basic Attack, 15% chance to negate Damage taken"],"urlName":"bluebane-arm","description":"A man whose blue fists give him grief","requirements":["a:Power Gauntlet","a:Frozen Gauntlet"]},{"name":"Spore Studies","effects":["Poison Explosion, Poisonous Mushroom Explosion radius +50%","Poison Sac's Poison Explosion Damage +100%"],"urlName":"Spore-studies","description":"Self-taught Stone","requirements":["a:Floating Stone","a:Poisonous Mushroom","a:Poison Sac"]},{"name":"Poor Explorer","effects":["Luck +15%","Gold required to refresh chests -30"],"urlName":"poor-explorer","description":"The poncho is being worn like a skirt.","requirements":["a:Bandage","a:Worn Poncho","a:Red Poncho"]},{"name":"Roly-poly Wizard","effects":["When the current HP drops to 3 bars or lower, Attack Power +3"],"urlName":"roly-poly-wizard","description":"Wizards also need full stomachs.","requirements":["a:Unidentified Staff","a:Lizard Skewer"]},{"name":"Humming Stone","effects":["Cursed Room Chance of Appearance +10%"],"urlName":"humming-stone","description":"This resonates with the Devil.","requirements":["a:Inscribed Stone","a:Ominous Fragment"]},{"name":"Berserk","effects":["No reduction of Damage received","Damage from Stab +150% Amplified"],"urlName":"berserk","description":"Grrr...Gr...Grrrrrroowl","requirements":["a:Blood Flask","a:Dragon Seal","a:Broken Pauldron","a:Rugged Bodyarmor"]},{"name":"Cursed Pirate","effects":["Increases attack power by 1% for every 100 Gold held, up to a maximum of 60%"],"urlName":"cursed-pirate","description":"They are obsessed with money.","requirements":["a:Flagellant's Gold Coin","a:Niflheim's Symbol"]},{"name":"Conduction","effects":["<skill>Electric Stigma</skill> (Curse Skill) count +1","<skill>Electric Stigma</skill> (Curse Skill) chance to Shock +15%"],"urlName":"conduction","description":"Zzzzzap!","requirements":["s:Electric Stigma","a:Spoon","a:Coil"]},{"name":"Combustion","effects":["<skill>Flame Stigma</skill> (Curse Skill) count +1","Burn Damage count +1"],"urlName":"combustion","description":"Bzzzz? Crackle!","requirements":["s:Flame Stigma","a:Spoon","a:Lava in a Cup"]},{"name":"Frostbite","effects":["<skill>Ice Stigma</skill> (Curse Skill) count + 1","<skill>Ice Stigma</skill> (Curse Skill) size +30%"],"urlName":"frostbite","description":"Frozen!","requirements":["s:Ice Stigma","a:Spoon","a:Ice Crystal"]},{"name":"Warrior of the West","effects":["Max Dash count +1."],"urlName":"warrior-of-the-west","description":"\"Fanfare\"","requirements":["a:Mysterious Egg","a:Red Poncho"]},{"name":"Dizzy Eyes","effects":["Projectile, Targeting tags Random Projectile count 0-10"],"urlName":"dizzy-eyes","description":"The numbers go round and round","requirements":["a:Madness Potion","a:The Devil Eye"]},{"name":"Shell Shock","effects":["Scatter bombs at the front","Randomly changes the explosion timer by 0.1-1 seconds"],"urlName":"shell-shock","description":"I'm kiddinggg!","requirements":["a:Mysterious Branch","a:Summon Scroll"]},{"name":"Big... Large... Enormous...","effects":["Melee Tag Range +30%"],"urlName":"big-large-enormous","description":"That was such an enormous... attack.","requirements":["a:Golden Flask","a:Torn Journal I","a:Ruined Royal Family's Insignia"]},{"name":"Chimera","effects":["For every 50 enemies defeated, ATK +1 (Maximum: +10)"],"urlName":"chimera","description":"Becomes stronger by eating the enemy.","requirements":["a:Star Fragment","a:Mysterious Egg","a:Lizard Skewer"]},{"name":"Sled","effects":["MOV SPD +25%","Can walk on liquid"],"urlName":"sled","description":"Ha- ha- Hyaaa... Ha- ha- Hyaaah!","requirements":["a:Wooden Sled","a:Ice Cube"]},{"name":"Captain","effects":["Changes the skill's Projectile tag to the Targeting tag","Fires at the nearest enemy"],"urlName":"captain","description":"It looks like fireworks","requirements":["s:Venom Dispersion","s:Apply Toxin","a:Poison Sting","a:Soldier's Seal"]},{"name":"Robber","effects":["Shop's Goods +1"],"urlName":"robber","description":"I'll give you money so give me more goods!","requirements":["a:Kitchen Knife","a:Coupon","a:Silver Coin"]},{"name":"Weapons Dealer","effects":["Attack Power +5","Attack Power increases by 1 for each Lesser Artifact equipped"],"urlName":"weapons-dealer","description":"If 3 sacks won't do, then 4 sacks!","requirements":["a:Soldier's Seal","a:Kunai","a:Kitchen Knife"]},{"name":"Hydra","effects":["Poison ATK +40%"],"urlName":"hydra","description":"A toxin that makes you weak and dizzy just by grazing it!","requirements":["a:Poison Sting","a:Hydra's Tooth"]},{"name":"Lunar Eclipse","effects":["All Spell, Targeting tag skills change to Shadow.","Spell, Targeting Skill Cooldown Recovery Speed +50%","Spell, Targeting ATK +20%"],"urlName":"lunar-eclipse","description":"And darkness has arrived all over the world.","requirements":["a:Small Sun","a:Phelan's Emblem"]},{"name":"Razor-Sharp Blade","effects":["When Poison is inflicted, 100% chance to inflict Bleed"],"urlName":"razor-sharp-blade","description":"A blade that causes unexpected bleeding","requirements":["s:Apply Toxin","a:Blood Flask"]},{"name":"God of Mischief","effects":["Undoes reverse arrow key (Removes the <artifact>Strange God's Mask</artifact>'s (Greater Artifact) \"Reversed Player Controls\" effect)"],"urlName":"god-of-mischief","description":"Looooook!!","requirements":["a:Steel Boots","a:Strange God's Mask"]},{"name":"Bizzare Plant","effects":["Summons Bleed Spikes at 6 enemies every 6 seconds"],"urlName":"bizzare-plant","description":"Rotting plant","requirements":["a:Spore","a:Plant Seed","a:Yearning Vine"]},{"name":"Fortune Coin","effects":["<npc>Mimic</npc>'s (NPC) appearance rate +50%"],"urlName":"fortune-coin","description":"Front? Back!","requirements":["a:Flagellant's Gold Coin","a:Ominous Fragment","a:Coupon"]},{"name":"Master Swordsmanship","effects":["Number of slashes in multi-hit attacks +2","Cast SPD +30%","Base Damage +30%"],"urlName":"master-swordsmanship","description":"One who walks the path of sword","requirements":["s:Successive Strike","a:Inscribed Stone","a:Ruined Royal Family's Insignia"]},{"name":"Skull and Gold Coin","effects":["Drops an additional 1 Gold upon defeating an enemy."],"urlName":"skull-and-gold-coin","description":"Traditionally skulls and gold coins make a set.","requirements":["a:Skull Head","a:Flagellant's Gold Coin"]},{"name":"Rotten Egg","effects":["Applies Poison to all Basic Skills","Stab damage -96%"],"urlName":"rotten-egg","description":"I'm telling you it's expired!!!","requirements":["a:Mysterious Egg","a:Blighted Soulstone"]},{"name":"Sulfur","effects":["Poison ATK +50%"],"urlName":"sulfur","description":"Silver can discern when toxins contain sulfur.","requirements":["a:Silver Coin","a:Hydra's Tooth"]},{"name":"Records from the Age of Magic","effects":["Magic Skill count +1"],"urlName":"records-from-the-age-of-magic","description":"A time when civilization was at its most prosperous in history","requirements":["a:Feather","a:Magical Parchment"]},{"name":"Processed Soulstone","effects":["Poison and Bleeding stacks +1"],"urlName":"processed-soulstone","description":"The unpleasant energy has intensified","requirements":["a:Blighted Soulstone","a:Lucky Clover Hammer"]},{"name":"Apostle of Greed","effects":["Positive effects for the <artifact>Perch</artifact>'s (Boss Artifact) effect from Fireball mod"],"urlName":"apostle-of-greed","description":"I give you my blessings...","requirements":["s:Fireball","a:Perch","a:Crest of Greed"]},{"name":"Chain Reaction Dagger","effects":["Even after Chain is applied after the <skill>Dagger Throw</skill> (Subskill), can apply Chain again"],"urlName":"chain-reaction-dagger","description":"A chain between you and me","requirements":["s:Dagger Throw","a:Reactive Armor","a:Mechanical Arm"]},{"name":"Static Strike","effects":["Activates additional <skill>Chain Lightning</skill> (Main Skill) every 8 seconds"],"urlName":"static-strike","description":"Ouch, it's hot!","requirements":["s:Chain Lightning","a:Lightning Rod","a:Coil"]},{"name":"Tanker","effects":["If there is no shield every 45 seconds, shield is acquired"],"urlName":"tanker","description":"Haha! That bad?","requirements":["s:Barrier","a:Rugged Bodyarmor","a:Broken Pauldron"]},{"name":"Toad","effects":["Randomly fires 3 Toad Venom at nearby enemies every 1.5 seconds."],"urlName":"toad","description":"Ribbit","requirements":["a:Baby Toad","a:Toad Fluid"]},{"name":"Gargantuan Toad","effects":["Fires 5 Toad Venom every 0.75 seconds"],"urlName":"gargantuan-toad","description":"At this rate, might as well become a toad, ribbit.","requirements":["a:Baby Toad","a:Toad Fluid","a:Mysterious Egg"]},{"name":"Toad Sage","effects":["Fires 8 Powerful Toad Venom every 0.5 seconds."],"urlName":"toad-sage","description":"Whaat... You're telling me that it wasn't a frog??","requirements":["a:Baby Toad","a:Toad Fluid","a:Mysterious Egg","a:Molten Skull"]},{"name":"Losing Battle","effects":["If 100 Fighting Spirit is reached, Skill Activation chance +5%"],"urlName":"losing-battle","description":"We may lose the war, but we will never lose our fighting spirit.","requirements":["a:Torn Flag","a:Niflheim's Symbol"]},{"name":"Undead Kingdom","effects":["Attack Power +30%"],"urlName":"undead-kingdom","description":"Fight, even in death. That is the Niflheim spirit!","requirements":["a:Torn Flag","a:Niflheim's Symbol","a:Soldier's Seal"]},{"name":"Flag Bearer","effects":["Charges Fighting Spirit even with Summonlings' movements"],"urlName":"flag-bearer","description":"Follow me!!","requirements":["a:War Flag","a:Symbol of Loyalty"]},{"name":"Empire's Currency Printer","effects":["If 2 types of artifacts are in possession, Gold Aquisition +50%"],"urlName":"empires-currency-printer","description":"Think of money as irrelevant as a stone.","requirements":["a:Niflheim's Coin","a:Niflheim's Silver Coin","a:Niflheim's Gold Coin"]},{"name":"Empire Soldier","effects":["If <artifact>Sniper's Cape</artifact> (Greater Artifact) and 1 type of Niflheim Coin are in possession, <artifact>Niflheim's Silver Coin</artifact> (Regular Artifact) and <artifact>Niflheim's Gold Coin</artifact> (Greater Artifact) max stack +1"],"urlName":"empire-soldier","description":"One! Two!","requirements":["a:Sniper's Cape","a:Niflheim's Silver Coin","a:Niflheim's Gold Coin"]},{"name":"Empire Archer","effects":["If <artifact>Sniper's Cape</artifact> (Greater Artifact) and 2 types of Niflheim Coin are in possession, <artifact>Niflheim's Silver Coin</artifact> (Regular Artifact) and <artifact>Niflheim's Gold Coin</artifact> (Greater Artifact) max stack +1"],"urlName":"empires-archer","description":"Three!","requirements":["a:Sniper's Cape","a:Niflheim's Coin","a:Niflheim's Silver Coin","a:Niflheim's Gold Coin"]},{"name":"Piercing Eyes","effects":["<artifact>Niflheim's Silver Coin</artifact> (Regular Artifact) and <artifact>Niflheim's Gold Coin</artifact> (Greater Artifact) coin stacks +2"],"urlName":"piercing-eyes","description":"The echo of a fallen coin can help understand your surroundings even if you can't see.","requirements":["a:Sniper's Cape","a:Niflheim's Coin","a:Niflheim's Silver Coin","a:Niflheim's Gold Coin"]},{"name":"Polaris","effects":["If Dash is cast, fires arrows at nearby enemies","(6 times, ATK 120%, Poison, Targeting)"],"urlName":"polaris","description":"If you hear the coin, give up on life. An arrow has already penetrated you...","requirements":["a:Sniper's Cape","a:Niflheim's Coin","a:Niflheim's Silver Coin","a:Niflheim's Gold Coin","a:Poisoned Arrow"]},{"name":"Fundamentals of the Void","effects":["Max HP +1"],"urlName":"fundamentals-of-the-void","description":"A mask! And another mask!","requirements":["a:White Mask","a:Simple Key"]},{"name":"Tundra Flower","effects":["<artifact>Ice Flower</artifact> Range +30%"],"urlName":"tundra-flower","description":"A flower that only grows in the Absolute Area and is out of the reach of humans.","requirements":["a:Morning Dew","a:Ice Flower"]},{"name":"Eternal Tundra Flower","effects":["Freeze Duration +3 seconds"],"urlName":"eternal-tundra-flower","description":"A flower that emits energy so cold that it could also be the cause of the frozen soil.","requirements":["a:Morning Dew","a:Eternal Flower","a:Ice Flower"]},{"name":"Eternal Flower Garden","effects":["Number of Frost Skills +30%"],"urlName":"Eternal Flower-garden","description":"Those who set foot in this place instantly freeze. Hence, the nickname.","requirements":["a:Eternal Flower","a:Ice Flower","a:Frozen Branch"]},{"name":"Blade Queen","effects":["Blade gains Bleed and Projectile tags","Blades pireces 2 times and chains 1 time","Blades count +1","Blades damage +15%"],"urlName":"blade-queen","description":"They say he is cursed with daggers constantly coming out of his body.","requirements":["a:Blade Cape","a:Blade Fan"]},{"name":"Bomber","effects":["When equipping the artifact <artifact>Bomber's Bag</artifact> and 2 types of Bomb Tag Skills,","Bombs detonate instantly","Explosion Range +15%"],"urlName":"bomber","description":"Arrgghh! (Sound of frustration)","requirements":["s:Frost Bomb Throw","s:Flame Bomb Throw","s:Explosive Marble","s:Pulse Bomb","s:Cactus Bomb","s:Gravity Bomb","a:Bomber's Bag"]},{"name":"Magic-Infused Feather Pen","effects":["For every 1 previous stage,","MOV SPD +1%","ATK SPD +1%","(Maximum: +5%)"],"urlName":"magic-infused-feather-pen","description":"Can you write with demons' blood?","requirements":["a:Feather","a:Black Flask"]},{"name":"Warrior of the Floating Castle","effects":["Spell Tag Skill Target count +1"],"urlName":"warrior-of-the-floating-castle","description":"His/her uncomfortably smiling face","requirements":["a:Floating Stone","a:Hermes Boots"]},{"name":"Assassin","effects":["Attacks from these items' effect deal CRIT"],"urlName":"assassin","description":"A true assassin isn't choosy about his weapons.","requirements":["a:Hidden Blade","a:Blade Cape","a:Kunai","a:Blade Fan"]},{"name":"Goblin Sage","effects":["Max HP +1"],"urlName":"goblin-sage","description":"Are they goblins or sages?","requirements":["a:Bandage","a:Iron Chains of Protection"]},{"name":"Thor","effects":["<skill>Call Lightning</skill> (Subskill) falls on a single enemy"],"urlName":"thor","description":"God of Thunder","requirements":["s:Call Lightning","a:Mysterious Branch","a:Strange God's Mask"]},{"name":"Noir Action!","effects":["Cannot activate skills and use ranged-characters in normal stages","Upon attacking, slightly advance forward","Upon attacking a standard stage enemy, defeats with one hit"],"urlName":"noir-action","description":"Yes, that should work.","requirements":["a:Mechanical Arm","a:Mysterious Blue Drug"]},{"name":"Demon","effects":["Change projectile speed to projectiles via <artifact>The Devil Eye</artifact>'s (Lesser Artifact) abilities by 2 times","Changes all Projectile skill's Main Skill tag to Subskill tag","Projectile Tag Skill Cooldown Recovery Speed +20%"],"urlName":"demon","description":"ROAR! Fire!","requirements":["a:Demon Horn","a:The Devil Eye"]},{"name":"Broken Equipment","effects":["Obtain 1 Shield upon taking lethal damage.","Broken Pauldron is destroyed afterwards."],"urlName":"broken-equipment","description":"Even this equipment will save lives.","requirements":["a:Broken Pauldron","a:Broken Vambrace"]},{"name":"Iron Girl","effects":["Plunging Attack, <artifact>Meteorite Fragment</artifact>'s (Lesser Artifact) Additional Range +100%","Height-Based Meteorite Fragment Attack Power Bonus (Maximum: 1000%)"],"urlName":"iron-girl","description":"Super heroooo landing!","requirements":["a:Red Steel Vambrace","a:Meteorite Fragment","w:Draupnir","c:Fighter"]},{"name":"Gas Eruption","effects":["Creates Toxin Fog over time on your body","The Poison value of the Toxin Fog is 1/2 of the <skill>Venom Cloud</skill>'s (Subskill) value"],"urlName":"gas-eruption","description":"B-b-b-boooom!","requirements":["s:Venom Cloud","a:Moldy Mushroom","a:Poisonous Mushroom"]},{"name":"Risky Hydra","effects":["0% chance of <skill>Neurotoxin</skill> (Subskill) poisoning","<skill>Neurotoxin</skill> (Subskill) penetrates all enemies and the only 1 <skill>Neurotoxin</skill> (Subskill) is fired","Base damage of <skill>Neurotoxin</skill> (Subskill) +45% for each extra Neurotoxin","Strengthen <skill>Neurotoxin</skill> (Subskill) with thorns"],"urlName":"risky-hydra","description":"Whether it's a dangerous bone spike or venom, it's like that.","requirements":["s:Neurotoxin","a:Hydra's Tooth","a:Poison Sting"]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"Rotten Eye Richie","effects":["When Poison is inflicted on enemies, the same amount of Poison is also applied to self.","Every second, the Poison stacks applied to self are transferred to nearby enemies (up to 200 stacks).","(Poison stacks inflicted on enemies by this effect are not applied back to self.)","Poison damage applied to self by this effect is negated."],"urlName":"rotten-eye-richie","description":"That rotten body sickens and decomposes everything around it.","requirements":["a:Molten Skull","a:Elixir of Immortality"]},{"name":"Magician of Explosion","effects":["Number of Targeting skills is fixed to 1","For each Targeting skill, <artifact>Magic Wand</artifact> explosion size +25%","For each Targeting skill, Targeting Skill Damage +85%, Targeting Skill Size +15%"],"urlName":"magician-of-explosion","description":"Explosion is Art","requirements":["a:Magic Wand","a:Scope"]},{"name":"Campfire","effects":["Freeze Immunity","Burn Damage +100%"],"urlName":"campfire","description":"Everyone, let's sit around the fire and sing","requirements":["a:F' Rune","a:Firewood"]},{"name":"Stone Ice Storage","effects":["Freeze Chance +30%"],"urlName":"stone-ice-storage","description":"If this isn't done, summer will be hot","requirements":["a:Ice Cube","a:Ice Shard","a:Wooden Sled"]},{"name":"Meteor Shower","effects":["<artifact>Meteorite Fragment</artifact> (Lesser Artifact) count +3","<artifact>Meteorite Fragment</artifact> (Lesser Artifact) ATK -10%"],"urlName":"meteor-shower","description":"Like a meteor streak.","requirements":["a:Small Sun","a:Meteorite Fragment"]},{"name":"Sniper of the North","effects":["Changes <artifact>Canteen</artifact>'s (Lesser Artifact) effect to Targeting tag","Aim Skill Damage +10%"],"urlName":"sniper-of-the-north","description":"Darn, the water in the canteen has frozen!","requirements":["a:Scope","a:Canteen"]},{"name":"Black Plaque","effects":["Poison max stack limit +100"],"urlName":"black-plaque","description":"The harbringer of the plague","requirements":["a:Yearning Vine","a:Strange God's Mask","a:Molten Skull"]},{"name":"Archeologist","effects":["Statue of Angels and Demons Chance of Appearance +10%"],"urlName":"archeologist","description":"Why would someone feel the need to collect slates","requirements":["a:Holy Slate","a:Ancient Slate"]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"Assassin Squad","effects":["If Dash is used, enter Stealth for 2 seconds"],"urlName":"assassin-squad","description":"Until a hole has been pierced through the heart, you won't see them coming.","requirements":["a:Hidden Blade","a:Thick Cape"]},{"name":"Completed Red Jewel","effects":["Gain 1 Darkness and 1 Divinity Synergy when activated."],"urlName":"completed-red-jewel","description":"A vampire's essential items","requirements":["a:Red Jewel Fragment","a:Blood Essence"]},{"name":"Cursed Wolf","effects":["Base damage of Cursed Claws increases by 50% per upgraded sub skill equipped","Bleed stack count of Cursed Claws +1 per upgraded main skill equipped","Bleed chance of Cursed Claws +100%.","Stab damage +100%","Cannot cast skills"],"urlName":"cursed-wolf","description":"The werewolf has appeared!","requirements":["a:Wild Animal's Tooth","a:Curse's Stigma","a:Cursed Fingernail","a:Red Devil's Contract"]},{"name":"Troll Fighter","effects":["ATK +12%","Skill Activation Chance +5%","Cannot activate Subskill"],"urlName":"troll-fighter","description":"I am not stupid!","requirements":["a:Tribal Mark","a:Icicle Tribal Mark"]},{"name":"Curse of Immortality","effects":["Changes <skill>Successive Strike</skill>'s (Main Skill) Slash count by 2","Cast SPD -50%","<skill>Successive Strike</skill> (Main Skill) Slash size +15% (Maximum: +120%) per 1 Slash count","ATK +100%, Bleed stack +2"],"urlName":"curse-of-immortality","description":"Curse-breaking Swordsmanship","requirements":["s:Successive Strike","a:Curse's Stigma","a:Elixir of Immortality","a:Cursed Immortality Sword"]},{"name":"Arrival of Darkness","effects":["<artifact>Cursed Fingernail</artifact>'s (Superior Artifact) Size and Damage +50%","When taking damage that reduces your HP to 1 or lower, cast Arrival of Darkness, granting invincibility for 3 seconds (once per stage, Duration: 3 seconds)"],"urlName":"arrival-of-darkness","description":"The first experience of falling to greed","requirements":["a:Cursed Fingernail","a:Perch"]},{"name":"Explorer","effects":["When Shield is destroyed, nearby enemies are dealt 500% damage"],"urlName":"explorer","description":"Lower. Keep going lower. It's falling.","requirements":["a:Soul Talisman","a:Soul Whistle"]},{"name":"Flint","effects":["Changes <artifact>Stone</artifact>'s (Lesser Artifact) effect to Flame tag"],"urlName":"flint","description":"An object that keeps you warm for the day","requirements":["a:Stone","a:Firewood"]},{"name":"Blacksmith","effects":["Removes the <artifact>Lucky Clover Hammer</artifact>'s (Greater Artifact) duration reduction debuff"],"urlName":"blacksmith","description":"TO make only the very best weapons","requirements":["a:Whetstone","a:Lucky Clover Hammer"]},{"name":"Dastard","effects":["Changes <artifact>Snowball</artifact>'s (Lesser Artifact) effect to Physical tag","Physical Skill Damage +30%"],"urlName":"dastard","description":"Wow, that was too much. Let's never have to get into a snowball fight with that jerk again.","requirements":["a:Snowball","a:Stone"]},{"name":"Swordsman","effects":["Forbidden Technique: <artifact>Summon Scroll</artifact>'s (Superior Artifact) Reactivation Cooldown -1 second"],"urlName":"swordsman","description":"Do you think chewing on a twig will look good on me?","requirements":["a:Wooden Shoes","a:Forbidden Technique - Summon Scroll"]},{"name":"Tree of Ice","effects":["When an enemy is released from Freeze, it receives 250% Damage."],"urlName":"tree-of-ice","description":"Oh my! It's cold!","requirements":["a:Frozen Branch","a:Ice Crystal"]},{"name":"Ice Sculptor","effects":["Frost tag Skill Activation Chance +5%","Frost tag Skill ATK +30%"],"urlName":"ice-sculptor","description":"You claim to be a sculptor, but you can only make plates?","requirements":["a:Ice Shard","a:Whetstone"]},{"name":"Dedication of the Heart","effects":["Summonlings' Attack Speed +10%","Upon killing an enemy with a summon skill, the summonling's Attack Speed increases by 3% (Duration: 2 seconds)."],"urlName":"dedication-of-the-heart","description":"If it's for my love, I'll even give you my heart.","requirements":["a:Serena's Feather","a:Blood Contractor"]},{"name":"Fast Hatch","effects":["Reduces enemy requirement on Easter Egg by 40. (Require 140 kills to hatch)"],"urlName":"fast-hatch","description":"You're warm!","requirements":["a:Easter Egg","a:Small Sun"]},{"name":"Kerrell's Piece","effects":["Mine count +2","Mines explode immediately"],"urlName":"kerrells-piece","description":"Tee hee! I'm just kidding!!","requirements":["a:Bomber's Bag","a:Mine"]},{"name":"Wings","effects":["Decreases fall speed"],"urlName":"wings","description":"Grant me the High Jump, for heaven's sake!","requirements":["a:Feather Fan","a:Hermes Boots"]},{"name":"Survivor","effects":["20% chance to reduce Damage from Barrage attacks"],"urlName":"survivor","description":"An Easter Egg's Easter Egg","requirements":["a:Frying Pan","a:Scope"]},{"name":"Adrenaline","effects":["When casting Basic Skill while under attack, does not lose Fighting Spirit."],"urlName":"adrenaline","description":"I can lose myself in the heat of battle.","requirements":["a:Red Steel Vambrace","a:War Flag","a:Spike Gloves"]},{"name":"Fool","effects":["Subskill cannot be used","ATK +50%","ATK SPD -30%"],"urlName":"fool","description":"Heh... Ants... Tasty...","requirements":["a:Icicle Tribal Mark","a:Spike Gloves"]},{"name":"Cook to Eat","effects":["Frozen Fruit's effect is immediately applied"],"urlName":"cook-to-eat","description":"I like to eat it cold!! Why are you cooking it!?!","requirements":["a:Frozen Fruit","a:Lava in a Cup","a:Small Sun"]},{"name":"Blighted Soulstone Arrow","effects":["Poison Skill's Poison stack count +5"],"urlName":"blighted-soulstone-arrow","description":"Wow... So this is how you use it","requirements":["a:Poisoned Arrow","a:Blighted Soulstone"]},{"name":"Insignia Collector","effects":["Burn Damage +50%"],"urlName":"insignia-collector","description":"Are you assembling them because the fabric is of such high quality?","requirements":["a:Burned Insignia","a:Ruined Royal Family's Insignia"]},{"name":"Three Musketeers","effects":["<artifact>Ice Spear</artifact>'s (Greater Artifact) effect applies to all tags"],"urlName":"three-musketeers","description":"The battle-hardened fighters that protected the Golden Age of the Empire","requirements":["a:Sniper's Cape","a:Ice Spear","a:Sword of Ash"]},{"name":"Cursed Organism","effects":["Summonling becomes a shadow","Summonling Size +50%","Summonling Detection Range +20%","Summonling Damage +105% per summon"],"urlName":"cursed-organism","description":"Spoooooo... ky.","requirements":["a:Cursed Marble","a:Serena's Feather"]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"Seal of Protection","effects":["Barrier +1"],"urlName":"seal-of-protection","description":"Looks like its been crushed with a rock...\nAre you saying this is a seal?","requirements":["a:Iron Chains of Protection","a:Barrier Stone"]},{"name":"Zealot's Blood","effects":["Basic Skill ATK +50%"],"urlName":"zealots-blood","description":"Aaaaaaah!","requirements":["a:Cursed Immortality Sword","a:Red Steel Vambrace"]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"Cursed Left Hand","effects":["MOV SPD +12.5%, ATK SPD +25%, Attack Power +50%"],"urlName":"cursed-left-hand","description":"Overdrive!","requirements":["a:Cursed Immortality Sword","a:Red Steel Vambrace","a:Iron Chains of Protection"]},{"name":"Fried Egg","effects":["Recovers HP by 0.5"],"urlName":"fried-egg","description":"Is this edible?","requirements":["a:Frying Pan","a:Easter Egg"]},{"name":"Real Chainsaw","effects":["<weapon>Tarventus</weapon> (<character>Knight</character>'s Weapon) Bleed Chance +100%"],"urlName":"real-chainsaw","description":"Did you think that would work??\nOf course it does!","requirements":["a:Blood Flask","w:Tarventus"]},{"name":"The devil hates hammers","effects":["<artifact>Lucky Clover Hammer</artifact>'s (Greater Artifact) turning radius changes randomly"],"urlName":"the-devil-hates-hammers","description":"Aww! I hate crosses!","requirements":["a:Lucky Clover Hammer","a:Red Devil's Contract"]},{"name":"Ninja Vigor","effects":["Strengthen <skill>Shuriken Maneuver</skill> (Subskill) with throwing stars","Throwing star attack damage +45%"],"urlName":"ninja-vigor","description":"This is the true path of the ninja.","requirements":["s:Shuriken Maneuver","a:Kunai"]},{"name":"Serene Step","effects":["MOV SPD +5%","ATK SPD +5%","ATK +2"],"urlName":"serene-step","description":"These clogs feel like walking on air.","requirements":["a:Wooden Shoes","c:Ronin"]},{"name":"Hidden Presence","effects":["<artifact>Cursed Fingernail</artifact>'s Cursed Claw Damage +125%"],"urlName":"hidden-presence","description":"Ta-da! Bet you didn't expect the real one to show up!","requirements":["a:Wild Animal's Tooth","a:Cursed Fingernail","a:Whetstone","c:Werewolf"]},{"name":"Meteor","effects":["**<skill>Rock Shot</skill> (Main Skill) needs to be Specially-Modified**","","Rock Shots (Main Skill) no longer track enemies.","Rock Shots (Main Skill) fall from the sky at random locations.","<artifact>Meteorite Fragment</artifact>s (Lesser Artifact) and Meteor Strike (Collection) options activate together.","Number of Rock Shots (Main Skill) +10","Base damage of Rock Shots (Main Skill) +200%","Size of Rock Shots (Main Skill) +100%"],"urlName":"meteor","description":"I can pull stars from distant places.","requirements":["s:Rock Shot","a:Small Sun","a:Meteorite Fragment"]},{"name":"Negotiation King","effects":["<npc>Mimic</npc> (NPC) appearance rate +50%"],"urlName":"negotiation-king","description":"Shall we go negotiate now?","requirements":["a:Silver Coin","a:Beautiful Fountain Pen"]},{"name":"Final Boss","effects":["Considered to have 2 summon synergies included."],"urlName":"final-boss","description":"What a terrifying final boss!","requirements":["a:Stone of Summoning","a:Cursed Marble","a:Engraved Mask"]},{"name":"Healing Bullet","effects":["When attacking enemies with <skill>Rampage</skill> (Subskill), there is a 2% chance to recover 0.5 HP (Cooldown 6 seconds)","<skill>Rampage</skill> (Subskill) damage +10%."],"urlName":"healing-bullet","description":"Feed the bullet and take the blood.","requirements":["s:Rampage","a:Healing Shell Casing","a:Mark of the Sisterhood"]},{"name":"Elemental Master","effects":["Considered as having 3 stacks of each of the following Tag Synergies: Bleed, Frost, Lightning, and Divinity."],"urlName":"elemental-master","description":"I can handle all elements.","requirements":["a:Blood Essence","a:Dragon Seal","a:Ice Crystal","a:Small Sun","a:Mark of the Sisterhood","a:Red Jewel Fragment","a:Time Fragment"]},{"name":"Festival Preparation","effects":["Critical Hit Damage +15%","Stab have a 15% chance to trigger a Critical hit."],"urlName":"festival-preparation","description":"The festival calls to me...","requirements":["a:8-bit Sunglasses","a:Star-shaped Party Glasses"]},{"name":"3rd Anniversary","effects":["Skill Damage increase changed to Bleed Damage increase."],"urlName":"3rd-anniversary","description":"I could not even imagine it.","requirements":["a:Star-shaped Party Glasses","a:Strawberry Cream Cake"]},{"name":"A word of thanks.","effects":["Melee Skill Damage +100%","Melee Skill Size +10%"],"urlName":"a-word-of-thanks","description":"Melee Skill 1 million times","requirements":["a:Star-shaped Party Glasses","a:Secret Mask ^q^"]},{"name":"The Best Offense...","effects":["Gain 1 additional Shield from <artifact>Soul Talisman</artifact> (Regular Artifact)"],"urlName":"the-best-offense","description":"When I hit with this... it really hurts.","requirements":["s:Guardian's Shield","a:Soul Talisman"]},{"name":"Deep Dive","effects":["Deep Execution Skill Size increases with height during Plunge Attacks (up to 500%)"],"urlName":"deep-dive","description":"The sea... and the deep sea!!!","requirements":["s:Abyssal Execution","a:Frozen Gauntlet","a:Ice Spear"]},{"name":"Blood Hound","effects":["<skill>Crushing Bite</skill> (Main Skill) Base Damage increased by 100%","Cast <skill>Crushing Bite</skill> an additional time"],"urlName":"blood-hound","description":"Bite their neck! Tear them to shreds!","requirements":["s:Crushing Bite","a:Thornmail","a:Spike Gloves"]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"Your blasphemy will not be forgiven!!!","effects":["<skill>Sacrificial Stake</skill> Skill Count is fixed at 1 and does not recast.","<skill>Sacrificial Stake</skill> Skill Damage and Size are increased by 3 times."],"urlName":"your-blasphemy-will-not-be-forgiven","description":"Worshipping Divinity again..!!","requirements":["s:Sacrificial Stake","a:Ancient Slate"]},{"name":"Kwisatz Haderach","effects":["Exclusive to the Desert of the Red Sun chapter","<skill>Sand Arrow</skill> (Main Skill) Skill Count is fixed at 1, Skill Damage +580%","<skill>Sand Arrow</skill> does not trigger as a Main Skill, and is unaffected by other activation conditions.","Casts <skill>Sand Arrow</skill> at the nearest monster every 2 seconds.","Grants Stealth upon killing an enemy with <skill>Sand Arrow</skill>"],"urlName":"kwisatz-haderach","description":"Now that you've come to the desert, you can never slip from my grasp.","requirements":["s:Sand Arrow","a:Sniper's Cape","a:Poem for the Departed"]},{"name":"Fragment of a Great Beast's Bone","effects":["Basic Attack deals 20% more damage to enemies."],"urlName":"fragment-of-a-great-beasts-bone","description":"Could this bone fragment have been crafted by beings of immense strength?","requirements":["a:Bone Fragment","a:Bone of a Colossal Beast"]},{"name":"Follow My Lead","effects":["Attack power +7"],"urlName":"follow-my-lead","description":"Follow me, minion!","requirements":["a:Rune Staff","c:Summoner"]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"MISSING ENTRY","effects":["THIS ENTRY HAS BEEN SKIPPED"],"urlName":"#","description":"NIL","requirements":[]},{"name":"Twisted Balance","effects":["When all skills from slot 1 to 6 have been specially-modified, <artifact>Admiral's Eyepatch</artifact> (Greater Artifact) effect's skill damage is amplified 60x."],"urlName":"twisted-balance","description":"Power always comes with a price...","requirements":["a:Admiral's Eyepatch","a:Plant Seed","a:Phelan's Emblem","a:Icicle Tribal Mark"]},{"name":"Thread of Fate I","effects":["Skill Damage +20%","(You only need 1 of any Torn Journals)"],"urlName":"thread-of-fate-i","description":"What remains at the end of a life spent protecting?","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V","c:Knight"]},{"name":"Thread of Fate II","effects":["Skill Damage +30%","Skill Activation +5%","(You only need 2 of any Torn Journals)"],"urlName":"thread-of-fate-ii","description":"It won't change, even after thousands of salvations.","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V","c:Knight"]},{"name":"Thread of Fate III","effects":["Skill Damage +40%","Skill Activation +10%","Skill Haste +15","(You only need 3 of any Torn Journals)"],"urlName":"thread-of-fate-iii","description":"Not dying is not a blessing. It is a terribly cruel punishment.","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V","c:Knight"]},{"name":"Thread of Fate IV","effects":["Skill Damage +50%","Skill Activation +15%","Skill Haste +30","(You only need 4 of any Torn Journals)"],"urlName":"thread-of-fate-iv","description":"To break free from this cycle... I must sever the origin of all tragedies.","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V","c:Knight"]},{"name":"Thread of Fate V","effects":["Skill Damage +100%","Skill Activation +25%","Skill Haste +65"],"urlName":"thread-of-fate-v","description":"I will save you. So that your brightest moment may last forever, never knowing the endless darkness.","requirements":["a:Torn Journal I","a:Torn Journal II","a:Torn Journal III","a:Torn Journal IV","a:Torn Journal V","c:Knight"]},{"name":"Paradoxical Salvation","effects":["The increase in the number of Divinity Skills from Blue Sindon is changed from 'Remaining Revival Count' to 'Divinity Revival Count'"],"urlName":"paradoxical-salvation","description":"Faith does not falter even in the face of death; rather, it burns most brilliantly at its end","requirements":["a:Forbidden Chalice","a:Blue Sindon","a:Healing Shell Casing"]},{"name":"Notorious Bomber","effects":["When equipping the Artifact Bomber's Bag and 4 types of Bomb Tag Skills:","Bombs detonate instantly","Explosion Range +25%","Each time a Bomb Skill deals damage, increases that Bomb Skill's damage +1% (Max 100%, Duration 5s)"],"urlName":"notorious-bomber","description":"Art is an Explosion!","requirements":["s:Frost Bomb Throw","s:Flame Bomb Throw","s:Explosive Marble","s:Pulse Bomb","s:Cactus Bomb","s:Gravity Bomb","a:Bomber's Bag"]},{"name":"History's Worst Bomber","effects":["When equipping the Artifact Bomber's Bag and 6 types of Bomb Tag Skills:","Bombs detonate instantly","Explosion Range +25%","Each time a Bomb Skill deals damage, increases that Bomb Skill's damage +1% (Max 100%, Duration 5s)","Each time a Bomb Skill deals damage, increases that Bomb Skill's damage +1% (Max 400%, Duration 5s)"],"urlName":"historys-worst-bomber","description":"If the world is going to end anyway, I'll show you the most spectacular end with my own hands","requirements":["s:Frost Bomb Throw","s:Flame Bomb Throw","s:Explosive Marble","s:Pulse Bomb","s:Cactus Bomb","s:Gravity Bomb","a:Bomber's Bag"]},{"name":"Basics of Grave Robbing","effects":["If current stats are lower than base stats, they are adjusted to base stats"],"urlName":"basics-of-grave-robbing","description":"And that is... to never forget your beginner's mind!","requirements":["a:Grave Robber's Whip","a:Grave Robber's Brush","a:Grave Robber's Notebook"]},{"name":"Dice Master","effects":["High Roller's Dice stats are doubled"],"urlName":"dice-master","description":"Who will Lady Luck smile upon?","requirements":["a:God's Dice","a:Hero's Dice","a:High Roller's Dice"]},{"name":"Day and Night Unceasing","effects":["Every time Divinity Ray hits an enemy, Divinity Ray's damage +0.25% (Duration 5 seconds, Max 100%)"],"urlName":"day-and-night-unceasing","description":"Whether the sun rises or the moon rises, the blue sky purely exists","requirements":["a:Sacred Sun Mirror","a:Blessed Moon Mirror"]},{"name":"Blade and Blade as One","effects":["Only the first equipped skill among Sword Spins triggers","Fixes the base amount of Sword Spin to 1","Skill base damage +70% per +1 to the amount of Sword Spin skills","Modification effects of all Sword Spins stack","Sword Spin changes to multi-hit","Rotation speed becomes fixed"],"urlName":"blade-and-blade-as-one","description":"What is better than many swords is an even greater sword","requirements":["s:Sword Spin","s:Sword Spin","s:Sword Spin"]},{"name":"Holy Mummy","effects":["Soul Heart +3"],"urlName":"holy-mummy","description":"Wrapped in bandages like this, you wouldn't be able to resurrect even if you wanted to, right?","requirements":["a:Bandage","a:Ankh of Eternity","a:Golden Bandage"]},{"name":"Wargame","effects":["When hit, only lose 50% of Fighting Spirit","Fighting Spirit Artifact effects +10% per Fighting Spirit Artifact in possession","You only need 3 pieces"],"urlName":"wargame","description":"As long as there is a will to achieve... there is nothing that cannot be accomplished","requirements":["a:Torn Flag","a:War Flag","a:Rook","a:Chess Knight"]}]}
+{
+  "data": [
+    {
+      "name": "Universal Fighter",
+      "effects": ["On basic skill attack, Attack Speed +15% for 1.5 seconds."],
+      "urlName": "universal-fighter",
+      "description": "A great battle begins.",
+      "requirements": ["a:Rugged Bodyarmor", "a:Broken Pauldron"]
+    },
+    {
+      "name": "Megamorph Potion",
+      "effects": ["All Player's Sizes +25%", "Attack Power +25%"],
+      "urlName": "megamorph-potion",
+      "description": "So that's what this effect is!",
+      "requirements": ["a:Blood Flask", "a:Golden Flask", "a:Black Flask"]
+    },
+    {
+      "name": "Memories of the Past",
+      "effects": [
+        "If 3 types of the artifact are in possession, removes the Torn Journals' ATK reduction penalty"
+      ],
+      "urlName": "memories-of-the-past-i",
+      "description": "The memories are coming back.",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V"
+      ]
+    },
+    {
+      "name": "Memories of the Past",
+      "effects": [
+        "When possessing 4 types Artifacts, removes the damage reduction penalty if Torn Journal",
+        "Projectile tag skill count +2"
+      ],
+      "urlName": "memories-of-the-past-ii",
+      "description": "The memories are coming back.",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V"
+      ]
+    },
+    {
+      "name": "Gambler",
+      "effects": ["Subskill Reactivation"],
+      "urlName": "gambler",
+      "description": "6,6 ... and 6.",
+      "requirements": ["a:Dice", "a:God's Dice", "a:Flagellant's Gold Coin"]
+    },
+    {
+      "name": "Explosion Fanatic",
+      "effects": [
+        "When hit, triggers 1 to 5 fire attribute explosions around you and stuns enemies."
+      ],
+      "urlName": "explosion-fanatic",
+      "description": "B-b-b-Boooom!",
+      "requirements": ["a:Coal", "a:F' Rune"]
+    },
+    {
+      "name": "Pyromaniac",
+      "effects": ["Flame Synergy Explosion Damage +150% Amplified"],
+      "urlName": "pyromaniac",
+      "description": "You feel warm.",
+      "requirements": [
+        "a:F' Rune",
+        "a:Firewood",
+        "a:Lava in a Cup",
+        "a:Bandage"
+      ]
+    },
+    {
+      "name": "Witch's Recipe",
+      "effects": [
+        "<artifact>Witch's Textbook</artifact> Base Cooldown changed to 1.5 seconds",
+        "<artifact>Madness Potion</artifact> Skill Count changed to 0-20",
+        "Toxin-tagged Projectile Skill Damage +100%"
+      ],
+      "urlName": "witchs-recipe",
+      "description": "First step as a witch",
+      "requirements": [
+        "a:Madness Potion",
+        "a:Witch's Textbook",
+        "a:Moldy Mushroom",
+        "a:The Devil Eye"
+      ]
+    },
+    {
+      "name": "Eccentric Epicure",
+      "effects": [
+        "+0.25 Maximum Stacks of Poison on kill (Maximum: 100 stacks).",
+        "Resets when Collection is deactivated."
+      ],
+      "urlName": "eccentric-epicure",
+      "description": "Between the two of you, one will die from eating this",
+      "requirements": ["a:Mysterious Egg", "a:Poison Sac", "a:Lizard Skewer"]
+    },
+    {
+      "name": "Hey, Rookie!",
+      "effects": ["Super Armor (Prevents flinching when taking hits)"],
+      "urlName": "hey-rookie",
+      "description": "Thousand times the courage!",
+      "requirements": [
+        "a:Inscribed Stone",
+        "a:Broken Horn",
+        "a:Broken Pauldron"
+      ]
+    },
+    {
+      "name": "Brave Fighter",
+      "effects": ["Adds Bleed tags to all Melee tag skills"],
+      "urlName": "brave-fighter",
+      "description": "WAAAAAARRR!!",
+      "requirements": [
+        "a:Blood Flask",
+        "a:Soldier's Seal",
+        "a:Niflheim's Symbol"
+      ]
+    },
+    {
+      "name": "The Hands of Midas",
+      "effects": ["All chests change to Unique grade"],
+      "urlName": "the-hands-of-midas",
+      "description": "Everything I touch becomes unique...",
+      "requirements": [
+        "a:Silver Coin",
+        "a:Flagellant's Gold Coin",
+        "a:Fortune Coin"
+      ]
+    },
+    {
+      "name": "Body Cart",
+      "effects": [
+        "Movement Speed -15%",
+        "Attack Power +1% per bonus 0.02 Movement Speed (Maximum: +100%)"
+      ],
+      "urlName": "body-cart",
+      "description": "It's heavy",
+      "requirements": ["a:Silver Coin", "a:Wooden Sled", "a:Steel Boots"]
+    },
+    {
+      "name": "Safety Matters",
+      "effects": ["Attack Power +1 for each full heart."],
+      "urlName": "safety-matters",
+      "description": "The head is a precious thing.",
+      "requirements": ["a:Skull Head", "a:White Mask"]
+    },
+    {
+      "name": "Goods from the Otherworld",
+      "effects": ["Spell tag skill also casts on player's rear"],
+      "urlName": "goods-from-the-otherworld",
+      "description": "What have you done to my body!?",
+      "requirements": [
+        "a:Floating Stone",
+        "a:Mysterious Branch",
+        "a:Unidentified Staff"
+      ]
+    },
+    {
+      "name": "Parasitic Devil",
+      "effects": ["If hit, Poison stacks +10 to nearby enemies"],
+      "urlName": "parasitic-devil",
+      "description": "Spores and plants will grow from your body.",
+      "requirements": ["a:Yearning Vine", "a:Spore", "a:Poisonous Mushroom"]
+    },
+    {
+      "name": "Spin of Madness",
+      "effects": [
+        "When possessing the <artifact>Lucky Clover Hammer</artifact> + <artifact>Torn Journal V</artifact> or <artifact>Madness Potion</artifact>, radius of spin gets larger",
+        "Spin begins from the player"
+      ],
+      "urlName": "spin-of-madness",
+      "description": "Go ahead and spin!.",
+      "requirements": [
+        "a:Lucky Clover Hammer",
+        "a:Torn Journal V",
+        "a:Madness Potion"
+      ]
+    },
+    {
+      "name": "Sever by Laser",
+      "effects": ["The <skill>Death Ray</skill> spins relative to the player."],
+      "urlName": "sever-by-laser",
+      "description": "What Men Want",
+      "requirements": ["s:Death Ray", "a:Lucky Clover Hammer"]
+    },
+    {
+      "name": "Zeus",
+      "effects": [
+        "Creates <skill>Plasma</skill> on the body",
+        "Chance to Shock +15%"
+      ],
+      "urlName": "zeus",
+      "description": "Can't hide my power.",
+      "requirements": [
+        "s:Plasma",
+        "a:Mechanical Arm",
+        "a:Lightning Rod",
+        "a:Coil"
+      ]
+    },
+    {
+      "name": "Spiky Devil",
+      "effects": [
+        "Generates as many <skill>Hatred Spike</skill>s beneath nearby enemies as the current number of enemies nearby.",
+        "<skill>Hatred Spike</skill>s' Base Damage +60%."
+      ],
+      "urlName": "spiky-devil",
+      "description": "Spikes endlessly comes out of the body",
+      "requirements": [
+        "s:Hatred Spike",
+        "a:Steel Boots",
+        "a:Strange God's Mask"
+      ]
+    },
+    {
+      "name": "Goods from Another World",
+      "effects": [
+        "When hit, deals 500 true damage to enemies within range and stuns them for 1 second."
+      ],
+      "urlName": "goods-from-another-world",
+      "description": "Shooting blanks!",
+      "requirements": ["a:Skull Head", "a:Mechanical Arm", "a:Cell Nucleus"]
+    },
+    {
+      "name": "Ninpo",
+      "effects": [
+        "Number of shurikens fired +3",
+        "Shurikens penetration count +1",
+        "Adds Bleed and Projectile tags"
+      ],
+      "urlName": "ninpo",
+      "description": "It's time to summon.",
+      "requirements": ["a:Summon Scroll", "a:Kunai"]
+    },
+    {
+      "name": "Handle",
+      "effects": ["Skill Damage +30%"],
+      "urlName": "handle",
+      "description": "Aren't horns called handles?",
+      "requirements": ["a:Broken Horn", "a:Demon Horn"]
+    },
+    {
+      "name": "Eternal's Gauntlet",
+      "effects": ["If enemy is defeated, 5% chance to defeat all monsters"],
+      "urlName": "eternals-gauntlet",
+      "description": "(Finger Snap)",
+      "requirements": [
+        "a:Blood Essence",
+        "a:Power Gauntlet",
+        "a:Blighted Soulstone",
+        "a:Ominous Fragment"
+      ]
+    },
+    {
+      "name": "Corrupted Dragonkin",
+      "effects": ["Projectile Tag Skill Damage +50%"],
+      "urlName": "corrupted-dragonkin",
+      "description": "Sold my soul to the Devil",
+      "requirements": ["a:Skull Head", "a:The Devil Eye", "a:Dragon Eye"]
+    },
+    {
+      "name": "Sans Bad Time",
+      "effects": ["Max HP +1"],
+      "urlName": "sans-bad-time",
+      "description": "The birds are chirping...",
+      "requirements": ["a:Skull Head", "a:Kitchen Knife"]
+    },
+    {
+      "name": "Bluebane Arm",
+      "effects": ["During Basic Attack, 15% chance to negate Damage taken"],
+      "urlName": "bluebane-arm",
+      "description": "A man whose blue fists give him grief",
+      "requirements": ["a:Power Gauntlet", "a:Frozen Gauntlet"]
+    },
+    {
+      "name": "Spore Studies",
+      "effects": [
+        "Poison Explosion, Poisonous Mushroom Explosion radius +50%",
+        "Poison Sac's Poison Explosion Damage +100%"
+      ],
+      "urlName": "Spore-studies",
+      "description": "Self-taught Stone",
+      "requirements": [
+        "a:Floating Stone",
+        "a:Poisonous Mushroom",
+        "a:Poison Sac"
+      ]
+    },
+    {
+      "name": "Poor Explorer",
+      "effects": ["Luck +15%", "Gold required to refresh chests -30"],
+      "urlName": "poor-explorer",
+      "description": "The poncho is being worn like a skirt.",
+      "requirements": ["a:Bandage", "a:Worn Poncho", "a:Red Poncho"]
+    },
+    {
+      "name": "Roly-poly Wizard",
+      "effects": [
+        "When the current HP drops to 3 bars or lower, Attack Power +3"
+      ],
+      "urlName": "roly-poly-wizard",
+      "description": "Wizards also need full stomachs.",
+      "requirements": ["a:Unidentified Staff", "a:Lizard Skewer"]
+    },
+    {
+      "name": "Humming Stone",
+      "effects": ["Cursed Room Chance of Appearance +10%"],
+      "urlName": "humming-stone",
+      "description": "This resonates with the Devil.",
+      "requirements": ["a:Inscribed Stone", "a:Ominous Fragment"]
+    },
+    {
+      "name": "Berserk",
+      "effects": [
+        "No reduction of Damage received",
+        "Damage from Stab +150% Amplified"
+      ],
+      "urlName": "berserk",
+      "description": "Grrr...Gr...Grrrrrroowl",
+      "requirements": [
+        "a:Blood Flask",
+        "a:Dragon Seal",
+        "a:Broken Pauldron",
+        "a:Rugged Bodyarmor"
+      ]
+    },
+    {
+      "name": "Cursed Pirate",
+      "effects": [
+        "Increases attack power by 1% for every 100 Gold held, up to a maximum of 60%"
+      ],
+      "urlName": "cursed-pirate",
+      "description": "They are obsessed with money.",
+      "requirements": ["a:Flagellant's Gold Coin", "a:Niflheim's Symbol"]
+    },
+    {
+      "name": "Conduction",
+      "effects": [
+        "<skill>Electric Stigma</skill> (Curse Skill) count +1",
+        "<skill>Electric Stigma</skill> (Curse Skill) chance to Shock +15%"
+      ],
+      "urlName": "conduction",
+      "description": "Zzzzzap!",
+      "requirements": ["s:Electric Stigma", "a:Spoon", "a:Coil"]
+    },
+    {
+      "name": "Combustion",
+      "effects": [
+        "<skill>Flame Stigma</skill> (Curse Skill) count +1",
+        "Burn Damage count +1"
+      ],
+      "urlName": "combustion",
+      "description": "Bzzzz? Crackle!",
+      "requirements": ["s:Flame Stigma", "a:Spoon", "a:Lava in a Cup"]
+    },
+    {
+      "name": "Frostbite",
+      "effects": [
+        "<skill>Ice Stigma</skill> (Curse Skill) count + 1",
+        "<skill>Ice Stigma</skill> (Curse Skill) size +30%"
+      ],
+      "urlName": "frostbite",
+      "description": "Frozen!",
+      "requirements": ["s:Ice Stigma", "a:Spoon", "a:Ice Crystal"]
+    },
+    {
+      "name": "Warrior of the West",
+      "effects": ["Max Dash count +1."],
+      "urlName": "warrior-of-the-west",
+      "description": "\"Fanfare\"",
+      "requirements": ["a:Mysterious Egg", "a:Red Poncho"]
+    },
+    {
+      "name": "Dizzy Eyes",
+      "effects": ["Projectile, Targeting tags Random Projectile count 0-10"],
+      "urlName": "dizzy-eyes",
+      "description": "The numbers go round and round",
+      "requirements": ["a:Madness Potion", "a:The Devil Eye"]
+    },
+    {
+      "name": "Shell Shock",
+      "effects": [
+        "Scatter bombs at the front",
+        "Randomly changes the explosion timer by 0.1-1 seconds"
+      ],
+      "urlName": "shell-shock",
+      "description": "I'm kiddinggg!",
+      "requirements": ["a:Mysterious Branch", "a:Summon Scroll"]
+    },
+    {
+      "name": "Big... Large... Enormous...",
+      "effects": ["Melee Tag Range +30%"],
+      "urlName": "big-large-enormous",
+      "description": "That was such an enormous... attack.",
+      "requirements": [
+        "a:Golden Flask",
+        "a:Torn Journal I",
+        "a:Ruined Royal Family's Insignia"
+      ]
+    },
+    {
+      "name": "Chimera",
+      "effects": ["For every 50 enemies defeated, ATK +1 (Maximum: +10)"],
+      "urlName": "chimera",
+      "description": "Becomes stronger by eating the enemy.",
+      "requirements": ["a:Star Fragment", "a:Mysterious Egg", "a:Lizard Skewer"]
+    },
+    {
+      "name": "Sled",
+      "effects": ["MOV SPD +25%", "Can walk on liquid"],
+      "urlName": "sled",
+      "description": "Ha- ha- Hyaaa... Ha- ha- Hyaaah!",
+      "requirements": ["a:Wooden Sled", "a:Ice Cube"]
+    },
+    {
+      "name": "Captain",
+      "effects": [
+        "Changes the skill's Projectile tag to the Targeting tag",
+        "Fires at the nearest enemy"
+      ],
+      "urlName": "captain",
+      "description": "It looks like fireworks",
+      "requirements": [
+        "s:Venom Dispersion",
+        "s:Apply Toxin",
+        "a:Poison Sting",
+        "a:Soldier's Seal"
+      ]
+    },
+    {
+      "name": "Robber",
+      "effects": ["Shop's Goods +1"],
+      "urlName": "robber",
+      "description": "I'll give you money so give me more goods!",
+      "requirements": ["a:Kitchen Knife", "a:Coupon", "a:Silver Coin"]
+    },
+    {
+      "name": "Weapons Dealer",
+      "effects": [
+        "Attack Power +5",
+        "Attack Power increases by 1 for each Lesser Artifact equipped"
+      ],
+      "urlName": "weapons-dealer",
+      "description": "If 3 sacks won't do, then 4 sacks!",
+      "requirements": ["a:Soldier's Seal", "a:Kunai", "a:Kitchen Knife"]
+    },
+    {
+      "name": "Hydra",
+      "effects": ["Poison ATK +40%"],
+      "urlName": "hydra",
+      "description": "A toxin that makes you weak and dizzy just by grazing it!",
+      "requirements": ["a:Poison Sting", "a:Hydra's Tooth"]
+    },
+    {
+      "name": "Lunar Eclipse",
+      "effects": [
+        "All Spell, Targeting tag skills change to Shadow.",
+        "Spell, Targeting Skill Cooldown Recovery Speed +50%",
+        "Spell, Targeting ATK +20%"
+      ],
+      "urlName": "lunar-eclipse",
+      "description": "And darkness has arrived all over the world.",
+      "requirements": ["a:Small Sun", "a:Phelan's Emblem"]
+    },
+    {
+      "name": "Razor-Sharp Blade",
+      "effects": ["When Poison is inflicted, 100% chance to inflict Bleed"],
+      "urlName": "razor-sharp-blade",
+      "description": "A blade that causes unexpected bleeding",
+      "requirements": ["s:Apply Toxin", "a:Blood Flask"]
+    },
+    {
+      "name": "God of Mischief",
+      "effects": [
+        "Undoes reverse arrow key (Removes the <artifact>Strange God's Mask</artifact>'s (Greater Artifact) \"Reversed Player Controls\" effect)"
+      ],
+      "urlName": "god-of-mischief",
+      "description": "Looooook!!",
+      "requirements": ["a:Steel Boots", "a:Strange God's Mask"]
+    },
+    {
+      "name": "Bizzare Plant",
+      "effects": ["Summons Bleed Spikes at 6 enemies every 6 seconds"],
+      "urlName": "bizzare-plant",
+      "description": "Rotting plant",
+      "requirements": ["a:Spore", "a:Plant Seed", "a:Yearning Vine"]
+    },
+    {
+      "name": "Fortune Coin",
+      "effects": ["<npc>Mimic</npc>'s (NPC) appearance rate +50%"],
+      "urlName": "fortune-coin",
+      "description": "Front? Back!",
+      "requirements": [
+        "a:Flagellant's Gold Coin",
+        "a:Ominous Fragment",
+        "a:Coupon"
+      ]
+    },
+    {
+      "name": "Master Swordsmanship",
+      "effects": [
+        "Number of slashes in multi-hit attacks +2",
+        "Cast SPD +30%",
+        "Base Damage +30%"
+      ],
+      "urlName": "master-swordsmanship",
+      "description": "One who walks the path of sword",
+      "requirements": [
+        "s:Successive Strike",
+        "a:Inscribed Stone",
+        "a:Ruined Royal Family's Insignia"
+      ]
+    },
+    {
+      "name": "Skull and Gold Coin",
+      "effects": ["Drops an additional 1 Gold upon defeating an enemy."],
+      "urlName": "skull-and-gold-coin",
+      "description": "Traditionally skulls and gold coins make a set.",
+      "requirements": ["a:Skull Head", "a:Flagellant's Gold Coin"]
+    },
+    {
+      "name": "Rotten Egg",
+      "effects": ["Applies Poison to all Basic Skills", "Stab damage -96%"],
+      "urlName": "rotten-egg",
+      "description": "I'm telling you it's expired!!!",
+      "requirements": ["a:Mysterious Egg", "a:Blighted Soulstone"]
+    },
+    {
+      "name": "Sulfur",
+      "effects": ["Poison ATK +50%"],
+      "urlName": "sulfur",
+      "description": "Silver can discern when toxins contain sulfur.",
+      "requirements": ["a:Silver Coin", "a:Hydra's Tooth"]
+    },
+    {
+      "name": "Records from the Age of Magic",
+      "effects": ["Magic Skill count +1"],
+      "urlName": "records-from-the-age-of-magic",
+      "description": "A time when civilization was at its most prosperous in history",
+      "requirements": ["a:Feather", "a:Magical Parchment"]
+    },
+    {
+      "name": "Processed Soulstone",
+      "effects": ["Poison and Bleeding stacks +1"],
+      "urlName": "processed-soulstone",
+      "description": "The unpleasant energy has intensified",
+      "requirements": ["a:Blighted Soulstone", "a:Lucky Clover Hammer"]
+    },
+    {
+      "name": "Apostle of Greed",
+      "effects": [
+        "Positive effects for the <artifact>Perch</artifact>'s (Boss Artifact) effect from Fireball mod"
+      ],
+      "urlName": "apostle-of-greed",
+      "description": "I give you my blessings...",
+      "requirements": ["s:Fireball", "a:Perch", "a:Crest of Greed"]
+    },
+    {
+      "name": "Chain Reaction Dagger",
+      "effects": [
+        "Even after Chain is applied after the <skill>Dagger Throw</skill> (Subskill), can apply Chain again"
+      ],
+      "urlName": "chain-reaction-dagger",
+      "description": "A chain between you and me",
+      "requirements": ["s:Dagger Throw", "a:Reactive Armor", "a:Mechanical Arm"]
+    },
+    {
+      "name": "Static Strike",
+      "effects": [
+        "Activates additional <skill>Chain Lightning</skill> (Main Skill) every 8 seconds"
+      ],
+      "urlName": "static-strike",
+      "description": "Ouch, it's hot!",
+      "requirements": ["s:Chain Lightning", "a:Lightning Rod", "a:Coil"]
+    },
+    {
+      "name": "Tanker",
+      "effects": ["If there is no shield every 45 seconds, shield is acquired"],
+      "urlName": "tanker",
+      "description": "Haha! That bad?",
+      "requirements": ["s:Barrier", "a:Rugged Bodyarmor", "a:Broken Pauldron"]
+    },
+    {
+      "name": "Toad",
+      "effects": [
+        "Randomly fires 3 Toad Venom at nearby enemies every 1.5 seconds."
+      ],
+      "urlName": "toad",
+      "description": "Ribbit",
+      "requirements": ["a:Baby Toad", "a:Toad Fluid"]
+    },
+    {
+      "name": "Gargantuan Toad",
+      "effects": ["Fires 5 Toad Venom every 0.75 seconds"],
+      "urlName": "gargantuan-toad",
+      "description": "At this rate, might as well become a toad, ribbit.",
+      "requirements": ["a:Baby Toad", "a:Toad Fluid", "a:Mysterious Egg"]
+    },
+    {
+      "name": "Toad Sage",
+      "effects": ["Fires 8 Powerful Toad Venom every 0.5 seconds."],
+      "urlName": "toad-sage",
+      "description": "Whaat... You're telling me that it wasn't a frog??",
+      "requirements": [
+        "a:Baby Toad",
+        "a:Toad Fluid",
+        "a:Mysterious Egg",
+        "a:Molten Skull"
+      ]
+    },
+    {
+      "name": "Losing Battle",
+      "effects": [
+        "If 100 Fighting Spirit is reached, Skill Activation chance +5%"
+      ],
+      "urlName": "losing-battle",
+      "description": "We may lose the war, but we will never lose our fighting spirit.",
+      "requirements": ["a:Torn Flag", "a:Niflheim's Symbol"]
+    },
+    {
+      "name": "Undead Kingdom",
+      "effects": ["Attack Power +30%"],
+      "urlName": "undead-kingdom",
+      "description": "Fight, even in death. That is the Niflheim spirit!",
+      "requirements": ["a:Torn Flag", "a:Niflheim's Symbol", "a:Soldier's Seal"]
+    },
+    {
+      "name": "Flag Bearer",
+      "effects": ["Charges Fighting Spirit even with Summonlings' movements"],
+      "urlName": "flag-bearer",
+      "description": "Follow me!!",
+      "requirements": ["a:War Flag", "a:Symbol of Loyalty"]
+    },
+    {
+      "name": "Empire's Currency Printer",
+      "effects": [
+        "If 2 types of artifacts are in possession, Gold Aquisition +50%"
+      ],
+      "urlName": "empires-currency-printer",
+      "description": "Think of money as irrelevant as a stone.",
+      "requirements": [
+        "a:Niflheim's Coin",
+        "a:Niflheim's Silver Coin",
+        "a:Niflheim's Gold Coin"
+      ]
+    },
+    {
+      "name": "Empire Soldier",
+      "effects": [
+        "If <artifact>Sniper's Cape</artifact> (Greater Artifact) and 1 type of Niflheim Coin are in possession, <artifact>Niflheim's Silver Coin</artifact> (Regular Artifact) and <artifact>Niflheim's Gold Coin</artifact> (Greater Artifact) max stack +1"
+      ],
+      "urlName": "empire-soldier",
+      "description": "One! Two!",
+      "requirements": [
+        "a:Sniper's Cape",
+        "a:Niflheim's Silver Coin",
+        "a:Niflheim's Gold Coin"
+      ]
+    },
+    {
+      "name": "Empire Archer",
+      "effects": [
+        "If <artifact>Sniper's Cape</artifact> (Greater Artifact) and 2 types of Niflheim Coin are in possession, <artifact>Niflheim's Silver Coin</artifact> (Regular Artifact) and <artifact>Niflheim's Gold Coin</artifact> (Greater Artifact) max stack +1"
+      ],
+      "urlName": "empires-archer",
+      "description": "Three!",
+      "requirements": [
+        "a:Sniper's Cape",
+        "a:Niflheim's Coin",
+        "a:Niflheim's Silver Coin",
+        "a:Niflheim's Gold Coin"
+      ]
+    },
+    {
+      "name": "Piercing Eyes",
+      "effects": [
+        "<artifact>Niflheim's Silver Coin</artifact> (Regular Artifact) and <artifact>Niflheim's Gold Coin</artifact> (Greater Artifact) coin stacks +2"
+      ],
+      "urlName": "piercing-eyes",
+      "description": "The echo of a fallen coin can help understand your surroundings even if you can't see.",
+      "requirements": [
+        "a:Sniper's Cape",
+        "a:Niflheim's Coin",
+        "a:Niflheim's Silver Coin",
+        "a:Niflheim's Gold Coin"
+      ]
+    },
+    {
+      "name": "Polaris",
+      "effects": [
+        "If Dash is cast, fires arrows at nearby enemies",
+        "(6 times, ATK 120%, Poison, Targeting)"
+      ],
+      "urlName": "polaris",
+      "description": "If you hear the coin, give up on life. An arrow has already penetrated you...",
+      "requirements": [
+        "a:Sniper's Cape",
+        "a:Niflheim's Coin",
+        "a:Niflheim's Silver Coin",
+        "a:Niflheim's Gold Coin",
+        "a:Poisoned Arrow"
+      ]
+    },
+    {
+      "name": "Fundamentals of the Void",
+      "effects": ["Max HP +1"],
+      "urlName": "fundamentals-of-the-void",
+      "description": "A mask! And another mask!",
+      "requirements": ["a:White Mask", "a:Simple Key"]
+    },
+    {
+      "name": "Tundra Flower",
+      "effects": ["<artifact>Ice Flower</artifact> Range +30%"],
+      "urlName": "tundra-flower",
+      "description": "A flower that only grows in the Absolute Area and is out of the reach of humans.",
+      "requirements": ["a:Morning Dew", "a:Ice Flower"]
+    },
+    {
+      "name": "Eternal Tundra Flower",
+      "effects": ["Freeze Duration +3 seconds"],
+      "urlName": "eternal-tundra-flower",
+      "description": "A flower that emits energy so cold that it could also be the cause of the frozen soil.",
+      "requirements": ["a:Morning Dew", "a:Eternal Flower", "a:Ice Flower"]
+    },
+    {
+      "name": "Eternal Flower Garden",
+      "effects": ["Number of Frost Skills +30%"],
+      "urlName": "Eternal Flower-garden",
+      "description": "Those who set foot in this place instantly freeze. Hence, the nickname.",
+      "requirements": ["a:Eternal Flower", "a:Ice Flower", "a:Frozen Branch"]
+    },
+    {
+      "name": "Blade Queen",
+      "effects": [
+        "Blade gains Bleed and Projectile tags",
+        "Blades pireces 2 times and chains 1 time",
+        "Blades count +1",
+        "Blades damage +15%"
+      ],
+      "urlName": "blade-queen",
+      "description": "They say he is cursed with daggers constantly coming out of his body.",
+      "requirements": ["a:Blade Cape", "a:Blade Fan"]
+    },
+    {
+      "name": "Bomber",
+      "effects": [
+        "When equipping the artifact <artifact>Bomber's Bag</artifact> and 2 types of Bomb Tag Skills,",
+        "Bombs detonate instantly",
+        "Explosion Range +15%"
+      ],
+      "urlName": "bomber",
+      "description": "Arrgghh! (Sound of frustration)",
+      "requirements": [
+        "s:Frost Bomb Throw",
+        "s:Flame Bomb Throw",
+        "s:Explosive Marble",
+        "s:Pulse Bomb",
+        "s:Cactus Bomb",
+        "s:Gravity Bomb",
+        "a:Bomber's Bag"
+      ]
+    },
+    {
+      "name": "Magic-Infused Feather Pen",
+      "effects": [
+        "For every 1 previous stage,",
+        "MOV SPD +1%",
+        "ATK SPD +1%",
+        "(Maximum: +5%)"
+      ],
+      "urlName": "magic-infused-feather-pen",
+      "description": "Can you write with demons' blood?",
+      "requirements": ["a:Feather", "a:Black Flask"]
+    },
+    {
+      "name": "Warrior of the Floating Castle",
+      "effects": ["Spell Tag Skill Target count +1"],
+      "urlName": "warrior-of-the-floating-castle",
+      "description": "His/her uncomfortably smiling face",
+      "requirements": ["a:Floating Stone", "a:Hermes Boots"]
+    },
+    {
+      "name": "Assassin",
+      "effects": ["Attacks from these items' effect deal CRIT"],
+      "urlName": "assassin",
+      "description": "A true assassin isn't choosy about his weapons.",
+      "requirements": [
+        "a:Hidden Blade",
+        "a:Blade Cape",
+        "a:Kunai",
+        "a:Blade Fan"
+      ]
+    },
+    {
+      "name": "Goblin Sage",
+      "effects": ["Max HP +1"],
+      "urlName": "goblin-sage",
+      "description": "Are they goblins or sages?",
+      "requirements": ["a:Bandage", "a:Iron Chains of Protection"]
+    },
+    {
+      "name": "Thor",
+      "effects": [
+        "<skill>Call Lightning</skill> (Subskill) falls on a single enemy"
+      ],
+      "urlName": "thor",
+      "description": "God of Thunder",
+      "requirements": [
+        "s:Call Lightning",
+        "a:Mysterious Branch",
+        "a:Strange God's Mask"
+      ]
+    },
+    {
+      "name": "Noir Action!",
+      "effects": [
+        "Cannot activate skills and use ranged-characters in normal stages",
+        "Upon attacking, slightly advance forward",
+        "Upon attacking a standard stage enemy, defeats with one hit"
+      ],
+      "urlName": "noir-action",
+      "description": "Yes, that should work.",
+      "requirements": ["a:Mechanical Arm", "a:Mysterious Blue Drug"]
+    },
+    {
+      "name": "Demon",
+      "effects": [
+        "Change projectile speed to projectiles via <artifact>The Devil Eye</artifact>'s (Lesser Artifact) abilities by 2 times",
+        "Changes all Projectile skill's Main Skill tag to Subskill tag",
+        "Projectile Tag Skill Cooldown Recovery Speed +20%"
+      ],
+      "urlName": "demon",
+      "description": "ROAR! Fire!",
+      "requirements": ["a:Demon Horn", "a:The Devil Eye"]
+    },
+    {
+      "name": "Broken Equipment",
+      "effects": [
+        "Obtain 1 Shield upon taking lethal damage.",
+        "Broken Pauldron is destroyed afterwards."
+      ],
+      "urlName": "broken-equipment",
+      "description": "Even this equipment will save lives.",
+      "requirements": ["a:Broken Pauldron", "a:Broken Vambrace"]
+    },
+    {
+      "name": "Iron Girl",
+      "effects": [
+        "Plunging Attack, <artifact>Meteorite Fragment</artifact>'s (Lesser Artifact) Additional Range +100%",
+        "Height-Based Meteorite Fragment Attack Power Bonus (Maximum: 1000%)"
+      ],
+      "urlName": "iron-girl",
+      "description": "Super heroooo landing!",
+      "requirements": [
+        "a:Red Steel Vambrace",
+        "a:Meteorite Fragment",
+        "w:Draupnir",
+        "c:Fighter"
+      ]
+    },
+    {
+      "name": "Gas Eruption",
+      "effects": [
+        "Creates Toxin Fog over time on your body",
+        "The Poison value of the Toxin Fog is 1/2 of the <skill>Venom Cloud</skill>'s (Subskill) value"
+      ],
+      "urlName": "gas-eruption",
+      "description": "B-b-b-boooom!",
+      "requirements": [
+        "s:Venom Cloud",
+        "a:Moldy Mushroom",
+        "a:Poisonous Mushroom"
+      ]
+    },
+    {
+      "name": "Risky Hydra",
+      "effects": [
+        "0% chance of <skill>Neurotoxin</skill> (Subskill) poisoning",
+        "<skill>Neurotoxin</skill> (Subskill) penetrates all enemies and the only 1 <skill>Neurotoxin</skill> (Subskill) is fired",
+        "Base damage of <skill>Neurotoxin</skill> (Subskill) +45% for each extra Neurotoxin",
+        "Strengthen <skill>Neurotoxin</skill> (Subskill) with thorns"
+      ],
+      "urlName": "risky-hydra",
+      "description": "Whether it's a dangerous bone spike or venom, it's like that.",
+      "requirements": ["s:Neurotoxin", "a:Hydra's Tooth", "a:Poison Sting"]
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "Rotten Eye Richie",
+      "effects": [
+        "When Poison is inflicted on enemies, the same amount of Poison is also applied to self.",
+        "Every second, the Poison stacks applied to self are transferred to nearby enemies (up to 200 stacks).",
+        "(Poison stacks inflicted on enemies by this effect are not applied back to self.)",
+        "Poison damage applied to self by this effect is negated."
+      ],
+      "urlName": "rotten-eye-richie",
+      "description": "That rotten body sickens and decomposes everything around it.",
+      "requirements": ["a:Molten Skull", "a:Elixir of Immortality"]
+    },
+    {
+      "name": "Magician of Explosion",
+      "effects": [
+        "Number of Targeting skills is fixed to 1",
+        "For each Targeting skill, <artifact>Magic Wand</artifact> explosion size +25%",
+        "For each Targeting skill, Targeting Skill Damage +85%, Targeting Skill Size +15%"
+      ],
+      "urlName": "magician-of-explosion",
+      "description": "Explosion is Art",
+      "requirements": ["a:Magic Wand", "a:Scope"]
+    },
+    {
+      "name": "Campfire",
+      "effects": ["Freeze Immunity", "Burn Damage +100%"],
+      "urlName": "campfire",
+      "description": "Everyone, let's sit around the fire and sing",
+      "requirements": ["a:F' Rune", "a:Firewood"]
+    },
+    {
+      "name": "Stone Ice Storage",
+      "effects": ["Freeze Chance +30%"],
+      "urlName": "stone-ice-storage",
+      "description": "If this isn't done, summer will be hot",
+      "requirements": ["a:Ice Cube", "a:Ice Shard", "a:Wooden Sled"]
+    },
+    {
+      "name": "Meteor Shower",
+      "effects": [
+        "<artifact>Meteorite Fragment</artifact> (Lesser Artifact) count +3",
+        "<artifact>Meteorite Fragment</artifact> (Lesser Artifact) ATK -10%"
+      ],
+      "urlName": "meteor-shower",
+      "description": "Like a meteor streak.",
+      "requirements": ["a:Small Sun", "a:Meteorite Fragment"]
+    },
+    {
+      "name": "Sniper of the North",
+      "effects": [
+        "Changes <artifact>Canteen</artifact>'s (Lesser Artifact) effect to Targeting tag",
+        "Aim Skill Damage +10%"
+      ],
+      "urlName": "sniper-of-the-north",
+      "description": "Darn, the water in the canteen has frozen!",
+      "requirements": ["a:Scope", "a:Canteen"]
+    },
+    {
+      "name": "Black Plaque",
+      "effects": ["Poison max stack limit +100"],
+      "urlName": "black-plaque",
+      "description": "The harbringer of the plague",
+      "requirements": [
+        "a:Yearning Vine",
+        "a:Strange God's Mask",
+        "a:Molten Skull"
+      ]
+    },
+    {
+      "name": "Archeologist",
+      "effects": ["Statue of Angels and Demons Chance of Appearance +10%"],
+      "urlName": "archeologist",
+      "description": "Why would someone feel the need to collect slates",
+      "requirements": ["a:Holy Slate", "a:Ancient Slate"]
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "Assassin Squad",
+      "effects": ["If Dash is used, enter Stealth for 2 seconds"],
+      "urlName": "assassin-squad",
+      "description": "Until a hole has been pierced through the heart, you won't see them coming.",
+      "requirements": ["a:Hidden Blade", "a:Thick Cape"]
+    },
+    {
+      "name": "Completed Red Jewel",
+      "effects": ["Gain 1 Darkness and 1 Divinity Synergy when activated."],
+      "urlName": "completed-red-jewel",
+      "description": "A vampire's essential items",
+      "requirements": ["a:Red Jewel Fragment", "a:Blood Essence"]
+    },
+    {
+      "name": "Cursed Wolf",
+      "effects": [
+        "Base damage of Cursed Claws increases by 50% per upgraded sub skill equipped",
+        "Bleed stack count of Cursed Claws +1 per upgraded main skill equipped",
+        "Bleed chance of Cursed Claws +100%.",
+        "Stab damage +100%",
+        "Cannot cast skills"
+      ],
+      "urlName": "cursed-wolf",
+      "description": "The werewolf has appeared!",
+      "requirements": [
+        "a:Wild Animal's Tooth",
+        "a:Curse's Stigma",
+        "a:Cursed Fingernail",
+        "a:Red Devil's Contract"
+      ]
+    },
+    {
+      "name": "Troll Fighter",
+      "effects": [
+        "ATK +12%",
+        "Skill Activation Chance +5%",
+        "Cannot activate Subskill"
+      ],
+      "urlName": "troll-fighter",
+      "description": "I am not stupid!",
+      "requirements": ["a:Tribal Mark", "a:Icicle Tribal Mark"]
+    },
+    {
+      "name": "Curse of Immortality",
+      "effects": [
+        "Changes <skill>Successive Strike</skill>'s (Main Skill) Slash count by 2",
+        "Cast SPD -50%",
+        "<skill>Successive Strike</skill> (Main Skill) Slash size +15% (Maximum: +120%) per 1 Slash count",
+        "ATK +100%, Bleed stack +2"
+      ],
+      "urlName": "curse-of-immortality",
+      "description": "Curse-breaking Swordsmanship",
+      "requirements": [
+        "s:Successive Strike",
+        "a:Curse's Stigma",
+        "a:Elixir of Immortality",
+        "a:Cursed Immortality Sword"
+      ]
+    },
+    {
+      "name": "Arrival of Darkness",
+      "effects": [
+        "<artifact>Cursed Fingernail</artifact>'s (Superior Artifact) Size and Damage +50%",
+        "When taking damage that reduces your HP to 1 or lower, cast Arrival of Darkness, granting invincibility for 3 seconds (once per stage, Duration: 3 seconds)"
+      ],
+      "urlName": "arrival-of-darkness",
+      "description": "The first experience of falling to greed",
+      "requirements": ["a:Cursed Fingernail", "a:Perch"]
+    },
+    {
+      "name": "Explorer",
+      "effects": [
+        "When Shield is destroyed, nearby enemies are dealt 500% damage"
+      ],
+      "urlName": "explorer",
+      "description": "Lower. Keep going lower. It's falling.",
+      "requirements": ["a:Soul Talisman", "a:Soul Whistle"]
+    },
+    {
+      "name": "Flint",
+      "effects": [
+        "Changes <artifact>Stone</artifact>'s (Lesser Artifact) effect to Flame tag"
+      ],
+      "urlName": "flint",
+      "description": "An object that keeps you warm for the day",
+      "requirements": ["a:Stone", "a:Firewood"]
+    },
+    {
+      "name": "Blacksmith",
+      "effects": [
+        "Removes the <artifact>Lucky Clover Hammer</artifact>'s (Greater Artifact) duration reduction debuff"
+      ],
+      "urlName": "blacksmith",
+      "description": "TO make only the very best weapons",
+      "requirements": ["a:Whetstone", "a:Lucky Clover Hammer"]
+    },
+    {
+      "name": "Dastard",
+      "effects": [
+        "Changes <artifact>Snowball</artifact>'s (Lesser Artifact) effect to Physical tag",
+        "Physical Skill Damage +30%"
+      ],
+      "urlName": "dastard",
+      "description": "Wow, that was too much. Let's never have to get into a snowball fight with that jerk again.",
+      "requirements": ["a:Snowball", "a:Stone"]
+    },
+    {
+      "name": "Swordsman",
+      "effects": [
+        "Forbidden Technique: <artifact>Summon Scroll</artifact>'s (Superior Artifact) Reactivation Cooldown -1 second"
+      ],
+      "urlName": "swordsman",
+      "description": "Do you think chewing on a twig will look good on me?",
+      "requirements": [
+        "a:Wooden Shoes",
+        "a:Forbidden Technique - Summon Scroll"
+      ]
+    },
+    {
+      "name": "Tree of Ice",
+      "effects": [
+        "When an enemy is released from Freeze, it receives 250% Damage."
+      ],
+      "urlName": "tree-of-ice",
+      "description": "Oh my! It's cold!",
+      "requirements": ["a:Frozen Branch", "a:Ice Crystal"]
+    },
+    {
+      "name": "Ice Sculptor",
+      "effects": [
+        "Frost tag Skill Activation Chance +5%",
+        "Frost tag Skill ATK +30%"
+      ],
+      "urlName": "ice-sculptor",
+      "description": "You claim to be a sculptor, but you can only make plates?",
+      "requirements": ["a:Ice Shard", "a:Whetstone"]
+    },
+    {
+      "name": "Dedication of the Heart",
+      "effects": [
+        "Summonlings' Attack Speed +10%",
+        "Upon killing an enemy with a summon skill, the summonling's Attack Speed increases by 3% (Duration: 2 seconds)."
+      ],
+      "urlName": "dedication-of-the-heart",
+      "description": "If it's for my love, I'll even give you my heart.",
+      "requirements": ["a:Serena's Feather", "a:Blood Contractor"]
+    },
+    {
+      "name": "Fast Hatch",
+      "effects": [
+        "Reduces enemy requirement on Easter Egg by 40. (Require 140 kills to hatch)"
+      ],
+      "urlName": "fast-hatch",
+      "description": "You're warm!",
+      "requirements": ["a:Easter Egg", "a:Small Sun"]
+    },
+    {
+      "name": "Kerrell's Piece",
+      "effects": ["Mine count +2", "Mines explode immediately"],
+      "urlName": "kerrells-piece",
+      "description": "Tee hee! I'm just kidding!!",
+      "requirements": ["a:Bomber's Bag", "a:Mine"]
+    },
+    {
+      "name": "Wings",
+      "effects": ["Decreases fall speed"],
+      "urlName": "wings",
+      "description": "Grant me the High Jump, for heaven's sake!",
+      "requirements": ["a:Feather Fan", "a:Hermes Boots"]
+    },
+    {
+      "name": "Survivor",
+      "effects": ["20% chance to reduce Damage from Barrage attacks"],
+      "urlName": "survivor",
+      "description": "An Easter Egg's Easter Egg",
+      "requirements": ["a:Frying Pan", "a:Scope"]
+    },
+    {
+      "name": "Adrenaline",
+      "effects": [
+        "When casting Basic Skill while under attack, does not lose Fighting Spirit."
+      ],
+      "urlName": "adrenaline",
+      "description": "I can lose myself in the heat of battle.",
+      "requirements": ["a:Red Steel Vambrace", "a:War Flag", "a:Spike Gloves"]
+    },
+    {
+      "name": "Fool",
+      "effects": ["Subskill cannot be used", "ATK +50%", "ATK SPD -30%"],
+      "urlName": "fool",
+      "description": "Heh... Ants... Tasty...",
+      "requirements": ["a:Icicle Tribal Mark", "a:Spike Gloves"]
+    },
+    {
+      "name": "Cook to Eat",
+      "effects": ["Frozen Fruit's effect is immediately applied"],
+      "urlName": "cook-to-eat",
+      "description": "I like to eat it cold!! Why are you cooking it!?!",
+      "requirements": ["a:Frozen Fruit", "a:Lava in a Cup", "a:Small Sun"]
+    },
+    {
+      "name": "Blighted Soulstone Arrow",
+      "effects": ["Poison Skill's Poison stack count +5"],
+      "urlName": "blighted-soulstone-arrow",
+      "description": "Wow... So this is how you use it",
+      "requirements": ["a:Poisoned Arrow", "a:Blighted Soulstone"]
+    },
+    {
+      "name": "Insignia Collector",
+      "effects": ["Burn Damage +50%"],
+      "urlName": "insignia-collector",
+      "description": "Are you assembling them because the fabric is of such high quality?",
+      "requirements": ["a:Burned Insignia", "a:Ruined Royal Family's Insignia"]
+    },
+    {
+      "name": "Three Musketeers",
+      "effects": [
+        "<artifact>Ice Spear</artifact>'s (Greater Artifact) effect applies to all tags"
+      ],
+      "urlName": "three-musketeers",
+      "description": "The battle-hardened fighters that protected the Golden Age of the Empire",
+      "requirements": ["a:Sniper's Cape", "a:Ice Spear", "a:Sword of Ash"]
+    },
+    {
+      "name": "Cursed Organism",
+      "effects": [
+        "Summonling becomes a shadow",
+        "Summonling Size +50%",
+        "Summonling Detection Range +20%",
+        "Summonling Damage +105% per summon"
+      ],
+      "urlName": "cursed-organism",
+      "description": "Spoooooo... ky.",
+      "requirements": ["a:Cursed Marble", "a:Serena's Feather"]
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "Seal of Protection",
+      "effects": ["Barrier +1"],
+      "urlName": "seal-of-protection",
+      "description": "Looks like its been crushed with a rock...\nAre you saying this is a seal?",
+      "requirements": ["a:Iron Chains of Protection", "a:Barrier Stone"]
+    },
+    {
+      "name": "Zealot's Blood",
+      "effects": ["Basic Skill ATK +50%"],
+      "urlName": "zealots-blood",
+      "description": "Aaaaaaah!",
+      "requirements": ["a:Cursed Immortality Sword", "a:Red Steel Vambrace"]
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "Cursed Left Hand",
+      "effects": ["MOV SPD +12.5%, ATK SPD +25%, Attack Power +50%"],
+      "urlName": "cursed-left-hand",
+      "description": "Overdrive!",
+      "requirements": [
+        "a:Cursed Immortality Sword",
+        "a:Red Steel Vambrace",
+        "a:Iron Chains of Protection"
+      ]
+    },
+    {
+      "name": "Fried Egg",
+      "effects": ["Recovers HP by 0.5"],
+      "urlName": "fried-egg",
+      "description": "Is this edible?",
+      "requirements": ["a:Frying Pan", "a:Easter Egg"]
+    },
+    {
+      "name": "Real Chainsaw",
+      "effects": [
+        "<weapon>Tarventus</weapon> (<character>Knight</character>'s Weapon) Bleed Chance +100%"
+      ],
+      "urlName": "real-chainsaw",
+      "description": "Did you think that would work??\nOf course it does!",
+      "requirements": ["a:Blood Flask", "w:Tarventus"]
+    },
+    {
+      "name": "The devil hates hammers",
+      "effects": [
+        "<artifact>Lucky Clover Hammer</artifact>'s (Greater Artifact) turning radius changes randomly"
+      ],
+      "urlName": "the-devil-hates-hammers",
+      "description": "Aww! I hate crosses!",
+      "requirements": ["a:Lucky Clover Hammer", "a:Red Devil's Contract"]
+    },
+    {
+      "name": "Ninja Vigor",
+      "effects": [
+        "Strengthen <skill>Shuriken Maneuver</skill> (Subskill) with throwing stars",
+        "Throwing star attack damage +45%"
+      ],
+      "urlName": "ninja-vigor",
+      "description": "This is the true path of the ninja.",
+      "requirements": ["s:Shuriken Maneuver", "a:Kunai"]
+    },
+    {
+      "name": "Serene Step",
+      "effects": ["MOV SPD +5%", "ATK SPD +5%", "ATK +2"],
+      "urlName": "serene-step",
+      "description": "These clogs feel like walking on air.",
+      "requirements": ["a:Wooden Shoes", "c:Ronin"]
+    },
+    {
+      "name": "Hidden Presence",
+      "effects": [
+        "<artifact>Cursed Fingernail</artifact>'s Cursed Claw Damage +125%"
+      ],
+      "urlName": "hidden-presence",
+      "description": "Ta-da! Bet you didn't expect the real one to show up!",
+      "requirements": [
+        "a:Wild Animal's Tooth",
+        "a:Cursed Fingernail",
+        "a:Whetstone",
+        "c:Werewolf"
+      ]
+    },
+    {
+      "name": "Meteor",
+      "effects": [
+        "**<skill>Rock Shot</skill> (Main Skill) needs to be Specially-Modified**",
+        "",
+        "Rock Shots (Main Skill) no longer track enemies.",
+        "Rock Shots (Main Skill) fall from the sky at random locations.",
+        "<artifact>Meteorite Fragment</artifact>s (Lesser Artifact) and Meteor Strike (Collection) options activate together.",
+        "Number of Rock Shots (Main Skill) +10",
+        "Base damage of Rock Shots (Main Skill) +200%",
+        "Size of Rock Shots (Main Skill) +100%"
+      ],
+      "urlName": "meteor",
+      "description": "I can pull stars from distant places.",
+      "requirements": ["s:Rock Shot", "a:Small Sun", "a:Meteorite Fragment"]
+    },
+    {
+      "name": "Negotiation King",
+      "effects": ["<npc>Mimic</npc> (NPC) appearance rate +50%"],
+      "urlName": "negotiation-king",
+      "description": "Shall we go negotiate now?",
+      "requirements": ["a:Silver Coin", "a:Beautiful Fountain Pen"]
+    },
+    {
+      "name": "Final Boss",
+      "effects": ["Considered to have 2 summon synergies included."],
+      "urlName": "final-boss",
+      "description": "What a terrifying final boss!",
+      "requirements": [
+        "a:Stone of Summoning",
+        "a:Cursed Marble",
+        "a:Engraved Mask"
+      ]
+    },
+    {
+      "name": "Healing Bullet",
+      "effects": [
+        "When attacking enemies with <skill>Rampage</skill> (Subskill), there is a 2% chance to recover 0.5 HP (Cooldown 6 seconds)",
+        "<skill>Rampage</skill> (Subskill) damage +10%."
+      ],
+      "urlName": "healing-bullet",
+      "description": "Feed the bullet and take the blood.",
+      "requirements": [
+        "s:Rampage",
+        "a:Healing Shell Casing",
+        "a:Mark of the Sisterhood"
+      ]
+    },
+    {
+      "name": "Elemental Master",
+      "effects": [
+        "Considered as having 3 stacks of each of the following Tag Synergies: Bleed, Frost, Lightning, and Divinity."
+      ],
+      "urlName": "elemental-master",
+      "description": "I can handle all elements.",
+      "requirements": [
+        "a:Blood Essence",
+        "a:Dragon Seal",
+        "a:Ice Crystal",
+        "a:Small Sun",
+        "a:Mark of the Sisterhood",
+        "a:Red Jewel Fragment",
+        "a:Time Fragment"
+      ]
+    },
+    {
+      "name": "Festival Preparation",
+      "effects": [
+        "Critical Hit Damage +15%",
+        "Stab have a 15% chance to trigger a Critical hit."
+      ],
+      "urlName": "festival-preparation",
+      "description": "The festival calls to me...",
+      "requirements": ["a:8-bit Sunglasses", "a:Star-shaped Party Glasses"]
+    },
+    {
+      "name": "3rd Anniversary",
+      "effects": ["Skill Damage increase changed to Bleed Damage increase."],
+      "urlName": "3rd-anniversary",
+      "description": "I could not even imagine it.",
+      "requirements": ["a:Star-shaped Party Glasses", "a:Strawberry Cream Cake"]
+    },
+    {
+      "name": "A word of thanks.",
+      "effects": ["Melee Skill Damage +100%", "Melee Skill Size +10%"],
+      "urlName": "a-word-of-thanks",
+      "description": "Melee Skill 1 million times",
+      "requirements": ["a:Star-shaped Party Glasses", "a:Secret Mask ^q^"]
+    },
+    {
+      "name": "The Best Offense...",
+      "effects": [
+        "Gain 1 additional Shield from <artifact>Soul Talisman</artifact> (Regular Artifact)"
+      ],
+      "urlName": "the-best-offense",
+      "description": "When I hit with this... it really hurts.",
+      "requirements": ["s:Guardian's Shield", "a:Soul Talisman"]
+    },
+    {
+      "name": "Deep Dive",
+      "effects": [
+        "Deep Execution Skill Size increases with height during Plunge Attacks (up to 500%)"
+      ],
+      "urlName": "deep-dive",
+      "description": "The sea... and the deep sea!!!",
+      "requirements": [
+        "s:Abyssal Execution",
+        "a:Frozen Gauntlet",
+        "a:Ice Spear"
+      ]
+    },
+    {
+      "name": "Blood Hound",
+      "effects": [
+        "<skill>Crushing Bite</skill> (Main Skill) Base Damage increased by 100%",
+        "Cast <skill>Crushing Bite</skill> an additional time"
+      ],
+      "urlName": "blood-hound",
+      "description": "Bite their neck! Tear them to shreds!",
+      "requirements": ["s:Crushing Bite", "a:Thornmail", "a:Spike Gloves"]
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "Your blasphemy will not be forgiven!!!",
+      "effects": [
+        "<skill>Sacrificial Stake</skill> Skill Count is fixed at 1 and does not recast.",
+        "<skill>Sacrificial Stake</skill> Skill Damage and Size are increased by 3 times."
+      ],
+      "urlName": "your-blasphemy-will-not-be-forgiven",
+      "description": "Worshipping Divinity again..!!",
+      "requirements": ["s:Sacrificial Stake", "a:Ancient Slate"]
+    },
+    {
+      "name": "Kwisatz Haderach",
+      "effects": [
+        "Exclusive to the Desert of the Red Sun chapter",
+        "<skill>Sand Arrow</skill> (Main Skill) Skill Count is fixed at 1, Skill Damage +580%",
+        "<skill>Sand Arrow</skill> does not trigger as a Main Skill, and is unaffected by other activation conditions.",
+        "Casts <skill>Sand Arrow</skill> at the nearest monster every 2 seconds.",
+        "Grants Stealth upon killing an enemy with <skill>Sand Arrow</skill>"
+      ],
+      "urlName": "kwisatz-haderach",
+      "description": "Now that you've come to the desert, you can never slip from my grasp.",
+      "requirements": [
+        "s:Sand Arrow",
+        "a:Sniper's Cape",
+        "a:Poem for the Departed"
+      ]
+    },
+    {
+      "name": "Fragment of a Great Beast's Bone",
+      "effects": ["Basic Attack deals 20% more damage to enemies."],
+      "urlName": "fragment-of-a-great-beasts-bone",
+      "description": "Could this bone fragment have been crafted by beings of immense strength?",
+      "requirements": ["a:Bone Fragment", "a:Bone of a Colossal Beast"]
+    },
+    {
+      "name": "Follow My Lead",
+      "effects": ["Attack power +7"],
+      "urlName": "follow-my-lead",
+      "description": "Follow me, minion!",
+      "requirements": ["a:Rune Staff", "c:Summoner"]
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "MISSING ENTRY",
+      "effects": ["THIS ENTRY HAS BEEN SKIPPED"],
+      "urlName": "#",
+      "description": "NIL",
+      "requirements": []
+    },
+    {
+      "name": "Twisted Balance",
+      "effects": [
+        "When all skills from slot 1 to 6 have been specially-modified, <artifact>Admiral's Eyepatch</artifact> (Greater Artifact) effect's skill damage is amplified 60x."
+      ],
+      "urlName": "twisted-balance",
+      "description": "Power always comes with a price...",
+      "requirements": [
+        "a:Admiral's Eyepatch",
+        "a:Plant Seed",
+        "a:Phelan's Emblem",
+        "a:Icicle Tribal Mark"
+      ]
+    },
+    {
+      "name": "Thread of Fate I",
+      "effects": [
+        "Skill Damage +20%",
+        "(You only need 1 of any Torn Journals)"
+      ],
+      "urlName": "thread-of-fate-i",
+      "description": "What remains at the end of a life spent protecting?",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V",
+        "c:Knight"
+      ]
+    },
+    {
+      "name": "Thread of Fate II",
+      "effects": [
+        "Skill Damage +30%",
+        "Skill Activation +5%",
+        "(You only need 2 of any Torn Journals)"
+      ],
+      "urlName": "thread-of-fate-ii",
+      "description": "It won't change, even after thousands of salvations.",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V",
+        "c:Knight"
+      ]
+    },
+    {
+      "name": "Thread of Fate III",
+      "effects": [
+        "Skill Damage +40%",
+        "Skill Activation +10%",
+        "Skill Haste +15",
+        "(You only need 3 of any Torn Journals)"
+      ],
+      "urlName": "thread-of-fate-iii",
+      "description": "Not dying is not a blessing. It is a terribly cruel punishment.",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V",
+        "c:Knight"
+      ]
+    },
+    {
+      "name": "Thread of Fate IV",
+      "effects": [
+        "Skill Damage +50%",
+        "Skill Activation +15%",
+        "Skill Haste +30",
+        "(You only need 4 of any Torn Journals)"
+      ],
+      "urlName": "thread-of-fate-iv",
+      "description": "To break free from this cycle... I must sever the origin of all tragedies.",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V",
+        "c:Knight"
+      ]
+    },
+    {
+      "name": "Thread of Fate V",
+      "effects": [
+        "Skill Damage +100%",
+        "Skill Activation +25%",
+        "Skill Haste +65"
+      ],
+      "urlName": "thread-of-fate-v",
+      "description": "I will save you. So that your brightest moment may last forever, never knowing the endless darkness.",
+      "requirements": [
+        "a:Torn Journal I",
+        "a:Torn Journal II",
+        "a:Torn Journal III",
+        "a:Torn Journal IV",
+        "a:Torn Journal V",
+        "c:Knight"
+      ]
+    },
+    {
+      "name": "Paradoxical Salvation",
+      "effects": [
+        "The increase in the number of Divinity Skills from Blue Sindon is changed from 'Remaining Revival Count' to 'Divinity Revival Count'"
+      ],
+      "urlName": "paradoxical-salvation",
+      "description": "Faith does not falter even in the face of death; rather, it burns most brilliantly at its end",
+      "requirements": [
+        "a:Forbidden Chalice",
+        "a:Blue Sindon",
+        "a:Healing Shell Casing"
+      ]
+    },
+    {
+      "name": "Notorious Bomber",
+      "effects": [
+        "When equipping the Artifact Bomber's Bag and 4 types of Bomb Tag Skills:",
+        "Bombs detonate instantly",
+        "Explosion Range +25%",
+        "Each time a Bomb Skill deals damage, increases that Bomb Skill's damage +1% (Max 100%, Duration 5s)"
+      ],
+      "urlName": "notorious-bomber",
+      "description": "Art is an Explosion!",
+      "requirements": [
+        "s:Frost Bomb Throw",
+        "s:Flame Bomb Throw",
+        "s:Explosive Marble",
+        "s:Pulse Bomb",
+        "s:Cactus Bomb",
+        "s:Gravity Bomb",
+        "a:Bomber's Bag"
+      ]
+    },
+    {
+      "name": "History's Worst Bomber",
+      "effects": [
+        "When equipping the Artifact Bomber's Bag and 6 types of Bomb Tag Skills:",
+        "Bombs detonate instantly",
+        "Explosion Range +25%",
+        "Each time a Bomb Skill deals damage, increases that Bomb Skill's damage +1% (Max 100%, Duration 5s)",
+        "Each time a Bomb Skill deals damage, increases that Bomb Skill's damage +1% (Max 400%, Duration 5s)"
+      ],
+      "urlName": "historys-worst-bomber",
+      "description": "If the world is going to end anyway, I'll show you the most spectacular end with my own hands",
+      "requirements": [
+        "s:Frost Bomb Throw",
+        "s:Flame Bomb Throw",
+        "s:Explosive Marble",
+        "s:Pulse Bomb",
+        "s:Cactus Bomb",
+        "s:Gravity Bomb",
+        "a:Bomber's Bag"
+      ]
+    },
+    {
+      "name": "Basics of Grave Robbing",
+      "effects": [
+        "If current stats are lower than base stats, they are adjusted to base stats"
+      ],
+      "urlName": "basics-of-grave-robbing",
+      "description": "And that is... to never forget your beginner's mind!",
+      "requirements": [
+        "a:Grave Robber's Whip",
+        "a:Grave Robber's Brush",
+        "a:Grave Robber's Notebook"
+      ]
+    },
+    {
+      "name": "Dice Master",
+      "effects": ["High Roller's Dice stats are doubled"],
+      "urlName": "dice-master",
+      "description": "Who will Lady Luck smile upon?",
+      "requirements": ["a:God's Dice", "a:Hero's Dice", "a:High Roller's Dice"]
+    },
+    {
+      "name": "Day and Night Unceasing",
+      "effects": [
+        "Every time Divinity Ray hits an enemy, Divinity Ray's damage +0.25% (Duration 5 seconds, Max 100%)"
+      ],
+      "urlName": "day-and-night-unceasing",
+      "description": "Whether the sun rises or the moon rises, the blue sky purely exists",
+      "requirements": ["a:Sacred Sun Mirror", "a:Blessed Moon Mirror"]
+    },
+    {
+      "name": "Blade and Blade as One",
+      "effects": [
+        "Only the first equipped skill among Sword Spins triggers",
+        "Fixes the base amount of Sword Spin to 1",
+        "Skill base damage +70% per +1 to the amount of Sword Spin skills",
+        "Modification effects of all Sword Spins stack",
+        "Sword Spin changes to multi-hit",
+        "Rotation speed becomes fixed"
+      ],
+      "urlName": "blade-and-blade-as-one",
+      "description": "What is better than many swords is an even greater sword",
+      "requirements": ["s:Sword Spin", "s:Sword Spin", "s:Sword Spin"]
+    },
+    {
+      "name": "Holy Mummy",
+      "effects": ["Soul Heart +3"],
+      "urlName": "holy-mummy",
+      "description": "Wrapped in bandages like this, you wouldn't be able to resurrect even if you wanted to, right?",
+      "requirements": ["a:Bandage", "a:Ankh of Eternity", "a:Golden Bandage"]
+    },
+    {
+      "name": "Wargame",
+      "effects": [
+        "When hit, only lose 50% of Fighting Spirit",
+        "Fighting Spirit Artifact effects +10% per Fighting Spirit Artifact in possession",
+        "You only need 3 pieces"
+      ],
+      "urlName": "wargame",
+      "description": "As long as there is a will to achieve... there is nothing that cannot be accomplished",
+      "requirements": ["a:Torn Flag", "a:War Flag", "a:Rook", "a:Chess Knight"]
+    }
+  ]
+}
