@@ -26,7 +26,7 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Robustly normalizes nested JSON structures and injects category keys as 'type' or 'tier'."""
+    """Robustly normalizes nested JSON structures without redundant type injection."""
     cleaned = []
     
     def parse_recursive(node, current_cat=None):
@@ -34,7 +34,7 @@ def extract_list(data):
             for item in node:
                 parse_recursive(item, current_cat)
         elif isinstance(node, dict):
-            # Check if this level represents a category/tier
+            # Check if this level represents a category/tier to capture if needed
             for key, val in node.items():
                 if isinstance(val, (list, dict)) and key.lower() in [
                     "boss", "cursed", "lesser", "greater", "regular", "superior",
@@ -46,12 +46,12 @@ def extract_list(data):
             
             # If this dictionary looks like an item
             if any(k in node for k in ["file", "urlName", "description", "abilities", "stat", "modifications"]):
-                # Assign type/tier if found from parent structure
+                # Ensure tags exist and include the category if present and not already listed
                 if current_cat:
-                    if not node.get("type") and current_cat.lower() in ["subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill"]:
-                        node["type"] = current_cat
-                    if not node.get("tier") and current_cat.lower() in ["boss", "cursed", "lesser", "greater", "regular", "superior"]:
-                        node["tier"] = current_cat
+                    if "tags" not in node or not isinstance(node["tags"], list):
+                        node["tags"] = []
+                    if current_cat not in node["tags"]:
+                        node["tags"].append(current_cat)
                 
                 # Determine a proper name if 'name' is missing
                 if not node.get("name"):
@@ -63,7 +63,6 @@ def extract_list(data):
                         node["name"] = "Unknown Item"
                 cleaned.append(node)
             else:
-                # Traverse other values if they aren't already handled
                 for k, val in node.items():
                     if k.lower() not in [
                         "boss", "cursed", "lesser", "greater", "regular", "superior",
@@ -575,16 +574,10 @@ class SkillFilterModal(discord.ui.Modal, title="Filter Skills Catalog"):
         placeholder="e.g. Slash, Fire",
         max_length=100
     )
-    type_input = discord.ui.TextInput(
-        label="Skill Type (subskill, buffskill, etc.)",
-        required=False,
-        placeholder="Leave blank for any",
-        max_length=50
-    )
     tag_input = discord.ui.TextInput(
-        label="Tag",
+        label="Tag / Type",
         required=False,
-        placeholder="e.g. Combat",
+        placeholder="e.g. subskill, Combat",
         max_length=50
     )
 
@@ -594,7 +587,6 @@ class SkillFilterModal(discord.ui.Modal, title="Filter Skills Catalog"):
 
     async def on_submit(self, interaction: discord.Interaction):
         q = self.query_input.value.strip().lower()
-        stype = self.type_input.value.strip().lower()
         tag = self.tag_input.value.strip().lower()
 
         results = []
@@ -607,10 +599,9 @@ class SkillFilterModal(discord.ui.Modal, title="Filter Skills Catalog"):
                 or q in str(sk.get("name", "")).lower()
                 or q in str(sk.get("description", "")).lower()
             )
-            match_type = not stype or stype == str(sk.get("type", "")).strip().lower()
             match_tag = not tag or any(tag in str(item_tag).lower() for item_tag in sk.get("tags", []))
 
-            if match_query and match_type and match_tag:
+            if match_query and match_tag:
                 results.append(sk)
 
         if not results:
@@ -637,10 +628,9 @@ class SkillSelectView(discord.ui.View):
         desc_lines = []
         for sk in page_items:
             name = sk.get("name", "Unknown Skill")
-            stype = str(sk.get("type", "Skill")).capitalize()
             tags = sk.get("tags", [])
             tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
-            desc_lines.append(f"**{name}** - Type: {stype} | Tags: {tags_str}")
+            desc_lines.append(f"**{name}** - Tags: {tags_str}")
 
         title_prefix = "Filtered Skills" if self.is_filtered else "Skills Catalog"
         embed = discord.Embed(
@@ -660,7 +650,7 @@ class SkillSelectView(discord.ui.View):
             discord.SelectOption(
                 label=str(sk.get("name", "Unknown Skill"))[:100],
                 value=str(sk.get("name", "Unknown Skill"))[:100],
-                description=f"Type: {str(sk.get('type', 'Skill')).capitalize()}"[:100]
+                description=f"Tags: {', '.join(str(t) for t in sk.get('tags', []))}"[:100]
             )
             for sk in page_items if isinstance(sk, dict)
         ]
@@ -689,7 +679,7 @@ class SkillSelectView(discord.ui.View):
             prev_btn = discord.ui.Button(label="◀ Prev", disabled=(self.page == 0), row=2)
             next_btn = discord.ui.Button(label="Next ▶", disabled=(self.page >= self.max_page), row=2)
             prev_btn.callback = self.prev_callback
-            next_btn.callback = self.next_callback
+            next_btn.callback = self.next_btn_callback
             self.add_item(prev_btn)
             self.add_item(next_btn)
 
@@ -712,7 +702,6 @@ class SkillSelectView(discord.ui.View):
             description=str(sk.get("description", "No description available.")),
             color=discord.Color.green(),
         )
-        embed.add_field(name="Type", value=str(sk.get("type", "Skill")).capitalize(), inline=True)
         embed.add_field(name="Stat / Scaling", value=str(sk.get("stat", "N/A")), inline=True)
 
         if sk.get("interval"):
@@ -741,35 +730,23 @@ class SkillSelectView(discord.ui.View):
         self.update_components()
         await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
-    async def next_callback(self, interaction: discord.Interaction):
+    async def next_btn_callback(self, interaction: discord.Interaction):
         self.page += 1
         self.update_components()
         await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
 
-@app_commands.choices(
-    skill_type=[
-        app_commands.Choice(name="Subskill", value="subskill"),
-        app_commands.Choice(name="Buff Skill", value="buffskill"),
-        app_commands.Choice(name="Main Skill", value="mainskill"),
-        app_commands.Choice(name="Curse Skill", value="curseskill"),
-        app_commands.Choice(name="Summon Skill", value="summonskill"),
-        app_commands.Choice(name="Enchant Skill", value="enchantskill"),
-    ]
-)
-@bot.tree.command(name="skill", description="Browse all skills or filter by type and tags")
+@bot.tree.command(name="skill", description="Browse all skills or filter by keywords and tags")
 @app_commands.describe(
     query="Skill name or keyword search",
-    skill_type="Filter by skill category",
-    tag="Filter by combat tag",
+    tag="Filter by tag or skill category",
 )
 async def skill(
     interaction: discord.Interaction,
     query: str = None,
-    skill_type: str = None,
     tag: str = None,
 ):
-    if not query and not skill_type and not tag:
+    if not query and not tag:
         if not SKILLS_DATA:
             return await interaction.response.send_message("❌ No skill data loaded or available.", ephemeral=True)
         view = SkillSelectView(SKILLS_DATA)
@@ -785,13 +762,9 @@ async def skill(
             or query.lower() in str(sk.get("name", "")).lower()
             or query.lower() in str(sk.get("description", "")).lower()
         )
-        match_type = (
-            not skill_type
-            or skill_type.lower() == str(sk.get("type", "")).strip().lower()
-        )
         match_tag = not tag or any(tag.lower() in str(t).lower() for t in sk.get("tags", []))
 
-        if match_query and match_type and match_tag:
+        if match_query and match_tag:
             results.append(sk)
 
     if not results:
