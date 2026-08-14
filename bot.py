@@ -26,36 +26,31 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Robustly normalizes JSON data into a valid list of dictionary items."""
-    if isinstance(data, list):
-        raw_list = data
-    elif isinstance(data, dict):
-        if "data" in data and isinstance(data["data"], list):
-            raw_list = data["data"]
-        else:
-            raw_list = list(data.values())
-    else:
-        raw_list = []
-
-    # Flatten out any nested lists or ensure dictionary coercion
+    """Robustly normalizes nested JSON structures into a valid list of dictionary items."""
     cleaned = []
-    for item in raw_list:
-        if isinstance(item, dict):
-            # Fallback name check if 'name' key is missing or stored under alternative fields
-            if not item.get("name"):
-                for alt_key in ["title", "file", "id", "key"]:
-                    if alt_key in item:
-                        item["name"] = str(item[alt_key])
-                        break
-                if not item.get("name"):
-                    item["name"] = "Unknown Item"
-            cleaned.append(item)
-        elif isinstance(item, list):
-            for sub_item in item:
-                if isinstance(sub_item, dict):
-                    if not sub_item.get("name"):
-                        sub_item["name"] = "Unknown Item"
-                    cleaned.append(sub_item)
+    
+    def parse_recursive(node):
+        if isinstance(node, list):
+            for item in node:
+                parse_recursive(item)
+        elif isinstance(node, dict):
+            # If this dictionary looks like an item (has file, urlName, or description)
+            if any(k in node for k in ["file", "urlName", "description", "abilities"]):
+                # Determine a proper name if 'name' is missing
+                if not node.get("name"):
+                    if node.get("file"):
+                        node["name"] = str(node["file"]).replace(".png", "")
+                    elif node.get("urlName"):
+                        node["name"] = str(node["urlName"]).replace("-", " ").title()
+                    else:
+                        node["name"] = "Unknown Item"
+                cleaned.append(node)
+            else:
+                # Otherwise, traverse all values in the dictionary deeper
+                for val in node.values():
+                    parse_recursive(val)
+
+    parse_recursive(data)
     return cleaned
 
 
@@ -119,11 +114,11 @@ class ArtifactSelectView(discord.ui.View):
         
         desc_lines = []
         for art in page_items:
-            name = art.get("name", "Unknown Artifact")
-            tier = str(art.get("tier", "Unknown")).capitalize()
+            name = art.get("name", "Unknown Item")
+            tier = str(art.get("tier", "Regular")).capitalize()
             tags = art.get("tags", [])
             tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
-            desc_lines.append(f"**{name}** - Tier: {tier} | Tags: {tags_str}")
+            desc_lines.append(f"**{name}** - Tags: {tags_str}")
 
         embed = discord.Embed(
             title=f"Artifacts Catalog (Page {self.page + 1}/{self.max_page + 1})",
@@ -140,9 +135,9 @@ class ArtifactSelectView(discord.ui.View):
 
         options = [
             discord.SelectOption(
-                label=str(art.get("name", "Unknown Artifact"))[:100],
-                value=str(art.get("name", "Unknown Artifact"))[:100],
-                description=f"Tier: {str(art.get('tier', 'Unknown')).capitalize()}"[:100]
+                label=str(art.get("name", "Unknown Item"))[:100],
+                value=str(art.get("name", "Unknown Item"))[:100],
+                description=str(art.get("description", "No description"))[:100]
             )
             for art in page_items if isinstance(art, dict)
         ]
@@ -187,14 +182,13 @@ class ArtifactSelectView(discord.ui.View):
             description=str(art.get("description", "No description available.")),
             color=discord.Color.gold(),
         )
-        embed.add_field(name="Tier", value=str(art.get("tier", "Unknown")).capitalize(), inline=True)
-
+        
         tags = art.get("tags", [])
         tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
         embed.add_field(name="Tags", value=tags_str, inline=True)
         embed.add_field(name="Abilities", value=format_field_value(art.get("abilities")), inline=False)
 
-        if art.get("unlock"):
+        if art.get("unlock") and art.get("unlock") != "-":
             embed.add_field(name="Unlock Requirement", value=format_field_value(art.get("unlock")), inline=False)
 
         await interaction.response.edit_message(embed=embed, view=self)
