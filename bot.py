@@ -26,34 +26,38 @@ def load_json(filename):
 
 
 def extract_list(data):
-    """Robustly normalizes nested JSON structures without redundant type injection."""
+    """Robustly normalizes all nested JSON structures (collections, characters, weapons, skills, artifacts)."""
     cleaned = []
+    
+    # Define actual artifact tiers vs other categories/skill types
+    artifact_tiers = ["boss", "cursed", "lesser", "greater", "regular", "superior"]
+    all_categories = artifact_tiers + [
+        "subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill"
+    ]
     
     def parse_recursive(node, current_cat=None):
         if isinstance(node, list):
             for item in node:
                 parse_recursive(item, current_cat)
         elif isinstance(node, dict):
-            # Check if this level represents a category/tier to capture if needed
             for key, val in node.items():
-                if isinstance(val, (list, dict)) and key.lower() in [
-                    "boss", "cursed", "lesser", "greater", "regular", "superior",
-                    "subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill"
-                ]:
+                if isinstance(val, (list, dict)) and key.lower() in all_categories:
                     parse_recursive(val, current_cat=key)
                 elif key == "list" and isinstance(val, list):
                     parse_recursive(val, current_cat=current_cat)
             
-            # If this dictionary looks like an item
             if any(k in node for k in ["file", "urlName", "description", "abilities", "stat", "modifications"]):
-                # Ensure tags exist and include the category if present and not already listed
                 if current_cat:
+                    # ONLY inject a 'tier' property if it's an artifact tier
+                    if current_cat.lower() in artifact_tiers:
+                        node["tier"] = current_cat.lower()
+                    
+                    # Keep universal tag injection for everything else
                     if "tags" not in node or not isinstance(node["tags"], list):
                         node["tags"] = []
                     if current_cat not in node["tags"]:
                         node["tags"].append(current_cat)
                 
-                # Determine a proper name if 'name' is missing
                 if not node.get("name"):
                     if node.get("file"):
                         node["name"] = str(node["file"]).replace(".png", "")
@@ -64,10 +68,7 @@ def extract_list(data):
                 cleaned.append(node)
             else:
                 for k, val in node.items():
-                    if k.lower() not in [
-                        "boss", "cursed", "lesser", "greater", "regular", "superior",
-                        "subskill", "buffskill", "mainskill", "curseskill", "summonskill", "enchantskill", "list"
-                    ]:
+                    if k.lower() not in all_categories and k.lower() != "list":
                         if isinstance(val, (dict, list)):
                             parse_recursive(val, current_cat=current_cat)
 
@@ -103,6 +104,41 @@ def format_field_value(val) -> str:
 
     return str(val)
 
+async def artifact_tag_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
+    """Dynamically gathers unique tags from ARTIFACTS_DATA and suggests matches."""
+    unique_tags = set()
+    for art in ARTIFACTS_DATA:
+        if isinstance(art, dict):
+            tags = art.get("tags", [])
+            if isinstance(tags, list):
+                for t in tags:
+                    if t and t != "-":
+                        unique_tags.add(str(t))
+
+    filtered = [
+        app_commands.Choice(name=tag, value=tag)
+        for tag in sorted(unique_tags)
+        if current.lower() in tag.lower()
+    ]
+    return filtered[:25]
+
+async def skill_tag_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
+    """Dynamically gathers unique tags from SKILLS_DATA and suggests matches."""
+    unique_tags = set()
+    for skill in SKILLS_DATA:
+        if isinstance(skill, dict):
+            tags = skill.get("tags", [])
+            if isinstance(tags, list):
+                for t in tags:
+                    if t and t != "-":
+                        unique_tags.add(str(t))
+
+    filtered = [
+        app_commands.Choice(name=tag, value=tag)
+        for tag in sorted(unique_tags)
+        if current.lower() in tag.lower()
+    ]
+    return filtered[:25]
 
 # Load local JSON datasets
 CHARACTERS_DATA = extract_list(load_json("ds_wiki_npoint_character.json"))
@@ -297,26 +333,6 @@ class ArtifactSelectView(discord.ui.View):
         self.update_components()
         await interaction.response.edit_message(embed=self.get_list_embed(), view=self)
 
-    async def artifact_tag_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
-        unique_tags = set()
-        for art in ARTIFACTS_DATA:
-            if isinstance(art, dict):
-                tags = art.get("tags", [])
-                if isinstance(tags, list):
-                    for t in tags:
-                        if t and t != "-":
-                            unique_tags.add(str(t))
-                tier = art.get("tier")
-                if tier and tier != "-":
-                    unique_tags.add(str(tier))
-
-        filtered = [
-            app_commands.Choice(name=tag, value=tag)
-            for tag in sorted(unique_tags)
-            if current.lower() in tag.lower()
-        ]
-        return filtered[:25]
-
 @app_commands.choices(
     tier=[
         app_commands.Choice(name="Boss", value="boss"),
@@ -327,23 +343,23 @@ class ArtifactSelectView(discord.ui.View):
         app_commands.Choice(name="Superior", value="superior"),
     ]
 )
-
-
 @bot.tree.command(name="artifact", description="Browse all artifacts or filter by keywords and tags")
 @app_commands.describe(
     query="Artifact name or keyword search",
-    tag="Filter by tag or tier category",
+    tag="Filter by artifact tag",
+    tier="Filter by artifact tier",
 )
 @app_commands.autocomplete(tag=artifact_tag_autocomplete)
 async def artifact(
     interaction: discord.Interaction,
     query: str = None,
     tag: str = None,
+    tier: str = None,
 ):
     if not ARTIFACTS_DATA:
         return await interaction.response.send_message("❌ No artifact data loaded or available.", ephemeral=True)
 
-    if not query and not tag:
+    if not query and not tag and not tier:
         view = ArtifactSelectView(ARTIFACTS_DATA)
         return await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
@@ -358,14 +374,14 @@ async def artifact(
             or query.lower() in str(art.get("description", "")).lower()
         )
         
-        # Check matching across both tags list and the explicit tier field if present
-        art_tags = [str(t) for t in art.get("tags", [])]
-        if art.get("tier"):
-            art_tags.append(str(art.get("tier")))
-            
-        match_tag = not tag or any(tag.lower() in t.lower() for t in art_tags)
+        # Strict separation: Tags vs Tiers
+        art_tags = [str(t).lower() for t in art.get("tags", []) if t and t != "-"]
+        match_tag = not tag or any(tag.lower() in t for t in art_tags)
+        
+        match_tier = not tier or tier.lower() == str(art.get("tier", "")).strip().lower()
 
-        if match_query and match_tag:
+        # Must satisfy all provided criteria (Query AND Tag AND Tier)
+        if match_query and match_tag and match_tier:
             results.append(art)
 
     if not results:
@@ -780,33 +796,37 @@ class SkillSelectView(discord.ui.View):
 @bot.tree.command(name="skill", description="Browse all skills or filter by keywords and tags")
 @app_commands.describe(
     query="Skill name or keyword search",
-    tag="Filter by tag or skill category",
+    tag="Filter by skill tag",
 )
+@app_commands.autocomplete(tag=skill_tag_autocomplete)
 async def skill(
     interaction: discord.Interaction,
     query: str = None,
     tag: str = None,
 ):
+    if not SKILLS_DATA:
+        return await interaction.response.send_message("❌ No skill data loaded or available.", ephemeral=True)
+
     if not query and not tag:
-        if not SKILLS_DATA:
-            return await interaction.response.send_message("❌ No skill data loaded or available.", ephemeral=True)
         view = SkillSelectView(SKILLS_DATA)
         return await interaction.response.send_message(embed=view.get_list_embed(), view=view)
 
     results = []
-    for sk in SKILLS_DATA:
-        if not isinstance(sk, dict):
+    for s in SKILLS_DATA:
+        if not isinstance(s, dict):
             continue
 
         match_query = (
             not query
-            or query.lower() in str(sk.get("name", "")).lower()
-            or query.lower() in str(sk.get("description", "")).lower()
+            or query.lower() in str(s.get("name", "")).lower()
+            or query.lower() in str(s.get("description", "")).lower()
         )
-        match_tag = not tag or any(tag.lower() in str(t).lower() for t in sk.get("tags", []))
+        
+        s_tags = [str(t) for t in s.get("tags", [])]
+        match_tag = not tag or any(tag.lower() in t.lower() for t in s_tags)
 
         if match_query and match_tag:
-            results.append(sk)
+            results.append(s)
 
     if not results:
         return await interaction.response.send_message("No skills found matching your criteria.", ephemeral=True)
@@ -954,6 +974,75 @@ async def weapon(interaction: discord.Interaction, character: str = None):
 
     view = WeaponSelectView(WEAPONS_DATA)
     await interaction.response.send_message("Select a character folder:", view=view)
+
+# ==========================================
+# 6. See Available Codes
+# ==========================================
+@bot.tree.command(name="code-redeem", description="Displays the code redemption guide and instructions")
+async def code_redeem(interaction: discord.Interaction):
+    file_path = "cecicodes.png"
+    
+    if not os.path.exists(file_path):
+        return await interaction.response.send_message(
+            "The code redemption image (`cecicode.png`) could not be found on the server directory.", 
+            ephemeral=True
+        )
+    
+    file = discord.File(file_path, filename="cecicode.png")
+    embed = discord.Embed(
+        title="lmao",
+        #description="Follow the steps shown in the image below to redeem your in-game codes.",
+        color=discord.Color.blurple()
+    )
+    embed.set_image(url="attachment://cecicode.png")
+    
+    await interaction.response.send_message(embed=embed, file=file)
+
+# ==========================================
+# 7. TIPS & FAQ
+# ==========================================
+@bot.tree.command(name="beginner-tips", description="Essential tips and tricks for getting started in Dungeon Slasher")
+async def beginner_tips(interaction: discord.Interaction):
+    c, files = discord.Color.gold(), [discord.File(img) for img in ["kelsey_guide.png", "tag_combinations.png"] if os.path.exists(img)]
+    
+    embeds = [
+        discord.Embed(title="Beginner Tips", 
+                      description="""# Game Tips
+- Press, Settings, Graphics, set __**Skill Transparency to low**__. This will help you see your mistakes in 4K 
+- __**New Player Missions**__ will need __**Level 30 Knight**__ to complete it's last task
+-# It will give you 2 characters or 3k gems each if you have them
+- __**Artifacts do not grant synergy**__ unless it says "Gains X synergy when equipped"
+- Artifacts must have the __**same Tag**__ to boost the Skill
+- Most __**Characters have Tag Restrictions**__ making certain Artifacts and Skills unavailable. This makes them use less bans and easier to build 
+-# Artifacts and Skills have Words above their icon called __**Tags**__ 
+- __**Sin Points**__ have a maximum of 40. 20 from Unlocking Artifacts, and 20 from first clearing each of the 20 floors of Arena mode. 
+-# 10 points to Gluttony
+- __**Don't unlock too much**__ as it makes it harder to build  
+- __**Real Kelsey**__ is the one that is not smoking """, color=c),
+        discord.Embed(color=c),
+        discord.Embed(color=c),
+        discord.Embed(title="Here are some common questions:", 
+                      description="""## Basic Currencies
+- Best way to earn Soulstones is to run around the dungeon IN NORMAL MODE skipping all Chapter 1 mobs and watch the 1000 Soulstone ads
+continue the run after skipping chapter 1
+- Breachstones/Riftstones are used to level characters after level 30, they're from CHALLENGE MODE after beating the game
+- Challenge mode doesn't drop Soulstones
+- Prayerstones are used to roll item blessings at the start of the game and roll conditions for a game mode unlocked after beating normal mode
+not recommended to roll for blessings
+- Mileage Points are EXCLUSIVELY EARNED by spending money and is 5% of your product in KR Won
+- Gems are mainly obtained by doing daily, weekly and achievement missions for 950
+-# you get most of your early gems by unlocking things in the unlock menu, or doing challenges on the mission tab
+- Sin Points have a maximum of 40. 20 from Unlocking Artifacts, and 20 from first clearing each of the 20 floors of Arena mode.
+## Basics
+- Some Characters are not fully functionable for new players due to needing Riftstones for Masteries to work
+- Plunging Attacks stuns enemies and is performed by, Double Jump, Down Movement + Basic Attack""", color=c)
+    ]
+    
+    for i, file in enumerate(files):
+        embeds[i + 1].set_image(url=f"attachment://{file.filename}")
+
+    active_embeds = [embeds[0]] + embeds[1:1+len(files)] + [embeds[3]]
+    await interaction.response.send_message(embeds=active_embeds, files=files or None)
 
 
 bot.run(DISCORD_TOKEN)
