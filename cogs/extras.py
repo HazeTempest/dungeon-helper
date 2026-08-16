@@ -48,20 +48,28 @@ class ExtrasCog(commands.Cog):
             discord.Embed(color=c),
             discord.Embed(color=c),
             discord.Embed(title="Here are some common questions:", 
-                          description="""## Basic Currencies
-- Best way to earn Soulstones is to run around the dungeon IN NORMAL MODE skipping all Chapter 1 mobs and watch the 1000 Soulstone ads
-continue the run after skipping chapter 1
-- Breachstones/Riftstones are used to level characters after level 30, they're from CHALLENGE MODE after beating the game
-- Challenge mode doesn't drop Soulstones
-- Prayerstones are used to roll item blessings at the start of the game and roll conditions for a game mode unlocked after beating normal mode
-not recommended to roll for blessings
-- Mileage Points are EXCLUSIVELY EARNED by spending money and is 5% of your product in KR Won
-- Gems are mainly obtained by doing daily, weekly and achievement missions for 950
+                          description="""## Important
+# - There are __no codes__
+- __**New Player Missions**__ will need __**Level 30 Knight**__ to complete it's last task
+-# It will give you Fighter and Slayer or 3k gems each if you have them 
+
+## Basic Currencies
+- __**Best way to earn Soulstones**__ is to run around the dungeon **IN NORMAL MODE** skipping all Chapter 1 mobs and watch the 1000 Soulstone ads <:Soul:1362390802084532234> 
+-# continue the run after skipping chapter 1
+- __**Breachstones/Riftstones**__ are used to level characters after level 30, they're from **CHALLENGE MODE** after beating the game <:Rift:1362390080186224853> 
+-# Challenge mode doesn't drop Soulstones
+- __**Prayerstones**__ are used to roll item blessings at the start of the game and roll conditions for a game mode unlocked after beating normal mode <:Prayer:1362391447118024775> 
+-# not recommended to roll for blessings
+- __**Mileage Points**__ are **EXCLUSIVELY EARNED** by spending money and is 5% of your product in KR Won
+- __**Gems**__ are mainly obtained by doing daily, weekly and achievement missions for 950
 -# you get most of your early gems by unlocking things in the unlock menu, or doing challenges on the mission tab
-- Sin Points have a maximum of 40. 20 from Unlocking Artifacts, and 20 from first clearing each of the 20 floors of Arena mode.
+- __**Sin Points**__ have a maximum of 40. 20 from Unlocking Artifacts, and 20 from first clearing each of the 20 floors of Arena mode.
+
 ## Basics
-- Some Characters are not fully functionable for new players due to needing Riftstones for Masteries to work
-- Plunging Attacks stuns enemies and is performed by, Double Jump, Down Movement + Basic Attack""", color=c)
+- Some Characters are not fully functionable for new players due to needing __**Riftstones for Masteries**__ to work
+- __**Plunging Attacks**__ stuns enemies and is performed by, Double Jump, Down Movement + Basic Attack
+
+Any other basic questions, feel free to consult [The Wiki](https://dungeonslasher.wiki/misc)""", color=c)
         ]
         
         for i, file in enumerate(files):
