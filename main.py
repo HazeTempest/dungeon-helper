@@ -1,38 +1,38 @@
+# bot.py
 import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
-class DungeonSlasherBot(commands.Bot):
-    def __init__(self):
-        super().__init__(command_prefix="!", intents=discord.Intents.default())
+intents = discord.Intents.default()
+bot = commands.Bot(command_prefix="!", intents=intents)
 
+@bot.event
+async def on_ready():
+    await bot.tree.sync()
+    print(f"Logged in as {bot.user} (ID: {bot.user.id})")
+
+class MainBot(commands.Bot):
     async def setup_hook(self):
-        # Ensure cogs directory exists
-        if not os.path.exists("./cogs"):
-            os.makedirs("./cogs")
-        
-        # Load all cogs dynamically from the cogs folder
-        for filename in os.listdir("./cogs"):
-            if filename.endswith(".py"):
-                cog_name = filename[:-3]
-                await self.load_extension(f"cogs.{cog_name}")
-                print(f"Loaded cog: {cog_name}")
-        
-        # Sync global slash commands with Discord
-        await self.tree.sync()
-        print("Slash commands synced successfully.")
-
-    async def on_ready(self):
-        print(f"Logged in as {self.user} (ID: {self.user.id})")
-
-bot = DungeonSlasherBot()
+        # Load cogs dynamically from the 'cogs' folder
+        initial_extensions = [
+            "cogs.artifacts",
+            "cogs.collections",
+            "cogs.characters",
+            "cogs.skills",
+            "cogs.weapons",
+            "cogs.extras"
+        ]
+        for extension in initial_extensions:
+            try:
+                await self.load_extension(extension)
+                print(f"Loaded extension: {extension}")
+            except Exception as e:
+                print(f"Failed to load extension {extension}: {e}")
 
 if __name__ == "__main__":
-    if not TOKEN:
-        print("Error: DISCORD_TOKEN not found in environment variables.")
-    else:
-        bot.run(TOKEN)
+    bot = MainBot(command_prefix="!", intents=intents)
+    bot.run(DISCORD_TOKEN)
