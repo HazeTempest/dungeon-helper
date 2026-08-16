@@ -12,12 +12,6 @@ intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
-async def on_ready():
-    GUILD_ID = discord.Object(id=778628706729852991)
-
-    bot.tree.copy_global_to(guild=GUILD_ID)
-    await bot.tree.sync(guild=GUILD_ID)
-    print(f"Synced commands instantly to test guild for {bot.user}")
 
 class MainBot(commands.Bot):
     async def setup_hook(self):
@@ -36,6 +30,13 @@ class MainBot(commands.Bot):
                 print(f"Loaded extension: {extension}")
             except Exception as e:
                 print(f"Failed to load extension {extension}: {e}")
+    
+    async def on_ready(self):
+        GUILD_ID = discord.Object(id=778628706729852991)
+
+        self.tree.copy_global_to(guild=GUILD_ID)
+        await self.tree.sync(guild=GUILD_ID)
+        print(f"Synced commands instantly to test guild for {self.user}")
 
 if __name__ == "__main__":
     bot = MainBot(command_prefix="!", intents=intents)
