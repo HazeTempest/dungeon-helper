@@ -153,17 +153,56 @@ class SkillSelectView(discord.ui.View):
             description=str(sk.get("description", "No description available.")),
             color=discord.Color.green(),
         )
-        embed.add_field(name="Stat / Scaling", value=str(sk.get("stat", "N/A")), inline=True)
+        
+        # 1. Dynamic Stat / Scaling Field
+        stat_data = sk.get("stat", {})
+        if isinstance(stat_data, dict) and "name" in stat_data and "value" in stat_data:
+            embed.add_field(name=stat_data["name"], value=stat_data["value"], inline=True)
+        elif stat_data:
+            embed.add_field(name="Stat / Scaling", value=str(stat_data), inline=True)
 
-        if sk.get("interval"):
-            embed.add_field(name="Interval / Cooldown", value=str(sk.get("interval")), inline=True)
+        # 2. Dynamic Interval / Cooldown Field
+        interval_data = sk.get("interval", {})
+        if isinstance(interval_data, dict) and "name" in interval_data and "value" in interval_data:
+            embed.add_field(name=interval_data["name"], value=interval_data["value"], inline=True)
+        elif interval_data:
+            embed.add_field(name="Interval / Cooldown", value=str(interval_data), inline=True)
 
         tags = sk.get("tags", [])
         tags_str = ", ".join(str(t) for t in tags) if isinstance(tags, list) and tags else "None"
         embed.add_field(name="Tags", value=tags_str, inline=False)
 
-        if sk.get("modifications"):
-            embed.add_field(name="Modifications", value=format_field_value(sk.get("modifications")), inline=False)
+        # 3. Modifications List & Subheadings
+        mods = sk.get("modifications", [])
+        if mods:
+            mod_text_blocks = []
+            
+            for mod in mods:
+                if isinstance(mod, dict):
+                    mod_name = mod.get("name", "Unknown Mod")
+                    mod_upgrade = mod.get("upgrade", "")
+                    
+                    # Convert raw literal "\n" strings into actual newlines and split them
+                    lines = mod_upgrade.replace("\\n", "\n").split("\n")
+                    
+                    # Format each line as a bullet point
+                    bullet_points = "\n".join(f"  - {line.strip()}" for line in lines if line.strip())
+                    
+                    # Apply Discord markdown headings (###) for subheadings
+                    if mod_name.lower() == "special mod":
+                        formatted_block = f"- ⭐ {mod_name}\n{bullet_points}"
+                    else:
+                        formatted_block = f"  {mod_name}\n{bullet_points}"
+                        
+                    mod_text_blocks.append(formatted_block)
+                    
+            if mod_text_blocks:
+                # Join all modification blocks with a blank line between them
+                embed.add_field(
+                    name="Modifications", 
+                    value="\n\n".join(mod_text_blocks), 
+                    inline=False
+                )
 
         view = discord.ui.View()
         back_btn = discord.ui.Button(label="📋 Back to List", style=discord.ButtonStyle.secondary)

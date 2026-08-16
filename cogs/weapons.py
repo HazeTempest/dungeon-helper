@@ -1,148 +1,163 @@
-# cogs/weapons.py
 import discord
 from discord import app_commands
 from discord.ext import commands
-from utils import WEAPONS_DATA
 
-class WeaponDropdownView(discord.ui.View):
-    def __init__(self, char_folder: str, weapons: list):
-        super().__init__(timeout=180)
-        self.char_folder = char_folder
-        self.weapons = weapons
+from utils import WEAPONS_DATA 
 
-        options = [
-            discord.SelectOption(
-                label=str(w.get("file", "")).replace(".png", "")[:100],
-                value=str(w.get("urlName", w.get("file", "")))[:100],
-                description=f"WSAP: {w.get('WSAP', 'N/A')} | CD: {w.get('cooldown', 'N/A')}"[:100],
-            )
-            for w in weapons[:25] if isinstance(w, dict)
-        ]
 
-        if not options:
-            options = [discord.SelectOption(label="No weapons found", value="none")]
-
-        select = discord.ui.Select(
-            placeholder=f"Choose a weapon for {char_folder.capitalize()}...",
-            options=options
-        )
-        select.callback = self.weapon_callback
-        self.add_item(select)
-
-    async def weapon_callback(self, interaction: discord.Interaction):
-        selected_val = interaction.data["values"][0]
-        if selected_val == "none":
-            return await interaction.response.send_message("❌ No valid weapons available.", ephemeral=True)
-
-        chosen_weapon = next(
-            (w for w in self.weapons if isinstance(w, dict) and str(w.get("urlName", w.get("file", ""))) == selected_val),
-            None
-        )
-
-        if not chosen_weapon:
-            return await interaction.response.send_message("❌ Weapon details not found.", ephemeral=True)
-
+def build_weapon_embed(character_folder: str, page_index: int):
+    """Helper function to construct the embed for a given character and weapon page index."""
+    char_weapons = [w for w in WEAPONS_DATA if w.get("character_folder", "").lower() == character_folder.lower()]
+    if not char_weapons:
         embed = discord.Embed(
-            title=f"{str(chosen_weapon.get('file', '')).replace('.png', '')} ({self.char_folder.capitalize()})",
-            description=str(chosen_weapon.get("description", "No description available.")),
-            color=discord.Color.red(),
+            title="No Weapons Found", 
+            description=f"No weapons found for `{character_folder.capitalize()}`.", 
+            color=discord.Color.red()
         )
-        embed.add_field(name="WSAP", value=str(chosen_weapon.get("WSAP", "N/A")), inline=True)
-        embed.add_field(name="Cooldown", value=str(chosen_weapon.get("cooldown", "N/A")), inline=True)
+        return embed, 0, 0
+    
+    page_index = max(0, min(page_index, len(char_weapons) - 1))
+    matched_weapon = char_weapons[page_index]
+    
+    weapon_name = matched_weapon.get("name", "Unknown Weapon")
+    is_recommended = matched_weapon.get("recommended") == 1
+    embed_title = f"⚔️ {weapon_name} ⭐ (Recommended)" if is_recommended else f"⚔️ {weapon_name}"
+    
+    embed = discord.Embed(title=embed_title, color=discord.Color.blurple())
+    
+    wsap = matched_weapon.get("WSAP", "N/A")
+    cooldown = matched_weapon.get("cooldown", "N/A")
+    price = f"{matched_weapon.get('price', '0')} {matched_weapon.get('priceType', 'Gem')}"
+    tags = ", ".join(matched_weapon.get("tags", [])) if matched_weapon.get("tags") else "None"
+    desc = matched_weapon.get("description", "No description available.")
+    
+    details = (
+        f"**WSAP:** {wsap}\n"
+        f"**Cooldown:** {cooldown}\n"
+        f"**Price:** {price}\n"
+        f"**Tags:** {tags}"
+    )
+    embed.add_field(name="Stats & Info", value=details, inline=False)
+    embed.add_field(name="Description", value=f"_{desc}_", inline=False)
+    embed.set_footer(text=f"Character: {character_folder.capitalize()} | Weapon {page_index + 1} of {len(char_weapons)}")
+    
+    return embed, page_index, len(char_weapons)
 
-        price = chosen_weapon.get("price", "0")
-        price_type = chosen_weapon.get("priceType", "Gem")
-        embed.add_field(name="Price", value=f"{price} {price_type}", inline=True)
 
-        tags = chosen_weapon.get("tags", [])
-        if tags and tags != ["-"]:
-            embed.add_field(name="Tags", value=", ".join(str(t) for t in tags), inline=False)
-        else:
-            embed.add_field(name="Tags", value="None", inline=False)
+class CharacterSelect(discord.ui.Select):
+    """Dropdown menu to switch characters on the fly."""
+    def __init__(self, paging_view):
+        self.paging_view = paging_view
+        
+        characters = list(set([w.get("character_folder") for w in WEAPONS_DATA if w.get("character_folder")]))
+        characters.sort()
+        
+        options = []
+        for char in characters:
+            options.append(discord.SelectOption(
+                label=char.capitalize(),
+                value=char.lower(),
+                default=(char.lower() == paging_view.current_character)
+            ))
+        
+        super().__init__(placeholder="Switch character...", min_values=1, max_values=1, options=options[:25])
 
-        if chosen_weapon.get("recommended") == 1:
-            embed.set_footer(text="⭐ Recommended Weapon")
+    async def callback(self, interaction: discord.Interaction):
+        self.paging_view.current_character = self.values[0]
+        self.paging_view.current_page = 0  # Reset to first weapon of the new character
+        
+        # Update default flags on options
+        for option in self.options:
+            option.default = (option.value == self.paging_view.current_character)
+            
+        self.paging_view.update_button_states()
+        embed, _, _ = build_weapon_embed(self.paging_view.current_character, self.paging_view.current_page)
+        await interaction.response.edit_message(embed=embed, view=self.paging_view)
 
-        await interaction.response.edit_message(content="Here is your weapon info:", embed=embed, view=self)
 
-class WeaponSelectView(discord.ui.View):
-    def __init__(self, data):
+class WeaponPagingView(discord.ui.View):
+    """View container holding the character dropdown and L/R pagination buttons."""
+    def __init__(self, initial_character: str):
         super().__init__(timeout=180)
-        self.data = data
+        self.current_character = initial_character.lower()
+        self.current_page = 0
+        
+        # Add character select dropdown
+        self.add_item(CharacterSelect(self))
+        self.update_button_states()
 
-        char_options = [
-            discord.SelectOption(
-                label=str(group.get("folder", "")).capitalize()[:100],
-                value=str(group.get("folder", ""))[:100],
-            )
-            for group in data if isinstance(group, dict) and "folder" in group
-        ][:25]
+    def update_button_states(self):
+        char_weapons = [w for w in WEAPONS_DATA if w.get("character_folder", "").lower() == self.current_character]
+        total = len(char_weapons)
+        
+        for child in self.children:
+            if isinstance(child, discord.ui.Button):
+                if child.custom_id == "prev":
+                    child.disabled = self.current_page <= 0
+                elif child.custom_id == "next":
+                    child.disabled = self.current_page >= total - 1
 
-        if not char_options:
-            char_options = [discord.SelectOption(label="No characters found", value="none")]
+    @discord.ui.button(label="◀ Previous", style=discord.ButtonStyle.secondary, custom_id="prev")
+    async def prev_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        if self.current_page > 0:
+            self.current_page -= 1
+        self.update_button_states()
+        embed, _, _ = build_weapon_embed(self.current_character, self.current_page)
+        await interaction.response.edit_message(embed=embed, view=self)
 
-        self.char_select = discord.ui.Select(
-            placeholder="Choose a character...",
-            options=char_options,
-        )
-        self.char_select.callback = self.char_callback
-        self.add_item(self.char_select)
+    @discord.ui.button(label="Next ▶", style=discord.ButtonStyle.secondary, custom_id="next")
+    async def next_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        char_weapons = [w for w in WEAPONS_DATA if w.get("character_folder", "").lower() == self.current_character]
+        if self.current_page < len(char_weapons) - 1:
+            self.current_page += 1
+        self.update_button_states()
+        embed, _, _ = build_weapon_embed(self.current_character, self.current_page)
+        await interaction.response.edit_message(embed=embed, view=self)
 
-    async def char_callback(self, interaction: discord.Interaction):
-        selected_folder = self.char_select.values[0]
-        if selected_folder == "none":
-            return await interaction.response.send_message("❌ No valid characters loaded.", ephemeral=True)
-
-        char_data = next((g for g in self.data if isinstance(g, dict) and g.get("folder") == selected_folder), None)
-        if not char_data or not char_data.get("weapons"):
-            return await interaction.response.send_message("❌ No weapons found for this character.", ephemeral=True)
-
-        weapon_view = WeaponDropdownView(selected_folder, char_data.get("weapons", []))
-        await interaction.response.edit_message(
-            content=f"Character selected: **{selected_folder.capitalize()}**. Now select a weapon:",
-            view=weapon_view,
-        )
 
 class WeaponsCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    async def weapon_character_autocomplete(
-        self,
-        interaction: discord.Interaction,
-        current: str,
+    async def character_autocomplete(
+        self, interaction: discord.Interaction, current: str
     ) -> list[app_commands.Choice[str]]:
+        characters = list(set([w.get("character_folder") for w in WEAPONS_DATA if w.get("character_folder")]))
+        characters.sort()
+        
         choices = []
-        for group in WEAPONS_DATA:
-            if isinstance(group, dict) and "folder" in group:
-                folder_name = str(group["folder"])
-                if current.lower() in folder_name.lower():
-                    choices.append(app_commands.Choice(name=folder_name.capitalize(), value=folder_name))
+        for char in characters:
+            if current.lower() in char.lower():
+                choices.append(app_commands.Choice(name=char.capitalize(), value=char.lower()))
             if len(choices) >= 25:
                 break
         return choices
 
-    @app_commands.command(name="weapon", description="Lookup weapons by character autocomplete and drop-downs")
-    @app_commands.describe(character="Character name to view weapons for")
-    @app_commands.autocomplete(character=weapon_character_autocomplete)
-    async def weapon(self, interaction: discord.Interaction, character: str = None):
-        if not WEAPONS_DATA:
-            return await interaction.response.send_message("❌ Weapon data not loaded or empty.", ephemeral=True)
+    @app_commands.command(name="weapon", description="Browse character weapons with pagination and character selection")
+    @app_commands.autocomplete(character=character_autocomplete)
+    async def weapon(self, interaction: discord.Interaction, character: str):
+        # Validate character exists
+        matched_char = next(
+            (w.get("character_folder") for w in WEAPONS_DATA if w.get("character_folder", "").lower() == character.lower()),
+            None
+        )
+        
+        if not matched_char:
+            all_chars = list(set([w.get("character_folder") for w in WEAPONS_DATA if w.get("character_folder")]))
+            if all_chars:
+                matched_char = all_chars[0]
+            else:
+                await interaction.response.send_message("❌ No weapon data available.", ephemeral=True)
+                return
 
-        if character:
-            char_data = next((g for g in WEAPONS_DATA if isinstance(g, dict) and str(g.get("folder", "")).lower() == character.lower()), None)
-            if not char_data or not char_data.get("weapons"):
-                return await interaction.response.send_message(f"❌ No weapon data found for character '{character}'.", ephemeral=True)
+        embed, page, total = build_weapon_embed(matched_char, 0)
+        if total == 0:
+            await interaction.response.send_message(f"❌ No weapons found for `{matched_char.capitalize()}`.", ephemeral=True)
+            return
 
-            view = WeaponDropdownView(char_data.get("folder"), char_data.get("weapons", []))
-            return await interaction.response.send_message(
-                f"Select a weapon for **{str(char_data.get('folder', '')).capitalize()}**:",
-                view=view
-            )
+        view = WeaponPagingView(matched_char)
+        await interaction.response.send_message(embed=embed, view=view)
 
-        view = WeaponSelectView(WEAPONS_DATA)
-        await interaction.response.send_message("Select a character folder:", view=view)
 
 async def setup(bot):
     await bot.add_cog(WeaponsCog(bot))
-    
