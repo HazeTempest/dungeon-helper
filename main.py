@@ -11,8 +11,6 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-@bot.event
-
 class MainBot(commands.Bot):
     async def setup_hook(self):
         # Load cogs dynamically from the 'cogs' folder
