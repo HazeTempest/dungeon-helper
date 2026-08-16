@@ -13,8 +13,11 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    await bot.tree.sync()
-    print(f"Logged in as {bot.user} (ID: {bot.user.id})")
+    GUILD_ID = discord.Object(id=778628706729852991)
+
+    bot.tree.copy_global_to(guild=GUILD_ID)
+    await bot.tree.sync(guild=GUILD_ID)
+    print(f"Synced commands instantly to test guild for {bot.user}")
 
 class MainBot(commands.Bot):
     async def setup_hook(self):
